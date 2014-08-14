@@ -29,15 +29,27 @@ class ManagerDoors : Singleton<ManagerDoors>
     public List<Door> prefabDoorsWithoutPair;
 
     List< List < Door> > doors =  new List< List<Door>> ();
-    Vector2 firstOpen = new Vector2 (-1, -1);
+    Door firstOpen;
+    Door SecondOpen;
 
     public static float offSetX = 0.20f;
     public static float offSetZ = 0.20f;
+
+    /// <summary>
+    /// Tiempo para hacer el check de los pares
+    /// Se utiliza para dar chance a que se abra la puerta
+    /// </summary>
+    public static float TimeToCheck = 0.25f;
+    /// <summary>
+    /// Si se esta corriendo el tiempo de checkeo.
+    /// </summary>
+    bool isChecking = false;
 
     void Awake(){
         setDoors();
     }
 
+    #region Seteado Aleatorio:
     void setDoors(){
     
         switch (numberOfPair) {
@@ -88,31 +100,43 @@ class ManagerDoors : Singleton<ManagerDoors>
 
         allDoors.Clear ();
     }
-   
-    void Start(){
-
-    }
-
-   public Door getDoor(Vector2 pos){
-    
-        return doors [(int)pos.x] [(int)pos.y];
-    }
+   #endregion
 
     public void TouchMe(Door door){
-
-        if (firstOpen.x == -1) {
+        //Si no se esta esperando el tiempo de CheckPair
+        if (!isChecking) {
+            if (firstOpen == null) {
         
-            firstOpen = door.posMaxtrix;
+                firstOpen = door;
            
-            door.Open ();
-            //Aqui hago lo de la animacion de la puerta
-        } else {
+            } else {
         
-            //Hago check de que el par sea igual
+                SecondOpen = door;
 
-            ///
-            firstOpen = new Vector2 (-1, -1);
+                isChecking = true;
+                Invoke ("CheckPairs", TimeToCheck);
+            }
+            door.Open ();
         }
+    }
+
+    /// <summary>
+    /// Se revisa si las dos puertas abiertas son las mismas.
+    /// </summary>
+    void CheckPairs(){
+        //Hago check de que el par sea igual
+        if (firstOpen.IDpair == SecondOpen.IDpair) {
+
+            firstOpen.CheckTruePair ();
+            SecondOpen.CheckTruePair ();
+        } else {
+            firstOpen.Close ();
+            SecondOpen.Close ();
+
+        }
+        firstOpen = null;
+        SecondOpen = null;
+        isChecking = false;
     }
 }
 

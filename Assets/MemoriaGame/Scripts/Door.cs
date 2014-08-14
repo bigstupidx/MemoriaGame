@@ -17,6 +17,8 @@ class Door : MonoBehaviour
 
     [SerializeField]
     public List<Signal> onOpen = new List<Signal>();
+    public List<Signal> onClose = new List<Signal>();
+    public List<Signal> onCheckTruePair = new List<Signal>();
 
 
     public void Touch(){
@@ -30,6 +32,24 @@ class Door : MonoBehaviour
         
             sig.Invoke ();
         }
+    }
+    public void Close(){
+
+        foreach (Signal sig in onClose) {
+
+            sig.Invoke ();
+        }
+    }
+    public void CheckTruePair(){
+
+        foreach (Signal sig in onCheckTruePair) {
+
+            sig.Invoke ();
+        }
+    }
+    public void ReleaseObject(){
+
+        this.Recycle ();
     }
 }
 

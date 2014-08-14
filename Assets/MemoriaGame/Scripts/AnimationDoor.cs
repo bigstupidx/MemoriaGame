@@ -21,11 +21,28 @@ class AnimationDoor : MonoBehaviour
         anim = GetComponent<Animator> ();
 
         door.onOpen.Add (new Signal("onOpen",gameObject));
+        door.onClose.Add (new Signal("onClose",gameObject));
+        door.onCheckTruePair.Add (new Signal("onCheckTruePair",gameObject));
+
     }
     [Signal]
     void onOpen(){
         anim.SetBool("Open",true);
     }
+    [Signal]
+    void onClose(){
+        anim.SetBool("Open",false);
+    }
 
+    [Signal]
+    void onCheckTruePair(){
+        //anim.SetBool("Open",false);
+        TweenScale.Begin(door.gameObject,1.0f,new Vector3(0.01f,0.01f,0.01f)).AddOnFinished(new EventDelegate(this,"ReleaseDoor"));
+    }
+
+    public void ReleaseDoor(){
+    
+        door.ReleaseObject ();
+    }
 }
 
