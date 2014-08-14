@@ -56,8 +56,6 @@ MonoBehaviour:
   - {fileID: 11400002, guid: 633ad0fb44eaf4b5c8ccc38a28d60053, type: 2}
   - {fileID: 11400002, guid: f677680a613ce4a8d8ef34b1ed6e0e07, type: 2}
   - {fileID: 11400002, guid: 95da23e7ae10c4a8390f8f52baef5a8a, type: 2}
-  offSetX: 10
-  offSetZ: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

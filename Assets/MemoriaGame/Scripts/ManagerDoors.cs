@@ -39,7 +39,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// Tiempo para hacer el check de los pares
     /// Se utiliza para dar chance a que se abra la puerta
     /// </summary>
-    public static float TimeToCheck = 0.25f;
+    public static float TimeToCheck = 0.4f;
     /// <summary>
     /// Si se esta corriendo el tiempo de checkeo.
     /// </summary>
@@ -58,10 +58,10 @@ class ManagerDoors : Singleton<ManagerDoors>
             setDoorBy (5, 6,-0.5f,-10f);
             break;
         case NumberOfPair.CuatroXCuatro:
-            setDoorBy (4,4,-0.6f,-10.5f);
+            setDoorBy (4,4,-0.3f,-10f);
             break;
         case NumberOfPair.CuatroXDos:
-            setDoorBy (4, 2,-0.6f,-10.5f);
+            setDoorBy (4, 2,-0.1f,-10f);
             break;
 
         }
