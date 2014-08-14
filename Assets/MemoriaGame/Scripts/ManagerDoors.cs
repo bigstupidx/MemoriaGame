@@ -108,15 +108,16 @@ class ManagerDoors : Singleton<ManagerDoors>
             if (firstOpen == null) {
         
                 firstOpen = door;
-           
-            } else {
+                door.Open ();
+
+            } else if(firstOpen != door) {
         
                 SecondOpen = door;
+                door.Open ();
 
                 isChecking = true;
                 Invoke ("CheckPairs", TimeToCheck);
             }
-            door.Open ();
         }
     }
 
