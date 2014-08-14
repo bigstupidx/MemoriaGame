@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: ManagerDoors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.753600597, y: 1.27313173, z: .26854372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51273be4b86994814a2527fa541adb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfPair: 15
+  prefabDoorsWithoutPair:
+  - {fileID: 11400002, guid: d74b85c1c22d74f768badface7e376a4, type: 2}
+  - {fileID: 11400002, guid: 608bbdfc0bd3447dc8d0e4e4d730bd1c, type: 2}
+  - {fileID: 11400002, guid: bc0f3461dc2d74a9294582c64f92da80, type: 2}
+  - {fileID: 11400002, guid: 66c0a1f7429894088964450f04319aee, type: 2}
+  - {fileID: 11400002, guid: 326847c3ab57944baa676a89c2a3a526, type: 2}
+  - {fileID: 11400002, guid: 235967c72ed6f443a8fc13b21c45597b, type: 2}
+  - {fileID: 11400002, guid: 52b6e5d8d0f8d4dd2afc8616df62751a, type: 2}
+  - {fileID: 11400002, guid: 1b234f2e54c1246d9a26bae5ea2ebdaa, type: 2}
+  - {fileID: 11400002, guid: e10dbb163e6b04e13be5badcd351ae46, type: 2}
+  - {fileID: 11400002, guid: e64e4cf02c326401886f267777e93d5d, type: 2}
+  - {fileID: 11400002, guid: 8d7d9a916573f47548f1045ec76330fe, type: 2}
+  - {fileID: 11400002, guid: 9e1e3d66e83594d35ae0c393adc67dfc, type: 2}
+  - {fileID: 11400002, guid: 633ad0fb44eaf4b5c8ccc38a28d60053, type: 2}
+  - {fileID: 11400002, guid: f677680a613ce4a8d8ef34b1ed6e0e07, type: 2}
+  - {fileID: 11400002, guid: 95da23e7ae10c4a8390f8f52baef5a8a, type: 2}
+  offSetX: 10
+  offSetZ: 10
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

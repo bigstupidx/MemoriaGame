@@ -26,7 +26,11 @@ public class Signal
 	{
 		this.argType = argType.FullName;
 	}
-	
+    public Signal(string method,GameObject target)
+    {
+        this.method = method;
+        this.target = target;
+    }
 	public void Invoke()
 	{
 		if (target != null && !string.IsNullOrEmpty(method))
