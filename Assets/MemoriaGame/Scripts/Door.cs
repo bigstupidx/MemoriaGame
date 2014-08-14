@@ -47,9 +47,5 @@ class Door : MonoBehaviour
             sig.Invoke ();
         }
     }
-    public void ReleaseObject(){
-
-        this.Recycle ();
-    }
 }
 

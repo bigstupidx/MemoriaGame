@@ -45,6 +45,8 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// </summary>
     bool isChecking = false;
 
+
+    public bool CanTouch = false;
     void Awake(){
         setDoors();
     }
@@ -104,7 +106,7 @@ class ManagerDoors : Singleton<ManagerDoors>
 
     public void TouchMe(Door door){
         //Si no se esta esperando el tiempo de CheckPair
-        if (!isChecking) {
+        if (!isChecking && CanTouch) {
             if (firstOpen == null) {
         
                 firstOpen = door;

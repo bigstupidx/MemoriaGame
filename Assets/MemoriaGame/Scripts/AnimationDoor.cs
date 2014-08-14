@@ -42,7 +42,7 @@ class AnimationDoor : MonoBehaviour
 
     public void ReleaseDoor(){
     
-        door.ReleaseObject ();
+        door.Recycle ();
     }
 }
 
