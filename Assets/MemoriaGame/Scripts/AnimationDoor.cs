@@ -41,7 +41,7 @@ class AnimationDoor : MonoBehaviour
     }
 
     public void ReleaseDoor(){
-    
+        ManagerDoors.Instance.getStar((int)door.posMaxtrix.x,(int)door.posMaxtrix.y).SetActive(true);
         door.Recycle ();
     }
 }

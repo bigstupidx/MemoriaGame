@@ -13,11 +13,14 @@ using System.Collections.Generic;
 class Door : MonoBehaviour
 {
     public int IDpair = -1;
+    [HideInInspector]
     public Vector2 posMaxtrix = new Vector2(-1,-1);
 
-    [SerializeField]
+    [HideInInspector]
     public List<Signal> onOpen = new List<Signal>();
+    [HideInInspector]
     public List<Signal> onClose = new List<Signal>();
+    [HideInInspector]
     public List<Signal> onCheckTruePair = new List<Signal>();
 
 
@@ -47,5 +50,6 @@ class Door : MonoBehaviour
             sig.Invoke ();
         }
     }
+
 }
 

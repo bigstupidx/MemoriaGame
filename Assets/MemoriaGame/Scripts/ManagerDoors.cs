@@ -33,7 +33,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     Door SecondOpen;
 
     public static float offSetX = 0.20f;
-    public static float offSetZ = 0.20f;
+    public static float offSetZ = -0.20f;
 
     /// <summary>
     /// Tiempo para hacer el check de los pares
@@ -45,25 +45,66 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// </summary>
     bool isChecking = false;
 
-
+    [HideInInspector]
     public bool CanTouch = false;
+
+    #region Starts:
+    public GameObject Star;
+    List< List < GameObject> > stars =  new List< List<GameObject>> ();
+    public static float offSetXStar = 1.05f;
+    public static float offSetZStart = -1.05f;
+    #endregion
+
     void Awake(){
         setDoors();
+        setStars ();
     }
 
     #region Seteado Aleatorio:
+    void setStars(){
+        switch (numberOfPair) {
+
+        case NumberOfPair.CincoXSeis:
+            setStartBy (5, 6,-2.65f,-5.9f);
+            break;
+        case NumberOfPair.CuatroXCuatro:
+            setStartBy (4,4,-1.65f,-5.9f);
+            break;
+        case NumberOfPair.CuatroXDos:
+            setStartBy (4, 2,-0.65f,-5.9f);
+            break;
+
+        }
+    }
+    void setStartBy(int countX,int countZ,float posIniX,float posIniZ){
+
+        float currentX = posIniX;
+        float currentZ = posIniZ;
+        for (int i = 0; i < countX; ++i) {
+            stars.Add (new List<GameObject> ());
+            for (int j = 0; j < countZ; j++) {
+
+                stars[i].Add (Star.Spawn(new Vector3(currentX,0,currentZ),Quaternion.identity));
+                stars [i] [j].SetActive (false);
+                currentX += offSetXStar;
+            }
+
+            currentZ += offSetZStart;
+            currentX = posIniX;
+        }
+    }
     void setDoors(){
     
         switch (numberOfPair) {
 
         case NumberOfPair.CincoXSeis:
-            setDoorBy (5, 6,-0.5f,-10f);
+            setDoorBy (5, 6,-0.5f,-9.2f);
             break;
         case NumberOfPair.CuatroXCuatro:
-            setDoorBy (4,4,-0.3f,-10f);
+            setDoorBy (4,4,-0.3f,-9.2f);
             break;
         case NumberOfPair.CuatroXDos:
-            setDoorBy (4, 2,-0.1f,-10f);
+            setDoorBy (4, 2,-0.1f,-9.2f);
             break;
 
         }
@@ -88,12 +129,13 @@ class ManagerDoors : Singleton<ManagerDoors>
         float currentZ = posIniZ;
         for (int i = 0; i < countX; ++i) {
             doors.Add (new List<Door> ());
-
             for (int j = 0; j < countZ; j++) {
 
                 doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ),Quaternion.identity));
                 doors [i] [j].posMaxtrix = new Vector2 (i, j);
                 currentX += offSetX;
+
+
             }
 
             currentZ += offSetZ;
@@ -104,6 +146,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     }
    #endregion
 
+    #region GamePlay CHecking:
     public void TouchMe(Door door){
         //Si no se esta esperando el tiempo de CheckPair
         if (!isChecking && CanTouch) {
@@ -141,5 +184,13 @@ class ManagerDoors : Singleton<ManagerDoors>
         SecondOpen = null;
         isChecking = false;
     }
+    #endregion
+
+    #region Funciones de acceso:
+    public GameObject getStar(int x, int z){
+    
+        return stars [x] [z];
+    }
+    #endregion
 }
 
