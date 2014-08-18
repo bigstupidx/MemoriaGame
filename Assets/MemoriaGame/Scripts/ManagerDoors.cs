@@ -170,12 +170,18 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// Se revisa si las dos puertas abiertas son las mismas.
     /// </summary>
     void CheckPairs(){
-        //Hago check de que el par sea igual
-        if (firstOpen.IDpair == SecondOpen.IDpair) {
+
+        if (firstOpen.IDpair == SecondOpen.IDpair)//Si los dos pares son iguales
+        {
+            //LLamo a ManagerCombo
+
+            //Llamo a ManagerScore para
 
             firstOpen.CheckTruePair ();
             SecondOpen.CheckTruePair ();
         } else {
+            //LLamo a ManagerCombo
+
             firstOpen.Close ();
             SecondOpen.Close ();
 
@@ -183,6 +189,7 @@ class ManagerDoors : Singleton<ManagerDoors>
         firstOpen = null;
         SecondOpen = null;
         isChecking = false;
+		
     }
     #endregion
 
