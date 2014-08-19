@@ -20,16 +20,21 @@ class ManagerTime : Singleton<ManagerTime>
     float currentTimeOfGame = 0;
     public float getCurrentTimeOfGame{get{ return currentTimeOfGame; }}
 
+    /// <summary>
+    /// Funciones para cuando el tiempo comienza
+    /// </summary>
     [HideInInspector]
-    public List<Signal> onTimeGameStar = new List<Signal>();
+    public List<Signal> onTimeGameStart = new List<Signal>();
     public void TimeGameStar(){
 
-        foreach (Signal sig in onTimeGameStar) {
+        foreach (Signal sig in onTimeGameStart) {
 
             sig.Invoke ();
         }
     }
-
+    /// <summary>
+    /// Funciones para cuando el tiempo se acabe
+    /// </summary>
     [HideInInspector]
     public List<Signal> onTimeGameEnd = new List<Signal>();
     public void TimeGameEnd(){

@@ -7,7 +7,7 @@ public class ClockTimer : MonoBehaviour {
     TweenRotation tween;
 	// Use this for initialization
 	void Awake () {
-        ManagerTime.Instance.onTimeGameStar.Add (new Signal("onTimeGameStart",gameObject));
+        ManagerTime.Instance.onTimeGameStart.Add (new Signal("onTimeGameStart",gameObject));
         ManagerTime.Instance.onStopTime.Add (new Signal("onPaused",gameObject));
         ManagerTime.Instance.onPlayTime.Add (new Signal("onResume",gameObject));
         
