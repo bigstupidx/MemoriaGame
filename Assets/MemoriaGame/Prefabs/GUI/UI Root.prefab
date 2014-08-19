@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 312, y: 313.5, z: 0}
+  m_LocalPosition: {x: 23.9868622, y: 287.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
@@ -856,15 +856,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftAnchor:
     target: {fileID: 400014}
-    relative: .650355756
+    relative: .349999994
     absolute: 0
   rightAnchor:
     target: {fileID: 400014}
-    relative: 1
+    relative: .699999988
     absolute: 0
   bottomAnchor:
     target: {fileID: 400014}
-    relative: .870833337
+    relative: .798611104
     absolute: 0
   topAnchor:
     target: {fileID: 400014}
@@ -873,20 +873,20 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 335
-  mHeight: 93
+  mWidth: 336
+  mHeight: 145
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.60215044
+  aspectRatio: 2.31724143
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   mFont: {fileID: 0}
-  mText: 'Score: 0'
+  mText: 0
   mFontSize: 200
   mFontStyle: 0
-  mAlignment: 1
+  mAlignment: 2
   mEncoding: 1
   mMaxLineCount: 0
   mEffectStyle: 1
@@ -1024,7 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efd30713f11a4135ae47709201705ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseNameScore: 'Score: '
+  baseNameScore: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
