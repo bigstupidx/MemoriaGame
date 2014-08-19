@@ -22,8 +22,25 @@ class ManagerTime : Singleton<ManagerTime>
 
     [HideInInspector]
     public List<Signal> onTimeGameStar = new List<Signal>();
+    public void TimeGameStar(){
+
+        foreach (Signal sig in onTimeGameStar) {
+
+            sig.Invoke ();
+        }
+    }
+
     [HideInInspector]
     public List<Signal> onTimeGameEnd = new List<Signal>();
+    public void TimeGameEnd(){
+
+        foreach (Signal sig in onTimeGameEnd) {
+
+            sig.Invoke ();
+        }
+    }
+
+
 
     void Awake(){
         Invoke("setTimeToStart",0.1f);
@@ -32,22 +49,10 @@ class ManagerTime : Singleton<ManagerTime>
         currentTimeToStart = TimeToStart;
 
     }
-    public void TimeGameStar(){
 
-        foreach (Signal sig in onTimeGameStar) {
 
-            sig.Invoke ();
-        }
-    }
-    public void TimeGameEnd(){
-
-        foreach (Signal sig in onTimeGameEnd) {
-
-            sig.Invoke ();
-        }
-    }
     void Update(){
-        if (!isPaused) {
+        if (!isPaused && !stopTime) {
             if (currentTimeOfGame > 0) {
                 currentTimeOfGame -= Time.deltaTime;
                 if (currentTimeOfGame <= 0) {
@@ -70,6 +75,7 @@ class ManagerTime : Singleton<ManagerTime>
             }
         }
     }
+    #region Paused
     bool isPaused = false;
     void onPaused(){
         isPaused = true;
@@ -79,6 +85,51 @@ class ManagerTime : Singleton<ManagerTime>
         isPaused = false;
 
     }
+    #endregion
+    #region Stop:
+    /// <summary>
+    /// Guarda lo signal para cuando se para el tiempo
+    /// </summary>
+    [HideInInspector]
+    public List<Signal> onStopTime = new List<Signal>();
+    public void StopTimer(){
 
+        foreach (Signal sig in onStopTime) {
+
+            sig.Invoke ();
+        }
+    }
+    /// <summary>
+    /// Guarda los signal para cuando se da play al tiempo
+    /// </summary>
+    [HideInInspector]
+    public List<Signal> onPlayTime = new List<Signal>();
+    public void PlayTimer(){
+
+        foreach (Signal sig in onPlayTime) {
+
+            sig.Invoke ();
+        }
+    }
+
+    /// <summary>
+    /// Si el tiempo esta parado
+    /// </summary>
+    bool stopTime = false;
+    /// <summary>
+    /// Cuando se quiere parar el tiempo
+    /// </summary>
+    public void onStop(){
+        stopTime = true;
+        StopTimer ();
+    }
+    /// <summary>
+    /// Cuando se quiere reanudar el tiempo
+    /// </summary>
+    public void onPlay(){
+        stopTime = false;
+        PlayTimer ();
+    }
+    #endregion
 }
 

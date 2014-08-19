@@ -55,9 +55,18 @@ class ManagerDoors : Singleton<ManagerDoors>
     public static float offSetZStart = -1.05f;
     #endregion
 
+    #region ContadorDePares
+    int currentPair = 0;
+
+    bool CheckWinGame(){
+        return (currentPair >= (int)numberOfPair);
+    }
+    #endregion
+
     void Awake(){
         setDoors();
         setStars ();
+
     }
 
     #region Seteado Aleatorio:
@@ -180,6 +189,15 @@ class ManagerDoors : Singleton<ManagerDoors>
 
             firstOpen.CheckTruePair ();
             SecondOpen.CheckTruePair ();
+
+
+            //Aqui paro el tiempo si desbloquie todo.
+            ++currentPair;
+            if (CheckWinGame ()) {
+                CanTouch = false;
+                ManagerTime.Instance.onStop ();
+                //Invoco GUI
+            }
         } else {
             //LLamo a ManagerCombo
             ManagerCombo.Instance.setCombo (false);

@@ -383,6 +383,8 @@ MonoBehaviour:
   TimeOfGame: 60
   onTimeGameStar: []
   onTimeGameEnd: []
+  onStopTime: []
+  onPlayTime: []
 --- !u!4 &442816335
 Transform:
   m_ObjectHideFlags: 0
