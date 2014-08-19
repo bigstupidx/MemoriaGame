@@ -174,13 +174,15 @@ class ManagerDoors : Singleton<ManagerDoors>
         if (firstOpen.IDpair == SecondOpen.IDpair)//Si los dos pares son iguales
         {
             //LLamo a ManagerCombo
-
+            ManagerCombo.Instance.setCombo (true);
             //Llamo a ManagerScore para
+            ManagerScore.Instance.AddScore ();
 
             firstOpen.CheckTruePair ();
             SecondOpen.CheckTruePair ();
         } else {
             //LLamo a ManagerCombo
+            ManagerCombo.Instance.setCombo (false);
 
             firstOpen.Close ();
             SecondOpen.Close ();
