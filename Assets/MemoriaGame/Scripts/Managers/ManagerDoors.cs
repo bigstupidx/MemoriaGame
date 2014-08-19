@@ -213,6 +213,100 @@ class ManagerDoors : Singleton<ManagerDoors>
     }
     #endregion
 
+    #region Accesing Door:
+    int fila;
+    int pos;
+    int count;
+    bool isH;
+    const float TimeToNextOpen = 0.2f;
+    public void OpensDoors(int fila, bool isH){
+        CanTouch = false;
+        int countZ = 0;
+        int countX = 0;
+        switch (numberOfPair) {
+
+        case NumberOfPair.CincoXSeis:
+            countZ = 5;
+            countX = 6;
+            break;
+        case NumberOfPair.CuatroXCuatro:
+            countZ = 4;
+            countX = 4;
+            break;
+        case NumberOfPair.CuatroXDos:
+            countZ = 4;
+            countX = 2;
+            break;
+
+        }
+        this.isH = isH;
+        this.fila = fila;
+        pos = 0;
+
+        if (isH) {
+            count = countX;
+
+
+        } else {
+            count = countZ;
+
+        }
+        Invoke ("CloseDoors",TimeToNextOpen * count);
+
+        repeatOpensDoors ();
+    }
+
+    void repeatOpensDoors(){
+    
+        if (isH) {
+            doors [fila] [pos++].Open ();
+            if (pos < count) {
+            
+                Invoke ("repeatOpensDoors", TimeToNextOpen);
+            } 
+        } else {
+            doors [pos++] [fila].Open ();
+            if (pos < count) {
+
+                Invoke ("repeatOpensDoors", TimeToNextOpen);
+            } 
+        }
+    }
+
+    void CloseDoors(){
+
+        pos = 0;
+        repeatCloseDoors ();
+
+    }
+
+    void repeatCloseDoors(){
+
+        if (isH) {
+            doors [fila] [pos++].Close ();
+            if (pos < count) {
+
+                Invoke ("repeatCloseDoors", TimeToNextOpen);
+            } else {
+            
+                CanTouch = true;
+
+            }
+        } else {
+            doors [pos++] [fila].Close ();
+            if (pos < count) {
+
+                Invoke ("repeatCloseDoors",TimeToNextOpen);
+            }  else {
+
+                CanTouch = true;
+
+            }
+        }
+    }
+
+    #endregion
+
     #region Funciones de acceso:
     public GameObject getStar(int x, int z){
     
