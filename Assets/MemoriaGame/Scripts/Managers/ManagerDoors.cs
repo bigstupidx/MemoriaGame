@@ -29,6 +29,8 @@ class ManagerDoors : Singleton<ManagerDoors>
     public List<Door> prefabDoorsWithoutPair;
 
     List< List < Door> > doors =  new List< List<Door>> ();
+    public List< List < Door> > GetAllDoors { get { return doors; }}
+
     Door firstOpen;
     Door SecondOpen;
 
@@ -63,6 +65,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     }
 
     public int GetCurrentPairs { get { return currentPair; }}
+
     public int GetMaxPairs { 
         get {
             return (int)numberOfPair; 
@@ -164,7 +167,8 @@ class ManagerDoors : Singleton<ManagerDoors>
 
         allDoors.Clear ();
     }
-   #endregion
+    #endregion
+   
     #region Paused
     bool isPaused = false;
     [Signal]
@@ -233,7 +237,7 @@ class ManagerDoors : Singleton<ManagerDoors>
         firstOpen = null;
         SecondOpen = null;
         isChecking = false;
-		
+    	
     }
     #endregion
 
@@ -290,15 +294,19 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// Funcion que abre una puerta
     /// </summary>
     void repeatOpensDoors(){
-    
+
         if (isH) {
-            doors [fila] [pos++].Open ();
+            if(doors [fila] [pos] != null)
+                doors [fila] [pos].Open ();
+            pos++;
             if (pos < count) {
             
                 Invoke ("repeatOpensDoors", TimeToNextOpen);
             } 
         } else {
-            doors [pos++] [fila].Open ();
+            if(doors [pos] [fila]!= null)
+                doors [pos] [fila].Open ();
+            pos++;
             if (pos < count) {
 
                 Invoke ("repeatOpensDoors", TimeToNextOpen);
@@ -322,7 +330,9 @@ class ManagerDoors : Singleton<ManagerDoors>
     void repeatCloseDoors(){
 
         if (isH) {
-            doors [fila] [pos++].Close ();
+            if(doors [fila] [pos] != null)
+                doors [fila] [pos].Close ();
+            pos++;
             if (pos < count) {
 
                 Invoke ("repeatCloseDoors", TimeToNextOpen);
@@ -332,7 +342,9 @@ class ManagerDoors : Singleton<ManagerDoors>
 
             }
         } else {
-            doors [pos++] [fila].Close ();
+            if(doors [pos] [fila]!= null)
+                doors [pos] [fila].Close ();
+            pos++;
             if (pos < count) {
 
                 Invoke ("repeatCloseDoors",TimeToNextOpen);
@@ -348,16 +360,21 @@ class ManagerDoors : Singleton<ManagerDoors>
 
     #region Funciones de acceso:
     public GameObject getStar(int x, int z){
-    
+
         return stars [x] [z];
     }
 
     public string getFisrtDoorName(){
-    
+
         if (firstOpen == null)
             return "";
 
         return firstOpen.NameDoor;
+    }
+    public bool isFirstOpen{
+    
+
+        get{ return firstOpen != null; }
     }
     #endregion
 }

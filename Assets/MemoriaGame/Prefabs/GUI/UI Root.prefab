@@ -1535,12 +1535,12 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick:
-  - mTarget: {fileID: 0}
-    mMethodName: ActivePower
-    mParameters: []
-    oneShot: 0
   - mTarget: {fileID: 11400052}
     mMethodName: setOffPower
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 0}
+    mMethodName: ActivePower
     mParameters: []
     oneShot: 0
 --- !u!114 &11400050
@@ -1698,6 +1698,10 @@ MonoBehaviour:
     mMethodName: setOffPower
     mParameters: []
     oneShot: 0
+  - mTarget: {fileID: 0}
+    mMethodName: ActivePower
+    mParameters: []
+    oneShot: 0
 --- !u!114 &11400060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1788,6 +1792,10 @@ MonoBehaviour:
   onClick:
   - mTarget: {fileID: 11400060}
     mMethodName: setOffPower
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 0}
+    mMethodName: ActivePower
     mParameters: []
     oneShot: 0
 --- !u!114 &11400066
@@ -1890,7 +1898,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.01438844
+  aspectRatio: 1.01570678
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   mFont: {fileID: 0}

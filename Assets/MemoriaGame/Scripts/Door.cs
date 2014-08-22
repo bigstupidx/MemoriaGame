@@ -14,16 +14,20 @@ class Door : MonoBehaviour
 {
     public int IDpair = -1;
     public string NameDoor = "Hola";
+    public bool isPairOpen { get; private set;}
+
     [HideInInspector]
     public Vector2 posMaxtrix = new Vector2(-1,-1);
 
+    #region Signal list
     [HideInInspector]
     public List<Signal> onOpen = new List<Signal>();
     [HideInInspector]
     public List<Signal> onClose = new List<Signal>();
     [HideInInspector]
     public List<Signal> onCheckTruePair = new List<Signal>();
-
+    #endregion
+   
     void Awake(){
     
         NameDoor = gameObject.name;
@@ -48,8 +52,11 @@ class Door : MonoBehaviour
             sig.Invoke ();
         }
     }
+    /// <summary>
+    /// Si los dos pares  fueron iguales
+    /// </summary>
     public void CheckTruePair(){
-
+        isPairOpen = true;
         foreach (Signal sig in onCheckTruePair) {
 
             sig.Invoke ();

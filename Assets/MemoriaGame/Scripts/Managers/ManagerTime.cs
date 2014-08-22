@@ -57,8 +57,7 @@ class ManagerTime : Singleton<ManagerTime>
         currentTimeToStart = TimeToStart;
 
     }
-
-
+        
     void Update(){
         if (!isPaused && !stopTime) {
             if (currentTimeOfGame > 0) {
@@ -83,6 +82,7 @@ class ManagerTime : Singleton<ManagerTime>
             }
         }
     }
+   
     #region Paused
     bool isPaused = false;
     [Signal]
@@ -96,13 +96,14 @@ class ManagerTime : Singleton<ManagerTime>
 
     }
     #endregion
+
     #region Stop:
     /// <summary>
     /// Guarda lo signal para cuando se para el tiempo
     /// </summary>
     [HideInInspector]
     public List<Signal> onStopTime = new List<Signal>();
-    public void StopTimer(){
+     void StopTimer(){
 
         foreach (Signal sig in onStopTime) {
 
