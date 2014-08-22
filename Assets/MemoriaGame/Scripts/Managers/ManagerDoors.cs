@@ -296,7 +296,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     void repeatOpensDoors(){
 
         if (isH) {
-            if(doors [fila] [pos] != null)
+            if(doors [fila] [pos] != null && doors [fila] [pos]!= firstOpen)
                 doors [fila] [pos].Open ();
             pos++;
             if (pos < count) {
@@ -304,7 +304,7 @@ class ManagerDoors : Singleton<ManagerDoors>
                 Invoke ("repeatOpensDoors", TimeToNextOpen);
             } 
         } else {
-            if(doors [pos] [fila]!= null)
+            if(doors [pos] [fila]!= null && doors [pos] [fila]!= firstOpen)
                 doors [pos] [fila].Open ();
             pos++;
             if (pos < count) {
@@ -330,7 +330,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     void repeatCloseDoors(){
 
         if (isH) {
-            if(doors [fila] [pos] != null)
+            if(doors [fila] [pos] != null && doors [fila] [pos] != firstOpen)
                 doors [fila] [pos].Close ();
             pos++;
             if (pos < count) {
@@ -342,7 +342,7 @@ class ManagerDoors : Singleton<ManagerDoors>
 
             }
         } else {
-            if(doors [pos] [fila]!= null)
+            if(doors [pos] [fila]!= null && doors [fila] [pos] != firstOpen)
                 doors [pos] [fila].Close ();
             pos++;
             if (pos < count) {
@@ -375,6 +375,27 @@ class ManagerDoors : Singleton<ManagerDoors>
     
 
         get{ return firstOpen != null; }
+    }
+    public void CloseFirstOpen(){
+
+
+        if (isFirstOpen) {
+        
+            firstOpen.Close ();
+            firstOpen = null;
+            isChecking = false;
+        }
+
+    }
+    public bool isFirstOpenEqual(Door door){
+
+
+        if (isFirstOpen) {
+        
+            return door == firstOpen;
+        }
+
+        return false;
     }
     #endregion
 }

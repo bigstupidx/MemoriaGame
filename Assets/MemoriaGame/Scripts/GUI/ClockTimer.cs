@@ -25,7 +25,7 @@ public class ClockTimer : MonoBehaviour {
     [Signal]
     public void onPaused(){
         tween.enabled = false;
-        currentStop = new Vector3(0,0,Mathf.Rad2Deg *  transform.rotation.z);
+        currentStop = new Vector3(0,0,Mathf.Rad2Deg *  transform.rotation.z * 2.0f);
     }
     [Signal]
     public void onResume(){

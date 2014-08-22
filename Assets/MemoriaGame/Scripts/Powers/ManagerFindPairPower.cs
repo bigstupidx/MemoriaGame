@@ -26,7 +26,8 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
             return;
         }
         FindPair ();
-
+        ManagerDoors.Instance.CloseFirstOpen ();
+    
         ManagerDoors.Instance.TouchMe(primera);
         Invoke ("DeActivePower", 0.1f);
 
