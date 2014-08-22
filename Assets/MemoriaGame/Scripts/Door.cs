@@ -13,6 +13,7 @@ using System.Collections.Generic;
 class Door : MonoBehaviour
 {
     public int IDpair = -1;
+    public string NameDoor = "Hola";
     [HideInInspector]
     public Vector2 posMaxtrix = new Vector2(-1,-1);
 
@@ -23,6 +24,10 @@ class Door : MonoBehaviour
     [HideInInspector]
     public List<Signal> onCheckTruePair = new List<Signal>();
 
+    void Awake(){
+    
+        NameDoor = gameObject.name;
+    }
 
     public void Touch(){
 

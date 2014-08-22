@@ -351,6 +351,14 @@ class ManagerDoors : Singleton<ManagerDoors>
     
         return stars [x] [z];
     }
+
+    public string getFisrtDoorName(){
+    
+        if (firstOpen == null)
+            return "";
+
+        return firstOpen.NameDoor;
+    }
     #endregion
 }
 
