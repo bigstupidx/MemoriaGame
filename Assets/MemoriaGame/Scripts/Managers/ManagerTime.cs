@@ -49,6 +49,9 @@ class ManagerTime : Singleton<ManagerTime>
 
     void Awake(){
         Invoke("setTimeToStart",0.1f);
+
+        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
+        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
     }
     void setTimeToStart(){
         currentTimeToStart = TimeToStart;
@@ -82,10 +85,12 @@ class ManagerTime : Singleton<ManagerTime>
     }
     #region Paused
     bool isPaused = false;
+    [Signal]
     void onPaused(){
         isPaused = true;
 
     }
+    [Signal]
     void onResume(){
         isPaused = false;
 

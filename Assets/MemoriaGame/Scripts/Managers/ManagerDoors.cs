@@ -61,11 +61,22 @@ class ManagerDoors : Singleton<ManagerDoors>
     bool CheckWinGame(){
         return (currentPair >= (int)numberOfPair);
     }
+
+    public int GetCurrentPairs { get { return currentPair; }}
+    public int GetMaxPairs { 
+        get {
+            return (int)numberOfPair; 
+        }
+    }
+
     #endregion
 
     void Awake(){
         setDoors();
         setStars ();
+
+        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
+        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
 
     }
 
@@ -154,11 +165,24 @@ class ManagerDoors : Singleton<ManagerDoors>
         allDoors.Clear ();
     }
    #endregion
+    #region Paused
+    bool isPaused = false;
+    [Signal]
+    void onPaused(){
+        isPaused = true;
+
+    }
+    [Signal]
+    void onResume(){
+        isPaused = false;
+
+    }
+    #endregion
 
     #region GamePlay CHecking:
     public void TouchMe(Door door){
         //Si no se esta esperando el tiempo de CheckPair
-        if (!isChecking && CanTouch) {
+        if (!isChecking && CanTouch && !isPaused) {
             if (firstOpen == null) {
         
                 firstOpen = door;
@@ -219,6 +243,12 @@ class ManagerDoors : Singleton<ManagerDoors>
     int count;
     bool isH;
     const float TimeToNextOpen = 0.2f;
+
+    /// <summary>
+    /// Abre las puertas que se encuentre en la fila y la direccion isH
+    /// </summary>
+    /// <param name="fila">Fila.</param>
+    /// <param name="isH">If is Horizontal <c>true</c> is h.</param>
     public void OpensDoors(int fila, bool isH){
         CanTouch = false;
         int countZ = 0;
@@ -256,6 +286,9 @@ class ManagerDoors : Singleton<ManagerDoors>
         repeatOpensDoors ();
     }
 
+    /// <summary>
+    /// Funcion que abre una puerta
+    /// </summary>
     void repeatOpensDoors(){
     
         if (isH) {
@@ -273,6 +306,9 @@ class ManagerDoors : Singleton<ManagerDoors>
         }
     }
 
+    /// <summary>
+    /// Cierra las puertas que se abrieron en Opensdoors
+    /// </summary>
     void CloseDoors(){
 
         pos = 0;
@@ -280,6 +316,9 @@ class ManagerDoors : Singleton<ManagerDoors>
 
     }
 
+    /// <summary>
+    /// Funcion que cierra una puerta.
+    /// </summary>
     void repeatCloseDoors(){
 
         if (isH) {

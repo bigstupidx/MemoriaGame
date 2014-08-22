@@ -8,11 +8,18 @@
 //
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ManagerPause : Singleton<ManagerPause> {
 
-	private static bool paused = false;
-	public static bool Pause {
+
+    [HideInInspector]
+    public List<Signal> onGamePaused = new List<Signal>();
+    [HideInInspector]
+    public List<Signal> onGameResumed = new List<Signal>();
+
+	private  bool paused = false;
+	public  bool Pause {
 	
 		get{
 			return paused;
@@ -26,24 +33,24 @@ public class ManagerPause : Singleton<ManagerPause> {
 			}
 		}
 	}
-	protected static void OnPauseGame(){
-		Object[] objects = FindObjectsOfType (typeof(GameObject));
-		foreach (GameObject go in objects) {
-			go.SendMessage ("OnPauseGame", SendMessageOptions.DontRequireReceiver);
-		}
+	protected  void OnPauseGame(){
+        foreach (Signal sig in onGamePaused) {
+
+            sig.Invoke ();
+        }
 	}
-	protected static void OnResumeGame(){
-		Object[] objects = FindObjectsOfType (typeof(GameObject));
-		foreach (GameObject go in objects) {
-			go.SendMessage ("OnResumeGame", SendMessageOptions.DontRequireReceiver);
-		}
+	protected  void OnResumeGame(){
+        foreach (Signal sig in onGameResumed) {
+
+            sig.Invoke ();
+        }
 	}
 
-	public static void PauseGame(){
+	public  void PauseGame(){
 
 		Pause = !Pause;
 	}
-	public static void PauseGame(bool value){
+	public  void PauseGame(bool value){
 		
 		Pause = value;
 	}
