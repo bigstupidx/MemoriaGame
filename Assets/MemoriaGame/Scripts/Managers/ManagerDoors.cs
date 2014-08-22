@@ -342,7 +342,7 @@ class ManagerDoors : Singleton<ManagerDoors>
 
             }
         } else {
-            if(doors [pos] [fila]!= null && doors [fila] [pos] != firstOpen)
+            if(doors [pos] [fila]!= null && doors [pos] [fila] != firstOpen)
                 doors [pos] [fila].Close ();
             pos++;
             if (pos < count) {
