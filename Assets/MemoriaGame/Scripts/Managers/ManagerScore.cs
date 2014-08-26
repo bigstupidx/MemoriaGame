@@ -10,6 +10,13 @@ public class ManagerScore : Singleton<ManagerScore> {
 
     public int ScoreBaseToSum = 10;
 
+    [HideInInspector]
+    protected int plusScore = 0;
+
+    public void SetPlusScore(int plus){
+    
+        plusScore += plus;
+    }
     void Awake(){
     
         highScore = PlayerPrefs.GetInt ("HighScore");
@@ -19,7 +26,7 @@ public class ManagerScore : Singleton<ManagerScore> {
         if (sum <= 0)
             return;
 
-        score += sum + ManagerCombo.Instance.GetCombo*sum;
+        score += sum + ManagerCombo.Instance.GetCombo*sum + sum*plusScore;
     }
     public void AddScore(){
 

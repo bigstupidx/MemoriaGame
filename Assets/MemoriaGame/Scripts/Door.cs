@@ -14,6 +14,9 @@ class Door : MonoBehaviour
 {
     public int IDpair = -1;
     public string NameDoor = "Hola";
+    public PowerDoor character = PowerDoor.Any;
+
+
     public bool isPairOpen { get; private set;}
 
     [HideInInspector]
@@ -26,6 +29,10 @@ class Door : MonoBehaviour
     public List<Signal> onClose = new List<Signal>();
     [HideInInspector]
     public List<Signal> onCheckTruePair = new List<Signal>();
+    [HideInInspector]
+    public List<Signal> onShakeTrue = new List<Signal>();
+    [HideInInspector]
+    public List<Signal> onShakeFalse = new List<Signal>();
     #endregion
    
     void Awake(){
@@ -62,6 +69,17 @@ class Door : MonoBehaviour
             sig.Invoke ();
         }
     }
+    public void ShakeTrue(){
+        foreach (Signal sig in onShakeTrue) {
 
+            sig.Invoke ();
+        }
+    }
+    public void ShakeFalse(){
+        foreach (Signal sig in onShakeFalse) {
+
+            sig.Invoke ();
+        }
+    }
 }
 

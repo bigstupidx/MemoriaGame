@@ -14,8 +14,8 @@
 public enum Transition
 {
 	NullTransition = 0, // Use this transition to represent a non-existing transition in your system
-	SeekToDestroy = 1,
-	DestroyToSeek = 2,
+	PauseToPlay = 1,
+	PlayToPause = 2,
 }
 
 /// <summary>
@@ -25,6 +25,6 @@ public enum Transition
 public enum StateID
 {
 	NullStateID = 0, // Use this ID to represent a non-existing State in your system
-	SeekID = 1,
-	DestroyID = 2,
+	PauseID = 1,
+	PlayID = 2,
 }

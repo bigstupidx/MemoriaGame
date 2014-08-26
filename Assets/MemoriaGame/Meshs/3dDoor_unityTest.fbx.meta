@@ -20,6 +20,7 @@ ModelImporter:
     7400000: Abriendo
     7400002: Cerrada
     7400004: Abierta
+    7400006: Shake
     9500000: //RootNode
     13700000: pCube1
     13700002: pCylinder1
@@ -126,6 +127,44 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: baseDoor_anim_jnt
+        weight: 1
+      - path: baseDoor_anim_jnt/baseDoor_end_jnt
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: group1/pCube1
+        weight: 1
+      - path: group1/pCylinder1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Shake
+      takeName: Take 001
+      firstFrame: 8
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
       loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1

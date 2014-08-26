@@ -343,6 +343,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IDpair: 2
+  NameDoor: Hola
+  character: 3
   posMaxtrix: {x: -1, y: -1}
   onOpen: []
   onClose: []

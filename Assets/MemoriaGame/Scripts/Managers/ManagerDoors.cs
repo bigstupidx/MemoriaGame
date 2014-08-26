@@ -397,6 +397,15 @@ class ManagerDoors : Singleton<ManagerDoors>
 
         return false;
     }
+    public bool isPair(Door door){
+
+        if(!isFirstOpenEqual(door)){
+        
+            return door.IDpair == firstOpen.IDpair;
+        }
+
+        return false;
+    }
     #endregion
 }
 
