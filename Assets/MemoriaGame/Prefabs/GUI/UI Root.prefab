@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   framerate: 12
-  ignoreTimeScale: 1
+  ignoreTimeScale: 0
   loop: 0
   frames:
   - {fileID: 21300000, guid: 0a2216a3cd7b3413eafedc6358bb6f24, type: 3}
@@ -3412,7 +3412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   framerate: 20
-  ignoreTimeScale: 1
+  ignoreTimeScale: 0
   loop: 0
   frames:
   - {fileID: 21300000, guid: dbd038a730be44696bedaf27359bc8e6, type: 3}
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   framerate: 12
-  ignoreTimeScale: 1
+  ignoreTimeScale: 0
   loop: 0
   frames:
   - {fileID: 21300000, guid: bc52d9a0911d54534aa80948b1e5173b, type: 3}
@@ -3470,7 +3470,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 302
   mHeight: 134
@@ -3506,7 +3506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   framerate: 12
-  ignoreTimeScale: 1
+  ignoreTimeScale: 0
   loop: 0
   frames:
   - {fileID: 21300000, guid: 16761b0c3ecef4847b798dcb69761b1c, type: 3}
