@@ -349,6 +349,8 @@ MonoBehaviour:
   onOpen: []
   onClose: []
   onCheckTruePair: []
+  onShakeTrue: []
+  onShakeFalse: []
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -402,7 +404,7 @@ MonoBehaviour:
   sendMessageTarget: {fileID: 0}
   requireGestureToFail: {fileID: 0}
   friendlyGestures: []
-  flickTime: .100000001
+  flickTime: 1
   minDistance: 1
   movementThreshold: .5
   direction: 1
@@ -425,7 +427,7 @@ MonoBehaviour:
   sendMessageTarget: {fileID: 0}
   requireGestureToFail: {fileID: 0}
   friendlyGestures: []
-  flickTime: .100000001
+  flickTime: 1
   minDistance: 1
   movementThreshold: .5
   direction: 2

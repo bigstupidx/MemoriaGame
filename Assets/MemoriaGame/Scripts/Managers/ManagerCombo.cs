@@ -5,7 +5,7 @@ public class ManagerCombo : Singleton<ManagerCombo> {
 
 
 
-    protected int timesInRow = -1;
+    protected int timesInRow = 0;
     public int MaxTimesInRow = 4;
 
     public int GetCombo {
@@ -22,6 +22,6 @@ public class ManagerCombo : Singleton<ManagerCombo> {
             if (timesInRow > MaxTimesInRow)
                 timesInRow = MaxTimesInRow;
         } else
-            timesInRow = -1;
+            timesInRow = 0;
 	}
 }
