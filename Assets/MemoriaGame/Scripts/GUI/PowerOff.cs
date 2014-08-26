@@ -44,13 +44,14 @@ public class PowerOff : MonoBehaviour {
         doors = null;
     }
 
+
     [Signal]
     public void setOnPower(){
         button.isEnabled = true;
     }
     public void setOffPower(){
 
-        if(!isPaused)
+        if(!isPaused && !ManagerPowers.UsingPower )
             button.isEnabled = false;
     }
 

@@ -25,10 +25,11 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     }
 
     public void ActivePower(){
-        if (isPaused || usedPower || !ManagerDoors.Instance.isFirstOpen){
+        if (isPaused || usedPower || !ManagerDoors.Instance.isFirstOpen || ManagerPowers.UsingPower ){
             return;
         }
-        Debug.Log ("se llama aaqui");
+        ManagerPowers.UsingPower = true;
+
         usedPower = true;
 
         FindPair ();
@@ -49,7 +50,7 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     }
     void DeActivePower(){
 
-
+        ManagerPowers.UsingPower = false;
 
         if (primera != null)
             primera.ShakeFalse ();

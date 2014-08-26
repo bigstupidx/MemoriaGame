@@ -17,8 +17,11 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
     }
 
     public void ActivePower(){
-        if (isPaused || stopTime || usedPower)
+        if (isPaused || stopTime || usedPower || ManagerPowers.UsingPower)
             return;
+
+        ManagerPowers.UsingPower = true;
+
         foreach (SlidePower power in powers) {
         
             if (power != null && power.gameObject.activeSelf) {
@@ -43,6 +46,9 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
         //Si quiero q no pueda abrir ninguno activo aaqui q  se peude hacer touch
         ManagerDoors.Instance.CanTouch = true;
         usedPower = true;
+
+        ManagerPowers.UsingPower = false;
+
         return true;
     }
 

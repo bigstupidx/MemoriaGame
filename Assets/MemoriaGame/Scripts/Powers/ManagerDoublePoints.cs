@@ -23,9 +23,11 @@ public class ManagerDoublePoints: Singleton<ManagerDoublePoints> {
     }
 
     public void ActivePower(){
-        if (isPaused || usedPower){
+        if (isPaused || usedPower || ManagerPowers.UsingPower){
             return;
         }
+        ManagerPowers.UsingPower = true;
+
         usedPower = true;
 
         currentTime = MaxTime;
@@ -36,6 +38,7 @@ public class ManagerDoublePoints: Singleton<ManagerDoublePoints> {
 
         ManagerScore.Instance.SetPlusScore(-1*PlusScore);
 
+        ManagerPowers.UsingPower = false;
     }
 
     void Update(){

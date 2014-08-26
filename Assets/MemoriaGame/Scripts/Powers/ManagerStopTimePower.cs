@@ -17,9 +17,11 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
     }
 
     public void ActivePower(){
-        if (isPaused || usedPower){
+        if (isPaused || usedPower || ManagerPowers.UsingPower){
             return;
         }
+        ManagerPowers.UsingPower = true;
+
         currentTimeStop = TimeStop;
 
         ManagerTime.Instance.onStop ();
@@ -29,6 +31,7 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
         ManagerTime.Instance.onPlay ();
         usedPower = true;
 
+        ManagerPowers.UsingPower = false;
     }
 
     #region Paused

@@ -22,9 +22,11 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
     }
 
     public void ActivePower(){
-        if (isPaused || usedPower){
+        if (isPaused || usedPower || ManagerPowers.UsingPower){
             return;
         }
+        ManagerPowers.UsingPower = true;
+
         FindPair ();
         ManagerDoors.Instance.CloseFirstOpen ();
     
@@ -38,6 +40,7 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
         usedPower = true;
         ManagerDoors.Instance.TouchMe(segunda);
 
+        ManagerPowers.UsingPower = false;
     }
 
     #region Paused

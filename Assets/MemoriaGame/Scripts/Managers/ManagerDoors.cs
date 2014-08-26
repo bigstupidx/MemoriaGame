@@ -178,8 +178,11 @@ class ManagerDoors : Singleton<ManagerDoors>
     }
     [Signal]
     void onResume(){
+       
+        Invoke ("setFalseIsPaused", 0.1f);
+    }
+    void setFalseIsPaused(){
         isPaused = false;
-
     }
     #endregion
 
