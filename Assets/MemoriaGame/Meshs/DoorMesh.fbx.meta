@@ -9,21 +9,42 @@ ModelImporter:
     100006: group1
     100008: pCube1
     100010: pCylinder1
+    100012: door_ANIM_Jnt
+    100014: door_END_Jnt
+    100016: left
+    100018: polySurface1
+    100020: pPipe1
+    100022: pPipe2
     400000: //RootNode
     400002: baseDoor_anim_jnt
     400004: baseDoor_end_jnt
     400006: group1
     400008: pCube1
     400010: pCylinder1
+    400012: door_ANIM_Jnt
+    400014: door_END_Jnt
+    400016: left
+    400018: polySurface1
+    400020: pPipe1
+    400022: pPipe2
+    2300000: pPipe1
+    2300002: pPipe2
+    3300000: pPipe1
+    3300002: pPipe2
     4300000: pCube1
     4300002: pCylinder1
+    4300004: polySurface1
+    4300006: pPipe1
+    4300008: pPipe2
     7400000: Abriendo
     7400002: Cerrada
     7400004: Abierta
     7400006: Shake
+    7400008: Cerrando
     9500000: //RootNode
     13700000: pCube1
     13700002: pCylinder1
+    13700004: polySurface1
   materials:
     importMaterials: 0
     materialName: 0
@@ -44,7 +65,7 @@ ModelImporter:
       name: Abriendo
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 72
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -66,15 +87,17 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: baseDoor_anim_jnt
+      - path: door_ANIM_Jnt
         weight: 1
-      - path: baseDoor_anim_jnt/baseDoor_end_jnt
+      - path: door_ANIM_Jnt/door_END_Jnt
         weight: 1
-      - path: group1
+      - path: left
         weight: 1
-      - path: group1/pCube1
+      - path: polySurface1
         weight: 1
-      - path: group1/pCylinder1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -104,23 +127,25 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: baseDoor_anim_jnt
+      - path: door_ANIM_Jnt
         weight: 1
-      - path: baseDoor_anim_jnt/baseDoor_end_jnt
+      - path: door_ANIM_Jnt/door_END_Jnt
         weight: 1
-      - path: group1
+      - path: left
         weight: 1
-      - path: group1/pCube1
+      - path: polySurface1
         weight: 1
-      - path: group1/pCylinder1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
       name: Abierta
       takeName: Take 001
-      firstFrame: 71
-      lastFrame: 72
+      firstFrame: 10
+      lastFrame: 10.1000004
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -142,23 +167,25 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: baseDoor_anim_jnt
+      - path: door_ANIM_Jnt
         weight: 1
-      - path: baseDoor_anim_jnt/baseDoor_end_jnt
+      - path: door_ANIM_Jnt/door_END_Jnt
         weight: 1
-      - path: group1
+      - path: left
         weight: 1
-      - path: group1/pCube1
+      - path: polySurface1
         weight: 1
-      - path: group1/pCylinder1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
       name: Shake
       takeName: Take 001
-      firstFrame: 8
-      lastFrame: 12
+      firstFrame: 1
+      lastFrame: 1.70000005
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -180,15 +207,57 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: baseDoor_anim_jnt
+      - path: door_ANIM_Jnt
         weight: 1
-      - path: baseDoor_anim_jnt/baseDoor_end_jnt
+      - path: door_ANIM_Jnt/door_END_Jnt
         weight: 1
-      - path: group1
+      - path: left
         weight: 1
-      - path: group1/pCube1
+      - path: polySurface1
         weight: 1
-      - path: group1/pCylinder1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Cerrando
+      takeName: Take 001
+      firstFrame: 24
+      lastFrame: 33
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: door_ANIM_Jnt
+        weight: 1
+      - path: door_ANIM_Jnt/door_END_Jnt
+        weight: 1
+      - path: left
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

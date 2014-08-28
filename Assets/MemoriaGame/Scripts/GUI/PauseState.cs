@@ -11,6 +11,7 @@ using System.Collections;
 public class PauseState : FSMState {
 
     public GameObject pause;
+
     public float timeAlpha = 0.5f;
 
     protected override void Awake () {

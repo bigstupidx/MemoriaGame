@@ -4,7 +4,7 @@ using System.Collections;
 public class ReloadScene : MonoBehaviour {
 
 	// Use this for initialization
-	public void Reload () {
+	public virtual void Reload () {
 
         Application.LoadLevel (Application.loadedLevelName);
 
