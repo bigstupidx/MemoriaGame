@@ -3,6 +3,11 @@ using System.Collections;
 
 public class ClockTimer : MonoBehaviour {
 
+    public UI2DSpriteAnimation animSprite;
+    [Range (0,100)]
+    public float toExplode = 35.0f;
+    float magicConstTime = 0.0f;
+    bool isTimeGameStart = false;
 
     TweenRotation tween;
     Vector3 currentStop;
@@ -15,11 +20,17 @@ public class ClockTimer : MonoBehaviour {
         ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
         ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
 	}
+
+    void Start(){
+        magicConstTime = 100.0f / ManagerTime.Instance.TimeOfGame;
+    }
 	
     [Signal]
 	void onTimeGameStart () {
         tween = TweenRotation.Begin (gameObject, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
         tween.to=new Vector3(0,0,-90);
+
+        isTimeGameStart = true;
        
 	}
     [Signal]
@@ -40,6 +51,14 @@ public class ClockTimer : MonoBehaviour {
     }
 
 
-
+    void Update(){
+        if (isTimeGameStart) {
+            if ((magicConstTime * ManagerTime.Instance.getCurrentTimeOfGame) <= toExplode) {
+                if (!animSprite.isPlaying) {
+                    animSprite.Play ();
+                }
+            }
+        }
+    }
 
 }

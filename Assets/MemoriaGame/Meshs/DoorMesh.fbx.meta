@@ -184,14 +184,14 @@ ModelImporter:
     - serializedVersion: 16
       name: Shake
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 1.70000005
+      firstFrame: 38
+      lastFrame: 44
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1

@@ -249,7 +249,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     int pos;
     int count;
     bool isH;
-    const float TimeToNextOpen = 0.2f;
+    const float TimeToNextOpen = 0.08f;
 
     /// <summary>
     /// Abre las puertas que se encuentre en la fila y la direccion isH
