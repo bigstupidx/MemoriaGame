@@ -2,8 +2,16 @@
 using System.Collections;
 
 public class ClockTimer : MonoBehaviour {
+    public GameObject Arrow;
 
-    public UI2DSpriteAnimation animSprite;
+    public UI2DSpriteAnimation animSpriteRed;
+    public UI2DSpriteAnimation animSpriteYellow;
+
+    public TweenScale scaleArrow;
+    [Range (0,100)]
+    public float toYellow = 70.0f;
+    bool playYellow = false;
+
     [Range (0,100)]
     public float toExplode = 35.0f;
     float magicConstTime = 0.0f;
@@ -27,7 +35,7 @@ public class ClockTimer : MonoBehaviour {
 	
     [Signal]
 	void onTimeGameStart () {
-        tween = TweenRotation.Begin (gameObject, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
+        tween = TweenRotation.Begin (Arrow, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
         tween.to=new Vector3(0,0,-90);
 
         isTimeGameStart = true;
@@ -42,7 +50,7 @@ public class ClockTimer : MonoBehaviour {
     public void onResume(){
         tween.from = currentStop;
 
-        tween = TweenRotation.Begin (gameObject, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
+        tween = TweenRotation.Begin (Arrow, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
         tween.from = currentStop;
         tween.to = new Vector3(0,0,-90);
 
@@ -53,11 +61,21 @@ public class ClockTimer : MonoBehaviour {
 
     void Update(){
         if (isTimeGameStart) {
-            if ((magicConstTime * ManagerTime.Instance.getCurrentTimeOfGame) <= toExplode) {
-                if (!animSprite.isPlaying) {
-                    animSprite.Play ();
+            float value = (magicConstTime * ManagerTime.Instance.getCurrentTimeOfGame);
+            if (value <= toExplode ) {
+                if (!animSpriteRed.isPlaying) {
+                    scaleArrow.PlayForward ();
+                    animSpriteRed.Play ();
                 }
+            }else if (value <= toYellow) {
+                if (!playYellow) {
+                    animSpriteYellow.Play ();
+                    playYellow = true;
+                }
+             
+     
             }
+           
         }
     }
 
