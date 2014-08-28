@@ -13,9 +13,13 @@ public class ComboGUI : MonoBehaviour {
 
     public UI2DSpriteAnimation combo4;
 
+    public UI2DSpriteAnimation comboFinal;
+
+
     UI2DSprite sprite;
     bool isCombo = false;
-    bool playOnce = false;
+
+    int lastCombo = 0;
     void Awake(){
         sprite = GetComponent<UI2DSprite> ();
     }
@@ -39,40 +43,41 @@ public class ComboGUI : MonoBehaviour {
 
             }
             isCombo = false;
-            playOnce = false;
             break;
         case 2:
-            if (!combo2.isPlaying && !playOnce) {
+            if (!combo2.isPlaying && lastCombo != 2) {
                 TweenAlpha.Begin (gameObject, 0.3f, 1);
                 ScaleBig ();
                 combo2.Play ();
-                playOnce = true;
             }
             isCombo = true;
             break;
         case 3:
-            if (!combo3.isPlaying && playOnce) {
+            if (!combo3.isPlaying && lastCombo != 3) {
                 ScaleBig ();
 
                 combo3.Play ();
-                playOnce = false;
             }
             isCombo = true;
             break;
         case 4:
-            if (!combo4.isPlaying && !playOnce) {
+            if (!combo4.isPlaying && lastCombo != 4) {
                 ScaleBig ();
 
                 combo4.Play ();
-                playOnce = true;
             }
             isCombo = true;
             break;
         default:
+            if (!comboFinal.isPlaying && lastCombo != ManagerCombo.Instance.GetCombo) {
+                ScaleBig ();
+
+                comboFinal.Play ();
+            }
             isCombo = true;
             break;
         }
 
-
+        lastCombo = ManagerCombo.Instance.GetCombo;
     }
 }

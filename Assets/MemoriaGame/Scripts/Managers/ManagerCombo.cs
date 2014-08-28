@@ -19,8 +19,8 @@ public class ManagerCombo : Singleton<ManagerCombo> {
     public void setCombo (bool value) {
         if (value) {
             ++timesInRow;
-            if (timesInRow > MaxTimesInRow)
-                timesInRow = MaxTimesInRow;
+            /*if (timesInRow > MaxTimesInRow)
+                timesInRow = MaxTimesInRow;*/
         } else
             timesInRow = 0;
 	}

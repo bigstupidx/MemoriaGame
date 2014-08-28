@@ -81,18 +81,18 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
 
         List< List < Door> > allD = ManagerDoors.Instance.GetAllDoors;
 
-        int z=0;
-        int x=0;
+        int zP=0;
+        int xP=0;
         bool find = false;
-        for (z = 0; z < allD.Count; ++z) {
+        for (zP = 0; zP < allD.Count; ++zP) {
         
-            for ( x = 0; x < allD[z].Count; ++x) {
-                if (allD [z] [x] != null
-                    &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [z] [x])) {
+            for ( xP = 0; xP < allD[zP].Count; ++xP) {
+                if (allD [zP] [xP] != null
+                    &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zP] [xP])) {
                 
-                    if(ManagerDoors.Instance.isPair(allD [z] [x])){
+                    if(ManagerDoors.Instance.isPair(allD [zP] [xP])){
                         find = true;
-                        primera = allD [z] [x];
+                        primera = allD [zP] [xP];
                         break;
                     }
                 }
@@ -104,13 +104,16 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
 
         if (!find)
             return;
+
+        int z = Random.Range (0,zP);
+        int x = Random.Range (0,xP);
         //Aqui busco a los otros dos;
         #region Buscar PrimeraPista Izquirda y luego derecha
         bool findL = false;
         //Busco el primero haci ala izquierda
-        for (int zL = z-1; zL >= 0; --zL) {
+        for (int zL = z; zL >= 0; --zL) {
 
-            for (int xL = x-1; xL>= 0; --xL) {
+            for (int xL = x; xL>= 0; --xL) {
                 if (allD [zL] [xL] != null
                     &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])) {
 
@@ -129,9 +132,9 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         if (!findL) {
            
             //Aqui busco a los otros dos;
-            for (int zL = z+1; zL < allD.Count; ++zL) {
+            for (int zL = z; zL < allD.Count; ++zL) {
 
-                for (int xL = x+1; xL< allD[zL].Count; ++xL) {
+                for (int xL = x; xL< allD[zL].Count; ++xL) {
                     if (allD [zL] [xL] != null
                         &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])) {
 
@@ -146,17 +149,24 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
                     break;
             }
 
-            if (!findLR)
-                return;
         }
 
         #endregion
+
+        if (zP + 1 < allD.Count) {
+            z = Random.Range (zP+1, allD.Count);
+        }
+        if (xP + 1 < allD [zP].Count) {
+            x = Random.Range (xP+1, allD.Count);
+        }
+      
+        Debug.Log ("Aqui "+z+" "+x);
         #region Buscar PrimeraPista Derecha y luego izquierda
         bool findR = false;
         //Busco el segundo a la derecha
-        for (int zL = z+1; zL < allD.Count; ++zL) {
+        for (int zL = z; zL < allD.Count; ++zL) {
 
-            for (int xL = x+1; xL< allD[zL].Count; ++xL) {
+            for (int xL = x; xL< allD[zL].Count; ++xL) {
                 if (allD [zL] [xL] != null
                     &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])
                     && segunda != allD [zL] [xL]  ) {
@@ -173,10 +183,10 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         }
         bool findRL = false;
         //Si no hay a la derecha lo busco haci ala izquierda
-        if(!findR && findL){
-            for (int zL = z-1; zL >= 0; --zL) {
+        if(!findR ){
+            for (int zL = z; zL >= 0; --zL) {
 
-                for (int xL = x-1; xL>= 0; --xL) {
+                for (int xL = x; xL>= 0; --xL) {
                     if (allD [zL] [xL] != null
                         &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])
                         && segunda != allD [zL] [xL] ) {
