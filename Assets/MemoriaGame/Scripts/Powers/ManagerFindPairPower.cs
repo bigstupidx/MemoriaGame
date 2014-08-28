@@ -61,6 +61,60 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
     
         List< List < Door> > allD = ManagerDoors.Instance.GetAllDoors;
 
+        int z= Random.Range(0,allD.Count);
+        int x= Random.Range(0,allD[z].Count);
+
+        bool find = false;
+        for (int zP = z; zP < allD.Count; ++zP) {
+
+            for (int  xP = x; xP < allD[zP].Count; ++xP) {
+                if (allD [zP] [xP] != null ) {
+
+                    primera = allD [zP] [xP];
+                    find = true;
+                    break;
+                }
+
+            }
+            if (find)
+                break;
+        }
+
+        if (!find) {
+            for (int zP = z; zP >=0; --zP) {
+
+                for (int  xP = x; xP >=0; --xP) {
+                    if (allD [zP] [xP] != null ) {
+
+                        primera = allD [zP] [xP];
+                        find = true;
+                        break;
+                    }
+
+                }
+                if (find)
+                    break;
+            }
+        }
+
+        find = false;
+        for (int zP = 0; zP < allD.Count; ++zP) {
+
+            for ( int xP = 0; xP < allD[zP].Count; ++xP) {
+                if (allD [zP] [xP] != null 
+                    && primera != allD [zP] [xP]
+                    && primera.IDpair == allD [zP] [xP].IDpair) {
+
+                    segunda =allD [zP] [xP];
+                    find = true;
+                    break;
+                }
+
+            }
+            if (find)
+                break;
+        }
+        /*
         foreach (List < Door> lD in allD) {
             foreach ( Door door in lD) {
                 if (door != null) {
@@ -74,6 +128,6 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
                     }
                 }
             }
-        }
+        }*/
     }
 }
