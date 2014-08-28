@@ -40,8 +40,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeOfGame: 60
-  onTimeGameStar: []
+  onTimeGameStart: []
   onTimeGameEnd: []
+  onStopTime: []
+  onPlayTime: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
