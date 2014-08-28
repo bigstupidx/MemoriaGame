@@ -26,14 +26,26 @@ public class SlidePower : MonoBehaviour {
     }
 
     void FlickHorizontalHandler(object sender, EventArgs e){
+        FlickGesture flick = (FlickGesture)sender;
+        bool isPosi = false;
+        if (flick.ScreenFlickVector.x > 0) {
+            isPosi = true;
+        } 
+        
         if (activePower &&  ManagerSlidePower.Instance.DeActivePower ()) {
-            ManagerDoors.Instance.OpensDoors ((int)door.posMaxtrix.x, true);
+            ManagerDoors.Instance.OpensDoors ((int)door.posMaxtrix.x, true,isPosi);
            
         }
     }
     void FlickVerticalHandler(object sender, EventArgs e){
+        FlickGesture flick = (FlickGesture)sender;
+
+        bool isPosi = false;
+        if (flick.ScreenFlickVector.y < 0) {
+            isPosi = true;
+        } 
         if (activePower &&  ManagerSlidePower.Instance.DeActivePower ()) {
-            ManagerDoors.Instance.OpensDoors ((int)door.posMaxtrix.y, false);
+            ManagerDoors.Instance.OpensDoors ((int)door.posMaxtrix.y, false,isPosi);
 
         }
     }

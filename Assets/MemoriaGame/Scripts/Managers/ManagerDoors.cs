@@ -249,6 +249,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     int pos;
     int count;
     bool isH;
+    bool isPosi;
     const float TimeToNextOpen = 0.08f;
 
     /// <summary>
@@ -256,7 +257,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// </summary>
     /// <param name="fila">Fila.</param>
     /// <param name="isH">If is Horizontal <c>true</c> is h.</param>
-    public void OpensDoors(int fila, bool isH){
+    public void OpensDoors(int fila, bool isH, bool isPosi){
         CanTouch = false;
         int countZ = 0;
         int countX = 0;
@@ -278,15 +279,25 @@ class ManagerDoors : Singleton<ManagerDoors>
         }
         this.isH = isH;
         this.fila = fila;
-        pos = 0;
+        this.isPosi = isPosi;
+
+      
+      
 
         if (isH) {
+
             count = countX;
 
 
         } else {
             count = countZ;
 
+        }
+
+        if (isPosi) {
+            pos = 0;
+        } else {
+            pos = count - 1;
         }
         Invoke ("CloseDoors",TimeToNextOpen * count);
 
@@ -301,19 +312,40 @@ class ManagerDoors : Singleton<ManagerDoors>
         if (isH) {
             if(doors [fila] [pos] != null && doors [fila] [pos]!= firstOpen)
                 doors [fila] [pos].Open ();
-            pos++;
-            if (pos < count) {
-            
-                Invoke ("repeatOpensDoors", TimeToNextOpen);
-            } 
-        } else {
+
+            if (isPosi) {
+                pos++;
+                if (pos < count) {
+
+                    Invoke ("repeatOpensDoors", TimeToNextOpen);
+                } 
+            } else {
+                pos--;
+                if (pos >= 0) {
+
+                    Invoke ("repeatOpensDoors", TimeToNextOpen);
+                } 
+            }
+           
+        } 
+        else {
             if(doors [pos] [fila]!= null && doors [pos] [fila]!= firstOpen)
                 doors [pos] [fila].Open ();
-            pos++;
-            if (pos < count) {
 
-                Invoke ("repeatOpensDoors", TimeToNextOpen);
-            } 
+            if (isPosi) {
+                pos++;
+                if (pos < count) {
+
+                    Invoke ("repeatOpensDoors", TimeToNextOpen);
+                } 
+            } else {
+                pos--;
+                if (pos >= 0) {
+
+                    Invoke ("repeatOpensDoors", TimeToNextOpen);
+                } 
+            }
+           
         }
     }
 
@@ -322,7 +354,11 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// </summary>
     void CloseDoors(){
 
-        pos = 0;
+        if (isPosi) {
+            pos = 0;
+        } else {
+            pos = count - 1;
+        }
         repeatCloseDoors ();
 
     }
@@ -335,27 +371,56 @@ class ManagerDoors : Singleton<ManagerDoors>
         if (isH) {
             if(doors [fila] [pos] != null && doors [fila] [pos] != firstOpen)
                 doors [fila] [pos].Close ();
-            pos++;
-            if (pos < count) {
 
-                Invoke ("repeatCloseDoors", TimeToNextOpen);
+            if (isPosi) {
+                pos++;
+                if (pos < count) {
+
+                    Invoke ("repeatCloseDoors", TimeToNextOpen);
+                } else {
+
+                    CanTouch = true;
+
+                }
             } else {
-            
-                CanTouch = true;
+                pos--;
+                if (pos >=0) {
 
+                    Invoke ("repeatCloseDoors", TimeToNextOpen);
+                } else {
+
+                    CanTouch = true;
+
+                }
             }
-        } else {
+           
+        }
+        else {
             if(doors [pos] [fila]!= null && doors [pos] [fila] != firstOpen)
                 doors [pos] [fila].Close ();
-            pos++;
-            if (pos < count) {
 
-                Invoke ("repeatCloseDoors",TimeToNextOpen);
-            }  else {
+            if (isPosi) {
+                pos++;
+                if (pos < count) {
 
-                CanTouch = true;
+                    Invoke ("repeatCloseDoors",TimeToNextOpen);
+                }  else {
 
+                    CanTouch = true;
+
+                }
+            } else {
+                pos--;
+                if (pos >=0) {
+
+                    Invoke ("repeatCloseDoors",TimeToNextOpen);
+                }  else {
+
+                    CanTouch = true;
+
+                }
             }
+          
         }
     }
 
