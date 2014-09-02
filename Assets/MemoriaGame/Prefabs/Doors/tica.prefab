@@ -13650,7 +13650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IDpair: 0
   NameDoor: Hola
-  character: 1
+  character: 2
   posMaxtrix: {x: -1, y: -1}
   onOpen: []
   onClose: []
