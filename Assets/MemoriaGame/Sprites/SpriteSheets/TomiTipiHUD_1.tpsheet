@@ -1,0 +1,12 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: TomiTipiHUD_1.png (2048 x 2048)
+# $TexturePacker:SmartUpdate:5662a526d54560ae267108fcea08bd84:8fa12b6ee0c58813f255339818de313c:f5e4cdf767fef80be5734bde7c2bb643$
+#
+
+juegodememoria_nombre;2;1282;1860;764;0.4962365591397849;0.5
+reiniciar/reiniciarForward_04;2;32;1834;1248;0.4825517993456925;0.5248397435897436

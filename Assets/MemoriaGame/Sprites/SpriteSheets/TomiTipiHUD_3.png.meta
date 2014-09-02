@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 34030920fc1684392a79c08767144626
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: combox2_4
+    21300002: reiniciar-reiniciarForward_02
+    21300004: reiniciar-reiniciarForward_03
+    21300006: timer_base_estadoamarillo_01
+    21300008: timer_base_estadoamarillo_02
+    21300010: timer_base_estadoamarillo_03
+    21300012: timer_base_estadoamarillo_04
+    21300014: timer_base_estadorojo_05
+    21300016: visor_de_objetos_provisional
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: combox2_4
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 78
+        width: 528
+        height: 242
+      alignment: 9
+      pivot: {x: .477272719, y: .491735548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarForward_02
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 40
+        width: 1434
+        height: 898
+      alignment: 9
+      pivot: {x: .528591335, y: .540089071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarForward_03
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 940
+        width: 1760
+        height: 1106
+      alignment: 9
+      pivot: {x: .499431819, y: .547920406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_01
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1812
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_02
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1576
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_03
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1340
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_04
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1104
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadorojo_05
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 864
+        width: 226
+        height: 238
+      alignment: 9
+      pivot: {x: .504424751, y: .50420171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: visor_de_objetos_provisional
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 322
+        width: 541
+        height: 540
+      alignment: 9
+      pivot: {x: .505545259, y: .507407427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

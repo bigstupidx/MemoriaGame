@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 97a6ae00c703949d6ae4bdd56982e893
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: base_nombres_visor_de_objetos
+    21300002: home
+    21300004: pausapantalla
+    21300006: reanudar
+    21300008: reiniciar-check_icon
+    21300010: reiniciar-reiniciarForward_00
+    21300012: reiniciar-reiniciarForward_01
+    21300014: restart_boton
+    21300016: sonido
+    21300018: timer_base_estadorojo_02
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: base_nombres_visor_de_objetos
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 15
+        width: 1133
+        height: 201
+      alignment: 9
+      pivot: {x: .50617826, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: home
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1180
+        width: 300
+        height: 284
+      alignment: 9
+      pivot: {x: .5, y: .471830994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pausapantalla
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 744
+        width: 1692
+        height: 1302
+      alignment: 9
+      pivot: {x: .519503534, y: .536098301}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reanudar
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1752
+        width: 300
+        height: 294
+      alignment: 9
+      pivot: {x: .513333321, y: .493197292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-check_icon
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 233
+        width: 431
+        height: 419
+      alignment: 9
+      pivot: {x: .5046404, y: .49761337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarForward_00
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 218
+        width: 706
+        height: 524
+      alignment: 9
+      pivot: {x: .511331439, y: .553435087}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarForward_01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 894
+        height: 638
+      alignment: 9
+      pivot: {x: .489932895, y: .529780567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: restart_boton
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1466
+        width: 302
+        height: 284
+      alignment: 9
+      pivot: {x: .5, y: .471830994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sonido
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 894
+        width: 296
+        height: 284
+      alignment: 9
+      pivot: {x: .503378391, y: .471830994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadorojo_02
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 654
+        width: 228
+        height: 238
+      alignment: 9
+      pivot: {x: .5, y: .50420171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

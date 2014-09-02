@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 895317ff6511f4600ad4eca83361a860
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: comboplus-comboxplus_1
+    21300002: combox2_0
+    21300004: combox2_2
+    21300006: combox2_5
+    21300008: combox2_6_definit
+    21300010: combox3_3
+    21300012: combox3_4_definit
+    21300014: combox4_1
+    21300016: combox4_10
+    21300018: combox4_12_definit
+    21300020: combox4_7
+    21300022: marcoazul
+    21300024: power_up_icon_tica
+    21300026: reiniciar-reiniciarReverse_02
+    21300028: reiniciar-reiniciarReverse_03
+    21300030: timer_base_estadoamarillo_05
+    21300032: timer_base_estadoamarillo_08
+    21300034: timer_base_estadoamarillo_09
+    21300036: timer_base_estadoamarillo_10
+    21300038: timer_base_estadorojo_00
+    21300040: timer_base_estadorojo_08
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: comboplus-comboxplus_1
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 428
+        width: 520
+        height: 222
+      alignment: 9
+      pivot: {x: .498076916, y: .481981993}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox2_0
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 664
+        width: 226
+        height: 202
+      alignment: 9
+      pivot: {x: .539822996, y: .485148519}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox2_2
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1106
+        width: 504
+        height: 232
+      alignment: 9
+      pivot: {x: .503968239, y: .521551728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox2_5
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 152
+        width: 494
+        height: 242
+      alignment: 9
+      pivot: {x: .5, y: .495867759}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox2_6_definit
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1340
+        width: 484
+        height: 232
+      alignment: 9
+      pivot: {x: .533057868, y: .487068951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox3_3
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 652
+        width: 480
+        height: 224
+      alignment: 9
+      pivot: {x: .489583343, y: .508928597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox3_4_definit
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1574
+        width: 492
+        height: 238
+      alignment: 9
+      pivot: {x: .51219511, y: .50420171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox4_1
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 206
+        width: 508
+        height: 220
+      alignment: 9
+      pivot: {x: .505905509, y: .454545468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox4_10
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1814
+        width: 510
+        height: 232
+      alignment: 9
+      pivot: {x: .525490224, y: .538793087}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox4_12_definit
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 878
+        width: 500
+        height: 226
+      alignment: 9
+      pivot: {x: .54400003, y: .460177004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox4_7
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 4
+        width: 386
+        height: 200
+      alignment: 9
+      pivot: {x: .673575103, y: .474999994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marcoazul
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6
+        width: 865
+        height: 388
+      alignment: 9
+      pivot: {x: .5, y: .502577305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: power_up_icon_tica
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 13
+        width: 237
+        height: 191
+      alignment: 9
+      pivot: {x: .508438826, y: .489528805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarReverse_02
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 396
+        width: 1288
+        height: 800
+      alignment: 9
+      pivot: {x: .534937859, y: .256249994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarReverse_03
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1198
+        width: 1288
+        height: 848
+      alignment: 9
+      pivot: {x: .534937859, y: .241745278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_05
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1812
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_08
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 1576
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_09
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 1340
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoamarillo_10
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 1104
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadorojo_00
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 868
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadorojo_08
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 428
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

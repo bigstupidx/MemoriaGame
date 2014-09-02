@@ -17,7 +17,7 @@ public class ClockTimer : MonoBehaviour {
     float magicConstTime = 0.0f;
     bool isTimeGameStart = false;
 
-    TweenRotation tween;
+    TweenRotation tweenRota;
     Vector3 currentStop;
 	// Use this for initialization
 	void Awake () {
@@ -35,24 +35,24 @@ public class ClockTimer : MonoBehaviour {
 	
     [Signal]
 	void onTimeGameStart () {
-        tween = TweenRotation.Begin (Arrow, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
-        tween.to=new Vector3(0,0,-90);
+        tweenRota = TweenRotation.Begin (Arrow, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
+        tweenRota.to=new Vector3(0,0,-90);
 
         isTimeGameStart = true;
        
 	}
     [Signal]
     public void onPaused(){
-        tween.enabled = false;
-        currentStop = new Vector3(0,0,Mathf.Rad2Deg *  transform.rotation.z * 2.0f);
+        tweenRota.enabled = false;
+        currentStop = new Vector3(0,0,Mathf.Rad2Deg *  Arrow.transform.rotation.z * 2.0f);
     }
     [Signal]
     public void onResume(){
-        tween.from = currentStop;
+        tweenRota.from = currentStop;
 
-        tween = TweenRotation.Begin (Arrow, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
-        tween.from = currentStop;
-        tween.to = new Vector3(0,0,-90);
+        tweenRota = TweenRotation.Begin (Arrow, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
+        tweenRota.from = currentStop;
+        tweenRota.to = new Vector3(0,0,-90);
 
        // tween.enabled = true;
 

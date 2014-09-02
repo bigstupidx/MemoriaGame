@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: d712ad5b7e98a405fafd5df88e0052db
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: boton_pausa
+    21300002: boton_pausa_press
+    21300004: comboplus-comboxplus_3
+    21300006: combox2_3
+    21300008: combox3_1
+    21300010: combox3_2
+    21300012: combox4_2
+    21300014: combox4_9
+    21300016: reiniciar-cancel_icon
+    21300018: reiniciar-reiniciarReverse_00
+    21300020: reiniciar-reiniciarReverse_01
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: boton_pausa
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 759
+        width: 401
+        height: 420
+      alignment: 9
+      pivot: {x: .485037416, y: .492857128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boton_pausa_press
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1181
+        width: 405
+        height: 428
+      alignment: 9
+      pivot: {x: .490123451, y: .483644873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: comboplus-comboxplus_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 518
+        height: 214
+      alignment: 9
+      pivot: {x: .51158303, y: .495327115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox2_3
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 33
+        width: 504
+        height: 242
+      alignment: 9
+      pivot: {x: .509920657, y: .487603307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox3_1
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 519
+        width: 528
+        height: 238
+      alignment: 9
+      pivot: {x: .501893938, y: .478991598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox3_2
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 277
+        width: 520
+        height: 240
+      alignment: 9
+      pivot: {x: .5, y: .508333325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox4_2
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 12
+        width: 466
+        height: 206
+      alignment: 9
+      pivot: {x: .532188833, y: .456310689}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox4_9
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 6
+        width: 510
+        height: 212
+      alignment: 9
+      pivot: {x: .525490224, y: .490566045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-cancel_icon
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1611
+        width: 452
+        height: 435
+      alignment: 9
+      pivot: {x: .495575219, y: .495402306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarReverse_00
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1080
+        width: 1584
+        height: 966
+      alignment: 9
+      pivot: {x: .5, y: .27743271}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reiniciar-reiniciarReverse_01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 220
+        width: 1386
+        height: 858
+      alignment: 9
+      pivot: {x: .512987018, y: .270396262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
