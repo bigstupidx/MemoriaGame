@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: TomiTipiStarPoof.png (1024 x 1024)
+# $TexturePacker:SmartUpdate:80907cd6ecea9610f2278d6eadc7c585:af5dfbcbe0a52e6b9275799a6355442a:77fd55247940c42c25bce6b4d4f8cf1d$
+#
+
+pff_estrella_1;882;830;136;192;0.5808823529411765;0.484375
+pff_estrella_2;350;30;250;220;0.448;0.3954545454545455
+pff_estrella_3;462;252;346;368;0.5375722543352601;0.4836956521739131
+pff_estrella_4;2;592;458;430;0.5087336244541485;0.5209302325581395
+pff_estrella_5;462;622;418;400;0.5239234449760766;0.5275000000000001
+pff_estrella_6;2;198;346;392;0.4190751445086705;0.4744897959183674
+pff_estrella_7;810;424;208;196;0.4567307692307692;0.44897959183673475

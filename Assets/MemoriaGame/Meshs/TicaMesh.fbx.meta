@@ -965,6 +965,7 @@ ModelImporter:
     7400002: Abierta
     7400004: Cerrando
     7400006: Cerrada
+    7400008: AbriendoEspecial
     9500000: //RootNode
     11100000: //RootNode
     13700000: tica_Beta:Tica_L_Eyelashes_Ms
@@ -1819,33 +1820,17 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Base 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Lattice 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
         weight: 1
@@ -2709,33 +2694,17 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Base 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Lattice 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
         weight: 1
@@ -3599,33 +3568,17 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Base 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Lattice 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
         weight: 1
@@ -4489,33 +4442,891 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_cls01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_cls01/tica_Beta:flexiPlane_flexiPlane_cl_a01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_cls01/tica_Beta:flexiPlane_flexiPlane_cl_b01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_cls01/tica_Beta:flexiPlane_flexiPlane_cl_mid01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_flexiPlane_bind_a01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_flexiPlane_bind_b01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_flexiPlane_bind_c01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_flexiPlane_bind_d01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_flexiPlane_bind_e01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: AbriendoEspecial
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pipeMesh
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:L_brow_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:L_Cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:L_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:Mid_brow_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:mouth_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:Nose_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:R_brow_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:R_Cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:R_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_Hand_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_wrist_IK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt/tica_Beta:L_leg_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt/tica_Beta:L_leg_FK_Con/tica_Beta:locAlign_L_knee_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt/tica_Beta:L_leg_FK_Con/tica_Beta:locAlign_L_knee_jnt/tica_Beta:L_knee_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt/tica_Beta:L_leg_FK_Con/tica_Beta:locAlign_L_knee_jnt/tica_Beta:L_knee_FK_Con/tica_Beta:locAlign_L_ankle_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt/tica_Beta:L_leg_FK_Con/tica_Beta:locAlign_L_knee_jnt/tica_Beta:L_knee_FK_Con/tica_Beta:locAlign_L_ankle_jnt/tica_Beta:L_ankle_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt/tica_Beta:L_leg_FK_Con/tica_Beta:locAlign_L_knee_jnt/tica_Beta:L_knee_FK_Con/tica_Beta:locAlign_L_ankle_jnt/tica_Beta:L_ankle_FK_Con/tica_Beta:locAlign_L_ball_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_L_leg_jnt/tica_Beta:L_leg_FK_Con/tica_Beta:locAlign_L_knee_jnt/tica_Beta:L_knee_FK_Con/tica_Beta:locAlign_L_ankle_jnt/tica_Beta:L_ankle_FK_Con/tica_Beta:locAlign_L_ball_jnt/tica_Beta:L_ball_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt/tica_Beta:R_leg_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt/tica_Beta:R_leg_FK_Con/tica_Beta:locAlign_R_knee_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt/tica_Beta:R_leg_FK_Con/tica_Beta:locAlign_R_knee_jnt/tica_Beta:R_knee_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt/tica_Beta:R_leg_FK_Con/tica_Beta:locAlign_R_knee_jnt/tica_Beta:R_knee_FK_Con/tica_Beta:locAlign_R_ankle_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt/tica_Beta:R_leg_FK_Con/tica_Beta:locAlign_R_knee_jnt/tica_Beta:R_knee_FK_Con/tica_Beta:locAlign_R_ankle_jnt/tica_Beta:R_ankle_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt/tica_Beta:R_leg_FK_Con/tica_Beta:locAlign_R_knee_jnt/tica_Beta:R_knee_FK_Con/tica_Beta:locAlign_R_ankle_jnt/tica_Beta:R_ankle_FK_Con/tica_Beta:locAlign_R_ball_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con/tica_Beta:locAlign_R_leg_jnt/tica_Beta:R_leg_FK_Con/tica_Beta:locAlign_R_knee_jnt/tica_Beta:R_knee_FK_Con/tica_Beta:locAlign_R_ankle_jnt/tica_Beta:R_ankle_FK_Con/tica_Beta:locAlign_R_ball_jnt/tica_Beta:R_ball_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_L_earBase_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_L_earBase_jnt/tica_Beta:nurbsCircle19
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_L_earBase_jnt/tica_Beta:nurbsCircle19/tica_Beta:nurbsCircle20
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_L_earBase_jnt/tica_Beta:nurbsCircle19/tica_Beta:nurbsCircle20/tica_Beta:nurbsCircle21
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_L_earBase_jnt/tica_Beta:nurbsCircle19/tica_Beta:nurbsCircle20/tica_Beta:nurbsCircle21/tica_Beta:nurbsCircle22
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_L_earBase_jnt/tica_Beta:nurbsCircle19/tica_Beta:nurbsCircle20/tica_Beta:nurbsCircle21/tica_Beta:nurbsCircle22/tica_Beta:nurbsCircle23
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_R_earBase_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_R_earBase_jnt/tica_Beta:nurbsCircle25
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_R_earBase_jnt/tica_Beta:nurbsCircle25/tica_Beta:nurbsCircle24
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_R_earBase_jnt/tica_Beta:nurbsCircle25/tica_Beta:nurbsCircle24/tica_Beta:nurbsCircle26
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_R_earBase_jnt/tica_Beta:nurbsCircle25/tica_Beta:nurbsCircle24/tica_Beta:nurbsCircle26/tica_Beta:nurbsCircle27
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_neck_jnt/tica_Beta:neck_Con/tica_Beta:locAlign_head_jnt/tica_Beta:head_Con/tica_Beta:locAlign_R_earBase_jnt/tica_Beta:nurbsCircle25/tica_Beta:nurbsCircle24/tica_Beta:nurbsCircle26/tica_Beta:nurbsCircle27/tica_Beta:nurbsCircle28
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con/tica_Beta:locAlign_arm_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con/tica_Beta:locAlign_arm_L_jnt/tica_Beta:L_arm_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con/tica_Beta:locAlign_arm_L_jnt/tica_Beta:L_arm_FK_Con/tica_Beta:locAlign_elbow_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con/tica_Beta:locAlign_arm_L_jnt/tica_Beta:L_arm_FK_Con/tica_Beta:locAlign_elbow_L_jnt/tica_Beta:L_elbow_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con/tica_Beta:locAlign_arm_L_jnt/tica_Beta:L_arm_FK_Con/tica_Beta:locAlign_elbow_L_jnt/tica_Beta:L_elbow_FK_Con/tica_Beta:locAlign_wrist_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con/tica_Beta:locAlign_arm_L_jnt/tica_Beta:L_arm_FK_Con/tica_Beta:locAlign_elbow_L_jnt/tica_Beta:L_elbow_FK_Con/tica_Beta:locAlign_wrist_L_jnt/tica_Beta:L_wrist_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_L_jnt/tica_Beta:L_shoulder_Con/tica_Beta:locAlign_arm_L_jnt/tica_Beta:L_arm_FK_Con/tica_Beta:locAlign_elbow_L_jnt/tica_Beta:L_elbow_FK_Con/tica_Beta:locAlign_wrist_L_jnt/tica_Beta:locAlign_foreArm_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con/tica_Beta:locAlign_arm_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con/tica_Beta:locAlign_arm_R_jnt/tica_Beta:R_arm_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con/tica_Beta:locAlign_arm_R_jnt/tica_Beta:R_arm_FK_Con/tica_Beta:locAlign_elbow_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con/tica_Beta:locAlign_arm_R_jnt/tica_Beta:R_arm_FK_Con/tica_Beta:locAlign_elbow_R_jnt/tica_Beta:R_elbow_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con/tica_Beta:locAlign_arm_R_jnt/tica_Beta:R_arm_FK_Con/tica_Beta:locAlign_elbow_R_jnt/tica_Beta:R_elbow_FK_Con/tica_Beta:locAlign_wrist_R_jnt
+          1
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con/tica_Beta:locAlign_arm_R_jnt/tica_Beta:R_arm_FK_Con/tica_Beta:locAlign_elbow_R_jnt/tica_Beta:R_elbow_FK_Con/tica_Beta:locAlign_wrist_R_jnt
+          1/tica_Beta:locAlign_foreArm_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_b01/tica_Beta:chest_Con/tica_Beta:locAlign_shoulder_R_jnt/tica_Beta:R_shoulder_Con/tica_Beta:locAlign_arm_R_jnt/tica_Beta:R_arm_FK_Con/tica_Beta:locAlign_elbow_R_jnt/tica_Beta:R_elbow_FK_Con/tica_Beta:locAlign_wrist_R_jnt
+          1/tica_Beta:R_wrist_FK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt/tica_Beta:R_wrist_IK_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_Hand_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:back_bottom_L_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:back_bottom_L_cheek_ctrl_grp/tica_Beta:back_bottom_L_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:back_bottom_R_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:back_bottom_R_cheek_ctrl_grp/tica_Beta:back_bottom_R_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:back_top_L_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:back_top_L_cheek_ctrl_grp/tica_Beta:back_top_L_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_cornerInner_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_cornerInner_eyelid_ctrl_grp/tica_Beta:drv_L_cornerInner_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_cornerOuter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_cornerOuter_eyelid_ctrl_grp/tica_Beta:drv_L_cornerOuter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_lowerCenter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_lowerCenter_eyelid_ctrl_grp/tica_Beta:drv_L_lowerCenter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_lowerInner_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_lowerInner_eyelid_ctrl_grp/tica_Beta:drv_L_lowerInner_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_lowerOuter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_lowerOuter_eyelid_ctrl_grp/tica_Beta:drv_L_lowerOuter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_upperCenter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_upperCenter_eyelid_ctrl_grp/tica_Beta:drv_L_upperCenter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_upperInner_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_upperInner_eyelid_ctrl_grp/tica_Beta:drv_L_upperInner_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_upperOuter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_L_upperOuter_eyelid_ctrl_grp/tica_Beta:drv_L_upperOuter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_cornerInner_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_cornerInner_eyelid_ctrl_grp/tica_Beta:drv_R_cornerInner_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_cornerOuter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_cornerOuter_eyelid_ctrl_grp/tica_Beta:drv_R_cornerOuter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_lowerCenter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_lowerCenter_eyelid_ctrl_grp/tica_Beta:drv_R_lowerCenter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_lowerInner_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_lowerInner_eyelid_ctrl_grp/tica_Beta:drv_R_lowerInner_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_lowerOuter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_lowerOuter_eyelid_ctrl_grp/tica_Beta:drv_R_lowerOuter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_upperCenter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_upperCenter_eyelid_ctrl_grp/tica_Beta:drv_R_upperCenter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_upperInner_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_upperInner_eyelid_ctrl_grp/tica_Beta:drv_R_upperInner_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_upperOuter_eyelid_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:drv_R_upperOuter_eyelid_ctrl_grp/tica_Beta:drv_R_upperOuter_eyelid_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:forehead_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:forehead_ctrl_grp/tica_Beta:forehead_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_bottom_L_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_bottom_L_cheek_ctrl_grp/tica_Beta:front_bottom_L_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_bottom_R_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_bottom_R_cheek_ctrl_grp/tica_Beta:front_bottom_R_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_top_L_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_top_L_cheek_ctrl_grp/tica_Beta:front_top_L_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_top_R_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:front_top_R_cheek_ctrl_grp/tica_Beta:front_top_R_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:head_ctrl_back_top_R_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:head_ctrl_back_top_R_cheek_ctrl_grp/tica_Beta:head_ctrl_back_top_R_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_L_maxilia_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_L_maxilia_ctrl_grp/tica_Beta:inner_L_maxilia_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_L_upper_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_L_upper_lip_ctrl_grp/tica_Beta:inner_L_upper_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_R_maxilia_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_R_maxilia_ctrl_grp/tica_Beta:inner_R_maxilia_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_R_upper_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:inner_R_upper_lip_ctrl_grp/tica_Beta:inner_R_upper_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerBrow_L_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerBrow_L_ctrl_grp/tica_Beta:innerBrow_L_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerBrow_R_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerBrow_R_ctrl_grp/tica_Beta:innerBrow_R_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerCorner_L_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerCorner_L_lip_ctrl_grp/tica_Beta:innerCorner_L_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerCorner_R_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:innerCorner_R_lip_ctrl_grp/tica_Beta:innerCorner_R_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:lowerForehead_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:lowerForehead_ctrl_grp/tica_Beta:lowerForehead_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_L_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_L_cheek_ctrl_grp/tica_Beta:middle_L_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_L_maxilia_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_L_maxilia_ctrl_grp/tica_Beta:middle_L_maxilia_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_L_upper_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_L_upper_lip_ctrl_grp/tica_Beta:middle_L_upper_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_lip_ctrl_grp/tica_Beta:middle_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_R_cheek_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_R_cheek_ctrl_grp/tica_Beta:middle_R_cheek_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_R_maxilia_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_R_maxilia_ctrl_grp/tica_Beta:middle_R_maxilia_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_R_upper_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middle_R_upper_lip_ctrl_grp/tica_Beta:middle_R_upper_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middleBrow_L_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middleBrow_L_ctrl_grp/tica_Beta:middleBrow_L_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middleBrow_R_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:middleBrow_R_ctrl_grp/tica_Beta:middleBrow_R_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_bottom_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_bottom_ctrl_grp/tica_Beta:nose_bottom_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_center_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_center_ctrl_grp/tica_Beta:nose_center_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_L_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_L_ctrl_grp/tica_Beta:nose_L_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_R_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_R_ctrl_grp/tica_Beta:nose_R_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_top_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:nose_top_ctrl_grp/tica_Beta:nose_top_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_L_maxilia_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_L_maxilia_ctrl_grp/tica_Beta:outer_L_maxilia_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_L_upper_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_L_upper_lip_ctrl_grp/tica_Beta:outer_L_upper_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_R_maxilia_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_R_maxilia_ctrl_grp/tica_Beta:outer_R_maxilia_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_R_upper_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outer_R_upper_lip_ctrl_grp/tica_Beta:outer_R_upper_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outerBrow_L_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outerBrow_L_ctrl_grp/tica_Beta:outerBrow_L_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outerBrow_R_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:outerBrow_R_ctrl_grp/tica_Beta:outerBrow_R_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:upperMiddle_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:head_ctrl_grp/tica_Beta:upperMiddle_lip_ctrl_grp/tica_Beta:upperMiddle_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:center_lower_chin_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:center_lower_chin_ctrl_grp/tica_Beta:center_lower_chin_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:center_lower_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:center_lower_lip_ctrl_grp/tica_Beta:center_lower_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:chin_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:chin_ctrl_grp/tica_Beta:chin_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_L_lower_chin_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_L_lower_chin_ctrl_grp/tica_Beta:inner_L_lower_chin_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_L_lower_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_L_lower_lip_ctrl_grp/tica_Beta:inner_L_lower_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_R_lower_chin_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_R_lower_chin_ctrl_grp/tica_Beta:inner_R_lower_chin_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_R_lower_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:inner_R_lower_lip_ctrl_grp/tica_Beta:inner_R_lower_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_L_lower_chin_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_L_lower_chin_ctrl_grp/tica_Beta:outer_L_lower_chin_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_L_lower_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_L_lower_lip_ctrl_grp/tica_Beta:outer_L_lower_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_R_lower_chin_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_R_lower_chin_ctrl_grp/tica_Beta:outer_R_lower_chin_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_R_lower_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outer_R_lower_lip_ctrl_grp/tica_Beta:outer_R_lower_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outerCorner_L_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outerCorner_L_lip_ctrl_grp/tica_Beta:outerCorner_L_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outerCorner_R_lip_ctrl_grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
+          1/tica_Beta:outerCorner_R_lip_ctrl_grp/tica_Beta:outerCorner_R_lip_ctrl
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:back_bottom_L_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:back_bottom_R_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:back_top_L_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:back_top_R_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:forehead_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:front_bottom_L_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:front_bottom_R_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:front_top_L_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:front_top_R_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:headEnd_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:inner_L_maxilia_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:inner_L_upper_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:inner_R_maxilia_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:inner_R_upper_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:innerBrow_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:innerBrow_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:innerCorner_L_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:innerCorner_R_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_earBase_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_earBase_jnt/tica_Beta:L_ear_A_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_earBase_jnt/tica_Beta:L_ear_A_jnt/tica_Beta:L_ear_B_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_earBase_jnt/tica_Beta:L_ear_A_jnt/tica_Beta:L_ear_B_jnt/tica_Beta:L_ear_C_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_earBase_jnt/tica_Beta:L_ear_A_jnt/tica_Beta:L_ear_B_jnt/tica_Beta:L_ear_C_jnt/tica_Beta:L_ear_D_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_earBase_jnt/tica_Beta:L_ear_A_jnt/tica_Beta:L_ear_B_jnt/tica_Beta:L_ear_C_jnt/tica_Beta:L_ear_D_jnt/tica_Beta:L_earEnd_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_cornerInner_eyelid_jnt/tica_Beta:bind_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_cornerOuter_eyelid_jnt/tica_Beta:bind_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_lowerCenter_eyelid_jnt/tica_Beta:bind_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_lowerInner_eyelid_jnt/tica_Beta:bind_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_lowerOuter_eyelid_jnt/tica_Beta:bind_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_upperCenter_eyelid_jnt/tica_Beta:bind_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_upperInner_eyelid_jnt/tica_Beta:bind_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:L_eye_jnt/tica_Beta:drv_L_upperOuter_eyelid_jnt/tica_Beta:bind_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:lowerForehead_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middle_L_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middle_L_maxilia_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middle_L_upper_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middle_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middle_R_cheek_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middle_R_maxilia_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middle_R_upper_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middleBrow_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:middleBrow_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:center_lower_chin_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:center_lower_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:chin_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:inner_L_lower_chin_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:inner_L_lower_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:inner_R_lower_chin_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:inner_R_lower_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:outer_L_lower_chin_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:outer_L_lower_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:outer_R_lower_chin_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:jaw_jnt/tica_Beta:outer_R_lower_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:tongueBase_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:tongueBase_jnt/tica_Beta:tongue_A_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:tongueBase_jnt/tica_Beta:tongue_A_jnt/tica_Beta:tongue_B_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:tongueBase_jnt/tica_Beta:tongue_A_jnt/tica_Beta:tongue_B_jnt/tica_Beta:tongue_C_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:tongueBase_jnt/tica_Beta:tongue_A_jnt/tica_Beta:tongue_B_jnt/tica_Beta:tongue_C_jnt/tica_Beta:tongue_D_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:mouth_jnt/tica_Beta:tongueBase_jnt/tica_Beta:tongue_A_jnt/tica_Beta:tongue_B_jnt/tica_Beta:tongue_C_jnt/tica_Beta:tongue_D_jnt/tica_Beta:tongue_E_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:nose_bottom_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:nose_center_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:nose_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:nose_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:nose_top_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outer_L_maxilia_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outer_L_upper_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outer_R_maxilia_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outer_R_upper_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outerBrow_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outerBrow_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outerCorner_L_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:outerCorner_R_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_earBase_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_earBase_jnt/tica_Beta:R_ear_A_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_earBase_jnt/tica_Beta:R_ear_A_jnt/tica_Beta:R_ear_B_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_earBase_jnt/tica_Beta:R_ear_A_jnt/tica_Beta:R_ear_B_jnt/tica_Beta:R_ear_C_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_earBase_jnt/tica_Beta:R_ear_A_jnt/tica_Beta:R_ear_B_jnt/tica_Beta:R_ear_C_jnt/tica_Beta:R_ear_D_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_earBase_jnt/tica_Beta:R_ear_A_jnt/tica_Beta:R_ear_B_jnt/tica_Beta:R_ear_C_jnt/tica_Beta:R_ear_D_jnt/tica_Beta:R_earEnd_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_cornerInner_eyelid_jnt/tica_Beta:bind_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_cornerOuter_eyelid_jnt/tica_Beta:bind_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_lowerCenter_eyelid_jnt/tica_Beta:bind_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_lowerInner_eyelid_jnt/tica_Beta:bind_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_lowerOuter_eyelid_jnt/tica_Beta:bind_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_upperCenter_eyelid_jnt/tica_Beta:bind_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_upperInner_eyelid_jnt/tica_Beta:bind_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:R_eye_jnt/tica_Beta:drv_R_upperOuter_eyelid_jnt/tica_Beta:bind_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:neck_jnt/tica_Beta:head_jnt/tica_Beta:upperMiddle_lip_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:palm_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:palm_L_jnt/tica_Beta:finger_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:palm_L_jnt/tica_Beta:finger_L_jnt/tica_Beta:fingerEnd_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:thumbHand_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:thumbHand_L_jnt/tica_Beta:thumbBase_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:thumbHand_L_jnt/tica_Beta:thumbBase_L_jnt/tica_Beta:thumb_A_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:thumbHand_L_jnt/tica_Beta:thumbBase_L_jnt/tica_Beta:thumb_A_L_jnt/tica_Beta:thumb_B_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_L_jnt/tica_Beta:arm_L_jnt/tica_Beta:elbow_L_jnt/tica_Beta:forearm_L_jnt/tica_Beta:wrist_L_jnt/tica_Beta:thumbHand_L_jnt/tica_Beta:thumbBase_L_jnt/tica_Beta:thumb_A_L_jnt/tica_Beta:thumb_B_L_jnt/tica_Beta:thumbEnd_L_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:palm_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:palm_R_jnt/tica_Beta:finger_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:palm_R_jnt/tica_Beta:finger_R_jnt/tica_Beta:fingerEnd_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:thumbHand_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:thumbHand_R_jnt/tica_Beta:thumbBase_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:thumbHand_R_jnt/tica_Beta:thumbBase_R_jnt/tica_Beta:thumb_A_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:thumbHand_R_jnt/tica_Beta:thumbBase_R_jnt/tica_Beta:thumb_A_R_jnt/tica_Beta:thumb_B_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:chest_jnt/tica_Beta:shoulder_R_jnt/tica_Beta:arm_R_jnt/tica_Beta:elbow_R_jnt/tica_Beta:forearm_R_jnt/tica_Beta:wrist_R_jnt/tica_Beta:thumbHand_R_jnt/tica_Beta:thumbBase_R_jnt/tica_Beta:thumb_A_R_jnt/tica_Beta:thumb_B_R_jnt/tica_Beta:thumbEnd_R_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:baseTail_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:baseTail_jnt/tica_Beta:tail_A_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:baseTail_jnt/tica_Beta:tail_A_jnt/tica_Beta:tail_B_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:baseTail_jnt/tica_Beta:tail_A_jnt/tica_Beta:tail_B_jnt/tica_Beta:tail_C_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:baseTail_jnt/tica_Beta:tail_A_jnt/tica_Beta:tail_B_jnt/tica_Beta:tail_C_jnt/tica_Beta:tailEnd_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:L_leg_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:L_leg_jnt/tica_Beta:L_knee_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:L_leg_jnt/tica_Beta:L_knee_jnt/tica_Beta:L_ankle_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:L_leg_jnt/tica_Beta:L_knee_jnt/tica_Beta:L_ankle_jnt/tica_Beta:L_ball_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:L_leg_jnt/tica_Beta:L_knee_jnt/tica_Beta:L_ankle_jnt/tica_Beta:L_ball_jnt/tica_Beta:L_toe_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:R_leg_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:R_leg_jnt/tica_Beta:R_knee_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:R_leg_jnt/tica_Beta:R_knee_jnt/tica_Beta:R_ankle_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:R_leg_jnt/tica_Beta:R_knee_jnt/tica_Beta:R_ankle_jnt/tica_Beta:R_ball_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints/tica_Beta:root_jnt/tica_Beta:R_leg_jnt/tica_Beta:R_knee_jnt/tica_Beta:R_ankle_jnt/tica_Beta:R_ball_jnt/tica_Beta:R_toe_jnt
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:ticaMaster_Con
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:Tica_L_Eyelashes_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:Tica_L_Eyelid_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:Tica_Lowerteeth_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:Tica_R_Eyelashes_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:Tica_R_Eyelid_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:Tica_TshirtLace_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:Tica_Upperteeth_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:TicaBody_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:TicaBow_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:TicaTeeth_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:TicaTongue_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:TicaModel_Ms_Grp/tica_Beta:TicaWhiskers_Ms
+        weight: 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Base 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Base
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
-          1/tica_Beta:StretchEye_Eye_Lattice 1
+      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
         weight: 1

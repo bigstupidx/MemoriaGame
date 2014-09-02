@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 98c708fe30820499fa861185388dc515
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pff_estrella_1
+    21300002: pff_estrella_2
+    21300004: pff_estrella_3
+    21300006: pff_estrella_4
+    21300008: pff_estrella_5
+    21300010: pff_estrella_6
+    21300012: pff_estrella_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: pff_estrella_1
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 830
+        width: 136
+        height: 192
+      alignment: 9
+      pivot: {x: .58088237, y: .484375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pff_estrella_2
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 30
+        width: 250
+        height: 220
+      alignment: 9
+      pivot: {x: .448000014, y: .395454556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pff_estrella_3
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 252
+        width: 346
+        height: 368
+      alignment: 9
+      pivot: {x: .537572265, y: .483695656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pff_estrella_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 592
+        width: 458
+        height: 430
+      alignment: 9
+      pivot: {x: .50873363, y: .520930231}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pff_estrella_5
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 622
+        width: 418
+        height: 400
+      alignment: 9
+      pivot: {x: .523923457, y: .527499974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pff_estrella_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 198
+        width: 346
+        height: 392
+      alignment: 9
+      pivot: {x: .419075131, y: .474489808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pff_estrella_7
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 424
+        width: 208
+        height: 196
+      alignment: 9
+      pivot: {x: .456730783, y: .448979586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

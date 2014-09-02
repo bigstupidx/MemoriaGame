@@ -59,6 +59,14 @@ class ManagerDoors : Singleton<ManagerDoors>
     public static float offSetZStart = -0.20f;
     #endregion
 
+    #region StartsPoof:
+    public GameObject StarPoof;
+    List< List < GameObject> > starsPoof =  new List< List<GameObject>> ();
+    [HideInInspector]
+    public static float offSetXStarPoof = 0.20f;
+    [HideInInspector]
+    public static float offSetZStartPoof = - 0.20f;
+    #endregion
     #region ContadorDePares
     int currentPair = 0;
 
@@ -79,13 +87,46 @@ class ManagerDoors : Singleton<ManagerDoors>
     void Awake(){
         setDoors();
         setStars ();
+        setStarsPoof ();
 
         ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
         ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
 
     }
 
-    #region Seteado Aleatorio:
+    #region Seteado Aleatorio (arreglar todas estas funciones):
+    void setStarsPoof(){
+        switch (numberOfPair) {
+
+        case NumberOfPair.CincoXSeis:
+            setStartPoofBy (5, 6,-0.5f,-9.2f);
+            break;
+        case NumberOfPair.CuatroXCuatro:
+            setStartPoofBy (4,4,-0.3f,-9.2f);
+            break;
+        case NumberOfPair.CuatroXDos:
+            setStartPoofBy (4, 2,-0.1f,-9.2f);
+            break;
+
+        }
+    }
+    void setStartPoofBy(int countX,int countZ,float posIniX,float posIniZ){
+
+        float currentX = posIniX;
+        float currentZ = posIniZ;
+        for (int i = 0; i < countX; ++i) {
+            starsPoof.Add (new List<GameObject> ());
+            for (int j = 0; j < countZ; j++) {
+
+                starsPoof[i].Add (StarPoof.Spawn(new Vector3(currentX,0.1f,currentZ),Quaternion.identity));
+                starsPoof [i] [j].SetActive (false);
+                currentX += offSetXStarPoof;
+            }
+
+            currentZ += offSetZStartPoof;
+            currentX = posIniX;
+        }
+    }
     void setStars(){
         switch (numberOfPair) {
 
@@ -433,7 +474,10 @@ class ManagerDoors : Singleton<ManagerDoors>
 
         return stars [x] [z];
     }
+    public GameObject getStarPoof(int x, int z){
 
+        return starsPoof[x] [z];
+    }
     public string getFisrtDoorName(){
 
         if (firstOpen == null)

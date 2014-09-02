@@ -41,8 +41,9 @@ class AnimationDoor : MonoBehaviour
     [Signal]
     void onCheckTruePair(){
         //anim.SetBool("Open",false);
-        TweenScale.Begin(door.gameObject,1.0f,new Vector3(0.01f,0.01f,0.01f)).AddOnFinished(new EventDelegate(this,"ReleaseDoor"));
-        Invoke ("InvokeStar",0.7f);
+        TweenScale.Begin(door.gameObject,0.7f,new Vector3(0.01f,0.01f,0.01f)).AddOnFinished(new EventDelegate(this,"ReleaseDoor"));
+        InvokeStarPoof ();
+        Invoke ("InvokeStar",0.5f);
     }
     [Signal]
     void onShakeTrue(){
@@ -60,6 +61,10 @@ class AnimationDoor : MonoBehaviour
 
     void InvokeStar(){
         ManagerDoors.Instance.getStar((int)door.posMaxtrix.x,(int)door.posMaxtrix.y).SetActive(true);
+
+    }
+    void InvokeStarPoof(){
+        ManagerDoors.Instance.getStarPoof((int)door.posMaxtrix.x,(int)door.posMaxtrix.y).SetActive(true);
 
     }
 }
