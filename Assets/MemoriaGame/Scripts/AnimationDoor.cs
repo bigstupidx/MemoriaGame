@@ -42,6 +42,7 @@ class AnimationDoor : MonoBehaviour
     void onCheckTruePair(){
         //anim.SetBool("Open",false);
         TweenScale.Begin(door.gameObject,1.0f,new Vector3(0.01f,0.01f,0.01f)).AddOnFinished(new EventDelegate(this,"ReleaseDoor"));
+        Invoke ("InvokeStar",0.7f);
     }
     [Signal]
     void onShakeTrue(){
@@ -53,8 +54,13 @@ class AnimationDoor : MonoBehaviour
     }
 
     public void ReleaseDoor(){
-        ManagerDoors.Instance.getStar((int)door.posMaxtrix.x,(int)door.posMaxtrix.y).SetActive(true);
+       // ManagerDoors.Instance.getStar ((int)door.posMaxtrix.x, (int)door.posMaxtrix.y).GetComponent<Animator> ().SetBool ("Changue", true);
         door.Recycle ();
+    }
+
+    void InvokeStar(){
+        ManagerDoors.Instance.getStar((int)door.posMaxtrix.x,(int)door.posMaxtrix.y).SetActive(true);
+
     }
 }
 

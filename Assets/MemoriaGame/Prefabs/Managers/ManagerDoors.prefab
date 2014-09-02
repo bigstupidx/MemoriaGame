@@ -57,7 +57,7 @@ MonoBehaviour:
   - {fileID: 11400002, guid: f677680a613ce4a8d8ef34b1ed6e0e07, type: 2}
   - {fileID: 11400002, guid: 95da23e7ae10c4a8390f8f52baef5a8a, type: 2}
   CanTouch: 0
-  Star: {fileID: 100002, guid: 836414109fec745c58de0b15633b1e97, type: 2}
+  Star: {fileID: 100024, guid: 836414109fec745c58de0b15633b1e97, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

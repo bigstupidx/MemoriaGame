@@ -1021,11 +1021,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: left
-        weight: 1
       - path: pipeMesh
-        weight: 1
-      - path: tica_Beta:bottom
         weight: 1
       - path: tica_Beta:Tica_Master_Grp
         weight: 1
@@ -1034,12 +1030,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:L_eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:R_eye_Aim
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp
         weight: 1
@@ -1061,28 +1051,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:R_eyelid_ctrl
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:Tica_faceControls_Cam
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:L_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:L_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt/tica_Beta:L_ankle_IK
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_Hand_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_wrist_IK_Con
@@ -1092,18 +1060,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_a01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01/tica_Beta:flexiPlane_flexiPlane_midBend01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con
         weight: 1
@@ -1217,26 +1173,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt/tica_Beta:R_wrist_IK_Con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:R_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:R_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt/tica_Beta:R_ankle_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_Hand_Con
         weight: 1
@@ -1546,12 +1482,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
           1/tica_Beta:outerCorner_R_lip_ctrl_grp/tica_Beta:outerCorner_R_lip_ctrl
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:L_hand_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:R_hand_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints
         weight: 1
@@ -1899,17 +1829,7 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup/tica_Beta:StretchEye_Pupil_Base
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet/tica_Beta:StretchEye_Pupil_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
@@ -1924,21 +1844,7 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
           1/tica_Beta:StretchEye_Eye_Lattice 1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-          1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1/tica_Beta:StretchEye_Pupil_Base 1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet/tica_Beta:StretchEye_Pupil_Lattice
           1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
@@ -1957,39 +1863,25 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_curve1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_flexiPlane_bind_a01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_curve2
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_flexiPlane_bind_b01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_curve3
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_flexiPlane_bind_c01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_curve4
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_flexiPlane_bind_d01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_curve5
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_flexiPlane_bind_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_twist_surface01
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01BaseWire
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -2019,11 +1911,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: left
-        weight: 1
       - path: pipeMesh
-        weight: 1
-      - path: tica_Beta:bottom
         weight: 1
       - path: tica_Beta:Tica_Master_Grp
         weight: 1
@@ -2032,12 +1920,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:L_eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:R_eye_Aim
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp
         weight: 1
@@ -2059,28 +1941,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:R_eyelid_ctrl
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:Tica_faceControls_Cam
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:L_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:L_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt/tica_Beta:L_ankle_IK
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_Hand_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_wrist_IK_Con
@@ -2090,18 +1950,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_a01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01/tica_Beta:flexiPlane_flexiPlane_midBend01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con
         weight: 1
@@ -2215,26 +2063,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt/tica_Beta:R_wrist_IK_Con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:R_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:R_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt/tica_Beta:R_ankle_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_Hand_Con
         weight: 1
@@ -2544,12 +2372,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
           1/tica_Beta:outerCorner_R_lip_ctrl_grp/tica_Beta:outerCorner_R_lip_ctrl
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:L_hand_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:R_hand_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints
         weight: 1
@@ -2897,17 +2719,7 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup/tica_Beta:StretchEye_Pupil_Base
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet/tica_Beta:StretchEye_Pupil_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
@@ -2922,21 +2734,7 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
           1/tica_Beta:StretchEye_Eye_Lattice 1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-          1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1/tica_Beta:StretchEye_Pupil_Base 1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet/tica_Beta:StretchEye_Pupil_Lattice
           1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
@@ -2955,39 +2753,25 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_curve1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_flexiPlane_bind_a01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_curve2
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_flexiPlane_bind_b01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_curve3
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_flexiPlane_bind_c01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_curve4
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_flexiPlane_bind_d01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_curve5
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_flexiPlane_bind_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_twist_surface01
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01BaseWire
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -3017,11 +2801,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: left
-        weight: 1
       - path: pipeMesh
-        weight: 1
-      - path: tica_Beta:bottom
         weight: 1
       - path: tica_Beta:Tica_Master_Grp
         weight: 1
@@ -3030,12 +2810,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:L_eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:R_eye_Aim
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp
         weight: 1
@@ -3057,28 +2831,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:R_eyelid_ctrl
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:Tica_faceControls_Cam
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:L_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:L_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt/tica_Beta:L_ankle_IK
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_Hand_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_wrist_IK_Con
@@ -3088,18 +2840,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_a01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01/tica_Beta:flexiPlane_flexiPlane_midBend01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con
         weight: 1
@@ -3213,26 +2953,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt/tica_Beta:R_wrist_IK_Con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:R_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:R_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt/tica_Beta:R_ankle_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_Hand_Con
         weight: 1
@@ -3542,12 +3262,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
           1/tica_Beta:outerCorner_R_lip_ctrl_grp/tica_Beta:outerCorner_R_lip_ctrl
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:L_hand_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:R_hand_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints
         weight: 1
@@ -3895,17 +3609,7 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup/tica_Beta:StretchEye_Pupil_Base
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet/tica_Beta:StretchEye_Pupil_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
@@ -3920,21 +3624,7 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
           1/tica_Beta:StretchEye_Eye_Lattice 1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-          1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1/tica_Beta:StretchEye_Pupil_Base 1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet/tica_Beta:StretchEye_Pupil_Lattice
           1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
@@ -3953,47 +3643,33 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_curve1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_flexiPlane_bind_a01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_curve2
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_flexiPlane_bind_b01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_curve3
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_flexiPlane_bind_c01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_curve4
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_flexiPlane_bind_d01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_curve5
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_flexiPlane_bind_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_twist_surface01
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01BaseWire
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
       name: Cerrada
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: .100000009
+      firstFrame: 1
+      lastFrame: 1.10000002
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4015,11 +3691,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: left
-        weight: 1
       - path: pipeMesh
-        weight: 1
-      - path: tica_Beta:bottom
         weight: 1
       - path: tica_Beta:Tica_Master_Grp
         weight: 1
@@ -4028,12 +3700,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:L_eye_Aim
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:eye_Aim/tica_Beta:R_eye_Aim
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp
         weight: 1
@@ -4055,28 +3721,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:R_eyelid_ctrl
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:Face_Controls_grp/tica_Beta:Tica_faceControls_Cam
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:L_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:L_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_foot_Ik_con/tica_Beta:Rev_L_Bank_A_jnt/tica_Beta:Rev_L_Bank_B_jnt/tica_Beta:Rev_L_heel_jnt/tica_Beta:Rev_L_toe_jnt/tica_Beta:Rev_L_ball_jnt/tica_Beta:Rev_L_ankle_jnt/tica_Beta:L_ankle_IK
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_Hand_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:L_wrist_IK_Con
@@ -4086,18 +3730,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_a01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_cnt_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:flexiPlane_flexiPlane_cnt_global01/tica_Beta:flexiPlane_flexiPlane_globalMove01/tica_Beta:flexiPlane_flexiPlane_cnts01/tica_Beta:flexiPlane_flexiPlane_grp_midBend01/tica_Beta:flexiPlane_flexiPlane_midBend01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_flexiPlane_flexiPlane_cnt_a01/tica_Beta:COG_Con/tica_Beta:hipsGymbal_Con
         weight: 1
@@ -4211,26 +3843,6 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:locAlign_wrist_R_jnt/tica_Beta:R_wrist_IK_Con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:R_toe_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:R_ball_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_foot_Ik_con/tica_Beta:Rev_R_Bank_A_jnt/tica_Beta:Rev_R_Bank_B_jnt/tica_Beta:Rev_R_heel_jnt/tica_Beta:Rev_R_toe_jnt/tica_Beta:Rev_R_ball_jnt/tica_Beta:Rev_R_ankle_jnt/tica_Beta:R_ankle_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:controls/tica_Beta:R_Hand_Con
         weight: 1
@@ -4540,12 +4152,6 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:head_grp/tica_Beta:mouth_ctrl_grp/tica_Beta:mouth_ctrl
           1/tica_Beta:outerCorner_R_lip_ctrl_grp/tica_Beta:outerCorner_R_lip_ctrl
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:L_hand_IK
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:Ik_Grp/tica_Beta:R_hand_IK
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:moveGroup/tica_Beta:scaleGroup/tica_Beta:joints
         weight: 1
@@ -4893,17 +4499,7 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eye_LatticeGroup/tica_Beta:StretchEye_Eye_Lattice
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_pSphere_Animatable
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_Eye_L_grp/tica_Beta:StretchEye_Pupil_LatticeGroup/tica_Beta:StretchEye_Pupil_Base
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_L_Grp/tica_Beta:StretchEye_L_rivet/tica_Beta:StretchEye_Pupil_Lattice
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp
         weight: 1
@@ -4918,21 +4514,7 @@ ModelImporter:
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eye_LatticeGroup
           1/tica_Beta:StretchEye_Eye_Lattice 1
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Eyeball_DontTouch
-          1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_pSphere_Animatable
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_Eye_R_grp/tica_Beta:StretchEye_Pupil_LatticeGroup
-          1/tica_Beta:StretchEye_Pupil_Base 1
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:Eye_R_Grp/tica_Beta:StretchEye_R_rivet/tica_Beta:StretchEye_Pupil_Lattice
           1
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01
@@ -4951,39 +4533,25 @@ ModelImporter:
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_curve1
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_a01/tica_Beta:flexiPlane_flexiPlane_bind_a01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_curve2
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_b01/tica_Beta:flexiPlane_flexiPlane_bind_b01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_curve3
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_c01/tica_Beta:flexiPlane_flexiPlane_bind_c01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_curve4
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_d01/tica_Beta:flexiPlane_flexiPlane_bind_d01
         weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_curve5
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_flcs01/tica_Beta:flexiPlane_flexiPlane_flc_e01/tica_Beta:flexiPlane_flexiPlane_bind_e01
         weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_twist_surface01
-        weight: 1
       - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01
-        weight: 1
-      - path: tica_Beta:Tica_Master_Grp/tica_Beta:Utilities/tica_Beta:flexiPlane_flexiPlane01/tica_Beta:flexiPlane_flexiPlane_extraNodes01/tica_Beta:flexiPlane_flexiPlane_wire_surface01BaseWire
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
