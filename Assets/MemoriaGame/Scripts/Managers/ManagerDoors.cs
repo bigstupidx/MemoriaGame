@@ -53,8 +53,10 @@ class ManagerDoors : Singleton<ManagerDoors>
     #region Starts:
     public GameObject Star;
     List< List < GameObject> > stars =  new List< List<GameObject>> ();
-    public static float offSetXStar = 1.05f;
-    public static float offSetZStart = -1.05f;
+    [HideInInspector]
+    public static float offSetXStar =0.20f;
+    [HideInInspector]
+    public static float offSetZStart = -0.20f;
     #endregion
 
     #region ContadorDePares
@@ -88,13 +90,13 @@ class ManagerDoors : Singleton<ManagerDoors>
         switch (numberOfPair) {
 
         case NumberOfPair.CincoXSeis:
-            setStartBy (5, 6,-2.65f,-5.9f);
+            setStartBy (5, 6,-0.5f,-9.2f);
             break;
         case NumberOfPair.CuatroXCuatro:
-            setStartBy (4,4,-1.65f,-5.9f);
+            setStartBy (4,4,-0.3f,-9.2f);
             break;
         case NumberOfPair.CuatroXDos:
-            setStartBy (4, 2,-0.65f,-5.9f);
+            setStartBy (4, 2,-0.1f,-9.2f);
             break;
 
         }

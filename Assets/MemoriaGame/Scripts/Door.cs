@@ -37,7 +37,7 @@ class Door : MonoBehaviour
    
     void Awake(){
     
-        NameDoor = gameObject.name;
+        NameDoor = gameObject.name.Substring(0,gameObject.name.Length-7);
     }
 
     public void Touch(){
