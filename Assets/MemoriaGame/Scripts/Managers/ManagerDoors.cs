@@ -353,9 +353,10 @@ class ManagerDoors : Singleton<ManagerDoors>
     void repeatOpensDoors(){
 
         if (isH) {
-            if(doors [fila] [pos] != null && doors [fila] [pos]!= firstOpen)
-                doors [fila] [pos].Open ();
+            if (doors [fila] [pos] != null && doors [fila] [pos] != firstOpen) {
 
+                doors [fila] [pos].OpenQuickly ();
+            }
             if (isPosi) {
                 pos++;
                 if (pos < count) {
@@ -373,7 +374,7 @@ class ManagerDoors : Singleton<ManagerDoors>
         } 
         else {
             if(doors [pos] [fila]!= null && doors [pos] [fila]!= firstOpen)
-                doors [pos] [fila].Open ();
+                doors [pos] [fila].OpenQuickly ();
 
             if (isPosi) {
                 pos++;

@@ -21,6 +21,8 @@ class AnimationDoor : MonoBehaviour
         anim = GetComponent<Animator> ();
 
         door.onOpen.Add (new Signal("onOpen",gameObject));
+        door.onOpenQuickly.Add (new Signal("onOpenQuickly",gameObject));
+
         door.onClose.Add (new Signal("onClose",gameObject));
         door.onShakeTrue.Add (new Signal("onShakeTrue",gameObject));
         door.onShakeFalse.Add (new Signal("onShakeFalse",gameObject));
@@ -34,8 +36,16 @@ class AnimationDoor : MonoBehaviour
 
     }
     [Signal]
+    void onOpenQuickly(){
+        anim.SetBool("OpenQuickly",true);
+        anim.SetBool("Shake",false);
+    }
+
+    [Signal]
     void onClose(){
         anim.SetBool("Open",false);
+        anim.SetBool("OpenQuickly",false);
+
     }
 
     [Signal]

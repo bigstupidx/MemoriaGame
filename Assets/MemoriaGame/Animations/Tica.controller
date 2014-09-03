@@ -14,6 +14,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: OpenQuickly
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -106,6 +112,46 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110188831
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110227593}
+  m_DstState: {fileID: 110231478}
+  m_TransitionDuration: 1.5
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: OpenQuickly
+    m_EventTreshold: 0
+    m_ExitTime: 0
+  m_Atomic: 0
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110194127
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110200000}
+  m_DstState: {fileID: 110227593}
+  m_TransitionDuration: 60.0000038
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: OpenQuickly
+    m_EventTreshold: 0
+    m_ExitTime: 0
+  m_Atomic: 0
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1102 &110200000
 State:
   m_ObjectHideFlags: 3
@@ -118,6 +164,21 @@ State:
   - {fileID: 7400006, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -144, y: -36, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110227593
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AbritRapidito
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400008, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 180, y: -60, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -147,7 +208,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 60, y: -168, z: 0}
+  m_Position: {x: 96, y: -216, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -179,9 +240,14 @@ StateMachine:
   - {fileID: 110240060}
   - {fileID: 110231478}
   - {fileID: 110274490}
+  - {fileID: 110227593}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
+    data:
+      first: {fileID: 110227593}
+      second:
+      - {fileID: 110188831}
     data:
       first: {fileID: 0}
       second: []
@@ -189,6 +255,7 @@ StateMachine:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+      - {fileID: 110194127}
     data:
       first: {fileID: 110240060}
       second:

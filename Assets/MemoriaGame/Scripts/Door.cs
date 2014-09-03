@@ -26,6 +26,8 @@ class Door : MonoBehaviour
     [HideInInspector]
     public List<Signal> onOpen = new List<Signal>();
     [HideInInspector]
+    public List<Signal> onOpenQuickly = new List<Signal>();
+    [HideInInspector]
     public List<Signal> onClose = new List<Signal>();
     [HideInInspector]
     public List<Signal> onCheckTruePair = new List<Signal>();
@@ -44,7 +46,13 @@ class Door : MonoBehaviour
 
         ManagerDoors.Instance.TouchMe(this);
     }
+    public void OpenQuickly(){
 
+        foreach (Signal sig in onOpenQuickly) {
+
+            sig.Invoke ();
+        }
+    }
     public void Open(){
 
         foreach (Signal sig in onOpen) {

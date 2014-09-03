@@ -19,6 +19,8 @@ class AnimationMesh : MonoBehaviour
         anim = GetComponent<Animator> ();
 
         door.onOpen.Add (new Signal("onOpen",gameObject));
+        door.onOpenQuickly.Add (new Signal("onOpenQuickly",gameObject));
+
         door.onClose.Add (new Signal("onClose",gameObject));
 
         door.onCheckTruePair.Add (new Signal("onCheckTruePair",gameObject));
@@ -29,8 +31,14 @@ class AnimationMesh : MonoBehaviour
         anim.SetBool("Open",true);
     }
     [Signal]
+    void onOpenQuickly(){
+        anim.SetBool("OpenQuickly",true);
+    }
+    [Signal]
     void onClose(){
         anim.SetBool("Open",false);
+        anim.SetBool("OpenQuickly",false);
+
     }
 
     [Signal]
