@@ -46,7 +46,12 @@ public class ReloadSceneGUI : MonoBehaviour {
         Application.LoadLevel (Application.loadedLevelName);
 
     }
+    public void Home(){
+        //CAMIBAR
+        PlayerPrefs.Save ();
+        Application.LoadLevel ("HomeScene");
 
+    }
     #region BackButon:
     public void ReloadNo(){
 
