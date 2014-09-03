@@ -1,0 +1,14 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: TomiTipiStarSound.png (1024 x 2048)
+# $TexturePacker:SmartUpdate:2658f3481d0016d1da702dbab4224d0a:a4df42b5db85c593462c05875d5f40a4:5abf17fe04d69fa22e6243c9ce28ffc3$
+#
+
+barra_sonido;2;1709;866;337;0.4953810623556582;0.48219584569732943
+barra_sonido_background;2;1412;778;295;0.4717223650385604;0.45593220338983054
+corneta;2;401;499;605;0.49198396793587174;0.5016528925619834
+fx;2;1008;566;402;0.5212014134275619;0.46766169154228854
