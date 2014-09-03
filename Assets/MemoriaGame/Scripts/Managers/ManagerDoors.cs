@@ -485,6 +485,15 @@ class ManagerDoors : Singleton<ManagerDoors>
 
         return firstOpen.NameDoor;
     }
+
+    public int getFisrtDoorID(){
+
+        if (firstOpen == null)
+            return -1;
+
+        return firstOpen.IDpair;
+    }
+
     public bool isFirstOpen{
     
 

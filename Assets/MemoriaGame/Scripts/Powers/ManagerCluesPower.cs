@@ -17,6 +17,8 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     Door segunda = null;
     Door tercera = null;
 
+    bool usingPower = false;
+    int idFirst = -1;
     void Awake(){
 
         ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
@@ -43,12 +45,15 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
 
         if (tercera != null)
             tercera.ShakeTrue ();
-
-
+       
+        usingPower = true;
+        idFirst = ManagerDoors.Instance.getFisrtDoorID();
         Invoke ("DeActivePower", TimeOfPower);
 
     }
     void DeActivePower(){
+        usingPower = false;
+        idFirst = -1;
 
         ManagerPowers.UsingPower = false;
 
@@ -62,7 +67,17 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
             tercera.ShakeFalse ();
 
     }
+    void Update(){
+    
+        if (usingPower) {
 
+            if (ManagerDoors.Instance.getFisrtDoorID() != idFirst) {
+            
+                CancelInvoke ("DeActivePower");
+                DeActivePower ();
+            }
+        }
+    }
     #region Paused
     bool isPaused = false;
     [Signal]
