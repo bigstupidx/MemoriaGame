@@ -21,7 +21,7 @@ public enum NumberOfPair
 
 class ManagerDoors : Singleton<ManagerDoors>
 {
-    public NumberOfPair numberOfPair = NumberOfPair.CincoXSeis;
+    public static NumberOfPair numberOfPair = NumberOfPair.CincoXSeis;
   
     /// <summary>
     /// Contiene los prefabs de las diferentes puertas del juego. En total 15.

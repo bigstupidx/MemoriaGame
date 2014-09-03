@@ -1,0 +1,15 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: TomiTipiHome.png (2048 x 512)
+# $TexturePacker:SmartUpdate:540415ac4692ec706c15eb428162895c:47d983e648f37aae9e11a2a46f7e0f24:ac8e49a8d8b4f6e8a88e20ff7b6aa075$
+#
+
+atras_boton;2;232;563;278;0.5355239786856127;0.44964028776978415
+dificil_boton;2;6;537;224;0.4553072625698324;0.4508928571428571
+dificultad_;541;15;983;215;0.48779247202441506;0.48139534883720925
+facil_boton;1526;275;497;235;0.5885311871227364;0.4829787234042553
+normal_boton;567;334;631;176;0.4619651347068146;0.5397727272727273

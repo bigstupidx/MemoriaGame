@@ -6,4 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MemoriaGame/Scenes/TestFBX.unity
+    path: Assets/MemoriaGame/Scenes/HomeScene.unity
+  - enabled: 1
+    path: Assets/MemoriaGame/Scenes/GameScene.unity
