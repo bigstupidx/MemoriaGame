@@ -470,6 +470,7 @@ ModelImporter:
     100928: tica_Beta:wrist_L_jnt
     100930: tica_Beta:wrist_R_jnt
     100932: //RootNode
+    100934: pCylinder1
     400000: left
     400002: pipeMesh
     400004: tica_Beta:arm_L_jnt
@@ -937,14 +938,17 @@ ModelImporter:
     400928: tica_Beta:wrist_L_jnt
     400930: tica_Beta:wrist_R_jnt
     400932: //RootNode
+    400934: pCylinder1
     2300000: pipeMesh
     2300002: tica_Beta:flexiPlane_flexiPlane_midBend01
     2300004: tica_Beta:StretchEye_pSphere_Animatable
     2300006: tica_Beta:StretchEye_pSphere_Animatable 1
+    2300008: pCylinder1
     3300000: pipeMesh
     3300002: tica_Beta:flexiPlane_flexiPlane_midBend01
     3300004: tica_Beta:StretchEye_pSphere_Animatable
     3300006: tica_Beta:StretchEye_pSphere_Animatable 1
+    3300008: pCylinder1
     4300000: pipeMesh
     4300002: tica_Beta:TicaBody_Ms
     4300004: tica_Beta:TicaBow_Ms
@@ -961,6 +965,7 @@ ModelImporter:
     4300026: tica_Beta:flexiPlane_flexiPlane_midBend01
     4300028: tica_Beta:StretchEye_pSphere_Animatable
     4300030: tica_Beta:StretchEye_pSphere_Animatable
+    4300032: pCylinder1
     7400000: Abriendo
     7400002: Abierta
     7400004: Cerrando
