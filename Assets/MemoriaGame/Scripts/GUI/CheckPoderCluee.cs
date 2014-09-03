@@ -11,10 +11,12 @@ using UnityEngine;
 public class CheckPoderCluee : MonoBehaviour
 {
     UIButton button;
+    PowerOff power;
     bool check = false;
     void Awake(){
 
         button = GetComponent<UIButton> ();
+        power = GetComponent<PowerOff> ();
     }
 
     public void CheckEnable(){
@@ -27,6 +29,7 @@ public class CheckPoderCluee : MonoBehaviour
     void  LateUpdate(){
         if (check) {
             if (!ManagerCluesPower.Instance.isPowerUsed) {
+                power.used = false;
                 button.isEnabled = true;
                 check = false;
                 enabled = false;

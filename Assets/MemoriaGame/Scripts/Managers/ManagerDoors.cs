@@ -26,7 +26,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// <summary>
     /// Contiene los prefabs de las diferentes puertas del juego. En total 15.
     /// </summary>
-    public List<Door> prefabDoorsWithoutPair;
+    public List<Door> prefabDoorsWithoutPair = new List<Door>();
 
     List< List < Door> > doors =  new List< List<Door>> ();
     public List< List < Door> > GetAllDoors { get { return doors; }}
@@ -51,7 +51,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     public bool CanTouch = false;
 
     #region Starts:
-    public GameObject Star;
+    public GameObject Star = null;
     List< List < GameObject> > stars =  new List< List<GameObject>> ();
     [HideInInspector]
     public static float offSetXStar =0.20f;
@@ -60,7 +60,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     #endregion
 
     #region StartsPoof:
-    public GameObject StarPoof;
+    public GameObject StarPoof = null;
     List< List < GameObject> > starsPoof =  new List< List<GameObject>> ();
     [HideInInspector]
     public static float offSetXStarPoof = 0.20f;

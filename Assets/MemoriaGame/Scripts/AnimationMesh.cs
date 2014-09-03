@@ -11,8 +11,8 @@ using System.Collections;
 
 class AnimationMesh : MonoBehaviour
 {
-    public Door door;
-    Animator anim;
+    public Door door = null;
+    Animator anim = null;
     void Awake(){
         // door = GetComponent<Door> ();
 

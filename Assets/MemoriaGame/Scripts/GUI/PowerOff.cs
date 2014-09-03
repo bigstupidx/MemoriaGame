@@ -14,10 +14,15 @@ public class PowerOff : MonoBehaviour {
 
     public PowerDoor character = PowerDoor.Any;
 
+
+    bool Locked = true;
+    [HideInInspector]
+    public bool used = false;
+
+
     UIButton button;
 
     static  Door[] doors;
-
     void Awake(){
     
         button = GetComponent<UIButton> ();
@@ -39,6 +44,11 @@ public class PowerOff : MonoBehaviour {
 
         ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
         ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
+
+
+
+        ManagerPowers.Instance.onPowerTrue.Add (new Signal ("onNotUse", gameObject));
+        ManagerPowers.Instance.onPowerFalse.Add (new Signal ("onUse", gameObject));
     }
     void Start(){
         doors = null;
@@ -47,13 +57,33 @@ public class PowerOff : MonoBehaviour {
 
     [Signal]
     public void setOnPower(){
+        Locked = false;
         button.isEnabled = true;
     }
     public void setOffPower(){
 
-        if(!isPaused && !ManagerPowers.UsingPower )
+        if (!isPaused) {
             button.isEnabled = false;
+            used = true;
+        }
+
+
     }
+
+    #region Used
+    [Signal]
+    void onUse(){
+        if(!Locked && !used)
+            button.isEnabled = true;
+
+    }
+    [Signal]
+    void onNotUse(){
+        Debug.Log ("onNotUse");
+        button.isEnabled = false;
+
+    }
+    #endregion
 
     #region Paused
     bool isPaused = false;

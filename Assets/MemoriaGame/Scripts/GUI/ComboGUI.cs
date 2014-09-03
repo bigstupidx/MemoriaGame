@@ -15,14 +15,10 @@ public class ComboGUI : MonoBehaviour {
 
     public UI2DSpriteAnimation comboFinal;
 
-
-    UI2DSprite sprite;
     bool isCombo = false;
 
     int lastCombo = 0;
-    void Awake(){
-        sprite = GetComponent<UI2DSprite> ();
-    }
+   
     void ScaleNormal(){
         TweenScale.Begin (gameObject, 0.1f, new Vector3 (1, 1, 1));
 

@@ -27,10 +27,10 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     }
 
     public void ActivePower(){
-        if (isPaused || usedPower || !ManagerDoors.Instance.isFirstOpen || ManagerPowers.UsingPower ){
+        if (isPaused || usedPower || !ManagerDoors.Instance.isFirstOpen ){
             return;
         }
-        ManagerPowers.UsingPower = true;
+        ManagerPowers.Instance.UsingPower = true;
 
         usedPower = true;
 
@@ -55,7 +55,7 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         usingPower = false;
         idFirst = -1;
 
-        ManagerPowers.UsingPower = false;
+        ManagerPowers.Instance.UsingPower = false;
 
         if (primera != null)
             primera.ShakeFalse ();
@@ -67,6 +67,7 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
             tercera.ShakeFalse ();
 
     }
+
     void Update(){
     
         if (usingPower) {
@@ -78,19 +79,6 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
             }
         }
     }
-    #region Paused
-    bool isPaused = false;
-    [Signal]
-    void onPaused(){
-        isPaused = true;
-
-    }
-    [Signal]
-    void onResume(){
-        isPaused = false;
-
-    }
-    #endregion
 
     void FindPair(){
 
@@ -100,11 +88,11 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         int xP=0;
         bool find = false;
         for (zP = 0; zP < allD.Count; ++zP) {
-        
+
             for ( xP = 0; xP < allD[zP].Count; ++xP) {
                 if (allD [zP] [xP] != null
                     &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zP] [xP])) {
-                
+
                     if(ManagerDoors.Instance.isPair(allD [zP] [xP])){
                         find = true;
                         primera = allD [zP] [xP];
@@ -145,7 +133,7 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         bool findLR = false;
         //Si no encontre en la izquierda voy a la derecha
         if (!findL) {
-           
+
             //Aqui busco a los otros dos;
             for (int zL = z; zL < allD.Count; ++zL) {
 
@@ -174,8 +162,8 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         if (xP + 1 < allD [zP].Count) {
             x = Random.Range (xP+1, allD.Count);
         }
-      
-        Debug.Log ("Aqui "+z+" "+x);
+
+
         #region Buscar PrimeraPista Derecha y luego izquierda
         bool findR = false;
         //Busco el segundo a la derecha
@@ -223,5 +211,21 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
 
 
     }
+
+    #region Paused
+    bool isPaused = false;
+    [Signal]
+    void onPaused(){
+        isPaused = true;
+
+    }
+    [Signal]
+    void onResume(){
+        isPaused = false;
+
+    }
+    #endregion
+
+
 }
 

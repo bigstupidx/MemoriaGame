@@ -17,10 +17,10 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
     }
 
     public void ActivePower(){
-        if (isPaused || stopTime || usedPower || ManagerPowers.UsingPower)
+        if (isPaused || stopTime || usedPower)
             return;
 
-        ManagerPowers.UsingPower = true;
+        ManagerPowers.Instance.UsingPower = true;
 
         foreach (SlidePower power in powers) {
         
@@ -47,7 +47,7 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
         ManagerDoors.Instance.CanTouch = true;
         usedPower = true;
 
-        ManagerPowers.UsingPower = false;
+        ManagerPowers.Instance.UsingPower = false;
 
         return true;
     }
