@@ -16,7 +16,7 @@ public class LinkWidgetToMesh : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void LateUpdate () {
         mat.SetFloat("_Alpha",widget.finalAlpha);
         if(widget.finalAlpha <= 0){
             if(mesh.enabled)

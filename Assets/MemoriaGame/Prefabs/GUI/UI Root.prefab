@@ -1467,6 +1467,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400176}
   - 137: {fileID: 13700000}
+  - 114: {fileID: 11400216}
   m_Layer: 5
   m_Name: tica_Beta:TicaWhiskers_Ms
   m_TagString: Untagged
@@ -1483,6 +1484,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400178}
   - 137: {fileID: 13700002}
+  - 114: {fileID: 11400222}
   m_Layer: 5
   m_Name: tica_Beta:TicaTongue_Ms
   m_TagString: Untagged
@@ -1499,6 +1501,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400180}
   - 137: {fileID: 13700004}
+  - 114: {fileID: 11400218}
   m_Layer: 5
   m_Name: tica_Beta:TicaTeeth_Ms
   m_TagString: Untagged
@@ -1515,6 +1518,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400182}
   - 137: {fileID: 13700006}
+  - 114: {fileID: 11400224}
   m_Layer: 5
   m_Name: tica_Beta:TicaBow_Ms
   m_TagString: Untagged
@@ -1548,6 +1552,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400186}
   - 137: {fileID: 13700010}
+  - 114: {fileID: 11400214}
   m_Layer: 5
   m_Name: tica_Beta:Tica_Upperteeth_Ms
   m_TagString: Untagged
@@ -1581,6 +1586,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400190}
   - 137: {fileID: 13700014}
+  - 114: {fileID: 11400212}
   m_Layer: 5
   m_Name: tica_Beta:Tica_R_Eyelid_Ms
   m_TagString: Untagged
@@ -1597,6 +1603,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400192}
   - 137: {fileID: 13700016}
+  - 114: {fileID: 11400220}
   m_Layer: 5
   m_Name: tica_Beta:Tica_R_Eyelashes_Ms
   m_TagString: Untagged
@@ -1613,6 +1620,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400194}
   - 137: {fileID: 13700018}
+  - 114: {fileID: 11400210}
   m_Layer: 5
   m_Name: tica_Beta:Tica_Lowerteeth_Ms
   m_TagString: Untagged
@@ -1629,6 +1637,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400196}
   - 137: {fileID: 13700020}
+  - 114: {fileID: 11400228}
   m_Layer: 5
   m_Name: tica_Beta:Tica_L_Eyelid_Ms
   m_TagString: Untagged
@@ -1645,6 +1654,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400198}
   - 137: {fileID: 13700022}
+  - 114: {fileID: 11400226}
   m_Layer: 5
   m_Name: tica_Beta:Tica_L_Eyelashes_Ms
   m_TagString: Untagged
@@ -17411,6 +17421,126 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widget: {fileID: 11400126}
+--- !u!114 &11400228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100198}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e1b3a27daee4e0caad5e0caacb2cc6, type: 3}
