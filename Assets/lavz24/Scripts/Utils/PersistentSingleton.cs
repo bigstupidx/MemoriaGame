@@ -36,6 +36,9 @@ public class PersistentSingleton<T> : MonoBehaviour where T : MonoBehaviour
 						Debug.LogError("[Singleton] Something went really wrong " +
 						               " - there should never be more than 1 singleton!" +
 						               " Reopenning the scene might fix it.");
+
+                        DontDestroyOnLoad(_instance);
+
 						return _instance;
 					}
 					
@@ -69,7 +72,7 @@ public class PersistentSingleton<T> : MonoBehaviour where T : MonoBehaviour
 	///   even after stopping playing the Application. Really bad!
 	/// So, this was made to be sure we're not creating that buggy ghost object.
 	/// </summary>
-	public void OnDestroy () {
+	void OnDestroy () {
 		
 		applicationIsQuitting = true;
 	}
