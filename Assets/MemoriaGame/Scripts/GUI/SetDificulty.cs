@@ -27,7 +27,8 @@ public class SetDificulty : MonoBehaviour
 
     void LoadLevel(){
         PlayerPrefs.Save ();
-        Application.LoadLevel (level);
+        LoadLevelManager.Instance.LoadLevelImmediate (level);
+       
 
     }
 }

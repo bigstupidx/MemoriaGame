@@ -9,7 +9,7 @@ public class LoadLevelManager : PersistentSingleton<LoadLevelManager> {
 
 
     #region HelperWithSceneLoading:
-    public int SceneLoading = 1;
+    public int SceneLoading = -1;
 
     object level = null;
     bool manualActivation = false;
