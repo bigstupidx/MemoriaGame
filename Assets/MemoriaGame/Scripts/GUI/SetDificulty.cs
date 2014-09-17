@@ -5,24 +5,39 @@
 //       Luis Alejandro Vieira <lavz24@gmail.com>
 //
 using UnityEngine;
+using System.Collections;
 
 public class SetDificulty : MonoBehaviour
 {
         
     public string level = "GameScene";
+    public float timeForChangue = 1.5f;
+
+    public GameObject test;
+
 
     public void facil(){
         ManagerDoors.numberOfPair = NumberOfPair.CuatroXDos;
-        LoadLevel ();
+        //LoadLevel ();
+        test.SetActive (true);
+        StartCoroutine (LoadLevelAfter(timeForChangue));
     }
 
     public void normal(){
         ManagerDoors.numberOfPair = NumberOfPair.CuatroXCuatro;
-        LoadLevel ();
+        //LoadLevel ();
+        test.SetActive (true);
+
+        StartCoroutine (LoadLevelAfter(timeForChangue));
+
     }
     public void dificil(){
         ManagerDoors.numberOfPair = NumberOfPair.CincoXSeis;
-        LoadLevel ();
+        //LoadLevel ();
+        test.SetActive (true);
+
+        StartCoroutine (LoadLevelAfter(timeForChangue));
+
     }
 
     void LoadLevel(){
@@ -30,6 +45,19 @@ public class SetDificulty : MonoBehaviour
         LoadLevelManager.Instance.LoadLevelImmediate (level);
        
 
+    }
+
+    //Our wait function //Se usa este porque pdes cambiar el el time
+    IEnumerator Wait(float duration)
+    {
+        for (float timer = 0; timer < duration; timer += Time.deltaTime)
+            yield return null;
+    }
+
+    IEnumerator LoadLevelAfter(float waitTime) {
+
+        yield return StartCoroutine( Wait(waitTime));
+        LoadLevel ();
     }
 }
 
