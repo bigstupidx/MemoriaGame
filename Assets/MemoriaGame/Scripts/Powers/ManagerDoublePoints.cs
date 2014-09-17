@@ -15,13 +15,15 @@ public class ManagerDoublePoints: Singleton<ManagerDoublePoints> {
     public float MaxTime = 0;
     public int PlusScore = 2;
     float currentTime = 0;
-    void Awake(){
 
-        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
-        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
-
+    void OnEnable(){
+        ManagerPause.Instance.OnPauseGame += onPaused;
+        ManagerPause.Instance.OnResumeGame += onResume;
     }
-
+    void OnDisable(){
+        ManagerPause.Instance.OnPauseGame -= onPaused;
+        ManagerPause.Instance.OnResumeGame -= onResume;
+    }
     public void ActivePower(){
         if (isPaused || usedPower ){
             return;
@@ -52,12 +54,10 @@ public class ManagerDoublePoints: Singleton<ManagerDoublePoints> {
 
     #region Paused
     bool isPaused = false;
-    [Signal]
     void onPaused(){
         isPaused = true;
 
     }
-    [Signal]
     void onResume(){
             isPaused = false;
 

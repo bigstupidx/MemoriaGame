@@ -33,7 +33,7 @@ public class PlayState : FSMState {
     }
 
     public void ChangueToPause(){
-        ManagerPause.Instance.PauseGame(true);
+        ManagerPause.Instance.Pause = true;
         fsm.PerformTransition(Transition.PlayToPause);
     }
 

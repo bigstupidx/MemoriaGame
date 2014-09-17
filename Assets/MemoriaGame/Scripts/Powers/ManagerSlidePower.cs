@@ -5,12 +5,16 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
 
     bool usedPower = false;
     SlidePower[] powers;
-    void Awake(){
 
-        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
-        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
-
+    void OnEnable(){
+        ManagerPause.Instance.OnPauseGame += onPaused;
+        ManagerPause.Instance.OnResumeGame += onResume;
     }
+    void OnDisable(){
+        ManagerPause.Instance.OnPauseGame -= onPaused;
+        ManagerPause.Instance.OnResumeGame -= onResume;
+    }
+
     void Start(){
     
         powers =  GameObject.FindObjectsOfType<SlidePower> ();
@@ -54,12 +58,10 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
 
     #region Paused
     bool isPaused = false;
-    [Signal]
     void onPaused(){
         isPaused = true;
 
     }
-    [Signal]
     void onResume(){
         isPaused = false;
 

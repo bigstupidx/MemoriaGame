@@ -40,7 +40,7 @@ public class PauseState : FSMState {
     }
 
     public  void Resume() {
-        ManagerPause.Instance.PauseGame(false);
+        ManagerPause.Instance.Pause = false;
         fsm.PerformTransition(Transition.PlayToPause);
     }
 

@@ -41,12 +41,6 @@ public class PowerOff : MonoBehaviour {
             }
         }
 
-
-        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
-        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
-
-
-
         ManagerPowers.Instance.onPowerTrue.Add (new Signal ("onNotUse", gameObject));
         ManagerPowers.Instance.onPowerFalse.Add (new Signal ("onUse", gameObject));
     }
@@ -54,6 +48,14 @@ public class PowerOff : MonoBehaviour {
         doors = null;
     }
 
+    void OnEnable(){
+        ManagerPause.Instance.OnPauseGame += onPaused;
+        ManagerPause.Instance.OnResumeGame += onResume;
+    }
+    void OnDisable(){
+        ManagerPause.Instance.OnPauseGame -= onPaused;
+        ManagerPause.Instance.OnResumeGame -= onResume;
+    }
 
     [Signal]
     public void setOnPower(){
@@ -87,12 +89,10 @@ public class PowerOff : MonoBehaviour {
 
     #region Paused
     bool isPaused = false;
-    [Signal]
     void onPaused(){
         isPaused = true;
 
     }
-    [Signal]
     void onResume(){
         isPaused = false;
 

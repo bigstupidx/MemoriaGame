@@ -89,11 +89,15 @@ class ManagerDoors : Singleton<ManagerDoors>
         setStars ();
         setStarsPoof ();
 
-        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
-        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
-
     }
-
+    void OnEnable(){
+        ManagerPause.Instance.OnPauseGame += onPaused;
+        ManagerPause.Instance.OnResumeGame += onResume;
+    }
+    void OnDisable(){
+        ManagerPause.Instance.OnPauseGame -= onPaused;
+        ManagerPause.Instance.OnResumeGame -= onResume;
+    }
     #region Seteado Aleatorio (arreglar todas estas funciones):
     void setStarsPoof(){
         switch (numberOfPair) {
@@ -214,12 +218,10 @@ class ManagerDoors : Singleton<ManagerDoors>
    
     #region Paused
     bool isPaused = false;
-    [Signal]
     void onPaused(){
         isPaused = true;
 
     }
-    [Signal]
     void onResume(){
        
         Invoke ("setFalseIsPaused", 0.1f);

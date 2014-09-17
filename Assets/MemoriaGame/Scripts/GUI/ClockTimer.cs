@@ -25,10 +25,16 @@ public class ClockTimer : MonoBehaviour {
         ManagerTime.Instance.onStopTime.Add (new Signal("onPaused",gameObject));
         ManagerTime.Instance.onPlayTime.Add (new Signal("onResume",gameObject));
         
-        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
-        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
+    
 	}
-
+    void OnEnable(){
+        ManagerPause.Instance.OnPauseGame += onPaused;
+        ManagerPause.Instance.OnResumeGame += onResume;
+    }
+    void OnDisable(){
+        ManagerPause.Instance.OnPauseGame -= onPaused;
+        ManagerPause.Instance.OnResumeGame -= onResume;
+    }
     void Start(){
         magicConstTime = 100.0f / ManagerTime.Instance.TimeOfGame;
     }
@@ -41,12 +47,10 @@ public class ClockTimer : MonoBehaviour {
         isTimeGameStart = true;
        
 	}
-    [Signal]
     public void onPaused(){
         tweenRota.enabled = false;
         currentStop = new Vector3(0,0,Mathf.Rad2Deg *  Arrow.transform.rotation.z * 2.0f);
     }
-    [Signal]
     public void onResume(){
         tweenRota.from = currentStop;
 

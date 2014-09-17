@@ -14,11 +14,13 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
     Door primera = null;
     Door segunda = null;
 
-    void Awake(){
-
-        ManagerPause.Instance.onGamePaused.Add (new Signal ("onPaused", gameObject));
-        ManagerPause.Instance.onGameResumed.Add (new Signal ("onResume", gameObject));
-
+    void OnEnable(){
+        ManagerPause.Instance.OnPauseGame += onPaused;
+        ManagerPause.Instance.OnResumeGame += onResume;
+    }
+    void OnDisable(){
+        ManagerPause.Instance.OnPauseGame -= onPaused;
+        ManagerPause.Instance.OnResumeGame -= onResume;
     }
 
     public void ActivePower(){
@@ -45,12 +47,10 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
 
     #region Paused
     bool isPaused = false;
-    [Signal]
     void onPaused(){
         isPaused = true;
 
     }
-    [Signal]
     void onResume(){
         isPaused = false;
 
