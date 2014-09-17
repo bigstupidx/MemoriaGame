@@ -84,7 +84,8 @@ class ManagerDoors : Singleton<ManagerDoors>
 
     #endregion
 
-    void Awake(){
+    protected override void Awake(){
+        base.Awake();
         setDoors();
         setStars ();
         setStarsPoof ();

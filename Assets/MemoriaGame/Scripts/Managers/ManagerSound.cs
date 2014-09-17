@@ -18,8 +18,8 @@ public class ManagerSound : Singleton<ManagerSound>
 
     AudioSource bgAudio;
 
-    void Awake(){
-    
+    protected override void Awake(){
+        base.Awake ();
         bgAudio = GameObject.FindGameObjectWithTag ("BgSound").GetComponent<AudioSource>();
     }
 
