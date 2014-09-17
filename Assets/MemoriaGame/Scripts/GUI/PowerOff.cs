@@ -81,7 +81,6 @@ public class PowerOff : MonoBehaviour {
     }
     [Signal]
     void onNotUse(){
-        Debug.Log ("onNotUse");
         button.isEnabled = false;
 
     }

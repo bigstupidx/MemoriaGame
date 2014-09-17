@@ -17,8 +17,7 @@ public class ManagerScore : Singleton<ManagerScore> {
     
         plusScore += plus;
     }
-    protected override void Awake(){
-        base.Awake ();
+    protected override void AwakeChild(){
         highScore = PlayerPrefs.GetInt ("HighScore");
     }
 

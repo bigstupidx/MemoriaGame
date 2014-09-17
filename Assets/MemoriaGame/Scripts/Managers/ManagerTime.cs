@@ -47,8 +47,7 @@ class ManagerTime : Singleton<ManagerTime>
 
 
 
-    protected override void Awake(){
-        base.Awake();
+    protected override void AwakeChild(){
         Invoke("setTimeToStart",0.1f);
 
       
