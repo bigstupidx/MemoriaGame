@@ -68,17 +68,24 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     ///   even after stopping playing the Application. Really bad!
     /// So, this was made to be sure we're not creating that buggy ghost object.
     /// </summary>
-    protected virtual void OnDestroy () {
+    void OnDestroy () {
 
         applicationIsQuitting = true;
+        OnDestroyChild ();
     }
+    protected virtual void OnDestroyChild (){}
+
     /// <summary>
     /// Awake this instance
-    /// REMEMBER call base.Awake().
     /// </summary>
-    protected virtual void Awake(){
+    void Awake(){
         applicationIsQuitting = false;
-
+        AwakeChild ();
 
     }
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    protected virtual void AwakeChild (){}
+
 }
