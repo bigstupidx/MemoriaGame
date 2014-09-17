@@ -15,12 +15,13 @@ public class ManagerFindPairPower : Singleton<ManagerStopTimePower> {
     Door segunda = null;
 
     void OnEnable(){
-        ManagerPause.Instance.OnPauseGame += onPaused;
-        ManagerPause.Instance.OnResumeGame += onResume;
+        ManagerPause.SubscribeOnPauseGame(onPaused);
+        ManagerPause.SubscribeOnResumeGame( onResume);
     }
     void OnDisable(){
-        ManagerPause.Instance.OnPauseGame -= onPaused;
-        ManagerPause.Instance.OnResumeGame -= onResume;
+
+        ManagerPause.UnSubscribeOnPauseGame(onPaused);
+        ManagerPause.UnSubscribeOnResumeGame(onResume);
     }
 
     public void ActivePower(){

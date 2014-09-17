@@ -7,12 +7,13 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
     SlidePower[] powers;
 
     void OnEnable(){
-        ManagerPause.Instance.OnPauseGame += onPaused;
-        ManagerPause.Instance.OnResumeGame += onResume;
+        ManagerPause.SubscribeOnPauseGame(onPaused);
+        ManagerPause.SubscribeOnResumeGame( onResume);
     }
     void OnDisable(){
-        ManagerPause.Instance.OnPauseGame -= onPaused;
-        ManagerPause.Instance.OnResumeGame -= onResume;
+
+        ManagerPause.UnSubscribeOnPauseGame(onPaused);
+        ManagerPause.UnSubscribeOnResumeGame(onResume);
     }
 
     void Start(){
