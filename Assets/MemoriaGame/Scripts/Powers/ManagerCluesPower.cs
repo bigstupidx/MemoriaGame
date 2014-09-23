@@ -20,9 +20,18 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     bool usingPower = false;
     int idFirst = -1;
 
+    bool firstRun = true;
+    void Start(){
+    
+        firstRun = false;
+        ManagerPause.SubscribeOnPauseGame (onPaused);
+        ManagerPause.SubscribeOnResumeGame (onResume);
+    }
     void OnEnable(){
-        ManagerPause.SubscribeOnPauseGame(onPaused);
-        ManagerPause.SubscribeOnResumeGame( onResume);
+        if (!firstRun) {
+            ManagerPause.SubscribeOnPauseGame (onPaused);
+            ManagerPause.SubscribeOnResumeGame (onResume);
+        }
     }
     void OnDisable(){
 

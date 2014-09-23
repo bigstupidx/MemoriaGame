@@ -17,11 +17,11 @@ public class ButtonEnable : MonoBehaviour {
         button = GetComponent<UIButton> ();
         button.isEnabled = false;
 
+    }
+    void Start(){
         ManagerTime.Instance.onTimeGameStart.Add (new Signal ("setOnPower", gameObject));
 
-
     }
-
 
     [Signal]
     public void setOnPower(){

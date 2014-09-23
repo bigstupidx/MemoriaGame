@@ -10,7 +10,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-class Door : MonoBehaviour
+public class Door : MonoBehaviour
 {
     public int IDpair = -1;
     public string NameDoor = "Hola";
@@ -23,10 +23,13 @@ class Door : MonoBehaviour
     public Vector2 posMaxtrix = new Vector2(-1,-1);
 
     #region Signal list
-    [HideInInspector]
-    public List<Signal> onOpen = new List<Signal>();
-    [HideInInspector]
-    public List<Signal> onOpenQuickly = new List<Signal>();
+
+    public delegate void onOpenBroadcast();
+    public event onOpenBroadcast OnOpenDoor;
+
+    public delegate void onOpenQuicklyBroadcast();
+    public event onOpenQuicklyBroadcast onOpenQuickly;
+
     [HideInInspector]
     public List<Signal> onClose = new List<Signal>();
     [HideInInspector]
@@ -48,17 +51,10 @@ class Door : MonoBehaviour
     }
     public void OpenQuickly(){
 
-        foreach (Signal sig in onOpenQuickly) {
-
-            sig.Invoke ();
-        }
+        onOpenQuickly ();
     }
     public void Open(){
-
-        foreach (Signal sig in onOpen) {
-        
-            sig.Invoke ();
-        }
+        OnOpenDoor();
     }
     public void Close(){
 

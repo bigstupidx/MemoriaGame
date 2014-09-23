@@ -23,6 +23,8 @@ public class PowerOff : MonoBehaviour {
     UIButton button;
 
     static  Door[] doors;
+
+    bool firstRun = true;
     void Awake(){
     
         button = GetComponent<UIButton> ();
@@ -41,17 +43,27 @@ public class PowerOff : MonoBehaviour {
             }
         }
 
-        ManagerPowers.Instance.onPowerTrue.Add (new Signal ("onNotUse", gameObject));
-        ManagerPowers.Instance.onPowerFalse.Add (new Signal ("onUse", gameObject));
     }
     void Start(){
         doors = null;
+
+        ManagerPowers.Instance.onPowerTrue.Add (new Signal ("onNotUse", gameObject));
+        ManagerPowers.Instance.onPowerFalse.Add (new Signal ("onUse", gameObject));
+
+        ManagerPause.SubscribeOnPauseGame(onPaused);
+        ManagerPause.SubscribeOnResumeGame( onResume);
+
+        firstRun = false;
     }
 
     void OnEnable(){
-        ManagerPause.SubscribeOnPauseGame(onPaused);
-        ManagerPause.SubscribeOnResumeGame( onResume);
+        if (!firstRun) {
+
+            ManagerPause.SubscribeOnPauseGame(onPaused);
+            ManagerPause.SubscribeOnResumeGame( onResume);
+        }
     }
+
     void OnDisable(){
 
         ManagerPause.UnSubscribeOnPauseGame(onPaused);

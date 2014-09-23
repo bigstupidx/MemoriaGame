@@ -14,14 +14,14 @@ using System.Collections;
 class AnimationDoor : MonoBehaviour
 {
     public Door door = null;
-    Animator anim = null;
+    public Animator anim = null;
     void Awake(){
        // door = GetComponent<Door> ();
 
-        anim = GetComponent<Animator> ();
+       
 
-        door.onOpen.Add (new Signal("onOpen",gameObject));
-        door.onOpenQuickly.Add (new Signal("onOpenQuickly",gameObject));
+        door.OnOpenDoor += onOpen;
+        door.onOpenQuickly += onOpenQuickly;
 
         door.onClose.Add (new Signal("onClose",gameObject));
         door.onShakeTrue.Add (new Signal("onShakeTrue",gameObject));
@@ -29,13 +29,11 @@ class AnimationDoor : MonoBehaviour
         door.onCheckTruePair.Add (new Signal("onCheckTruePair",gameObject));
 
     }
-    [Signal]
     void onOpen(){
         anim.SetBool("Open",true);
         anim.SetBool("Shake",false);
 
     }
-    [Signal]
     void onOpenQuickly(){
         anim.SetBool("OpenQuickly",true);
         anim.SetBool("Shake",false);

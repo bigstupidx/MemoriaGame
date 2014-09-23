@@ -14,7 +14,7 @@ using System;
 [RequireComponent (typeof(Door))]
 [RequireComponent (typeof(TapGesture))]
 
-class InputDoor : MonoBehaviour
+public class InputDoor : MonoBehaviour
 {
     Door door;
 

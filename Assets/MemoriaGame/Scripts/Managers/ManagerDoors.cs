@@ -34,8 +34,8 @@ class ManagerDoors : Singleton<ManagerDoors>
     Door firstOpen;
     Door SecondOpen;
 
-    public static float offSetX = 0.20f;
-    public static float offSetZ = -0.20f;
+    public static float offSetX = 0.15f;
+    public static float offSetZ = -0.17f;
 
     /// <summary>
     /// Tiempo para hacer el check de los pares
@@ -53,19 +53,13 @@ class ManagerDoors : Singleton<ManagerDoors>
     #region Starts:
     public GameObject Star = null;
     List< List < GameObject> > stars =  new List< List<GameObject>> ();
-    [HideInInspector]
-    public static float offSetXStar =0.20f;
-    [HideInInspector]
-    public static float offSetZStart = -0.20f;
+
     #endregion
 
     #region StartsPoof:
     public GameObject StarPoof = null;
     List< List < GameObject> > starsPoof =  new List< List<GameObject>> ();
-    [HideInInspector]
-    public static float offSetXStarPoof = 0.20f;
-    [HideInInspector]
-    public static float offSetZStartPoof = - 0.20f;
+
     #endregion
     #region ContadorDePares
     int currentPair = 0;
@@ -90,9 +84,16 @@ class ManagerDoors : Singleton<ManagerDoors>
         setStarsPoof ();
 
     }
+    bool firstRun = true;
+    void Start(){
+        ManagerPause.SubscribeOnPauseGame (onPaused);
+        ManagerPause.SubscribeOnResumeGame (onResume);
+    }
     void OnEnable(){
-        ManagerPause.SubscribeOnPauseGame(onPaused);
-        ManagerPause.SubscribeOnResumeGame( onResume);
+        if (!firstRun) {
+            ManagerPause.SubscribeOnPauseGame (onPaused);
+            ManagerPause.SubscribeOnResumeGame (onResume);
+        }
     }
     void OnDisable(){
 
@@ -123,12 +124,12 @@ class ManagerDoors : Singleton<ManagerDoors>
             starsPoof.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
 
-                starsPoof[i].Add (StarPoof.Spawn(new Vector3(currentX,0.1f,currentZ),Quaternion.identity));
+                starsPoof[i].Add (StarPoof.Spawn(new Vector3(currentX,0.08f ,currentZ),Quaternion.identity));
                 starsPoof [i] [j].SetActive (false);
-                currentX += offSetXStarPoof;
+                currentX += offSetX;
             }
 
-            currentZ += offSetZStartPoof;
+            currentZ += offSetZ +i*0.01f;;
             currentX = posIniX;
         }
     }
@@ -155,12 +156,12 @@ class ManagerDoors : Singleton<ManagerDoors>
             stars.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
 
-                stars[i].Add (Star.Spawn(new Vector3(currentX,0,currentZ),Quaternion.identity));
+                stars[i].Add (Star.Spawn(new Vector3(currentX +j*0.001f,0 - i*0.015f,currentZ),Quaternion.identity));
                 stars [i] [j].SetActive (false);
-                currentX += offSetXStar;
+                currentX += offSetX;
             }
 
-            currentZ += offSetZStart;
+            currentZ += offSetZ +i*0.01f;
             currentX = posIniX;
         }
     }
@@ -209,7 +210,7 @@ class ManagerDoors : Singleton<ManagerDoors>
 
             }
 
-            currentZ += offSetZ;
+            currentZ += offSetZ +i*0.01f;
             currentX = posIniX;
         }
 

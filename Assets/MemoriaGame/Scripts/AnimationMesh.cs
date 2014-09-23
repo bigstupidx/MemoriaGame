@@ -9,29 +9,38 @@ using System.Collections;
 
 [RequireComponent (typeof(Animator))]
 
-class AnimationMesh : MonoBehaviour
+public class AnimationMesh : MonoBehaviour
 {
     public Door door = null;
-    Animator anim = null;
-    void Awake(){
+    public Animator anim = null;
+
+    const float timeShutDown = 0.25f;
+
+    void Start(){
         // door = GetComponent<Door> ();
 
-        anim = GetComponent<Animator> ();
 
-        door.onOpen.Add (new Signal("onOpen",gameObject));
-        door.onOpenQuickly.Add (new Signal("onOpenQuickly",gameObject));
+        door.OnOpenDoor += onOpen;
+        door.onOpenQuickly += onOpenQuickly;
 
         door.onClose.Add (new Signal("onClose",gameObject));
 
         door.onCheckTruePair.Add (new Signal("onCheckTruePair",gameObject));
 
+        gameObject.SetActive (false);
     }
-    [Signal]
     void onOpen(){
+
+        StopCoroutine (ShutDown(timeShutDown));
+        gameObject.SetActive (true);
+
         anim.SetBool("Open",true);
     }
-    [Signal]
     void onOpenQuickly(){
+        StopCoroutine (ShutDown(timeShutDown));
+
+        gameObject.SetActive (true);
+
         anim.SetBool("OpenQuickly",true);
     }
     [Signal]
@@ -39,13 +48,26 @@ class AnimationMesh : MonoBehaviour
         anim.SetBool("Open",false);
         anim.SetBool("OpenQuickly",false);
 
+        StartCoroutine( ShutDown (timeShutDown));
+
     }
 
     [Signal]
     void onCheckTruePair(){
         //anim.SetBool("Open",false);
     }
-        
+       
+    IEnumerator ShutDown(float time)
+    {
+        yield return StartCoroutine(Wait(time));
+        gameObject.SetActive (false);
+    }
+    //Our wait function
+    IEnumerator Wait(float duration)
+    {
+        for (float timer = 0; timer < duration; timer += Time.deltaTime)
+            yield return null;
+    } 
 }
 
 
