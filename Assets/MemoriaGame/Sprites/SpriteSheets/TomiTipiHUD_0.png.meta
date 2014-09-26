@@ -66,47 +66,47 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 112
-        width: 601
-        height: 152
+        y: 106
+        width: 624
+        height: 159
       alignment: 9
-      pivot: {x: .511647284, y: .460526317}
+      pivot: {x: .484775633, y: .484276742}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: comboplus-comboxplus_2
       rect:
         serializedVersion: 2
-        x: 605
-        y: 94
-        width: 502
-        height: 170
+        x: 628
+        y: 96
+        width: 501
+        height: 169
       alignment: 9
-      pivot: {x: .503984034, y: .382352948}
+      pivot: {x: .502994001, y: .384615391}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox4_3
       rect:
         serializedVersion: 2
-        x: 1109
-        y: 80
+        x: 1131
+        y: 82
         width: 322
-        height: 184
+        height: 183
       alignment: 9
-      pivot: {x: .41614908, y: .5}
+      pivot: {x: .41614908, y: .502732217}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox4_4
       rect:
         serializedVersion: 2
-        x: 1433
-        y: 10
-        width: 242
+        x: 1455
+        y: 11
+        width: 241
         height: 116
       alignment: 9
-      pivot: {x: .504132211, y: .646551728}
+      pivot: {x: .502074718, y: .646551728}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox4_5
       rect:
         serializedVersion: 2
-        x: 1847
-        y: 23
+        x: 1846
+        y: 26
         width: 150
         height: 150
       alignment: 9
@@ -116,97 +116,97 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1456
-        y: 128
-        width: 389
+        y: 129
+        width: 388
         height: 452
       alignment: 9
-      pivot: {x: .469151676, y: .5}
+      pivot: {x: .467783511, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_tati
       rect:
         serializedVersion: 2
         x: 1860
-        y: 1461
+        y: 1464
         width: 178
-        height: 184
+        height: 183
       alignment: 9
-      pivot: {x: .488764048, y: .461956531}
+      pivot: {x: .488764048, y: .464480877}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_tati_off
       rect:
         serializedVersion: 2
         x: 1860
-        y: 1275
+        y: 1279
         width: 178
-        height: 184
+        height: 183
       alignment: 9
-      pivot: {x: .488764048, y: .461956531}
+      pivot: {x: .488764048, y: .464480877}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_tico
       rect:
         serializedVersion: 2
-        x: 1847
-        y: 175
+        x: 1846
+        y: 178
         width: 186
-        height: 199
+        height: 198
       alignment: 9
-      pivot: {x: .5, y: .489949763}
+      pivot: {x: .5, y: .49242425}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_tico_off
       rect:
         serializedVersion: 2
         x: 1860
-        y: 1847
+        y: 1848
         width: 186
-        height: 199
+        height: 198
       alignment: 9
-      pivot: {x: .5, y: .489949763}
+      pivot: {x: .5, y: .49242425}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_timi
       rect:
         serializedVersion: 2
         x: 1860
-        y: 1095
+        y: 1100
         width: 177
-        height: 178
+        height: 177
       alignment: 9
-      pivot: {x: .483050853, y: .488764048}
+      pivot: {x: .483050853, y: .491525412}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_timi_off
       rect:
         serializedVersion: 2
         x: 1860
-        y: 915
+        y: 921
         width: 177
-        height: 178
+        height: 177
       alignment: 9
-      pivot: {x: .483050853, y: .488764048}
+      pivot: {x: .483050853, y: .491525412}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_topi
       rect:
         serializedVersion: 2
-        x: 1847
-        y: 376
+        x: 1846
+        y: 378
         width: 176
-        height: 204
+        height: 203
       alignment: 9
-      pivot: {x: .494318187, y: .509803951}
+      pivot: {x: .494318187, y: .512315273}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: power_up_icon_topi_off
       rect:
         serializedVersion: 2
         x: 1860
-        y: 1647
+        y: 1649
         width: 176
-        height: 198
+        height: 197
       alignment: 9
-      pivot: {x: .494318187, y: .49494949}
+      pivot: {x: .494318187, y: .497461915}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reiniciar-Reiniciar_escrito
       rect:
         serializedVersion: 2
         x: 2
-        y: 266
+        y: 267
         width: 1452
         height: 314
       alignment: 9
@@ -216,17 +216,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 582
+        y: 583
         width: 1856
-        height: 1464
+        height: 1463
       alignment: 9
-      pivot: {x: .5, y: .489071041}
+      pivot: {x: .5, y: .489405334}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: timer_pointer
       rect:
         serializedVersion: 2
         x: 1860
-        y: 773
+        y: 779
         width: 62
         height: 140
       alignment: 0

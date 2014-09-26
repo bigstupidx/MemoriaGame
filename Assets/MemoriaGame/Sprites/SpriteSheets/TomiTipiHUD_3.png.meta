@@ -56,7 +56,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1438
-        y: 78
+        y: 79
         width: 528
         height: 242
       alignment: 9
@@ -66,11 +66,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 40
+        y: 41
         width: 1434
-        height: 898
+        height: 897
       alignment: 9
-      pivot: {x: .528591335, y: .540089071}
+      pivot: {x: .528591335, y: .540691197}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reiniciar-reiniciarForward_03
       rect:
@@ -126,21 +126,21 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1764
-        y: 864
+        y: 865
         width: 226
-        height: 238
+        height: 237
       alignment: 9
-      pivot: {x: .504424751, y: .50420171}
+      pivot: {x: .504424751, y: .506329119}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: visor_de_objetos_provisional
       rect:
         serializedVersion: 2
         x: 1438
-        y: 322
-        width: 541
+        y: 323
+        width: 540
         height: 540
       alignment: 9
-      pivot: {x: .505545259, y: .507407427}
+      pivot: {x: .504629612, y: .507407427}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

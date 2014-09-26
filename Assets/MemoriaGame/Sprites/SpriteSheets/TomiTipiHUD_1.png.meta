@@ -49,21 +49,21 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 1282
+        y: 1283
         width: 1860
-        height: 764
+        height: 763
       alignment: 9
-      pivot: {x: .496236563, y: .5}
+      pivot: {x: .496236563, y: .500655293}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reiniciar-reiniciarForward_04
       rect:
         serializedVersion: 2
         x: 2
-        y: 32
+        y: 34
         width: 1834
-        height: 1248
+        height: 1247
       alignment: 9
-      pivot: {x: .482551813, y: .524839759}
+      pivot: {x: .482551813, y: .525260627}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

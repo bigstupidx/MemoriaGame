@@ -57,38 +57,38 @@ TextureImporter:
     - name: boton_pausa
       rect:
         serializedVersion: 2
-        x: 1588
+        x: 1587
         y: 759
         width: 401
         height: 420
       alignment: 9
-      pivot: {x: .485037416, y: .492857128}
+      pivot: {x: .514962614, y: .492857128}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: boton_pausa_press
       rect:
         serializedVersion: 2
-        x: 1588
+        x: 1587
         y: 1181
-        width: 405
+        width: 404
         height: 428
       alignment: 9
-      pivot: {x: .490123451, y: .483644873}
+      pivot: {x: .511138618, y: .483644873}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: comboplus-comboxplus_3
       rect:
         serializedVersion: 2
         x: 2
-        y: 4
-        width: 518
+        y: 5
+        width: 517
         height: 214
       alignment: 9
-      pivot: {x: .51158303, y: .495327115}
+      pivot: {x: .510638297, y: .495327115}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox2_3
       rect:
         serializedVersion: 2
-        x: 1502
-        y: 33
+        x: 1500
+        y: 35
         width: 504
         height: 242
       alignment: 9
@@ -97,47 +97,47 @@ TextureImporter:
     - name: combox3_1
       rect:
         serializedVersion: 2
-        x: 1502
-        y: 519
+        x: 1500
+        y: 520
         width: 528
-        height: 238
+        height: 237
       alignment: 9
-      pivot: {x: .501893938, y: .478991598}
+      pivot: {x: .501893938, y: .481012672}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox3_2
       rect:
         serializedVersion: 2
-        x: 1502
-        y: 277
-        width: 520
-        height: 240
+        x: 1500
+        y: 279
+        width: 519
+        height: 239
       alignment: 9
-      pivot: {x: .5, y: .508333325}
+      pivot: {x: .49903661, y: .510460258}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox4_2
       rect:
         serializedVersion: 2
-        x: 1034
-        y: 12
-        width: 466
-        height: 206
+        x: 1033
+        y: 14
+        width: 465
+        height: 205
       alignment: 9
-      pivot: {x: .532188833, y: .456310689}
+      pivot: {x: .531182766, y: .458536595}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox4_9
       rect:
         serializedVersion: 2
-        x: 522
-        y: 6
+        x: 521
+        y: 8
         width: 510
-        height: 212
+        height: 211
       alignment: 9
-      pivot: {x: .525490224, y: .490566045}
+      pivot: {x: .525490224, y: .492890984}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reiniciar-cancel_icon
       rect:
         serializedVersion: 2
-        x: 1588
+        x: 1587
         y: 1611
         width: 452
         height: 435
@@ -148,17 +148,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 1080
-        width: 1584
-        height: 966
+        y: 1081
+        width: 1583
+        height: 965
       alignment: 9
-      pivot: {x: .5, y: .27743271}
+      pivot: {x: .499684155, y: .277720213}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reiniciar-reiniciarReverse_01
       rect:
         serializedVersion: 2
         x: 2
-        y: 220
+        y: 221
         width: 1386
         height: 858
       alignment: 9

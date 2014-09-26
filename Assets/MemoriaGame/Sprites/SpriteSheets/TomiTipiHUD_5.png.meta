@@ -9,20 +9,20 @@ TextureImporter:
     21300008: combox2_6_definit
     21300010: combox3_3
     21300012: combox3_4_definit
-    21300014: combox4_1
-    21300016: combox4_10
-    21300018: combox4_12_definit
-    21300020: combox4_7
+    21300014: combox4_10
+    21300016: combox4_11
+    21300018: combox4_6
+    21300020: combox4_8
     21300022: marcoazul
-    21300024: power_up_icon_tica
-    21300026: reiniciar-reiniciarReverse_02
-    21300028: reiniciar-reiniciarReverse_03
-    21300030: timer_base_estadoamarillo_05
-    21300032: timer_base_estadoamarillo_08
-    21300034: timer_base_estadoamarillo_09
-    21300036: timer_base_estadoamarillo_10
-    21300038: timer_base_estadorojo_00
-    21300040: timer_base_estadorojo_08
+    21300024: reiniciar-reiniciarReverse_02
+    21300026: reiniciar-reiniciarReverse_03
+    21300028: timer_base_estadoamarillo_05
+    21300030: timer_base_estadoamarillo_08
+    21300032: timer_base_estadoamarillo_09
+    21300034: timer_base_estadoamarillo_10
+    21300036: timer_base_estadorojo_00
+    21300038: timer_base_estadorojo_08
+    21300040: timer_base_estadoverde_00
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -67,8 +67,8 @@ TextureImporter:
     - name: comboplus-comboxplus_1
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 428
+        x: 1291
+        y: 425
         width: 520
         height: 222
       alignment: 9
@@ -77,18 +77,18 @@ TextureImporter:
     - name: combox2_0
       rect:
         serializedVersion: 2
-        x: 1774
-        y: 664
-        width: 226
-        height: 202
+        x: 1750
+        y: 665
+        width: 225
+        height: 201
       alignment: 9
-      pivot: {x: .539822996, y: .485148519}
+      pivot: {x: .537777781, y: .48756218}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox2_2
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 1106
+        x: 1291
+        y: 1580
         width: 504
         height: 232
       alignment: 9
@@ -98,27 +98,27 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 869
-        y: 152
+        y: 154
         width: 494
-        height: 242
+        height: 241
       alignment: 9
-      pivot: {x: .5, y: .495867759}
+      pivot: {x: .5, y: .497925311}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox2_6_definit
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 1340
-        width: 484
+        x: 1291
+        y: 1107
+        width: 483
         height: 232
       alignment: 9
-      pivot: {x: .533057868, y: .487068951}
+      pivot: {x: .532091081, y: .487068951}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox3_3
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 652
+        x: 1291
+        y: 881
         width: 480
         height: 224
       alignment: 9
@@ -127,97 +127,87 @@ TextureImporter:
     - name: combox3_4_definit
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 1574
+        x: 1291
+        y: 1341
         width: 492
-        height: 238
+        height: 237
       alignment: 9
-      pivot: {x: .51219511, y: .50420171}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: combox4_1
-      rect:
-        serializedVersion: 2
-        x: 1365
-        y: 206
-        width: 508
-        height: 220
-      alignment: 9
-      pivot: {x: .505905509, y: .454545468}
+      pivot: {x: .51219511, y: .506329119}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: combox4_10
       rect:
         serializedVersion: 2
-        x: 1292
+        x: 1291
         y: 1814
         width: 510
         height: 232
       alignment: 9
       pivot: {x: .525490224, y: .538793087}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: combox4_12_definit
+    - name: combox4_11
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 878
-        width: 500
-        height: 226
+        x: 1291
+        y: 649
+        width: 457
+        height: 230
       alignment: 9
-      pivot: {x: .54400003, y: .460177004}
+      pivot: {x: .588621438, y: .469565213}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: combox4_7
+    - name: combox4_6
       rect:
         serializedVersion: 2
         x: 1365
-        y: 4
-        width: 386
-        height: 200
+        y: 25
+        width: 257
+        height: 166
       alignment: 9
-      pivot: {x: .673575103, y: .474999994}
+      pivot: {x: 1.0077821, y: .572289169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: combox4_8
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 219
+        width: 446
+        height: 204
+      alignment: 9
+      pivot: {x: .580717504, y: .465686262}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: marcoazul
       rect:
         serializedVersion: 2
         x: 2
-        y: 6
+        y: 8
         width: 865
-        height: 388
+        height: 387
       alignment: 9
-      pivot: {x: .5, y: .502577305}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: power_up_icon_tica
-      rect:
-        serializedVersion: 2
-        x: 1753
-        y: 13
-        width: 237
-        height: 191
-      alignment: 9
-      pivot: {x: .508438826, y: .489528805}
+      pivot: {x: .5, y: .503875971}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reiniciar-reiniciarReverse_02
       rect:
         serializedVersion: 2
         x: 2
-        y: 396
-        width: 1288
-        height: 800
+        y: 397
+        width: 1287
+        height: 799
       alignment: 9
-      pivot: {x: .534937859, y: .256249994}
+      pivot: {x: .534576535, y: .256570727}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reiniciar-reiniciarReverse_03
       rect:
         serializedVersion: 2
         x: 2
         y: 1198
-        width: 1288
+        width: 1287
         height: 848
       alignment: 9
-      pivot: {x: .534937859, y: .241745278}
+      pivot: {x: .534576535, y: .241745278}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: timer_base_estadoamarillo_05
       rect:
         serializedVersion: 2
-        x: 1804
+        x: 1803
         y: 1812
         width: 228
         height: 234
@@ -227,7 +217,7 @@ TextureImporter:
     - name: timer_base_estadoamarillo_08
       rect:
         serializedVersion: 2
-        x: 1786
+        x: 1797
         y: 1576
         width: 228
         height: 234
@@ -237,7 +227,7 @@ TextureImporter:
     - name: timer_base_estadoamarillo_09
       rect:
         serializedVersion: 2
-        x: 1786
+        x: 1785
         y: 1340
         width: 228
         height: 234
@@ -247,7 +237,7 @@ TextureImporter:
     - name: timer_base_estadoamarillo_10
       rect:
         serializedVersion: 2
-        x: 1798
+        x: 1776
         y: 1104
         width: 228
         height: 234
@@ -257,7 +247,7 @@ TextureImporter:
     - name: timer_base_estadorojo_00
       rect:
         serializedVersion: 2
-        x: 1794
+        x: 1773
         y: 868
         width: 228
         height: 234
@@ -267,8 +257,18 @@ TextureImporter:
     - name: timer_base_estadorojo_08
       rect:
         serializedVersion: 2
-        x: 1814
-        y: 428
+        x: 1813
+        y: 429
+        width: 228
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .512820542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: timer_base_estadoverde_00
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 193
         width: 228
         height: 234
       alignment: 9
