@@ -50,6 +50,11 @@ class ManagerDoors : Singleton<ManagerDoors>
     [HideInInspector]
     public bool CanTouch = false;
 
+    public delegate void onOpenFirstBroadcast(int id, string name);
+    public event onOpenFirstBroadcast OnOpenFirst;
+
+    public delegate void onCloseFirstBroadcast(int id, string name);
+    public event onCloseFirstBroadcast OnCloseFirst;
     #region Starts:
     public GameObject Star = null;
     List< List < GameObject> > stars =  new List< List<GameObject>> ();
@@ -241,7 +246,8 @@ class ManagerDoors : Singleton<ManagerDoors>
         
                 firstOpen = door;
                 door.Open ();
-
+                //Aqui deberia poder poner un delegado para el visor
+                OnOpenFirst (door.IDpair,door.NameDoor);
             } else if(firstOpen != door) {
         
                 SecondOpen = door;
@@ -284,6 +290,8 @@ class ManagerDoors : Singleton<ManagerDoors>
             SecondOpen.Close ();
 
         }
+        //Aqui llamo a las funciones q dependen  del primer abierto
+        OnCloseFirst (firstOpen.IDpair,firstOpen.NameDoor);
         firstOpen = null;
         SecondOpen = null;
         isChecking = false;

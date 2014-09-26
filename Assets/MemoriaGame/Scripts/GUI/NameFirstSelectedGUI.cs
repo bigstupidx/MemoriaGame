@@ -15,9 +15,19 @@ public class NameFirstSelectedGUI : MonoBehaviour {
     void Awake  () {
         label = GetComponent<UILabel> ();
     }
+    void Start(){
+        label.text = "";
+        ManagerDoors.Instance.OnOpenFirst += FirstOpenShow;
+        ManagerDoors.Instance.OnCloseFirst += FirstOpenClose;
+    }
 
-    void LateUpdate(){
+    void FirstOpenShow(int id, string name){
 
-        label.text = ManagerDoors.Instance.getFisrtDoorName();
+        label.text = name;
+    }
+
+    void FirstOpenClose(int id,  string name){
+
+        label.text = "";
     }
 }

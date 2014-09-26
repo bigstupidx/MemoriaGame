@@ -46,9 +46,6 @@ public class PauseState : FSMState {
 
 
 
-    protected override void Act () {
-
-    }
 
 }
 

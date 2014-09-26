@@ -37,8 +37,6 @@ public class PlayState : FSMState {
         fsm.PerformTransition(Transition.PlayToPause);
     }
 
-    protected override void Act () {
-    }
 
 }
 
