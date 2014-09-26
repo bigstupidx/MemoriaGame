@@ -114,8 +114,15 @@ public class FSMState : MonoBehaviour
 	/// <summary>
 	/// This method is used to a normal update
 	/// </summary>
-	protected virtual void Act() { }
-	protected virtual void FixedAct() { }
+	protected virtual void UpdateChild() { }
+    /// <summary>
+    /// thu methos is used to a lateupdate
+    /// </summary>
+    protected virtual void LateUpdateChild() { }
+    /// <summary>
+    /// this method is used to a fixedupdate
+    /// </summary>
+	protected virtual void FixedUpdateChild() { }
 
 	protected virtual void Awake(){
 #if UNITY_PSM
@@ -124,13 +131,19 @@ public class FSMState : MonoBehaviour
 #endif
 		fsm = GetComponent<FSMSystem>();
 	}
-	protected void Update(){
+	
+    void Update(){
 		Reason();
-		Act();
+		UpdateChild();
 	}
-	protected void FixedUpdate(){
-		FixedAct();
+    void LateUpdate()
+    {
+        LateUpdateChild();
+    }
+	void FixedUpdate(){
+		FixedUpdateChild();
 	}
+
 
 
 
