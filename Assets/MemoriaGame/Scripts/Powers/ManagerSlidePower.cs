@@ -36,6 +36,8 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
         }
         //Si quiero q no pueda abrir ninguno activo aaqui q no se puede hacer touch
         ManagerDoors.Instance.CanTouch = false;
+
+        //Mostras GUI del feedbackvisual
     }
     public bool DeActivePower(){
         if (isPaused || stopTime)
@@ -53,6 +55,8 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
         usedPower = true;
 
         ManagerPowers.Instance.UsingPower = false;
+
+        //apagar GUI de feedbackvisual 
 
         return true;
     }
