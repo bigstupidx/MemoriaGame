@@ -7,7 +7,7 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
     public float TimeStop = 4.0f;
     float currentTimeStop = 0;
     bool usedPower = false;
-
+    public ClockTimer clock;
 
     void OnEnable(){
         ManagerPause.SubscribeOnPauseGame(onPaused);
@@ -26,14 +26,14 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
         ManagerPowers.Instance.UsingPower = true;
 
         currentTimeStop = TimeStop;
-
+        clock.Freeze ();
         ManagerTime.Instance.onStop ();
 
     }
     public void DeActivePower(){
         ManagerTime.Instance.onPlay ();
         usedPower = true;
-
+        clock.NotFreeze ();
         ManagerPowers.Instance.UsingPower = false;
     }
 

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ClockTimer : MonoBehaviour {
-    public GameObject Arrow;
+    public UI2DSprite Arrow;
 
     public UI2DSpriteAnimation animSpriteRed;
     public UI2DSpriteAnimation animSpriteYellow;
@@ -11,7 +11,7 @@ public class ClockTimer : MonoBehaviour {
     [Range (0,100)]
     public float toYellow = 70.0f;
     bool playYellow = false;
-
+	bool playRed = false;
     [Range (0,100)]
     public float toExplode = 35.0f;
     float magicConstTime = 0.0f;
@@ -19,6 +19,12 @@ public class ClockTimer : MonoBehaviour {
 
     TweenRotation tweenRota;
     Vector3 currentStop;
+
+    public UI2DSpriteAnimation freezeAnimation;
+    public Sprite ArrowSprite;
+    public Sprite ArrowFreeze;
+    public Sprite BaseStateClock;
+    bool isFreezing = false;
 	// Use this for initialization
 	void Awake () {
         ManagerTime.Instance.onTimeGameStart.Add (new Signal("onTimeGameStart",gameObject));
@@ -42,7 +48,7 @@ public class ClockTimer : MonoBehaviour {
 	
     [Signal]
 	void onTimeGameStart () {
-        tweenRota = TweenRotation.Begin (Arrow, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
+        tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
         tweenRota.to=new Vector3(0,0,-90);
 
         isTimeGameStart = true;
@@ -55,7 +61,7 @@ public class ClockTimer : MonoBehaviour {
     public void onResume(){
         tweenRota.from = currentStop;
 
-        tweenRota = TweenRotation.Begin (Arrow, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
+        tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
         tweenRota.from = currentStop;
         tweenRota.to = new Vector3(0,0,-90);
 
@@ -63,25 +69,53 @@ public class ClockTimer : MonoBehaviour {
 
     }
 
+    public void Freeze(){
+        if (playRed) {
+            animSpriteRed.Pause ();
+            scaleArrow.enabled = false;
+        } else if (playYellow) {
+            animSpriteYellow.Pause ();
+        }
+        Arrow.sprite2D = ArrowFreeze;
+        freezeAnimation.Play ();
+        isFreezing = true;
+    }
+    public void NotFreeze(){
+        isFreezing = false;
+        freezeAnimation.Pause ();
+        Arrow.sprite2D = ArrowSprite;
+        if (playRed) {
+            scaleArrow.PlayForward ();
+            animSpriteRed.Play ();
 
+        } else if (playYellow) {
+            animSpriteYellow.Play ();
+        } else {
+            GetComponent<UI2DSprite> ().sprite2D = BaseStateClock;
+        }
+
+    }
     void Update(){
         if (isTimeGameStart) {
             float value = (magicConstTime * ManagerTime.Instance.getCurrentTimeOfGame);
-            if (value <= toExplode ) {
-                if (!animSpriteRed.isPlaying) {
+            if (value <= toExplode) {
+                if (!animSpriteRed.isPlaying && !isFreezing) {
                     scaleArrow.PlayForward ();
                     animSpriteRed.Play ();
+                    playRed = true;
                 }
-            }else if (value <= toYellow) {
-                if (!playYellow) {
+            } else if (value <= toYellow) {
+                if (!playYellow && !isFreezing) {
                     animSpriteYellow.Play ();
                     playYellow = true;
                 }
              
      
-            }
+            
            
+            }
         }
     }
-
 }
+
+
