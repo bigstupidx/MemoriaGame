@@ -25,7 +25,7 @@ public class PlayState : FSMState {
     }
 
     public override void DoBeforeLeaving() {
-        TweenAlpha.Begin(play,timeAlpha,0);
+       // TweenAlpha.Begin(play,timeAlpha,0);
     }
 
     protected override void Reason() {

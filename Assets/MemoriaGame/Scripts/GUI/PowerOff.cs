@@ -15,37 +15,34 @@ public class PowerOff : MonoBehaviour {
     public PowerDoor character = PowerDoor.Any;
 
 
-    bool Locked = true;
+    protected bool Locked = true;
     [HideInInspector]
     public bool used = false;
 
 
-    UIButton button;
+    protected UIButton button;
 
-    static  Door[] doors;
+    Door[] doors;
 
     bool firstRun = true;
-    void Awake(){
-    
+
+    void Start(){
+
         button = GetComponent<UIButton> ();
         button.isEnabled = false;
 
-        if (doors == null) {
-        
-            doors = GameObject.FindObjectsOfType<Door> ();
-        }
+        doors = GameObject.FindObjectsOfType<Door> ();
+
 
         for (int i = 0; i < doors.Length; ++i) {
             if (character == doors [i].character) {
                 doors[i].onCheckTruePair.Add (new Signal ("setOnPower", gameObject));
+                Debug.Log ("SetOnPower add");
+
 
                 break;
             }
         }
-
-    }
-    void Start(){
-        doors = null;
 
         ManagerPowers.Instance.onPowerTrue.Add (new Signal ("onNotUse", gameObject));
         ManagerPowers.Instance.onPowerFalse.Add (new Signal ("onUse", gameObject));
@@ -72,6 +69,8 @@ public class PowerOff : MonoBehaviour {
 
     [Signal]
     public void setOnPower(){
+        Debug.Log ("SetOnPower Padre");
+
         Locked = false;
         button.isEnabled = true;
     }
