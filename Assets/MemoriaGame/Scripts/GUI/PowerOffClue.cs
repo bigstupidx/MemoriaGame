@@ -17,7 +17,7 @@ public class PowerOffClue : PowerOff {
                         button.isEnabled = true;
                 } else {
                     button.isEnabled = false;
-                    enabled = false;
+             //       enabled = false;
                 }
             } else {
             

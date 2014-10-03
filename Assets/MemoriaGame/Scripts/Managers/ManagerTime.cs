@@ -32,17 +32,27 @@ class ManagerTime : Singleton<ManagerTime>
             sig.Invoke ();
         }
     }
+
     /// <summary>
     /// Funciones para cuando el tiempo se acabe
     /// </summary>
-    [HideInInspector]
-    public List<Signal> onTimeGameEnd = new List<Signal>();
-    public void TimeGameEnd(){
+    public delegate void onTimeGameEndBroadcast();
+    public event onTimeGameEndBroadcast onTimeGameEnd;
 
-        foreach (Signal sig in onTimeGameEnd) {
-
-            sig.Invoke ();
-        }
+    /// <summary>
+    /// Subscribes funct to OnPauseGame.
+    /// </summary>
+    /// <param name="funct">Funct.</param>
+    public static void SubscribeOnTimeGameEnd(onTimeGameEndBroadcast funct){
+        Instance.onTimeGameEnd+=funct;
+    }
+    /// <summary>
+    /// Unsubscribe safetely funct Function to OnPauseGameDelegate
+    /// </summary>
+    /// <param name="funct">Function.</param>
+    public static void UnSubscribeOnTimeGameEnd(onTimeGameEndBroadcast funct){
+        if(Instance != null)
+            Instance.onTimeGameEnd-=funct;
     }
 
 
@@ -75,8 +85,9 @@ class ManagerTime : Singleton<ManagerTime>
                     //Aqui hago lo q pasa cuando se pierde.
 
                     ManagerDoors.Instance.CanTouch = false;
-                    TimeGameEnd ();
-
+                    ManagerPause.Instance.Pause = true;
+                    onTimeGameEnd ();
+                    enabled = false;
                 }
 
             } else if (currentTimeToStart > 0) {

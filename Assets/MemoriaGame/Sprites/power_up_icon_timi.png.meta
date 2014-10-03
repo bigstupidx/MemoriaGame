@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 58ac4bc9f26734416bc349804ce989cb
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: power_up_icon_timi
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

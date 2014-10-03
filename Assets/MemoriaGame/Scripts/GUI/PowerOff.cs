@@ -37,8 +37,6 @@ public class PowerOff : MonoBehaviour {
         for (int i = 0; i < doors.Length; ++i) {
             if (character == doors [i].character) {
                 doors[i].onCheckTruePair.Add (new Signal ("setOnPower", gameObject));
-                Debug.Log ("SetOnPower add");
-
 
                 break;
             }
@@ -69,8 +67,6 @@ public class PowerOff : MonoBehaviour {
 
     [Signal]
     public void setOnPower(){
-        Debug.Log ("SetOnPower Padre");
-
         Locked = false;
         button.isEnabled = true;
     }

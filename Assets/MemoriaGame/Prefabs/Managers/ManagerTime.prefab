@@ -39,9 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f51b77f9e0e4b1581b57cd7b1907bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeOfGame: 60
+  TimeOfGame: 150
   onTimeGameStart: []
-  onTimeGameEnd: []
   onStopTime: []
   onPlayTime: []
 --- !u!1001 &100100000

@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: ad47626f12aa24875a398e493e3ced27
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: timer_base_freeze_a
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

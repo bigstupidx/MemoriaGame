@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: f6d79de48c3a54f1aa402c1c20386847
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: power_up_icon_tica_
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -83,6 +83,28 @@ class ManagerDoors : Singleton<ManagerDoors>
 
     #endregion
 
+    /// <summary>
+    /// Funciones para cuando el tiempo se acabe
+    /// </summary>
+    public delegate void onVictoryBroadcast();
+    public event onVictoryBroadcast onVictory;
+
+    /// <summary>
+    /// Subscribes funct to OnPauseGame.
+    /// </summary>
+    /// <param name="funct">Funct.</param>
+    public static void SubscribeOnVictory(onVictoryBroadcast funct){
+        Instance.onVictory+=funct;
+    }
+    /// <summary>
+    /// Unsubscribe safetely funct Function to OnPauseGameDelegate
+    /// </summary>
+    /// <param name="funct">Function.</param>
+    public static void UnSubscribeOnVictory(onVictoryBroadcast funct){
+        if(Instance != null)
+            Instance.onVictory-=funct;
+    }
+
     protected override void AwakeChild(){
         setDoors();
         setStars ();
@@ -161,7 +183,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             stars.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
 
-                stars[i].Add (Star.Spawn(new Vector3(currentX +j*0.001f,0 - i*0.015f,currentZ),Quaternion.identity));
+                stars[i].Add (Star.Spawn(new Vector3(currentX +j*0.001f,0.01f - i*0.015f,currentZ),Quaternion.identity));
                 stars [i] [j].SetActive (false);
                 currentX += offSetX;
             }
@@ -208,7 +230,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             doors.Add (new List<Door> ());
             for (int j = 0; j < countZ; j++) {
 
-                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ),Quaternion.identity));
+                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0 - i*0.01f,currentZ),Quaternion.identity));
                 doors [i] [j].posMaxtrix = new Vector2 (i, j);
                 currentX += offSetX;
 
@@ -281,6 +303,7 @@ class ManagerDoors : Singleton<ManagerDoors>
                 CanTouch = false;
                 ManagerTime.Instance.onStop ();
                 //Invoco GUI
+                onVictory ();
             }
         } else {
             //LLamo a ManagerCombo
@@ -295,7 +318,6 @@ class ManagerDoors : Singleton<ManagerDoors>
         firstOpen = null;
         SecondOpen = null;
         isChecking = false;
-    	
     }
     #endregion
 

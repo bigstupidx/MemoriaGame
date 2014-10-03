@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: d455584ecb3494ef49cf7b673b55fec1
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: marcoazul
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

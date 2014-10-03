@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: cde9e91a888024a9680c0ecfdbed26bc
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: power_up_icon_tipi_
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 0fa80f9f2922e4e3a80dbafe467a2387
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: juegodememoria_nombre
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: e05ab544fd42748668468095138415e1
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: power_up_icon_tati_
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
