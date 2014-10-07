@@ -13,7 +13,7 @@ public class PowerOffClue : PowerOff {
 
             if (ManagerDoors.Instance.isFirstOpen ) {
                 if (ManagerCluesPower.Instance.isPowerUsed == false) {
-                    if (!button.isEnabled)
+                    if (!button.isEnabled && anotherUsing==false)
                         button.isEnabled = true;
                 } else {
                     button.isEnabled = false;

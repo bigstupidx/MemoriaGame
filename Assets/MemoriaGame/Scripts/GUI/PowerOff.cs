@@ -68,7 +68,8 @@ public class PowerOff : MonoBehaviour {
     [Signal]
     public void setOnPower(){
         Locked = false;
-        button.isEnabled = true;
+        if(anotherUsing == false)
+            button.isEnabled = true;
     }
     public void setOffPower(){
 
@@ -79,17 +80,20 @@ public class PowerOff : MonoBehaviour {
 
 
     }
-
+    protected bool anotherUsing = false;
     #region Used
     [Signal]
     void onUse(){
         if(!Locked && !used)
             button.isEnabled = true;
 
+        anotherUsing = false;
+
     }
     [Signal]
     void onNotUse(){
         button.isEnabled = false;
+        anotherUsing = true;
 
     }
     #endregion
