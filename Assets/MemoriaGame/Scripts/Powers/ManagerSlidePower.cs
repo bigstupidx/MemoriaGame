@@ -5,6 +5,8 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
 
     bool usedPower = false;
     SlidePower[] powers;
+    public delegate void onActiveBroadcast(bool activate);
+    public event onActiveBroadcast OnActivePower;
 
     void OnEnable(){
         ManagerPause.SubscribeOnPauseGame(onPaused);
@@ -38,6 +40,8 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
         ManagerDoors.Instance.CanTouch = false;
 
         //Mostras GUI del feedbackvisual
+        if (OnActivePower != null)
+            OnActivePower (true);
     }
     public bool DeActivePower(){
         if (isPaused || stopTime)
@@ -57,7 +61,8 @@ public class ManagerSlidePower : Singleton<ManagerSlidePower> {
         ManagerPowers.Instance.UsingPower = false;
 
         //apagar GUI de feedbackvisual 
-
+        if (OnActivePower != null)
+        OnActivePower (false);
         return true;
     }
 

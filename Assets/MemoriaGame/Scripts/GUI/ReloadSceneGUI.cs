@@ -17,6 +17,8 @@ public class ReloadSceneGUI : MonoBehaviour {
     bool reset = false;
     bool sound  = false;
 
+    public GameObject loadPrefab;
+
     void activeBG(){
         spriteBG.alpha = 1;
 
@@ -42,11 +44,14 @@ public class ReloadSceneGUI : MonoBehaviour {
 
     public void ReloadYes(){
         //CAMIBAR
+        loadPrefab.SetActive (true);
         PlayerPrefs.Save ();
         LoadLevelManager.Instance.RestartCurrentLevel ();
 
     }
     public void Home(){
+        loadPrefab.SetActive (true);
+
         //CAMIBAR
         PlayerPrefs.Save ();
         LoadLevelManager.Instance.LoadLevel ("HomeScene");

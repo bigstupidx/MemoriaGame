@@ -15,6 +15,8 @@ public class ManagerDoublePoints: Singleton<ManagerDoublePoints> {
     public float MaxTime = 0;
     public int PlusScore = 2;
     float currentTime = 0;
+    public delegate void onActiveBroadcast(bool activate);
+    public event onActiveBroadcast OnActivePower;
 
     void OnEnable(){
         ManagerPause.SubscribeOnPauseGame(onPaused);
@@ -36,12 +38,18 @@ public class ManagerDoublePoints: Singleton<ManagerDoublePoints> {
         currentTime = MaxTime;
         ManagerScore.Instance.SetPlusScore(PlusScore);
 
+        if (OnActivePower != null)
+            OnActivePower (true);
+
     }
     void DeActivePower(){
 
         ManagerScore.Instance.SetPlusScore(-1*PlusScore);
 
         ManagerPowers.Instance.UsingPower = false;
+
+        if (OnActivePower != null)
+            OnActivePower (false);
     }
 
     void Update(){

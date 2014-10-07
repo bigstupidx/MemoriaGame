@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c529fca18524badb48276a494eb789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxTime: 10
+  MaxTime: 14
   PlusScore: 2
 --- !u!1001 &100100000
 Prefab:
