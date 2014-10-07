@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class TimeManager : Singleton<TimeManager>
+public class TimeCallBacks
 {
     public IEnumerator Wait(float duration)
     {

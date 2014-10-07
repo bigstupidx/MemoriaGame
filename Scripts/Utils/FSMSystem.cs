@@ -26,7 +26,24 @@ public class FSMSystem :FSMState
 	public StateID CurrentStateID { get { return currentStateID; } }
 	private FSMState currentState;
 	public FSMState CurrentState { get { return currentState; } }
-	
+
+    /// <summary>
+    /// Get the state with the identifier id
+    /// If the FSM doestn have the state, return null
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public FSMState GetState(StateID id)
+    {
+        foreach (FSMState state in states)
+        {
+            if (state.ID == id)
+            {
+                return state;
+            }
+        }
+        return null;
+    }
 	/// <summary>
 	/// This method places new states inside the FSM,
 	/// or prints an ERROR message if the state was already inside the List.
