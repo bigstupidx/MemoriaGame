@@ -5,14 +5,14 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Tica
+  m_Name: Robot
   serializedVersion: 2
   m_AnimatorParameters:
   - m_Name: Open
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 1
+    m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: OpenQuickly
     m_Type: 4
@@ -127,7 +127,7 @@ Transition:
   - m_ConditionMode: 5
     m_ConditionEvent: OpenQuickly
     m_EventTreshold: 0
-    m_ExitTime: 0
+    m_ExitTime: .0684448257
   m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
@@ -161,7 +161,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400006, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
+  - {fileID: 7400004, guid: 647820a0782c640dfbd26e8c3f2491a3, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -144, y: -36, z: 0}
   m_IKOnFeet: 0
@@ -176,7 +176,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400008, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
+  - {fileID: 7400000, guid: 647820a0782c640dfbd26e8c3f2491a3, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 180, y: -60, z: 0}
   m_IKOnFeet: 0
@@ -188,10 +188,10 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cerrar
-  m_Speed: 1
+  m_Speed: -1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400004, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
+  - {fileID: 7400000, guid: 647820a0782c640dfbd26e8c3f2491a3, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -336, y: -300, z: 0}
   m_IKOnFeet: 0
@@ -206,9 +206,9 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
+  - {fileID: 7400000, guid: 647820a0782c640dfbd26e8c3f2491a3, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 96, y: -216, z: 0}
+  m_Position: {x: 96, y: -192, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -221,7 +221,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400002, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
+  - {fileID: 7400002, guid: 647820a0782c640dfbd26e8c3f2491a3, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 72, y: -300, z: 0}
   m_IKOnFeet: 0
@@ -253,21 +253,21 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110194127}
     data:
-      first: {fileID: 110240060}
+      first: {fileID: 110227593}
       second:
-      - {fileID: 110133994}
+      - {fileID: 110188831}
     data:
       first: {fileID: 110231478}
       second:
       - {fileID: 110154655}
     data:
+      first: {fileID: 110240060}
+      second:
+      - {fileID: 110133994}
+    data:
       first: {fileID: 110274490}
       second:
       - {fileID: 110158664}
-    data:
-      first: {fileID: 110227593}
-      second:
-      - {fileID: 110188831}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

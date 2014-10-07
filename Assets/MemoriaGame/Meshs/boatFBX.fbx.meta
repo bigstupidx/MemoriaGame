@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: da60004652d444a899c01078e555fa82
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: back
+    100002: Boat
+    100004: //RootNode
+    100006: bottom
+    100008: ControlBoat
+    100010: Master
+    100012: nurbsSquare1
+    100014: nurbsSquare2
+    400000: back
+    400002: Boat
+    400004: //RootNode
+    400006: bottom
+    400008: ControlBoat
+    400010: Master
+    400012: nurbsSquare1
+    400014: nurbsSquare2
+    2300000: Boat
+    3300000: Boat
+    4300000: Boat
+    7400000: Bote@Idle
+    7400002: Bote@Abriendo
+    7400004: Bote@Cerrado
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Bote@Idle
+      takeName: Take 001
+      firstFrame: 35
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Master
+        weight: 1
+      - path: Master/ControlBoat
+        weight: 1
+      - path: Master/ControlBoat/Boat
+        weight: 1
+      - path: nurbsSquare1
+        weight: 1
+      - path: nurbsSquare2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Bote@Abriendo
+      takeName: Take 001
+      firstFrame: 6
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Master
+        weight: 1
+      - path: Master/ControlBoat
+        weight: 1
+      - path: Master/ControlBoat/Boat
+        weight: 1
+      - path: nurbsSquare1
+        weight: 1
+      - path: nurbsSquare2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Bote@Cerrado
+      takeName: Take 001
+      firstFrame: 6
+      lastFrame: 6.0999999
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: Master
+        weight: 1
+      - path: Master/ControlBoat
+        weight: 1
+      - path: Master/ControlBoat/Boat
+        weight: 1
+      - path: nurbsSquare1
+        weight: 1
+      - path: nurbsSquare2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 0
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

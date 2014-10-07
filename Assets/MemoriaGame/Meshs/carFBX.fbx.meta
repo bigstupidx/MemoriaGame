@@ -1,0 +1,321 @@
+fileFormatVersion: 2
+guid: 78c7e43e4b4004f2988be25d3b6e520b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bodyCar
+    100002: bodyCar 1
+    100004: bodyCar_glass
+    100006: bodyCar_glassMarco
+    100008: BodyControl
+    100010: //RootNode
+    100012: CarroGrp
+    100014: group
+    100016: InclineBacknull1
+    100018: leftBack_joint5
+    100020: leftFront_joint2
+    100022: MasterNurbsCircle1
+    100024: neumaticCar
+    100026: rightBack_joint4
+    100028: rightFront_joint3
+    100030: ruedaDerecha_back
+    100032: ruedaDerecha_front
+    100034: ruedaIzquierda_back
+    100036: ruedaIzquierda_front
+    100038: SquishNeumatics
+    400000: bodyCar
+    400002: bodyCar 1
+    400004: bodyCar_glass
+    400006: bodyCar_glassMarco
+    400008: BodyControl
+    400010: //RootNode
+    400012: CarroGrp
+    400014: group
+    400016: InclineBacknull1
+    400018: leftBack_joint5
+    400020: leftFront_joint2
+    400022: MasterNurbsCircle1
+    400024: neumaticCar
+    400026: rightBack_joint4
+    400028: rightFront_joint3
+    400030: ruedaDerecha_back
+    400032: ruedaDerecha_front
+    400034: ruedaIzquierda_back
+    400036: ruedaIzquierda_front
+    400038: SquishNeumatics
+    2300000: bodyCar 1
+    2300002: bodyCar_glass
+    2300004: bodyCar_glassMarco
+    3300000: bodyCar 1
+    3300002: bodyCar_glass
+    3300004: bodyCar_glassMarco
+    4300000: ruedaDerecha_back
+    4300002: ruedaDerecha_front
+    4300004: ruedaIzquierda_front
+    4300006: ruedaIzquierda_back
+    4300008: bodyCar
+    4300010: bodyCar_glass
+    4300012: bodyCar_glassMarco
+    7400000: Carro@Abriendo
+    7400002: Carro@Idle
+    7400004: Carro@Cerrado
+    9500000: //RootNode
+    13700000: ruedaDerecha_back
+    13700002: ruedaDerecha_front
+    13700004: ruedaIzquierda_back
+    13700006: ruedaIzquierda_front
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Carro@Abriendo
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CarroGrp
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar
+          1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glass
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glassMarco
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftBack_joint5
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftFront_joint2
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightBack_joint4
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightFront_joint3
+        weight: 1
+      - path: CarroGrp/neumaticCar
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_front
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_front
+        weight: 1
+      - path: group
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Carro@Idle
+      takeName: Take 001
+      firstFrame: 37
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CarroGrp
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar
+          1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glass
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glassMarco
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftBack_joint5
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftFront_joint2
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightBack_joint4
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightFront_joint3
+        weight: 1
+      - path: CarroGrp/neumaticCar
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_front
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_front
+        weight: 1
+      - path: group
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Carro@Cerrado
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 10.1000004
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CarroGrp
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar
+          1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glass
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glassMarco
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftBack_joint5
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftFront_joint2
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightBack_joint4
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightFront_joint3
+        weight: 1
+      - path: CarroGrp/neumaticCar
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_front
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_front
+        weight: 1
+      - path: group
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
