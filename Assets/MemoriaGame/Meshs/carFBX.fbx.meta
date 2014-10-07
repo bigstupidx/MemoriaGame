@@ -23,6 +23,7 @@ ModelImporter:
     100034: ruedaIzquierda_back
     100036: ruedaIzquierda_front
     100038: SquishNeumatics
+    100040: group1
     400000: bodyCar
     400002: bodyCar 1
     400004: bodyCar_glass
@@ -43,6 +44,7 @@ ModelImporter:
     400034: ruedaIzquierda_back
     400036: ruedaIzquierda_front
     400038: SquishNeumatics
+    400040: group1
     2300000: bodyCar 1
     2300002: bodyCar_glass
     2300004: bodyCar_glassMarco
