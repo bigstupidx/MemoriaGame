@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: 736430a1e5e2442bb92ff1f83d62a1aa
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: flowerRIG_centerYellow
+    100004: flowerRIG_CurvesFlower
+    100006: flowerRIG_FlowerGRP
+    100008: flowerRIG_GeometryFlower
+    100010: flowerRIG_joint11
+    100012: flowerRIG_joint12
+    100014: flowerRIG_joint14
+    100016: flowerRIG_joint15
+    100018: flowerRIG_joint2
+    100020: flowerRIG_joint3
+    100022: flowerRIG_joint5
+    100024: flowerRIG_joint6
+    100026: flowerRIG_joint8
+    100028: flowerRIG_joint9
+    100030: flowerRIG_jointPetalo1
+    100032: flowerRIG_jointPetalo2
+    100034: flowerRIG_jointPetalo3
+    100036: flowerRIG_jointPetalo4
+    100038: flowerRIG_jointPetalo5
+    100040: flowerRIG_JointsFlower
+    100042: flowerRIG_left
+    100044: flowerRIG_Master
+    100046: flowerRIG_Middle
+    100048: flowerRIG_petalo1
+    100050: flowerRIG_petalo1_1
+    100052: flowerRIG_petalo1_2
+    100054: flowerRIG_petalo2
+    100056: flowerRIG_petalo2_1
+    100058: flowerRIG_petalo2_2
+    100060: flowerRIG_petalo3
+    100062: flowerRIG_petalo3_2
+    100064: flowerRIG_petalo4
+    100066: flowerRIG_petalo4_1
+    100068: flowerRIG_petalo4_2
+    100070: flowerRIG_petalo5
+    100072: flowerRIG_petalo5_1
+    100074: flowerRIG_petalo5_2
+    100076: flowerRIG_petalo_3_1
+    100078: flowerRIG_petalosCentro
+    100080: flowerRIG_petalosControlMiddle
+    100082: flowerRIG_petalosControlSuperior
+    100084: flowerRIG_Superior
+    100086: flowerRIG_tallo
+    100088: flowerRIG_TalloJoint
+    100090: flowerRIG_TalloMiddle
+    100092: flowerRIG_talloSup
+    100094: flowerRIG_TalloSuperior
+    100096: group9
+    400000: //RootNode
+    400002: flowerRIG_centerYellow
+    400004: flowerRIG_CurvesFlower
+    400006: flowerRIG_FlowerGRP
+    400008: flowerRIG_GeometryFlower
+    400010: flowerRIG_joint11
+    400012: flowerRIG_joint12
+    400014: flowerRIG_joint14
+    400016: flowerRIG_joint15
+    400018: flowerRIG_joint2
+    400020: flowerRIG_joint3
+    400022: flowerRIG_joint5
+    400024: flowerRIG_joint6
+    400026: flowerRIG_joint8
+    400028: flowerRIG_joint9
+    400030: flowerRIG_jointPetalo1
+    400032: flowerRIG_jointPetalo2
+    400034: flowerRIG_jointPetalo3
+    400036: flowerRIG_jointPetalo4
+    400038: flowerRIG_jointPetalo5
+    400040: flowerRIG_JointsFlower
+    400042: flowerRIG_left
+    400044: flowerRIG_Master
+    400046: flowerRIG_Middle
+    400048: flowerRIG_petalo1
+    400050: flowerRIG_petalo1_1
+    400052: flowerRIG_petalo1_2
+    400054: flowerRIG_petalo2
+    400056: flowerRIG_petalo2_1
+    400058: flowerRIG_petalo2_2
+    400060: flowerRIG_petalo3
+    400062: flowerRIG_petalo3_2
+    400064: flowerRIG_petalo4
+    400066: flowerRIG_petalo4_1
+    400068: flowerRIG_petalo4_2
+    400070: flowerRIG_petalo5
+    400072: flowerRIG_petalo5_1
+    400074: flowerRIG_petalo5_2
+    400076: flowerRIG_petalo_3_1
+    400078: flowerRIG_petalosCentro
+    400080: flowerRIG_petalosControlMiddle
+    400082: flowerRIG_petalosControlSuperior
+    400084: flowerRIG_Superior
+    400086: flowerRIG_tallo
+    400088: flowerRIG_TalloJoint
+    400090: flowerRIG_TalloMiddle
+    400092: flowerRIG_talloSup
+    400094: flowerRIG_TalloSuperior
+    400096: group9
+    4300000: flowerRIG_petalo5
+    4300002: flowerRIG_petalo4
+    4300004: flowerRIG_petalo3
+    4300006: flowerRIG_petalo2
+    4300008: flowerRIG_petalo1
+    4300010: flowerRIG_centerYellow
+    4300012: flowerRIG_tallo
+    7400000: Flower@Idle
+    7400002: Flower@Abriendo
+    7400004: Flower@Cerrado
+    9500000: //RootNode
+    13700000: flowerRIG_centerYellow
+    13700002: flowerRIG_petalo1
+    13700004: flowerRIG_petalo2
+    13700006: flowerRIG_petalo3
+    13700008: flowerRIG_petalo4
+    13700010: flowerRIG_petalo5
+    13700012: flowerRIG_tallo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Flower@Idle
+      takeName: Take 001
+      firstFrame: 21
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: flowerRIG_FlowerGRP
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_centerYellow
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo3
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo4
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_tallo
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo1_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo2_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo3_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo4_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo5_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo1_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo2_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo4_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo5_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo_3_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1/flowerRIG_joint5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1/flowerRIG_joint5/flowerRIG_joint6
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2/flowerRIG_joint8
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2/flowerRIG_joint8/flowerRIG_joint9
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3/flowerRIG_joint11
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3/flowerRIG_joint11/flowerRIG_joint12
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4/flowerRIG_joint14
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4/flowerRIG_joint14/flowerRIG_joint15
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5/flowerRIG_joint2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5/flowerRIG_joint2/flowerRIG_joint3
+        weight: 1
+      - path: flowerRIG_left
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Flower@Abriendo
+      takeName: Take 001
+      firstFrame: 4
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: flowerRIG_FlowerGRP
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_centerYellow
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo3
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo4
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_tallo
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo1_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo2_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo3_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo4_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo5_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo1_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo2_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo4_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo5_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo_3_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1/flowerRIG_joint5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1/flowerRIG_joint5/flowerRIG_joint6
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2/flowerRIG_joint8
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2/flowerRIG_joint8/flowerRIG_joint9
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3/flowerRIG_joint11
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3/flowerRIG_joint11/flowerRIG_joint12
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4/flowerRIG_joint14
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4/flowerRIG_joint14/flowerRIG_joint15
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5/flowerRIG_joint2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5/flowerRIG_joint2/flowerRIG_joint3
+        weight: 1
+      - path: flowerRIG_left
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Flower@Cerrado
+      takeName: Take 001
+      firstFrame: 4
+      lastFrame: 4.0999999
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: flowerRIG_FlowerGRP
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_centerYellow
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo3
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo4
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_petalosCentro/flowerRIG_petalo5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/flowerRIG_GeometryFlower/flowerRIG_tallo
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo1_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo2_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo3_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo4_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Middle/flowerRIG_petalosControlMiddle/flowerRIG_petalo5_2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo1_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo2_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo4_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo5_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_CurvesFlower/flowerRIG_talloSup/flowerRIG_Superior/flowerRIG_petalosControlSuperior/flowerRIG_petalo_3_1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1/flowerRIG_joint5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo1/flowerRIG_joint5/flowerRIG_joint6
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2/flowerRIG_joint8
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo2/flowerRIG_joint8/flowerRIG_joint9
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3/flowerRIG_joint11
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo3/flowerRIG_joint11/flowerRIG_joint12
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4/flowerRIG_joint14
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo4/flowerRIG_joint14/flowerRIG_joint15
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5/flowerRIG_joint2
+        weight: 1
+      - path: flowerRIG_FlowerGRP/group9/flowerRIG_Master/flowerRIG_JointsFlower/flowerRIG_TalloJoint/flowerRIG_TalloMiddle/flowerRIG_TalloSuperior/flowerRIG_jointPetalo5/flowerRIG_joint2/flowerRIG_joint3
+        weight: 1
+      - path: flowerRIG_left
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

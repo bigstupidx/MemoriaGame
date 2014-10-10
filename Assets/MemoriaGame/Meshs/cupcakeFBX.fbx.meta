@@ -16,6 +16,8 @@ ModelImporter:
     100020: pSphere1
     100022: relleno
     100024: relleno1
+    100026: cupcake
+    100028: group1
     400000: capacillo
     400002: capacillo1
     400004: cherry
@@ -29,6 +31,8 @@ ModelImporter:
     400020: pSphere1
     400022: relleno
     400024: relleno1
+    400026: cupcake
+    400028: group1
     2300000: capacillo
     2300002: pasted__pSphere1
     2300004: pCube1
@@ -93,29 +97,33 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Master
+      - path: cupcake
         weight: 1
-      - path: Master/capacillo1
+      - path: cupcake/Master
         weight: 1
-      - path: Master/capacillo1/capacillo
+      - path: cupcake/Master/capacillo1
         weight: 1
-      - path: Master/capacillo1/relleno1
+      - path: cupcake/Master/capacillo1/capacillo
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno
+      - path: cupcake/Master/capacillo1/relleno1
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pasted__pSphere1
+      - path: cupcake/Master/capacillo1/relleno1/relleno
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pCube1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pasted__pSphere1
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pSphere1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pCube1
         weight: 1
-      - path: Master/cherry1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pSphere1
         weight: 1
-      - path: Master/cherry1/cherry
+      - path: cupcake/Master/cherry1
         weight: 1
-      - path: Master/cherry1/cherry/polySurface2
+      - path: cupcake/Master/cherry1/cherry
         weight: 1
-      - path: Master/cherry1/cherry/polySurface3
+      - path: cupcake/Master/cherry1/cherry/polySurface2
+        weight: 1
+      - path: cupcake/Master/cherry1/cherry/polySurface3
+        weight: 1
+      - path: group1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -145,29 +153,33 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Master
+      - path: cupcake
         weight: 1
-      - path: Master/capacillo1
+      - path: cupcake/Master
         weight: 1
-      - path: Master/capacillo1/capacillo
+      - path: cupcake/Master/capacillo1
         weight: 1
-      - path: Master/capacillo1/relleno1
+      - path: cupcake/Master/capacillo1/capacillo
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno
+      - path: cupcake/Master/capacillo1/relleno1
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pasted__pSphere1
+      - path: cupcake/Master/capacillo1/relleno1/relleno
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pCube1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pasted__pSphere1
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pSphere1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pCube1
         weight: 1
-      - path: Master/cherry1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pSphere1
         weight: 1
-      - path: Master/cherry1/cherry
+      - path: cupcake/Master/cherry1
         weight: 1
-      - path: Master/cherry1/cherry/polySurface2
+      - path: cupcake/Master/cherry1/cherry
         weight: 1
-      - path: Master/cherry1/cherry/polySurface3
+      - path: cupcake/Master/cherry1/cherry/polySurface2
+        weight: 1
+      - path: cupcake/Master/cherry1/cherry/polySurface3
+        weight: 1
+      - path: group1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -197,29 +209,33 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Master
+      - path: cupcake
         weight: 1
-      - path: Master/capacillo1
+      - path: cupcake/Master
         weight: 1
-      - path: Master/capacillo1/capacillo
+      - path: cupcake/Master/capacillo1
         weight: 1
-      - path: Master/capacillo1/relleno1
+      - path: cupcake/Master/capacillo1/capacillo
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno
+      - path: cupcake/Master/capacillo1/relleno1
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pasted__pSphere1
+      - path: cupcake/Master/capacillo1/relleno1/relleno
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pCube1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pasted__pSphere1
         weight: 1
-      - path: Master/capacillo1/relleno1/relleno/pSphere1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pCube1
         weight: 1
-      - path: Master/cherry1
+      - path: cupcake/Master/capacillo1/relleno1/relleno/pSphere1
         weight: 1
-      - path: Master/cherry1/cherry
+      - path: cupcake/Master/cherry1
         weight: 1
-      - path: Master/cherry1/cherry/polySurface2
+      - path: cupcake/Master/cherry1/cherry
         weight: 1
-      - path: Master/cherry1/cherry/polySurface3
+      - path: cupcake/Master/cherry1/cherry/polySurface2
+        weight: 1
+      - path: cupcake/Master/cherry1/cherry/polySurface3
+        weight: 1
+      - path: group1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -242,7 +258,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

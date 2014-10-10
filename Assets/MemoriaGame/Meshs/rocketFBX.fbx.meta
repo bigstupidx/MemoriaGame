@@ -1,32 +1,24 @@
 fileFormatVersion: 2
-guid: da60004652d444a899c01078e555fa82
+guid: a5fea56b5c8a6402bbcc9e8ea333f977
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: back
-    100002: Boat
-    100004: //RootNode
-    100006: bottom
-    100008: ControlBoat
-    100010: Master
-    100012: nurbsSquare1
-    100014: nurbsSquare2
-    100016: group1
-    400000: back
-    400002: Boat
-    400004: //RootNode
-    400006: bottom
-    400008: ControlBoat
-    400010: Master
-    400012: nurbsSquare1
-    400014: nurbsSquare2
-    400016: group1
-    2300000: Boat
-    3300000: Boat
-    4300000: Boat
-    7400000: Bote@Idle
-    7400002: Bote@Abriendo
-    7400004: Bote@Cerrado
+    100000: bodyControl
+    100002: group1
+    100004: Master
+    100006: //RootNode
+    100008: rocketToy
+    400000: bodyControl
+    400002: group1
+    400004: Master
+    400006: //RootNode
+    400008: rocketToy
+    2300000: rocketToy
+    3300000: rocketToy
+    4300000: rocketToy
+    7400000: Rocket@Idle
+    7400002: Rocket@Abriendo
+    7400004: Rocket@Cerrado
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -45,10 +37,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Bote@Idle
+      name: Rocket@Idle
       takeName: Take 001
-      firstFrame: 35
-      lastFrame: 47
+      firstFrame: 27
+      lastFrame: 48
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -70,29 +62,21 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: back
-        weight: 1
-      - path: bottom
-        weight: 1
       - path: group1
         weight: 1
       - path: Master
         weight: 1
-      - path: Master/ControlBoat
+      - path: Master/bodyControl
         weight: 1
-      - path: Master/ControlBoat/Boat
-        weight: 1
-      - path: nurbsSquare1
-        weight: 1
-      - path: nurbsSquare2
+      - path: Master/bodyControl/rocketToy
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Bote@Abriendo
+      name: Rocket@Abriendo
       takeName: Take 001
-      firstFrame: 6
-      lastFrame: 34
+      firstFrame: 7
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -114,36 +98,28 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: back
-        weight: 1
-      - path: bottom
-        weight: 1
       - path: group1
         weight: 1
       - path: Master
         weight: 1
-      - path: Master/ControlBoat
+      - path: Master/bodyControl
         weight: 1
-      - path: Master/ControlBoat/Boat
-        weight: 1
-      - path: nurbsSquare1
-        weight: 1
-      - path: nurbsSquare2
+      - path: Master/bodyControl/rocketToy
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Bote@Cerrado
+      name: Rocket@Cerrado
       takeName: Take 001
-      firstFrame: 6
-      lastFrame: 6.0999999
+      firstFrame: 7
+      lastFrame: 7.09999943
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -158,21 +134,13 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: back
-        weight: 1
-      - path: bottom
-        weight: 1
       - path: group1
         weight: 1
       - path: Master
         weight: 1
-      - path: Master/ControlBoat
+      - path: Master/bodyControl
         weight: 1
-      - path: Master/ControlBoat/Boat
-        weight: 1
-      - path: nurbsSquare1
-        weight: 1
-      - path: nurbsSquare2
+      - path: Master/bodyControl/rocketToy
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

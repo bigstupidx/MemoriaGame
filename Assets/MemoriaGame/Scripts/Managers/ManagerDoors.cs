@@ -27,7 +27,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// Contiene los prefabs de las diferentes puertas del juego. En total 15.
     /// </summary>
     public List<Door> prefabDoorsWithoutPair = new List<Door>();
-
+    public GameObject Ground = null;
     List< List < Door> > doors =  new List< List<Door>> ();
     public List< List < Door> > GetAllDoors { get { return doors; }}
 
@@ -106,9 +106,8 @@ class ManagerDoors : Singleton<ManagerDoors>
     }
 
     protected override void AwakeChild(){
-        setDoors();
-        setStars ();
-        setStarsPoof ();
+        setObjects();
+
 
     }
     bool firstRun = true;
@@ -128,17 +127,26 @@ class ManagerDoors : Singleton<ManagerDoors>
         ManagerPause.UnSubscribeOnResumeGame(onResume);
     }
     #region Seteado Aleatorio (arreglar todas estas funciones):
-    void setStarsPoof(){
+    void setObjects(){
         switch (numberOfPair) {
 
         case NumberOfPair.CincoXSeis:
+            setDoorBy (5, 6,-0.5f,-9.2f);
+            setStartBy (5, 6,-0.5f,-9.2f);
             setStartPoofBy (5, 6,-0.5f,-9.2f);
+
             break;
         case NumberOfPair.CuatroXCuatro:
+            setDoorBy (4,4,-0.3f,-9.2f);
+            setStartBy (4,4,-0.3f,-9.2f);
             setStartPoofBy (4,4,-0.3f,-9.2f);
+
             break;
         case NumberOfPair.CuatroXDos:
+            setDoorBy (4, 2,-0.1f,-9.2f);
+            setStartBy (4, 2,-0.1f,-9.2f);
             setStartPoofBy (4, 2,-0.1f,-9.2f);
+
             break;
 
         }
@@ -151,7 +159,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             starsPoof.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
 
-                starsPoof[i].Add (StarPoof.Spawn(new Vector3(currentX,0.08f ,currentZ),Quaternion.identity));
+                starsPoof[i].Add (StarPoof.Spawn(new Vector3(currentX,0.09f ,currentZ),Quaternion.identity));
                 starsPoof [i] [j].SetActive (false);
                 currentX += offSetX;
             }
@@ -160,21 +168,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             currentX = posIniX;
         }
     }
-    void setStars(){
-        switch (numberOfPair) {
 
-        case NumberOfPair.CincoXSeis:
-            setStartBy (5, 6,-0.5f,-9.2f);
-            break;
-        case NumberOfPair.CuatroXCuatro:
-            setStartBy (4,4,-0.3f,-9.2f);
-            break;
-        case NumberOfPair.CuatroXDos:
-            setStartBy (4, 2,-0.1f,-9.2f);
-            break;
-
-        }
-    }
     void setStartBy(int countX,int countZ,float posIniX,float posIniZ){
 
         float currentX = posIniX;
@@ -183,7 +177,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             stars.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
 
-                stars[i].Add (Star.Spawn(new Vector3(currentX +j*0.001f,0.01f - i*0.015f,currentZ),Quaternion.identity));
+                stars[i].Add (Star.Spawn(new Vector3(currentX + 0.012f, 0.015f ,currentZ+0.005f),Quaternion.identity));
                 stars [i] [j].SetActive (false);
                 currentX += offSetX;
             }
@@ -192,22 +186,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             currentX = posIniX;
         }
     }
-    void setDoors(){
-    
-        switch (numberOfPair) {
 
-        case NumberOfPair.CincoXSeis:
-            setDoorBy (5, 6,-0.5f,-9.2f);
-            break;
-        case NumberOfPair.CuatroXCuatro:
-            setDoorBy (4,4,-0.3f,-9.2f);
-            break;
-        case NumberOfPair.CuatroXDos:
-            setDoorBy (4, 2,-0.1f,-9.2f);
-            break;
-
-        }
-    }
     void setDoorBy(int countX,int countZ,float posIniX,float posIniZ){
        
 
@@ -230,7 +209,11 @@ class ManagerDoors : Singleton<ManagerDoors>
             doors.Add (new List<Door> ());
             for (int j = 0; j < countZ; j++) {
 
-                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0 - i*0.01f,currentZ),Quaternion.identity));
+                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ),Quaternion.identity));
+                GameObject g1 =  Ground.Spawn (Vector3.zero, Ground.transform.rotation);
+                g1.transform.parent = doors [i] [j].transform;
+                g1.transform.localPosition = Vector3.zero;
+                g1.transform.parent = null;
                 doors [i] [j].posMaxtrix = new Vector2 (i, j);
                 currentX += offSetX;
 

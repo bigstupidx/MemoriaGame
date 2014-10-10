@@ -31,6 +31,8 @@ ModelImporter:
     100050: rightWheel
     100052: rightWheel 1
     100054: //RootNode
+    100056: group1
+    100058: robot
     400000: Body
     400002: body
     400004: leftARM
@@ -59,6 +61,8 @@ ModelImporter:
     400050: rightWheel
     400052: rightWheel 1
     400054: //RootNode
+    400056: group1
+    400058: robot
     2300000: pasted__pasted__pasted__pasted__pasted__pCube3
     2300002: pasted__pasted__pasted__pasted__pCube3
     2300004: pasted__pasted__pasted__pCube2
@@ -120,59 +124,63 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Master
+      - path: group1
         weight: 1
-      - path: Master/Body
+      - path: robot
         weight: 1
-      - path: Master/Body/body
+      - path: robot/Master
         weight: 1
-      - path: Master/Body/body/pasted__group2
+      - path: robot/Master/Body
         weight: 1
-      - path: Master/Body/body/pasted__group2/pasted__pasted__group1
+      - path: robot/Master/Body/body
         weight: 1
-      - path: Master/Body/body/pasted__pCube1
+      - path: robot/Master/Body/body/pasted__group2
         weight: 1
-      - path: Master/Body/leftARM
+      - path: robot/Master/Body/body/pasted__group2/pasted__pasted__group1
         weight: 1
-      - path: Master/Body/leftARM/leftArm
+      - path: robot/Master/Body/body/pasted__pCube1
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11
+      - path: robot/Master/Body/leftARM
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6
+      - path: robot/Master/Body/leftARM/leftArm
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pasted__pCube3
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2
         weight: 1
-      - path: Master/Body/rightARM
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1
         weight: 1
-      - path: Master/Body/rightARM/rightArm
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pasted__pCube3
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2
+      - path: robot/Master/Body/rightARM
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1
+      - path: robot/Master/Body/rightARM/rightArm
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pCube3
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2
         weight: 1
-      - path: Master/leftWheel
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1
         weight: 1
-      - path: Master/leftWheel/leftWheel 1
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pCube3
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10
+      - path: robot/Master/leftWheel
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9
+      - path: robot/Master/leftWheel/leftWheel 1
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9/pasted__pasted__pasted__pCube2
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10
         weight: 1
-      - path: Master/rightWheel
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9
         weight: 1
-      - path: Master/rightWheel/rightWheel 1
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9/pasted__pasted__pasted__pCube2
         weight: 1
-      - path: Master/rightWheel/rightWheel 1/pasted__group9
+      - path: robot/Master/rightWheel
         weight: 1
-      - path: Master/rightWheel/rightWheel 1/pasted__group9/pasted__pasted__pCube2
+      - path: robot/Master/rightWheel/rightWheel 1
+        weight: 1
+      - path: robot/Master/rightWheel/rightWheel 1/pasted__group9
+        weight: 1
+      - path: robot/Master/rightWheel/rightWheel 1/pasted__group9/pasted__pasted__pCube2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -202,59 +210,63 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Master
+      - path: group1
         weight: 1
-      - path: Master/Body
+      - path: robot
         weight: 1
-      - path: Master/Body/body
+      - path: robot/Master
         weight: 1
-      - path: Master/Body/body/pasted__group2
+      - path: robot/Master/Body
         weight: 1
-      - path: Master/Body/body/pasted__group2/pasted__pasted__group1
+      - path: robot/Master/Body/body
         weight: 1
-      - path: Master/Body/body/pasted__pCube1
+      - path: robot/Master/Body/body/pasted__group2
         weight: 1
-      - path: Master/Body/leftARM
+      - path: robot/Master/Body/body/pasted__group2/pasted__pasted__group1
         weight: 1
-      - path: Master/Body/leftARM/leftArm
+      - path: robot/Master/Body/body/pasted__pCube1
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11
+      - path: robot/Master/Body/leftARM
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6
+      - path: robot/Master/Body/leftARM/leftArm
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pasted__pCube3
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2
         weight: 1
-      - path: Master/Body/rightARM
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1
         weight: 1
-      - path: Master/Body/rightARM/rightArm
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pasted__pCube3
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2
+      - path: robot/Master/Body/rightARM
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1
+      - path: robot/Master/Body/rightARM/rightArm
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pCube3
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2
         weight: 1
-      - path: Master/leftWheel
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1
         weight: 1
-      - path: Master/leftWheel/leftWheel 1
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pCube3
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10
+      - path: robot/Master/leftWheel
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9
+      - path: robot/Master/leftWheel/leftWheel 1
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9/pasted__pasted__pasted__pCube2
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10
         weight: 1
-      - path: Master/rightWheel
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9
         weight: 1
-      - path: Master/rightWheel/rightWheel 1
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9/pasted__pasted__pasted__pCube2
         weight: 1
-      - path: Master/rightWheel/rightWheel 1/pasted__group9
+      - path: robot/Master/rightWheel
         weight: 1
-      - path: Master/rightWheel/rightWheel 1/pasted__group9/pasted__pasted__pCube2
+      - path: robot/Master/rightWheel/rightWheel 1
+        weight: 1
+      - path: robot/Master/rightWheel/rightWheel 1/pasted__group9
+        weight: 1
+      - path: robot/Master/rightWheel/rightWheel 1/pasted__group9/pasted__pasted__pCube2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -284,59 +296,63 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Master
+      - path: group1
         weight: 1
-      - path: Master/Body
+      - path: robot
         weight: 1
-      - path: Master/Body/body
+      - path: robot/Master
         weight: 1
-      - path: Master/Body/body/pasted__group2
+      - path: robot/Master/Body
         weight: 1
-      - path: Master/Body/body/pasted__group2/pasted__pasted__group1
+      - path: robot/Master/Body/body
         weight: 1
-      - path: Master/Body/body/pasted__pCube1
+      - path: robot/Master/Body/body/pasted__group2
         weight: 1
-      - path: Master/Body/leftARM
+      - path: robot/Master/Body/body/pasted__group2/pasted__pasted__group1
         weight: 1
-      - path: Master/Body/leftARM/leftArm
+      - path: robot/Master/Body/body/pasted__pCube1
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11
+      - path: robot/Master/Body/leftARM
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6
+      - path: robot/Master/Body/leftARM/leftArm
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6
         weight: 1
-      - path: Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pasted__pCube3
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2
         weight: 1
-      - path: Master/Body/rightARM
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1
         weight: 1
-      - path: Master/Body/rightARM/rightArm
+      - path: robot/Master/Body/leftARM/leftArm/pasted__group11/pasted__pasted__group6/pasted__pasted__pasted__group2/pasted__pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pasted__pCube3
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2
+      - path: robot/Master/Body/rightARM
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1
+      - path: robot/Master/Body/rightARM/rightArm
         weight: 1
-      - path: Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pCube3
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2
         weight: 1
-      - path: Master/leftWheel
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1
         weight: 1
-      - path: Master/leftWheel/leftWheel 1
+      - path: robot/Master/Body/rightARM/rightArm/pasted__pasted__group2/pasted__pasted__pasted__group1/pasted__pasted__pasted__pasted__pCube3
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10
+      - path: robot/Master/leftWheel
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9
+      - path: robot/Master/leftWheel/leftWheel 1
         weight: 1
-      - path: Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9/pasted__pasted__pasted__pCube2
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10
         weight: 1
-      - path: Master/rightWheel
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9
         weight: 1
-      - path: Master/rightWheel/rightWheel 1
+      - path: robot/Master/leftWheel/leftWheel 1/pasted__group10/pasted__pasted__group9/pasted__pasted__pasted__pCube2
         weight: 1
-      - path: Master/rightWheel/rightWheel 1/pasted__group9
+      - path: robot/Master/rightWheel
         weight: 1
-      - path: Master/rightWheel/rightWheel 1/pasted__group9/pasted__pasted__pCube2
+      - path: robot/Master/rightWheel/rightWheel 1
+        weight: 1
+      - path: robot/Master/rightWheel/rightWheel 1/pasted__group9
+        weight: 1
+      - path: robot/Master/rightWheel/rightWheel 1/pasted__group9/pasted__pasted__pCube2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -359,7 +375,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

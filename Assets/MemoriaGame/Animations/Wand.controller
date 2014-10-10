@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Bote
+  m_Name: Wand
   serializedVersion: 2
   m_AnimatorParameters:
   - m_Name: Open
@@ -161,7 +161,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400004, guid: da60004652d444a899c01078e555fa82, type: 3}
+  - {fileID: 7400004, guid: 12d09d7a64f7a41a582e284468728fc5, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -264, y: -72, z: 0}
   m_IKOnFeet: 0
@@ -176,7 +176,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400002, guid: da60004652d444a899c01078e555fa82, type: 3}
+  - {fileID: 7400002, guid: 12d09d7a64f7a41a582e284468728fc5, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 180, y: -60, z: 0}
   m_IKOnFeet: 0
@@ -191,7 +191,7 @@ State:
   m_Speed: -1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400002, guid: da60004652d444a899c01078e555fa82, type: 3}
+  - {fileID: 7400002, guid: 12d09d7a64f7a41a582e284468728fc5, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -336, y: -300, z: 0}
   m_IKOnFeet: 0
@@ -206,7 +206,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400002, guid: da60004652d444a899c01078e555fa82, type: 3}
+  - {fileID: 7400002, guid: 12d09d7a64f7a41a582e284468728fc5, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 96, y: -192, z: 0}
   m_IKOnFeet: 0
@@ -221,7 +221,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: da60004652d444a899c01078e555fa82, type: 3}
+  - {fileID: 7400000, guid: 12d09d7a64f7a41a582e284468728fc5, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 72, y: -300, z: 0}
   m_IKOnFeet: 0
@@ -253,21 +253,21 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110194127}
     data:
-      first: {fileID: 110240060}
+      first: {fileID: 110227593}
       second:
-      - {fileID: 110133994}
+      - {fileID: 110188831}
     data:
       first: {fileID: 110231478}
       second:
       - {fileID: 110154655}
     data:
+      first: {fileID: 110240060}
+      second:
+      - {fileID: 110133994}
+    data:
       first: {fileID: 110274490}
       second:
       - {fileID: 110158664}
-    data:
-      first: {fileID: 110227593}
-      second:
-      - {fileID: 110188831}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

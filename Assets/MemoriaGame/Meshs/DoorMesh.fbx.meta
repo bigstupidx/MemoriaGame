@@ -26,6 +26,14 @@ ModelImporter:
     100040: pasted__pasted__pasted__joint2
     100042: puerta1
     100044: puerta2
+    100046: group8
+    100048: pasted__group7
+    100050: pasted__pasted__group
+    100052: pasted__pasted__group6
+    100054: pasted__pasted__pasted__joint1 1
+    100056: pasted__pasted__pasted__pasted__joint1
+    100058: pasted__puerta1
+    100060: pasted__puerta2
     400000: //RootNode
     400002: baseDoor_anim_jnt
     400004: baseDoor_end_jnt
@@ -49,18 +57,30 @@ ModelImporter:
     400040: pasted__pasted__pasted__joint2
     400042: puerta1
     400044: puerta2
+    400046: group8
+    400048: pasted__group7
+    400050: pasted__pasted__group
+    400052: pasted__pasted__group6
+    400054: pasted__pasted__pasted__joint1 1
+    400056: pasted__pasted__pasted__pasted__joint1
+    400058: pasted__puerta1
+    400060: pasted__puerta2
     2300000: pPipe1
     2300002: pPipe2
     2300004: caja1
     2300006: fondoverde
     2300008: puerta1
     2300010: puerta2
+    2300012: pasted__puerta1
+    2300014: pasted__puerta2
     3300000: pPipe1
     3300002: pPipe2
     3300004: caja1
     3300006: fondoverde
     3300008: puerta1
     3300010: puerta2
+    3300012: pasted__puerta1
+    3300014: pasted__puerta2
     4300000: pCube1
     4300002: pCylinder1
     4300004: polySurface1
@@ -70,6 +90,8 @@ ModelImporter:
     4300012: puerta1
     4300014: fondoverde
     4300016: caja1
+    4300018: pasted__puerta2
+    4300020: pasted__puerta1
     7400000: Abriendo
     7400002: Cerrada
     7400004: Abierta
@@ -123,8 +145,6 @@ ModelImporter:
         weight: 1
       - path: caja1
         weight: 1
-      - path: fondoverde
-        weight: 1
       - path: group7
         weight: 1
       - path: group7/pasted__group6
@@ -133,15 +153,29 @@ ModelImporter:
         weight: 1
       - path: group7/pasted__group6/pasted__pasted__joint1/pasted__pasted__joint2
         weight: 1
-      - path: group7/pasted__group6/pasted__pasted__joint1/puerta1
+      - path: group8
+        weight: 1
+      - path: group8/pasted__group7
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1/pasted__puerta1
+        weight: 1
+      - path: group8/pasted__pasted__group
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1/pasted__puerta2
         weight: 1
       - path: pasted__group
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1/pasted__pasted__pasted__joint2
-        weight: 1
-      - path: pasted__group/pasted__pasted__pasted__joint1/puerta2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -173,8 +207,6 @@ ModelImporter:
         weight: 1
       - path: caja1
         weight: 1
-      - path: fondoverde
-        weight: 1
       - path: group7
         weight: 1
       - path: group7/pasted__group6
@@ -183,15 +215,29 @@ ModelImporter:
         weight: 1
       - path: group7/pasted__group6/pasted__pasted__joint1/pasted__pasted__joint2
         weight: 1
-      - path: group7/pasted__group6/pasted__pasted__joint1/puerta1
+      - path: group8
+        weight: 1
+      - path: group8/pasted__group7
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1/pasted__puerta1
+        weight: 1
+      - path: group8/pasted__pasted__group
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1/pasted__puerta2
         weight: 1
       - path: pasted__group
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1/pasted__pasted__pasted__joint2
-        weight: 1
-      - path: pasted__group/pasted__pasted__pasted__joint1/puerta2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -223,8 +269,6 @@ ModelImporter:
         weight: 1
       - path: caja1
         weight: 1
-      - path: fondoverde
-        weight: 1
       - path: group7
         weight: 1
       - path: group7/pasted__group6
@@ -233,15 +277,29 @@ ModelImporter:
         weight: 1
       - path: group7/pasted__group6/pasted__pasted__joint1/pasted__pasted__joint2
         weight: 1
-      - path: group7/pasted__group6/pasted__pasted__joint1/puerta1
+      - path: group8
+        weight: 1
+      - path: group8/pasted__group7
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1/pasted__puerta1
+        weight: 1
+      - path: group8/pasted__pasted__group
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1/pasted__puerta2
         weight: 1
       - path: pasted__group
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1/pasted__pasted__pasted__joint2
-        weight: 1
-      - path: pasted__group/pasted__pasted__pasted__joint1/puerta2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -273,8 +331,6 @@ ModelImporter:
         weight: 1
       - path: caja1
         weight: 1
-      - path: fondoverde
-        weight: 1
       - path: group7
         weight: 1
       - path: group7/pasted__group6
@@ -283,15 +339,29 @@ ModelImporter:
         weight: 1
       - path: group7/pasted__group6/pasted__pasted__joint1/pasted__pasted__joint2
         weight: 1
-      - path: group7/pasted__group6/pasted__pasted__joint1/puerta1
+      - path: group8
+        weight: 1
+      - path: group8/pasted__group7
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1/pasted__puerta1
+        weight: 1
+      - path: group8/pasted__pasted__group
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1/pasted__puerta2
         weight: 1
       - path: pasted__group
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1/pasted__pasted__pasted__joint2
-        weight: 1
-      - path: pasted__group/pasted__pasted__pasted__joint1/puerta2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -323,8 +393,6 @@ ModelImporter:
         weight: 1
       - path: caja1
         weight: 1
-      - path: fondoverde
-        weight: 1
       - path: group7
         weight: 1
       - path: group7/pasted__group6
@@ -333,15 +401,29 @@ ModelImporter:
         weight: 1
       - path: group7/pasted__group6/pasted__pasted__joint1/pasted__pasted__joint2
         weight: 1
-      - path: group7/pasted__group6/pasted__pasted__joint1/puerta1
+      - path: group8
+        weight: 1
+      - path: group8/pasted__group7
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1
+        weight: 1
+      - path: group8/pasted__group7/pasted__pasted__group6/pasted__pasted__pasted__joint1
+          1/pasted__puerta1
+        weight: 1
+      - path: group8/pasted__pasted__group
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1
+        weight: 1
+      - path: group8/pasted__pasted__group/pasted__pasted__pasted__pasted__joint1/pasted__puerta2
         weight: 1
       - path: pasted__group
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1
         weight: 1
       - path: pasted__group/pasted__pasted__pasted__joint1/pasted__pasted__pasted__joint2
-        weight: 1
-      - path: pasted__group/pasted__pasted__pasted__joint1/puerta2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -364,8 +446,8 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
-    tangentImportMode: 0
+    normalImportMode: 1
+    tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

@@ -61,6 +61,7 @@ ModelImporter:
     7400000: Carro@Abriendo
     7400002: Carro@Idle
     7400004: Carro@Cerrado
+    7400006: Carro@idle
     9500000: //RootNode
     13700000: ruedaDerecha_back
     13700002: ruedaDerecha_front
@@ -147,72 +148,7 @@ ModelImporter:
         weight: 1
       - path: group
         weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Carro@Idle
-      takeName: Take 001
-      firstFrame: 37
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: CarroGrp
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/BodyControl
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar
-          1
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glass
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glassMarco
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftBack_joint5
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftFront_joint2
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightBack_joint4
-        weight: 1
-      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightFront_joint3
-        weight: 1
-      - path: CarroGrp/neumaticCar
-        weight: 1
-      - path: CarroGrp/neumaticCar/ruedaDerecha_back
-        weight: 1
-      - path: CarroGrp/neumaticCar/ruedaDerecha_front
-        weight: 1
-      - path: CarroGrp/neumaticCar/ruedaIzquierda_back
-        weight: 1
-      - path: CarroGrp/neumaticCar/ruedaIzquierda_front
-        weight: 1
-      - path: group
+      - path: group1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -281,6 +217,77 @@ ModelImporter:
         weight: 1
       - path: group
         weight: 1
+      - path: group1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Carro@idle
+      takeName: Take 001
+      firstFrame: 36
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CarroGrp
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar
+          1
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glass
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/BodyControl/InclineBacknull1/bodyCar/bodyCar_glassMarco
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftBack_joint5
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/leftFront_joint2
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightBack_joint4
+        weight: 1
+      - path: CarroGrp/MasterNurbsCircle1/SquishNeumatics/rightFront_joint3
+        weight: 1
+      - path: CarroGrp/neumaticCar
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaDerecha_front
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_back
+        weight: 1
+      - path: CarroGrp/neumaticCar/ruedaIzquierda_front
+        weight: 1
+      - path: group
+        weight: 1
+      - path: group1
+        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
@@ -302,8 +309,8 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
-    tangentImportMode: 0
+    normalImportMode: 1
+    tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
