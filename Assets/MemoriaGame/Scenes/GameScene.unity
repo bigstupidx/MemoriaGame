@@ -4094,7 +4094,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
 --- !u!1 &982275295
 GameObject:
   m_ObjectHideFlags: 0
@@ -4830,7 +4830,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
 --- !u!114 &1095355358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4995,7 +4995,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107038020}
   m_LocalRotation: {x: .605005801, y: 0, z: 0, w: .796221137}
-  m_LocalPosition: {x: -.120506272, y: .731800079, z: -9.74107647}
+  m_LocalPosition: {x: -.0953384489, y: .785659492, z: -9.75605488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5968,7 +5968,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
 --- !u!1 &1328675160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7264,6 +7264,186 @@ Prefab:
       propertyPath: aspectRatio
       value: 6.91666651
       objectReference: {fileID: 0}
+    - target: {fileID: 11400240, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 864
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400250, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400294, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400160, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 475
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400160, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400102, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400102, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400286, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400286, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400310, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 248
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400310, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400264, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 583
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400264, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 215
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400140, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400140, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400262, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400262, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400290, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400290, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400306, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 248
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400306, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400292, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 583
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400292, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 215
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400266, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400260, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400260, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400038, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400308, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 248
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400308, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mHeight
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400256, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 864
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400244, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400138, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 950
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400138, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.49842274
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400096, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 950
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400096, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.49842274
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400094, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400094, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400296, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400296, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400154, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400154, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400282, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: mWidth
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400282, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
+      propertyPath: aspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6abe63df059c94219bf0509ccf4b55be, type: 2}
   m_RootGameObject: {fileID: 1687451499}
@@ -8082,7 +8262,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
 --- !u!114 &1659606595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9771,7 +9951,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.5
+  aspectRatio: 1.49842274
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -10409,7 +10589,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.5
+  aspectRatio: 1.49842274
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -10496,7 +10676,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
 --- !u!1 &2059594073
 GameObject:
   m_ObjectHideFlags: 0
@@ -10798,7 +10978,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -11143,7 +11323,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -11224,7 +11404,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.50138891
+  aspectRatio: 1.5
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
