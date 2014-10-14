@@ -46,18 +46,23 @@ public class Door : MonoBehaviour
     }
 
     public void Touch(){
-
+        if (isPairOpen)
+            return;
         ManagerDoors.Instance.TouchMe(this);
     }
     public void OpenQuickly(){
-
+        if (isPairOpen)
+            return;
         onOpenQuickly ();
     }
     public void Open(){
+        if (isPairOpen)
+            return;
         OnOpenDoor();
     }
     public void Close(){
-
+        if (isPairOpen)
+            return;
         foreach (Signal sig in onClose) {
 
             sig.Invoke ();
@@ -68,18 +73,23 @@ public class Door : MonoBehaviour
     /// </summary>
     public void CheckTruePair(){
         isPairOpen = true;
+        GetComponent<InputDoor> ().NotInput();
         foreach (Signal sig in onCheckTruePair) {
 
             sig.Invoke ();
         }
     }
     public void ShakeTrue(){
+        if (isPairOpen)
+            return;
         foreach (Signal sig in onShakeTrue) {
 
             sig.Invoke ();
         }
     }
     public void ShakeFalse(){
+        if (isPairOpen)
+            return;
         foreach (Signal sig in onShakeFalse) {
 
             sig.Invoke ();

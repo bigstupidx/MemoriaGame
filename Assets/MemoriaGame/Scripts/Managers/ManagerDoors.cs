@@ -177,7 +177,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             stars.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
 
-                stars[i].Add (Star.Spawn(new Vector3(currentX + 0.012f, 0.015f ,currentZ+0.005f),Quaternion.identity));
+                stars[i].Add (Star.Spawn(new Vector3(currentX + 0.012f, 0.02f ,currentZ-(countX-i)*0.015f),Quaternion.identity));
                 stars [i] [j].SetActive (false);
                 currentX += offSetX;
             }
@@ -209,7 +209,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             doors.Add (new List<Door> ());
             for (int j = 0; j < countZ; j++) {
 
-                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ),Quaternion.identity));
+                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ -(countX-i)*0.015f ),Quaternion.identity));
                 GameObject g1 =  Ground.Spawn (Vector3.zero, Ground.transform.rotation);
                 g1.transform.parent = doors [i] [j].transform;
                 g1.transform.localPosition = Vector3.zero;
@@ -279,6 +279,8 @@ class ManagerDoors : Singleton<ManagerDoors>
             firstOpen.CheckTruePair ();
             SecondOpen.CheckTruePair ();
 
+            doors [(int)firstOpen.posMaxtrix.x] [(int)firstOpen.posMaxtrix.y] = null;
+            doors [(int)SecondOpen.posMaxtrix.x] [(int)SecondOpen.posMaxtrix.y] = null;
 
             //Aqui paro el tiempo si desbloquie todo.
             ++currentPair;

@@ -49,7 +49,8 @@ class AnimationDoor : MonoBehaviour
     [Signal]
     void onCheckTruePair(){
         //anim.SetBool("Open",false);
-        TweenScale.Begin(door.gameObject,0.7f,new Vector3(0.01f,0.01f,0.01f)).AddOnFinished(new EventDelegate(this,"ReleaseDoor"));
+        //TweenScale.Begin(door.gameObject,0.7f,new Vector3(0.01f,0.01f,0.01f)).AddOnFinished(new EventDelegate(this,"ReleaseDoor"));
+        onClose ();
         InvokeStarPoof ();
         Invoke ("InvokeStar",0.5f);
     }
@@ -64,7 +65,7 @@ class AnimationDoor : MonoBehaviour
 
     public void ReleaseDoor(){
        // ManagerDoors.Instance.getStar ((int)door.posMaxtrix.x, (int)door.posMaxtrix.y).GetComponent<Animator> ().SetBool ("Changue", true);
-        door.Recycle ();
+       // door.Recycle ();
     }
 
     void InvokeStar(){

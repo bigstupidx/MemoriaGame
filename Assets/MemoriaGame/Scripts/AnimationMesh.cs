@@ -14,7 +14,7 @@ public class AnimationMesh : MonoBehaviour
     public Door door = null;
     public Animator anim = null;
 
-    const float timeShutDown = 0.45f;
+    const float timeShutDown = 0.35f;
 
     void Start(){
         // door = GetComponent<Door> ();
@@ -25,7 +25,7 @@ public class AnimationMesh : MonoBehaviour
 
         door.onClose.Add (new Signal("onClose",gameObject));
 
-        door.onCheckTruePair.Add (new Signal("onCheckTruePair",gameObject));
+        door.onCheckTruePair.Add (new Signal("onClose",gameObject));
 
         gameObject.SetActive (false);
     }
@@ -51,12 +51,7 @@ public class AnimationMesh : MonoBehaviour
         StartCoroutine( ShutDown (timeShutDown));
 
     }
-
-    [Signal]
-    void onCheckTruePair(){
-        //anim.SetBool("Open",false);
-    }
-       
+        
     IEnumerator ShutDown(float time)
     {
         yield return StartCoroutine(Wait(time));

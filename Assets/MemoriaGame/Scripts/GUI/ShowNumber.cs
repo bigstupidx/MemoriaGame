@@ -15,6 +15,7 @@ public class ShowNumber : MonoBehaviour {
 
         door.OnOpenDoor += onOpen;
         door.onOpenQuickly += onOpenQuickly;
+        door.onCheckTruePair.Add (new Signal("onClose",gameObject));
 
         door.onClose.Add (new Signal("onClose",gameObject));
     }

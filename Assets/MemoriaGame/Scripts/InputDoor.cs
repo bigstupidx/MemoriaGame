@@ -28,5 +28,9 @@ public class InputDoor : MonoBehaviour
         door.Touch();
     }
 
+    public void NotInput(){
+        GetComponent<TapGesture>().Tapped -= TappedHandler;
+    }
+
 }
 
