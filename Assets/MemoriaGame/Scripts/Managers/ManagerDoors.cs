@@ -41,7 +41,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// Tiempo para hacer el check de los pares
     /// Se utiliza para dar chance a que se abra la puerta
     /// </summary>
-    public static float TimeToCheck = 0.4f;
+    public static float TimeToCheck = 1.0f;
     /// <summary>
     /// Si se esta corriendo el tiempo de checkeo.
     /// </summary>
@@ -342,8 +342,6 @@ class ManagerDoors : Singleton<ManagerDoors>
         this.isPosi = isPosi;
 
       
-      
-
         if (isH) {
 
             count = countX;

@@ -14,7 +14,7 @@ public class AnimationMesh : MonoBehaviour
     public Door door = null;
     public Animator anim = null;
 
-    const float timeShutDown = 0.25f;
+    const float timeShutDown = 0.45f;
 
     void Start(){
         // door = GetComponent<Door> ();

@@ -188,7 +188,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cerrar
-  m_Speed: 1
+  m_Speed: -2
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400004, guid: 5a0725f9efbe24c8ca203c8f05b8c2f7, type: 3}
@@ -253,21 +253,21 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110194127}
     data:
-      first: {fileID: 110240060}
+      first: {fileID: 110227593}
       second:
-      - {fileID: 110133994}
+      - {fileID: 110188831}
     data:
       first: {fileID: 110231478}
       second:
       - {fileID: 110154655}
     data:
+      first: {fileID: 110240060}
+      second:
+      - {fileID: 110133994}
+    data:
       first: {fileID: 110274490}
       second:
       - {fileID: 110158664}
-    data:
-      first: {fileID: 110227593}
-      second:
-      - {fileID: 110188831}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
