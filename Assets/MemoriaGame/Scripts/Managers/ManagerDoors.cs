@@ -50,6 +50,9 @@ class ManagerDoors : Singleton<ManagerDoors>
     [HideInInspector]
     public bool CanTouch = false;
 
+    public delegate void onCheckBroadcast(bool value);
+    public event onCheckBroadcast OnCheckPair;
+
     public delegate void onOpenFirstBroadcast(int id, string name);
     public event onOpenFirstBroadcast OnOpenFirst;
 
@@ -275,9 +278,11 @@ class ManagerDoors : Singleton<ManagerDoors>
             ManagerCombo.Instance.setCombo (true);
             //Llamo a ManagerScore para
             ManagerScore.Instance.AddScore ();
-
+            if(OnCheckPair != null)
+                OnCheckPair (true);
             firstOpen.CheckTruePair ();
             SecondOpen.CheckTruePair ();
+ 
 
             doors [(int)firstOpen.posMaxtrix.x] [(int)firstOpen.posMaxtrix.y] = null;
             doors [(int)SecondOpen.posMaxtrix.x] [(int)SecondOpen.posMaxtrix.y] = null;
@@ -293,7 +298,8 @@ class ManagerDoors : Singleton<ManagerDoors>
         } else {
             //LLamo a ManagerCombo
             ManagerCombo.Instance.setCombo (false);
-
+            if(OnCheckPair != null)
+                OnCheckPair (false);
             firstOpen.Close ();
             SecondOpen.Close ();
 
