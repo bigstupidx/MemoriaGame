@@ -30,8 +30,9 @@ public class Door : MonoBehaviour
     public delegate void onOpenQuicklyBroadcast();
     public event onOpenQuicklyBroadcast onOpenQuickly;
 
-    [HideInInspector]
-    public List<Signal> onClose = new List<Signal>();
+    public delegate void onCloseBroadcast();
+    public event onCloseBroadcast onClose;
+
     [HideInInspector]
     public List<Signal> onCheckTruePair = new List<Signal>();
     [HideInInspector]
@@ -63,10 +64,7 @@ public class Door : MonoBehaviour
     public void Close(){
         if (isPairOpen)
             return;
-        foreach (Signal sig in onClose) {
-
-            sig.Invoke ();
-        }
+        onClose ();
     }
     /// <summary>
     /// Si los dos pares  fueron iguales

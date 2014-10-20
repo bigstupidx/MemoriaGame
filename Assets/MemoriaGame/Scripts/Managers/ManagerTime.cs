@@ -77,7 +77,7 @@ class ManagerTime : Singleton<ManagerTime>
 
     }
         
-    void Update(){
+    void LateUpdate(){
         if (!isPaused && !stopTime) {
             if (currentTimeOfGame > 0) {
                 currentTimeOfGame -= Time.deltaTime;
@@ -145,19 +145,41 @@ class ManagerTime : Singleton<ManagerTime>
     /// Si el tiempo esta parado
     /// </summary>
     bool stopTime = false;
+    bool isTika = false;
     /// <summary>
     /// Cuando se quiere parar el tiempo
     /// </summary>
-    public void onStop(){
-        stopTime = true;
-        StopTimer ();
+    public void onStop(bool tika){
+        if (!isTika && tika) {
+            isTika = true;
+        }
+
+        if (!stopTime) {
+            stopTime = true;
+            StopTimer ();
+        }
+    
     }
     /// <summary>
     /// Cuando se quiere reanudar el tiempo
     /// </summary>
-    public void onPlay(){
-        stopTime = false;
-        PlayTimer ();
+    public void onPlay(bool tika){
+        if (ManagerDoors.Instance.CheckWinGame())
+            return;
+
+        if (isTika) {
+            if (tika) {
+        
+                isTika = false;
+                stopTime = false;
+                PlayTimer ();
+            } else if (!tika) {
+            }
+        } else {
+            stopTime = false;
+            PlayTimer ();
+        }
+     
     }
     #endregion
 }

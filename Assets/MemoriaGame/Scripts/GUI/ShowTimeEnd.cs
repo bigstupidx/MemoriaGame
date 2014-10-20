@@ -4,6 +4,7 @@ using System.Collections;
 public class ShowTimeEnd : MonoBehaviour {
     public bool isForWin = false;
     public TweenAlpha alphaT;
+
     void OnEnable(){
         if (isForWin) {
             ManagerDoors.SubscribeOnVictory (StartAlpha);
@@ -24,5 +25,6 @@ public class ShowTimeEnd : MonoBehaviour {
     void StartAlpha(){
     
         alphaT.PlayForward();
+
     }
 }

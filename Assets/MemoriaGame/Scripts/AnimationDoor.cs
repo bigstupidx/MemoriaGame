@@ -15,6 +15,7 @@ class AnimationDoor : MonoBehaviour
 {
     public Door door = null;
     public Animator anim = null;
+    static float timeIvokingStar = 0.5f;
     void Awake(){
        // door = GetComponent<Door> ();
 
@@ -22,8 +23,8 @@ class AnimationDoor : MonoBehaviour
 
         door.OnOpenDoor += onOpen;
         door.onOpenQuickly += onOpenQuickly;
+        door.onClose += onClose;
 
-        door.onClose.Add (new Signal("onClose",gameObject));
         door.onShakeTrue.Add (new Signal("onShakeTrue",gameObject));
         door.onShakeFalse.Add (new Signal("onShakeFalse",gameObject));
         door.onCheckTruePair.Add (new Signal("onCheckTruePair",gameObject));
@@ -39,11 +40,9 @@ class AnimationDoor : MonoBehaviour
         anim.SetBool("Shake",false);
     }
 
-    [Signal]
     void onClose(){
         anim.SetBool("Open",false);
         anim.SetBool("OpenQuickly",false);
-
     }
 
     [Signal]
@@ -52,7 +51,7 @@ class AnimationDoor : MonoBehaviour
         //TweenScale.Begin(door.gameObject,0.7f,new Vector3(0.01f,0.01f,0.01f)).AddOnFinished(new EventDelegate(this,"ReleaseDoor"));
         onClose ();
         InvokeStarPoof ();
-        Invoke ("InvokeStar",0.5f);
+        Invoke ("InvokeStar",timeIvokingStar);
     }
     [Signal]
     void onShakeTrue(){

@@ -101,7 +101,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110274490}
   m_DstState: {fileID: 110231478}
-  m_TransitionDuration: .25
+  m_TransitionDuration: .157959208
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
@@ -188,7 +188,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cerrar
-  m_Speed: -2
+  m_Speed: -4
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 78c7e43e4b4004f2988be25d3b6e520b, type: 3}
@@ -253,21 +253,21 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110194127}
     data:
-      first: {fileID: 110227593}
+      first: {fileID: 110240060}
       second:
-      - {fileID: 110188831}
+      - {fileID: 110133994}
     data:
       first: {fileID: 110231478}
       second:
       - {fileID: 110154655}
     data:
-      first: {fileID: 110240060}
-      second:
-      - {fileID: 110133994}
-    data:
       first: {fileID: 110274490}
       second:
       - {fileID: 110168049}
+    data:
+      first: {fileID: 110227593}
+      second:
+      - {fileID: 110188831}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

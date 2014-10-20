@@ -207,7 +207,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110233435}
   m_DstState: {fileID: 110240060}
-  m_TransitionDuration: 1.50000012
+  m_TransitionDuration: .499591857
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -239,7 +239,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cerrar
-  m_Speed: 1
+  m_Speed: 1.20000005
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400008, guid: 3601e4222608e419bb773385d8c2bcd2, type: 3}

@@ -17,7 +17,7 @@ public class ShowNumber : MonoBehaviour {
         door.onOpenQuickly += onOpenQuickly;
         door.onCheckTruePair.Add (new Signal("onClose",gameObject));
 
-        door.onClose.Add (new Signal("onClose",gameObject));
+        door.onClose += onClose;
     }
     void onOpen(){
 
@@ -28,7 +28,6 @@ public class ShowNumber : MonoBehaviour {
 
     }
 
-    [Signal]
     void onClose(){
         mesh.enabled = false;
 

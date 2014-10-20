@@ -27,11 +27,11 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
 
         currentTimeStop = TimeStop;
         clock.Freeze ();
-        ManagerTime.Instance.onStop ();
+        ManagerTime.Instance.onStop (true);
 
     }
     public void DeActivePower(){
-        ManagerTime.Instance.onPlay ();
+        ManagerTime.Instance.onPlay (true);
         usedPower = true;
         clock.NotFreeze ();
         ManagerPowers.Instance.UsingPower = false;

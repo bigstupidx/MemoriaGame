@@ -41,7 +41,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// Tiempo para hacer el check de los pares
     /// Se utiliza para dar chance a que se abra la puerta
     /// </summary>
-    public static float TimeToCheck = 1.0f;
+    public static float TimeToCheck = 0.5f;
     /// <summary>
     /// Si se esta corriendo el tiempo de checkeo.
     /// </summary>
@@ -72,7 +72,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     #region ContadorDePares
     int currentPair = 0;
 
-    bool CheckWinGame(){
+    public bool CheckWinGame(){
         return (currentPair >= (int)numberOfPair);
     }
 
@@ -255,14 +255,18 @@ class ManagerDoors : Singleton<ManagerDoors>
                 firstOpen = door;
                 door.Open ();
                 //Aqui deberia poder poner un delegado para el visor
-                OnOpenFirst (door.IDpair,door.NameDoor);
-            } else if(firstOpen != door) {
+                OnOpenFirst (door.IDpair, door.NameDoor);
+            } else if (firstOpen != door) {
         
                 SecondOpen = door;
                 door.Open ();
 
                 isChecking = true;
+                ManagerTime.Instance.onStop (false);
                 Invoke ("CheckPairs", TimeToCheck);
+            } else {
+            
+                //Debug.LogWarning ("Problema de logica aqui: "+);
             }
         }
     }
@@ -271,6 +275,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     /// Se revisa si las dos puertas abiertas son las mismas.
     /// </summary>
     void CheckPairs(){
+        ManagerTime.Instance.onPlay (false);
 
         if (firstOpen.IDpair == SecondOpen.IDpair)//Si los dos pares son iguales
         {
@@ -280,6 +285,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             ManagerScore.Instance.AddScore ();
             if(OnCheckPair != null)
                 OnCheckPair (true);
+
             firstOpen.CheckTruePair ();
             SecondOpen.CheckTruePair ();
  
@@ -291,7 +297,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             ++currentPair;
             if (CheckWinGame ()) {
                 CanTouch = false;
-                ManagerTime.Instance.onStop ();
+                ManagerTime.Instance.onStop (false);
                 //Invoco GUI
                 onVictory ();
             }
@@ -300,6 +306,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             ManagerCombo.Instance.setCombo (false);
             if(OnCheckPair != null)
                 OnCheckPair (false);
+
             firstOpen.Close ();
             SecondOpen.Close ();
 

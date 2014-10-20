@@ -188,7 +188,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cerrar
-  m_Speed: -2
+  m_Speed: -4
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400002, guid: 12d09d7a64f7a41a582e284468728fc5, type: 3}

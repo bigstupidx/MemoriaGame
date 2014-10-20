@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12fd46ea658f345dd9a8e6741f2870d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxTimesInRow: 4
+  MaxTimesInRow: 8
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8742035e4197a48a0a033754e145b0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreBaseToSum: 10
+  ScoreBaseToSum: 50
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

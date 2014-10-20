@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: 43c76ebaac56c414c9fa7bdeaf08035a
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: center1
+    100002: group
+    100004: group1
+    100006: joint10
+    100008: joint11
+    100010: joint12
+    100012: joint13
+    100014: joint14
+    100016: joint15
+    100018: joint16
+    100020: joint17
+    100022: joint18
+    100024: joint4
+    100026: joint5
+    100028: joint6
+    100030: joint7
+    100032: joint8
+    100034: joint9
+    100036: joints
+    100038: Lazo
+    100040: lazo
+    100042: //RootNode
+    100044: left1
+    100046: left2
+    100048: Master
+    100050: pasted__polySurface11
+    100052: polySurface1
+    100054: polySurface2
+    100056: polySurface3
+    100058: polySurface4
+    100060: polySurface5
+    100062: right1
+    100064: right2
+    400000: center1
+    400002: group
+    400004: group1
+    400006: joint10
+    400008: joint11
+    400010: joint12
+    400012: joint13
+    400014: joint14
+    400016: joint15
+    400018: joint16
+    400020: joint17
+    400022: joint18
+    400024: joint4
+    400026: joint5
+    400028: joint6
+    400030: joint7
+    400032: joint8
+    400034: joint9
+    400036: joints
+    400038: Lazo
+    400040: lazo
+    400042: //RootNode
+    400044: left1
+    400046: left2
+    400048: Master
+    400050: pasted__polySurface11
+    400052: polySurface1
+    400054: polySurface2
+    400056: polySurface3
+    400058: polySurface4
+    400060: polySurface5
+    400062: right1
+    400064: right2
+    4300000: polySurface1
+    4300002: polySurface2
+    4300004: polySurface3
+    4300006: polySurface4
+    4300008: polySurface5
+    7400000: Lazo@Abriendo
+    7400002: Lazo@Idle
+    7400004: Lazo@Cerrado
+    9500000: //RootNode
+    13700000: polySurface1
+    13700002: polySurface2
+    13700004: polySurface3
+    13700006: polySurface4
+    13700008: polySurface5
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Lazo@Abriendo
+      takeName: Take 001
+      firstFrame: 7
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group
+        weight: 1
+      - path: group/pasted__polySurface11
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface1
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface2
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface3
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface4
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface5
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: Lazo
+        weight: 1
+      - path: Lazo/lazo
+        weight: 1
+      - path: Lazo/Master
+        weight: 1
+      - path: Lazo/Master/center1
+        weight: 1
+      - path: Lazo/Master/joints
+        weight: 1
+      - path: Lazo/Master/joints/joint10
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8/joint6
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8/joint6/joint4
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9/joint7
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9/joint7/joint5
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint16
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint17
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint18
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint13
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint14
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint15
+        weight: 1
+      - path: Lazo/Master/left1
+        weight: 1
+      - path: Lazo/Master/left1/left2
+        weight: 1
+      - path: Lazo/Master/right1
+        weight: 1
+      - path: Lazo/Master/right1/right2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Lazo@Idle
+      takeName: Take 001
+      firstFrame: 28
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group
+        weight: 1
+      - path: group/pasted__polySurface11
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface1
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface2
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface3
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface4
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface5
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: Lazo
+        weight: 1
+      - path: Lazo/lazo
+        weight: 1
+      - path: Lazo/Master
+        weight: 1
+      - path: Lazo/Master/center1
+        weight: 1
+      - path: Lazo/Master/joints
+        weight: 1
+      - path: Lazo/Master/joints/joint10
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8/joint6
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8/joint6/joint4
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9/joint7
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9/joint7/joint5
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint16
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint17
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint18
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint13
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint14
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint15
+        weight: 1
+      - path: Lazo/Master/left1
+        weight: 1
+      - path: Lazo/Master/left1/left2
+        weight: 1
+      - path: Lazo/Master/right1
+        weight: 1
+      - path: Lazo/Master/right1/right2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Lazo@Cerrado
+      takeName: Take 001
+      firstFrame: 7
+      lastFrame: 7.09999943
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group
+        weight: 1
+      - path: group/pasted__polySurface11
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface1
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface2
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface3
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface4
+        weight: 1
+      - path: group/pasted__polySurface11/polySurface5
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: Lazo
+        weight: 1
+      - path: Lazo/lazo
+        weight: 1
+      - path: Lazo/Master
+        weight: 1
+      - path: Lazo/Master/center1
+        weight: 1
+      - path: Lazo/Master/joints
+        weight: 1
+      - path: Lazo/Master/joints/joint10
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8/joint6
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint8/joint6/joint4
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9/joint7
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint9/joint7/joint5
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint16
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint17
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint11/joint18
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint13
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint14
+        weight: 1
+      - path: Lazo/Master/joints/joint10/joint12/joint15
+        weight: 1
+      - path: Lazo/Master/left1
+        weight: 1
+      - path: Lazo/Master/left1/left2
+        weight: 1
+      - path: Lazo/Master/right1
+        weight: 1
+      - path: Lazo/Master/right1/right2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

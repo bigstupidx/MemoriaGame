@@ -14,6 +14,20 @@ public class ScoreSumEnd : MonoBehaviour {
     static float secondToChangue = 0.5f;
 
     bool changued = false;
+
+    #if UNITY_IPHONE
+    static bool isIphone4 = false;
+
+    void Awake(){
+        // door = GetComponent<Door> ();
+        if( iPhone.generation == iPhoneGeneration.iPhone4)
+        {
+            isIphone4 = true;
+            //Its an iPod Touch, third generation
+        }
+
+    }
+    #endif
 	// Update is called once per frame
 	void Update () {
 	
@@ -25,7 +39,7 @@ public class ScoreSumEnd : MonoBehaviour {
                 sum = ManagerScore.Instance.CurrentScore;
                 CheckCoins ();
                 textNum.text = sum.ToString();
-
+                enabled = false;
             } else {
                
                 if (changued) {
@@ -48,6 +62,18 @@ public class ScoreSumEnd : MonoBehaviour {
     public void StartCounting(){
         enabled = true;
         isCounting = true;
+
+        #if UNITY_IPHONE
+        if(isIphone4){
+            sum = ManagerScore.Instance.CurrentScore;
+            textNum.text = ManagerScore.Instance.CurrentScore.ToString();
+            isCounting = false;
+            enabled = false;
+            CheckCoins ();
+            CheckCoins ();
+            CheckCoins ();
+        }
+        #endif
     }
     void CheckCoins(){
 

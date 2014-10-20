@@ -14,37 +14,63 @@ public class AnimationMesh : MonoBehaviour
     public Door door = null;
     public Animator anim = null;
 
-    const float timeShutDown = 0.35f;
+    static float timeShutDown = 0.35f;
 
-    void Start(){
+    #if UNITY_IPHONE
+    static bool isIphone4 = false;
+ 
+    void Awake(){
         // door = GetComponent<Door> ();
+        if( iPhone.generation == iPhoneGeneration.iPhone4)
+        {
+            isIphone4 = true;
+            //Its an iPod Touch, third generation
+        }
 
+    }
+    #endif
+    void Start(){
 
+        #if UNITY_IPHONE
+        if (isIphone4) {
+            gameObject.SetActive (false);
+
+        }
+        #endif
         door.OnOpenDoor += onOpen;
         door.onOpenQuickly += onOpenQuickly;
+        door.onClose += onClose;
 
-        door.onClose.Add (new Signal("onClose",gameObject));
 
         door.onCheckTruePair.Add (new Signal("onClose",gameObject));
 
-        gameObject.SetActive (false);
+       
     }
     void onOpen(){
 
         StopCoroutine (ShutDown(timeShutDown));
-        gameObject.SetActive (true);
+        #if UNITY_IPHONE
+
+        if (isIphone4) {
+            gameObject.SetActive (true);
+        }
+        #endif
 
         anim.SetBool("Open",true);
     }
     void onOpenQuickly(){
         StopCoroutine (ShutDown(timeShutDown));
+        #if UNITY_IPHONE
 
-        gameObject.SetActive (true);
-
+        if (isIphone4) {
+            gameObject.SetActive (true);
+        }
+        #endif
         anim.SetBool("OpenQuickly",true);
     }
-    [Signal]
     void onClose(){
+        StopCoroutine (ShutDown(timeShutDown));
+
         anim.SetBool("Open",false);
         anim.SetBool("OpenQuickly",false);
 
@@ -55,7 +81,12 @@ public class AnimationMesh : MonoBehaviour
     IEnumerator ShutDown(float time)
     {
         yield return StartCoroutine(Wait(time));
-        gameObject.SetActive (false);
+        #if UNITY_IPHONE
+
+        if (isIphone4) {
+            gameObject.SetActive (false);
+        }
+        #endif
     }
     //Our wait function
     IEnumerator Wait(float duration)

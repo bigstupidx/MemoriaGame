@@ -8,14 +8,16 @@ public class ManagerScore : Singleton<ManagerScore> {
 
     public int CurrentScore{ get { return score; } }
 
-    public int ScoreBaseToSum = 10;
+    public int ScoreBaseToSum = 50;
 
     [HideInInspector]
-    protected int plusScore = 0;
+    protected int plusScore = 1;
 
     public void SetPlusScore(int plus){
     
         plusScore += plus;
+        if (plusScore < 1)
+            plusScore = 1;
     }
     protected override void AwakeChild(){
         highScore = PlayerPrefs.GetInt ("HighScore");
@@ -25,7 +27,11 @@ public class ManagerScore : Singleton<ManagerScore> {
         if (sum <= 0)
             return;
 
-        score += sum + ManagerCombo.Instance.GetCombo*sum + sum*plusScore;
+        int value = sum * ( 1*plusScore +   ManagerCombo.Instance.GetCombo);
+
+        score += value*plusScore;
+
+
     }
     public void AddScore(){
 

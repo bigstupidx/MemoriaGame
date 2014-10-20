@@ -13,7 +13,7 @@ public class ManagerDoublePoints: Singleton<ManagerDoublePoints> {
     bool usedPower = false;
 
     public float MaxTime = 0;
-    public int PlusScore = 2;
+    public const int PlusScore = 1;
     float currentTime = 0;
     public delegate void onActiveBroadcast(bool activate);
     public event onActiveBroadcast OnActivePower;
