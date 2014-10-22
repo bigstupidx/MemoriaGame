@@ -403,9 +403,10 @@ class ManagerDoors : Singleton<ManagerDoors>
            
         } 
         else {
-            if(doors [pos] [fila]!= null && doors [pos] [fila]!= firstOpen)
-                doors [pos] [fila].OpenQuickly ();
+            if (doors [pos] [fila] != null && doors [pos] [fila] != firstOpen) {
 
+                doors [pos] [fila].OpenQuickly ();
+            }
             if (isPosi) {
                 pos++;
                 if (pos < count) {

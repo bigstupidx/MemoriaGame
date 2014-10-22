@@ -83,7 +83,7 @@ class ManagerTime : Singleton<ManagerTime>
                 currentTimeOfGame -= Time.deltaTime;
                 if (currentTimeOfGame <= 0) {
                     //Aqui hago lo q pasa cuando se pierde.
-
+                    currentTimeOfGame = 0;
                     ManagerDoors.Instance.CanTouch = false;
                     ManagerPause.Instance.Pause = true;
                     onTimeGameEnd ();

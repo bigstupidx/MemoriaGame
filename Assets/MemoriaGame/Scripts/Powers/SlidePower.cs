@@ -23,6 +23,11 @@ public class SlidePower : MonoBehaviour {
         horizontal.Flicked += FlickHorizontalHandler;
         vertical.Flicked += FlickVerticalHandler;
 
+        horizontal.MinDistance = 2;
+        horizontal.Direction = FlickGesture.GestureDirection.Horizontal;
+        vertical.MinDistance = 2;
+        vertical.Direction = FlickGesture.GestureDirection.Vertical;
+
     }
 
     void FlickHorizontalHandler(object sender, EventArgs e){
