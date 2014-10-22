@@ -20,11 +20,6 @@ public class ScoreSumEnd : MonoBehaviour {
     bool sumTime = false;
     float currentTime = 0;
     static int countSecondTime = 50;
-
-    #if UNITY_IPHONE
-    static bool isIphone4 = false;
-
-
     public ClockTimer clock;
     public UIWidget clockWid;
     public UIWidget timer;
@@ -32,6 +27,8 @@ public class ScoreSumEnd : MonoBehaviour {
     TweenPosition tweenPos;
 
     TweenScale scalesT;
+    #if UNITY_IPHONE
+    static bool isIphone4 = false;
     void Awake(){
         // door = GetComponent<Door> ();
         if( iPhone.generation == iPhoneGeneration.iPhone4)
