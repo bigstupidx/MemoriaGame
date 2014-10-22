@@ -404,6 +404,8 @@ ModelImporter:
     100796: //RootNode
     100798: Upper_Teeth_Ms
     100800: Utilities_Grp
+    100802: joint1
+    100804: transform1
     400000: B_L_ankle_Jnt
     400002: B_L_ball_Jnt
     400004: B_L_leg_Jnt
@@ -805,6 +807,8 @@ ModelImporter:
     400796: //RootNode
     400798: Upper_Teeth_Ms
     400800: Utilities_Grp
+    400802: joint1
+    400804: transform1
     2300000: Eyeball_DontTouch
     2300002: Eyeball_DontTouch 1
     2300004: nurbsToPoly1
@@ -833,6 +837,8 @@ ModelImporter:
     13700000: bottom_Teeth_Ms
     13700002: Giraffe_Ms
     13700004: Upper_Teeth_Ms
+    13700006: nurbsToPoly1
+    13700008: nurbsToPoly2
   materials:
     importMaterials: 1
     materialName: 0
@@ -1443,6 +1449,10 @@ ModelImporter:
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt
         weight: 1
+      - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt/transform1
+        weight: 1
+      - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt/transform1/joint1
+        weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/jaw_Jnt
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/jaw_Jnt/jawEnd_Jnt
@@ -1645,61 +1655,23 @@ ModelImporter:
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/tail_001_Jnt/tail_002_Jnt/tail_003_Jnt/tail_004_Jnt/tail_005_Jnt/tailEnd_Jnt
         weight: 1
+      - path: Topi/Giraffe_Gr/nurbsToPoly1
+        weight: 1
+      - path: Topi/Giraffe_Gr/nurbsToPoly2
+        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp
         weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup/Eye_Base
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup/Eye_Lattice
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eyeball_DontTouch
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/pSphere_Animatable
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Pupil_LatticeGroup
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Pupil_LatticeGroup/Pupil_Base
-        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/rivet1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/rivet1/Pupil_Lattice
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1
         weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1/Eye_Base
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1/Eye_Lattice
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eyeball_DontTouch
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/pSphere_Animatable
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Pupil_LatticeGroup
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Pupil_LatticeGroup
-          1/Pupil_Base 1
-        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/rivet1 1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/rivet1 1/Pupil_Lattice 1
-        weight: 1
-      - path: Topi/nurbsToPoly1
-        weight: 1
-      - path: Topi/nurbsToPoly2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1714,7 +1686,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -2297,6 +2269,10 @@ ModelImporter:
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt
         weight: 1
+      - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt/transform1
+        weight: 1
+      - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt/transform1/joint1
+        weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/jaw_Jnt
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/jaw_Jnt/jawEnd_Jnt
@@ -2499,61 +2475,23 @@ ModelImporter:
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/tail_001_Jnt/tail_002_Jnt/tail_003_Jnt/tail_004_Jnt/tail_005_Jnt/tailEnd_Jnt
         weight: 1
+      - path: Topi/Giraffe_Gr/nurbsToPoly1
+        weight: 1
+      - path: Topi/Giraffe_Gr/nurbsToPoly2
+        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp
         weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup/Eye_Base
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup/Eye_Lattice
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eyeball_DontTouch
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/pSphere_Animatable
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Pupil_LatticeGroup
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Pupil_LatticeGroup/Pupil_Base
-        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/rivet1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/rivet1/Pupil_Lattice
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1
         weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1/Eye_Base
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1/Eye_Lattice
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eyeball_DontTouch
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/pSphere_Animatable
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Pupil_LatticeGroup
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Pupil_LatticeGroup
-          1/Pupil_Base 1
-        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/rivet1 1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/rivet1 1/Pupil_Lattice 1
-        weight: 1
-      - path: Topi/nurbsToPoly1
-        weight: 1
-      - path: Topi/nurbsToPoly2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -2568,7 +2506,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -3151,6 +3089,10 @@ ModelImporter:
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt
         weight: 1
+      - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt/transform1
+        weight: 1
+      - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/head_Jnt/transform1/joint1
+        weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/jaw_Jnt
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/spine_001_Jnt/spine_002_Jnt/neck_001_Jnt/neck_002_Jnt/neck_003_Jnt/neckBase_Jnt/jaw_Jnt/jawEnd_Jnt
@@ -3353,61 +3295,23 @@ ModelImporter:
         weight: 1
       - path: Topi/Giraffe_Gr/Move_Grp/Scale_Grp/Joints_Grp/root_Jnt/tail_001_Jnt/tail_002_Jnt/tail_003_Jnt/tail_004_Jnt/tail_005_Jnt/tailEnd_Jnt
         weight: 1
+      - path: Topi/Giraffe_Gr/nurbsToPoly1
+        weight: 1
+      - path: Topi/Giraffe_Gr/nurbsToPoly2
+        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp
         weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup/Eye_Base
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eye_LatticeGroup/Eye_Lattice
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Eyeball_DontTouch
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/pSphere_Animatable
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Pupil_LatticeGroup
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/Eye_grp/Pupil_LatticeGroup/Pupil_Base
-        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/rivet1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/L_Eye_Grp/rivet1/Pupil_Lattice
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp
         weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1
         weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1/Eye_Base
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eye_LatticeGroup 1/Eye_Lattice
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Eyeball_DontTouch
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/pSphere_Animatable
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Pupil_LatticeGroup
-          1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/Eye_grp 1/Pupil_LatticeGroup
-          1/Pupil_Base 1
-        weight: 1
       - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/rivet1 1
-        weight: 1
-      - path: Topi/Giraffe_Gr/Utilities_Grp/R_Eye_Grp/rivet1 1/Pupil_Lattice 1
-        weight: 1
-      - path: Topi/nurbsToPoly1
-        weight: 1
-      - path: Topi/nurbsToPoly2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

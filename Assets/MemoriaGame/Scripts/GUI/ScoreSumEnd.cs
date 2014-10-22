@@ -16,7 +16,6 @@ public class ScoreSumEnd : MonoBehaviour {
     bool changued = false;
 
 
-    public UILabel timeNum;
     float TimeBySecondScore = 20.5f;
     bool sumTime = false;
     float currentTime = 0;
@@ -25,6 +24,14 @@ public class ScoreSumEnd : MonoBehaviour {
     #if UNITY_IPHONE
     static bool isIphone4 = false;
 
+
+    public ClockTimer clock;
+    public UIWidget clockWid;
+    public UIWidget timer;
+    public UIWidget texteffect;
+    TweenPosition tweenPos;
+
+    TweenScale scalesT;
     void Awake(){
         // door = GetComponent<Door> ();
         if( iPhone.generation == iPhoneGeneration.iPhone4)
@@ -52,7 +59,21 @@ public class ScoreSumEnd : MonoBehaviour {
                     currentTime = ManagerTime.Instance.getCurrentTimeOfGame;
 
                     //Showtime
-                    timeNum.text = currentTime.ToString ();
+
+                    clock.transform.parent = transform;
+                    clockWid.depth = 41;
+                    timer.depth = 42;
+
+                    scalesT = TweenScale.Begin (clock.gameObject, 0.3f,new Vector3( 1.3f, 1.3f, 1.3f)) ;
+                    scalesT.style = UITweener.Style.PingPong;
+
+                    clock.PlayFinalClock (  currentTime / countSecondTime);
+                    texteffect.alpha = 1;
+
+                    tweenPos = TweenPosition.Begin<TweenPosition> (texteffect.gameObject, 0.1f);
+                    tweenPos.from = clockWid.transform.localPosition;
+                    tweenPos.to = textNum.transform.localPosition;
+                    tweenPos.style = UITweener.Style.Loop;
                 } else {
                
                     if (changued) {
@@ -72,23 +93,30 @@ public class ScoreSumEnd : MonoBehaviour {
                 
                     currentTime += aux;
 
-                    sum += (int)(currentTime*TimeBySecondScore);
+                    sum += (int)(currentTime * TimeBySecondScore);
+                    CheckCoins ();
+
+                    textNum.text = sum.ToString ();
+                    tweenPos.enabled = false;
+                    texteffect.alpha = 0;
+                    scalesT.enabled = false;
+                    clockWid.alpha = 0;
+                    timer.alpha = 0;
+                    scalesT = TweenScale.Begin (textNum.gameObject, 0.3f,new Vector3( 1.3f, 1.3f, 1.3f)) ;
+                    scalesT.style = UITweener.Style.Once;
+
+                    currentTime = 0;
+                    isCounting = false;
+                    enabled = false;
+                } else {
+                    sum += (int)(aux*TimeBySecondScore) ;
                     CheckCoins ();
                     textNum.text = sum.ToString ();
 
-                    timeNum.text = "00:00";
-
-                    isCounting = false;
-                    enabled = false;
-                    return;
                 }
-                sum += (int)(aux*TimeBySecondScore) ;
-                CheckCoins ();
-                textNum.text = sum.ToString ();
 
               
 
-                timeNum.text =  Mathf.Floor((currentTime / 60) % 60).ToString()+":"+ ( Mathf.Floor(currentTime%60.0f)).ToString();
             }
   
         }
@@ -101,16 +129,16 @@ public class ScoreSumEnd : MonoBehaviour {
     public void StartCounting(){
         enabled = true;
         isCounting = true;
-        timeNum.text =  Mathf.Floor((ManagerTime.Instance.getCurrentTimeOfGame / 60) % 60).ToString()+":"+ ( Mathf.Floor(ManagerTime.Instance.getCurrentTimeOfGame%60.0f)).ToString();
 
         #if UNITY_IPHONE
         if(isIphone4){
             sum = ManagerScore.Instance.CurrentScore;
 
             sum+=  (int)(ManagerTime.Instance.getCurrentTimeOfGame * TimeBySecondScore);
-            textNum.text = ManagerScore.Instance.CurrentScore.ToString();
+            textNum.text = sum.ToString();
+            scalesT = TweenScale.Begin (textNum.gameObject, 0.3f,new Vector3( 1.3f, 1.3f, 1.3f)) ;
+            scalesT.style = UITweener.Style.Once;
 
-            timeNum.text = "00:00";
             isCounting = false;
             enabled = false;
             CheckCoins ();

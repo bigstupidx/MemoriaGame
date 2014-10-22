@@ -58,11 +58,11 @@ Transition:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 
+  m_Name: AbiertaTo
   m_SrcState: {fileID: 110274490}
   m_DstState: {fileID: 110231478}
-  m_TransitionDuration: .23999998
-  m_TransitionOffset: 0
+  m_TransitionDuration: .124493115
+  m_TransitionOffset: .00182676141
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: Open
@@ -122,11 +122,11 @@ Transition:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 
+  m_Name: AbrirTo
   m_SrcState: {fileID: 110240060}
   m_DstState: {fileID: 110231478}
-  m_TransitionDuration: .25
-  m_TransitionOffset: 0
+  m_TransitionDuration: .17694059
+  m_TransitionOffset: .0012176031
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: Open
@@ -142,7 +142,7 @@ Transition:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 
+  m_Name: RapiditoTo
   m_SrcState: {fileID: 110227593}
   m_DstState: {fileID: 110231478}
   m_TransitionDuration: .101598106

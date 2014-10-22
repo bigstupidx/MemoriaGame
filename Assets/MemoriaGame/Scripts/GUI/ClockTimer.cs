@@ -116,6 +116,27 @@ public class ClockTimer : MonoBehaviour {
             }
         }
     }
+
+    public void PlayFinalClock (float timerAux){
+        freezeAnimation.Pause ();
+        Arrow.sprite2D = ArrowSprite;
+        if (playRed) {
+            scaleArrow.PlayForward ();
+            animSpriteRed.Play ();
+
+        } else if (playYellow) {
+            animSpriteYellow.Play ();
+        } else {
+            GetComponent<UI2DSprite> ().sprite2D = BaseStateClock;
+        }
+
+        tweenRota.from = currentStop;
+
+        tweenRota = TweenRotation.Begin (Arrow.gameObject, timerAux, Quaternion.identity);
+        tweenRota.from = currentStop;
+        tweenRota.to = new Vector3(0,0,-90);
+    }
+
 }
 
 
