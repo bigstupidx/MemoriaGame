@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-// SL_NGUISpriteName.cs
+﻿// SL_NGUISpriteName.cs
 //
 // Copyright (c) 2013-2014 Niklas Borglund, Jakob Hillerström
 //

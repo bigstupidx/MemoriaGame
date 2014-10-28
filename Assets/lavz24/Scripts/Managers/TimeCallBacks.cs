@@ -16,15 +16,17 @@ public class TimeCallBacks
     }
     public IEnumerator WaitPause(float duration)
     {
-        if (ManagerPause.Instance.Pause)
-            yield return null;
 
-        for (float timer = 0; timer < duration; timer += Time.deltaTime)
-        {
- //           if (ManagerPause.Instance.Pause)
-  //              yield return null;
-
+        float timer = 0;
+        while(timer < duration){
+           
+           
             yield return null;
+            if (ManagerPause.Instance.Pause == false) {
+                timer += Time.deltaTime;
+            }
+           
         }
+
     }
 }

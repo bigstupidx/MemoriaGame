@@ -18,7 +18,13 @@ public class PowerOff : MonoBehaviour {
     protected bool Locked = true;
     [HideInInspector]
     public bool used = false;
-
+    public bool isEnabled {
+    
+        get{
+        
+            return !Locked && !used && button.isEnabled;
+        }
+    }
 
     protected UIButton button;
 

@@ -13,9 +13,9 @@ using System.Security.Cryptography;
 
 public enum NumberOfPair
 {
-    CuatroXDos = 4, 
     CuatroXCuatro = 8,
     CincoXSeis = 15,
+    CincoXSeisNormal = 14,
 }
 
 
@@ -134,24 +134,23 @@ class ManagerDoors : Singleton<ManagerDoors>
         switch (numberOfPair) {
 
         case NumberOfPair.CincoXSeis:
-            setDoorBy (5, 6,-0.5f,-9.2f);
-            setStartBy (5, 6,-0.5f,-9.2f);
-            setStartPoofBy (5, 6,-0.5f,-9.2f);
+            setDoorBy (5, 6, -0.5f, -9.2f);
+            setStartBy (5, 6, -0.5f, -9.2f);
+            setStartPoofBy (5, 6, -0.5f, -9.2f);
+
+            break;
+        case NumberOfPair.CincoXSeisNormal:
+            setDoorBy (5, 6, -0.5f, -9.2f);
+            setStartBy (5, 6, -0.5f, -9.2f);
+            setStartPoofBy (5, 6, -0.5f, -9.2f);
 
             break;
         case NumberOfPair.CuatroXCuatro:
-            setDoorBy (4,4,-0.3f,-9.2f);
-            setStartBy (4,4,-0.3f,-9.2f);
-            setStartPoofBy (4,4,-0.3f,-9.2f);
+            setDoorBy (4, 4, -0.3f, -9.2f);
+            setStartBy (4, 4, -0.3f, -9.2f);
+            setStartPoofBy (4, 4, -0.3f, -9.2f);
 
             break;
-        case NumberOfPair.CuatroXDos:
-            setDoorBy (4, 2,-0.1f,-9.2f);
-            setStartBy (4, 2,-0.1f,-9.2f);
-            setStartPoofBy (4, 2,-0.1f,-9.2f);
-
-            break;
-
         }
     }
     void setStartPoofBy(int countX,int countZ,float posIniX,float posIniZ){
@@ -348,13 +347,13 @@ class ManagerDoors : Singleton<ManagerDoors>
             countZ = 5;
             countX = 6;
             break;
+        case NumberOfPair.CincoXSeisNormal:
+                countZ = 5;
+                countX = 6;
+                break;
         case NumberOfPair.CuatroXCuatro:
             countZ = 4;
             countX = 4;
-            break;
-        case NumberOfPair.CuatroXDos:
-            countZ = 4;
-            countX = 2;
             break;
 
         }

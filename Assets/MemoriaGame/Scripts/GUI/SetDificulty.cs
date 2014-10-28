@@ -17,14 +17,14 @@ public class SetDificulty : MonoBehaviour
 
 
     public void facil(){
-        ManagerDoors.numberOfPair = NumberOfPair.CuatroXDos;
+        ManagerDoors.numberOfPair = NumberOfPair.CuatroXCuatro;
         //LoadLevel ();
         test.SetActive (true);
         StartCoroutine (LoadLevelAfter(timeForChangue));
     }
 
     public void normal(){
-        ManagerDoors.numberOfPair = NumberOfPair.CuatroXCuatro;
+        ManagerDoors.numberOfPair = NumberOfPair.CincoXSeisNormal;
         //LoadLevel ();
         test.SetActive (true);
 
