@@ -5,39 +5,37 @@
 
 //#define SMART_LOC_NGUI //<--- UNCOMMENT THIS FOR NGUI CLASSES
 
-#if SMART_LOC_NGUI
+//#if SMART_LOC_NGUI
 namespace SmartLocalization.Editor
 {
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(SL_NGUISpriteName))]
+    [CustomEditor(typeof(SL_NGUISprite2DName))]
 public class SL_NGUISprite2DNameInspector : Editor 
-{
+    {
 private string selectedKey = null;
 
 void Awake()
-{
-SL_NGUISpriteName textObject = ((SL_NGUISpriteName)target);
-if(textObject != null)
-{
-selectedKey = textObject.localizedKey;
-}
-}
+        {
+            SL_NGUISprite2DName textObject = ((SL_NGUISprite2DName)target);
+            if (textObject != null) {
+                selectedKey = textObject.localizedKey;
+            }
+        }
 
 public override void OnInspectorGUI()
-{
-base.OnInspectorGUI();
+        {
+            base.OnInspectorGUI ();
 
-selectedKey = LocalizedKeySelector.SelectKeyGUI(selectedKey, true, LocalizedObjectType.STRING);
+            selectedKey = LocalizedKeySelector.SelectKeyGUI (selectedKey, true, LocalizedObjectType.TEXTURE);
 
-if(!Application.isPlaying && GUILayout.Button("Use Key", GUILayout.Width(70)))
-{
-SL_NGUISpriteName spriteObject = ((SL_NGUISpriteName)target);       
-spriteObject.localizedKey = selectedKey;
-}
-}
-}
+            if (!Application.isPlaying && GUILayout.Button ("Use Key", GUILayout.Width (70))) {
+                SL_NGUISprite2DName spriteObject = ((SL_NGUISprite2DName)target);       
+                spriteObject.localizedKey = selectedKey;
+            }
+        }
+    }
 } //namespace SmartLocalization.Editor
-#endif
+//#endif
 

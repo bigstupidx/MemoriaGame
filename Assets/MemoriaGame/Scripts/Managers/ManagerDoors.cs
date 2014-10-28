@@ -179,8 +179,11 @@ class ManagerDoors : Singleton<ManagerDoors>
         for (int i = 0; i < countX; ++i) {
             stars.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
-
-                stars[i].Add (Star.Spawn(new Vector3(currentX + 0.012f, 0.02f ,currentZ-(countX-i)*0.015f),Quaternion.identity));
+                float aux = 0;
+                if (i > 3) {
+                    aux = i * 0.008f;
+                }
+                stars[i].Add (Star.Spawn(new Vector3(currentX + 0.012f, 0.02f ,currentZ-(countX-i)*0.015f - aux),Quaternion.identity));
                 stars [i] [j].SetActive (false);
                 currentX += offSetX;
             }
@@ -211,8 +214,11 @@ class ManagerDoors : Singleton<ManagerDoors>
         for (int i = 0; i < countX; ++i) {
             doors.Add (new List<Door> ());
             for (int j = 0; j < countZ; j++) {
-
-                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ -(countX-i)*0.015f ),Quaternion.identity));
+                float aux = 0;
+                if (i > 3) {
+                    aux = i * 0.008f;
+                }
+                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ -(countX-i)*0.015f -aux),Quaternion.identity));
                 GameObject g1 =  Ground.Spawn (Vector3.zero, Ground.transform.rotation);
                 g1.transform.parent = doors [i] [j].transform;
                 g1.transform.localPosition = Vector3.zero;
