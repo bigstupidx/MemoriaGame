@@ -1,0 +1,1936 @@
+fileFormatVersion: 2
+guid: 1d8eb347d45b042b6bc4fc400e6151f1
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: pasted__arm_L_jnt
+    100002: pasted__arm_R_jnt
+    100004: pasted__back_bottom_L_cheek_jnt
+    100006: pasted__back_bottom_R_cheek_jnt
+    100008: pasted__back_top_L_cheek_jnt
+    100010: pasted__back_top_R_cheek_jnt
+    100012: pasted__baseTail_jnt
+    100014: pasted__bind_L_cornerInner_eyelid_jnt
+    100016: pasted__bind_L_cornerOuter_eyelid_jnt
+    100018: pasted__bind_L_lowerCenter_eyelid_jnt
+    100020: pasted__bind_L_lowerInner_eyelid_jnt
+    100022: pasted__bind_L_lowerOuter_eyelid_jnt
+    100024: pasted__bind_L_upperCenter_eyelid_jnt
+    100026: pasted__bind_L_upperInner_eyelid_jnt
+    100028: pasted__bind_L_upperOuter_eyelid_jnt
+    100030: pasted__bind_R_cornerInner_eyelid_jnt
+    100032: pasted__bind_R_cornerOuter_eyelid_jnt
+    100034: pasted__bind_R_lowerCenter_eyelid_jnt
+    100036: pasted__bind_R_lowerInner_eyelid_jnt
+    100038: pasted__bind_R_lowerOuter_eyelid_jnt
+    100040: pasted__bind_R_upperCenter_eyelid_jnt
+    100042: pasted__bind_R_upperInner_eyelid_jnt
+    100044: pasted__bind_R_upperOuter_eyelid_jnt
+    100046: pasted__center_lower_chin_jnt
+    100048: pasted__center_lower_lip_jnt
+    100050: pasted__chest_Con
+    100052: pasted__chest_jnt
+    100054: pasted__chin_jnt
+    100056: pasted__COG_Con
+    100058: pasted__controls
+    100060: pasted__drv_L_cornerInner_eyelid_jnt
+    100062: pasted__drv_L_cornerOuter_eyelid_jnt
+    100064: pasted__drv_L_lowerCenter_eyelid_jnt
+    100066: pasted__drv_L_lowerInner_eyelid_jnt
+    100068: pasted__drv_L_lowerOuter_eyelid_jnt
+    100070: pasted__drv_L_upperCenter_eyelid_jnt
+    100072: pasted__drv_L_upperInner_eyelid_jnt
+    100074: pasted__drv_L_upperOuter_eyelid_jnt
+    100076: pasted__drv_R_cornerInner_eyelid_jnt
+    100078: pasted__drv_R_cornerOuter_eyelid_jnt
+    100080: pasted__drv_R_lowerCenter_eyelid_jnt
+    100082: pasted__drv_R_lowerInner_eyelid_jnt
+    100084: pasted__drv_R_lowerOuter_eyelid_jnt
+    100086: pasted__drv_R_upperCenter_eyelid_jnt
+    100088: pasted__drv_R_upperInner_eyelid_jnt
+    100090: pasted__drv_R_upperOuter_eyelid_jnt
+    100092: pasted__elbow_L_jnt
+    100094: pasted__elbow_R_jnt
+    100096: pasted__eye_Aim
+    100098: pasted__finger_L_jnt
+    100100: pasted__finger_R_jnt
+    100102: pasted__flexiPlane_flexiPlane01
+    100104: pasted__flexiPlane_flexiPlane_bind_a01
+    100106: pasted__flexiPlane_flexiPlane_bind_b01
+    100108: pasted__flexiPlane_flexiPlane_bind_c01
+    100110: pasted__flexiPlane_flexiPlane_bind_d01
+    100112: pasted__flexiPlane_flexiPlane_bind_e01
+    100114: pasted__flexiPlane_flexiPlane_cnt_global01
+    100116: pasted__flexiPlane_flexiPlane_cnts01
+    100118: pasted__flexiPlane_flexiPlane_extraNodes01
+    100120: pasted__flexiPlane_flexiPlane_flc_a01
+    100122: pasted__flexiPlane_flexiPlane_flc_b01
+    100124: pasted__flexiPlane_flexiPlane_flc_c01
+    100126: pasted__flexiPlane_flexiPlane_flc_d01
+    100128: pasted__flexiPlane_flexiPlane_flc_e01
+    100130: pasted__flexiPlane_flexiPlane_flcs01
+    100132: pasted__flexiPlane_flexiPlane_globalMove01
+    100134: pasted__flexiPlane_flexiPlane_grp_midBend01
+    100136: pasted__flexiPlane_flexiPlane_midBend01
+    100138: pasted__forearm_L_jnt
+    100140: pasted__forearm_R_jnt
+    100142: pasted__forehead_jnt
+    100144: pasted__front_bottom_L_cheek_jnt
+    100146: pasted__front_bottom_R_cheek_jnt
+    100148: pasted__front_top_L_cheek_jnt
+    100150: pasted__front_top_R_cheek_jnt
+    100152: pasted__head_Con
+    100154: pasted__head_jnt
+    100156: pasted__headEnd_jnt
+    100158: pasted__hipsGymbal_Con
+    100160: pasted__inner_L_lower_chin_jnt
+    100162: pasted__inner_L_lower_lip_jnt
+    100164: pasted__inner_L_maxilia_jnt
+    100166: pasted__inner_L_upper_lip_jnt
+    100168: pasted__inner_R_lower_chin_jnt
+    100170: pasted__inner_R_lower_lip_jnt
+    100172: pasted__inner_R_maxilia_jnt
+    100174: pasted__inner_R_upper_lip_jnt
+    100176: pasted__innerBrow_L_jnt
+    100178: pasted__innerBrow_R_jnt
+    100180: pasted__innerCorner_L_lip_jnt
+    100182: pasted__innerCorner_R_lip_jnt
+    100184: pasted__jaw_jnt
+    100186: pasted__joints
+    100188: pasted__L_ankle_jnt
+    100190: pasted__L_arm_FK_Con
+    100192: pasted__L_ball_jnt
+    100194: pasted__L_ear_A_jnt
+    100196: pasted__L_ear_B_jnt
+    100198: pasted__L_ear_C_jnt
+    100200: pasted__L_ear_D_jnt
+    100202: pasted__L_earBase_jnt
+    100204: pasted__L_elbow_FK_Con
+    100206: pasted__L_eye_Aim
+    100208: pasted__L_eye_jnt
+    100210: pasted__L_foot_Ik_con
+    100212: pasted__L_Hand_Con
+    100214: pasted__L_knee_jnt
+    100216: pasted__L_leg_jnt
+    100218: pasted__L_shoulder_Con
+    100220: pasted__L_wrist_FK_Con
+    100222: pasted__locAlign_arm_L_jnt
+    100224: pasted__locAlign_arm_R_jnt
+    100226: pasted__locAlign_elbow_L_jnt
+    100228: pasted__locAlign_elbow_R_jnt
+    100230: pasted__locAlign_flexiPlane_flexiPlane_cnt_a01
+    100232: pasted__locAlign_flexiPlane_flexiPlane_cnt_b01
+    100234: pasted__locAlign_foreArm_R_jnt
+    100236: pasted__locAlign_head_jnt
+    100238: pasted__locAlign_L_earBase_jnt
+    100240: pasted__locAlign_neck_jnt
+    100242: pasted__locAlign_R_earBase_jnt
+    100244: pasted__locAlign_shoulder_L_jnt
+    100246: pasted__locAlign_shoulder_R_jnt
+    100248: pasted__locAlign_wrist_L_jnt
+    100250: pasted__locAlign_wrist_R_jnt
+    100252: pasted__lowerForehead_jnt
+    100254: pasted__middle_L_cheek_jnt
+    100256: pasted__middle_L_maxilia_jnt
+    100258: pasted__middle_L_upper_lip_jnt
+    100260: pasted__middle_lip_jnt
+    100262: pasted__middle_R_cheek_jnt
+    100264: pasted__middle_R_maxilia_jnt
+    100266: pasted__middle_R_upper_lip_jnt
+    100268: pasted__middleBrow_L_jnt
+    100270: pasted__middleBrow_R_jnt
+    100272: pasted__mouth_jnt
+    100274: pasted__moveGroup
+    100276: pasted__neck_Con
+    100278: pasted__neck_jnt
+    100280: pasted__nose_bottom_jnt
+    100282: pasted__nose_center_jnt
+    100284: pasted__nose_L_jnt
+    100286: pasted__nose_R_jnt
+    100288: pasted__nose_top_jnt
+    100290: pasted__nurbsCircle19
+    100292: pasted__nurbsCircle20
+    100294: pasted__nurbsCircle21
+    100296: pasted__nurbsCircle22
+    100298: pasted__nurbsCircle23
+    100300: pasted__nurbsCircle24
+    100302: pasted__nurbsCircle25
+    100304: pasted__nurbsCircle26
+    100306: pasted__nurbsCircle27
+    100308: pasted__nurbsCircle28
+    100310: pasted__nurbsToPoly1
+    100312: pasted__nurbsToPoly2
+    100314: pasted__outer_L_lower_chin_jnt
+    100316: pasted__outer_L_lower_lip_jnt
+    100318: pasted__outer_L_maxilia_jnt
+    100320: pasted__outer_L_upper_lip_jnt
+    100322: pasted__outer_R_lower_chin_jnt
+    100324: pasted__outer_R_lower_lip_jnt
+    100326: pasted__outer_R_maxilia_jnt
+    100328: pasted__outer_R_upper_lip_jnt
+    100330: pasted__outerBrow_L_jnt
+    100332: pasted__outerBrow_R_jnt
+    100334: pasted__outerCorner_L_lip_jnt
+    100336: pasted__outerCorner_R_lip_jnt
+    100338: pasted__palm_L_jnt
+    100340: pasted__palm_R_jnt
+    100342: pasted__R_ankle_jnt
+    100344: pasted__R_arm_FK_Con
+    100346: pasted__R_ball_jnt
+    100348: pasted__R_ear_A_jnt
+    100350: pasted__R_ear_B_jnt
+    100352: pasted__R_ear_C_jnt
+    100354: pasted__R_ear_D_jnt
+    100356: pasted__R_earBase_jnt
+    100358: pasted__R_elbow_FK_Con
+    100360: pasted__R_eye_Aim
+    100362: pasted__R_eye_jnt
+    100364: pasted__R_foot_Ik_con
+    100366: pasted__R_Hand_Con
+    100368: pasted__R_knee_jnt
+    100370: pasted__R_leg_jnt
+    100372: pasted__R_shoulder_Con
+    100374: pasted__R_wrist_FK_Con
+    100376: pasted__root_jnt
+    100378: pasted__scaleGroup
+    100380: pasted__shoulder_L_jnt
+    100382: pasted__shoulder_R_jnt
+    100384: pasted__tail_A_jnt
+    100386: pasted__tail_B_jnt
+    100388: pasted__tail_C_jnt
+    100390: pasted__thumb_A_L_jnt
+    100392: pasted__thumb_A_R_jnt
+    100394: pasted__thumb_B_L_jnt
+    100396: pasted__thumb_B_R_jnt
+    100398: pasted__thumbBase_L_jnt
+    100400: pasted__thumbBase_R_jnt
+    100402: pasted__thumbHand_L_jnt
+    100404: pasted__thumbHand_R_jnt
+    100406: pasted__Tica_Lowerteeth_Ms
+    100408: pasted__Tica_Master_Grp
+    100410: pasted__Tica_Upperteeth_Ms
+    100412: pasted__TicaBody_Ms
+    100414: pasted__TicaBow_Ms
+    100416: pasted__ticaMaster_Con
+    100418: pasted__TicaModel_Ms_Grp
+    100420: pasted__TicaTeeth_Ms
+    100422: pasted__tongue_A_jnt
+    100424: pasted__tongue_B_jnt
+    100426: pasted__tongue_C_jnt
+    100428: pasted__tongue_D_jnt
+    100430: pasted__tongue_E_jnt
+    100432: pasted__tongueBase_jnt
+    100434: pasted__upperMiddle_lip_jnt
+    100436: pasted__Utilities
+    100438: pasted__wrist_L_jnt
+    100440: pasted__wrist_R_jnt
+    100442: //RootNode
+    400000: pasted__arm_L_jnt
+    400002: pasted__arm_R_jnt
+    400004: pasted__back_bottom_L_cheek_jnt
+    400006: pasted__back_bottom_R_cheek_jnt
+    400008: pasted__back_top_L_cheek_jnt
+    400010: pasted__back_top_R_cheek_jnt
+    400012: pasted__baseTail_jnt
+    400014: pasted__bind_L_cornerInner_eyelid_jnt
+    400016: pasted__bind_L_cornerOuter_eyelid_jnt
+    400018: pasted__bind_L_lowerCenter_eyelid_jnt
+    400020: pasted__bind_L_lowerInner_eyelid_jnt
+    400022: pasted__bind_L_lowerOuter_eyelid_jnt
+    400024: pasted__bind_L_upperCenter_eyelid_jnt
+    400026: pasted__bind_L_upperInner_eyelid_jnt
+    400028: pasted__bind_L_upperOuter_eyelid_jnt
+    400030: pasted__bind_R_cornerInner_eyelid_jnt
+    400032: pasted__bind_R_cornerOuter_eyelid_jnt
+    400034: pasted__bind_R_lowerCenter_eyelid_jnt
+    400036: pasted__bind_R_lowerInner_eyelid_jnt
+    400038: pasted__bind_R_lowerOuter_eyelid_jnt
+    400040: pasted__bind_R_upperCenter_eyelid_jnt
+    400042: pasted__bind_R_upperInner_eyelid_jnt
+    400044: pasted__bind_R_upperOuter_eyelid_jnt
+    400046: pasted__center_lower_chin_jnt
+    400048: pasted__center_lower_lip_jnt
+    400050: pasted__chest_Con
+    400052: pasted__chest_jnt
+    400054: pasted__chin_jnt
+    400056: pasted__COG_Con
+    400058: pasted__controls
+    400060: pasted__drv_L_cornerInner_eyelid_jnt
+    400062: pasted__drv_L_cornerOuter_eyelid_jnt
+    400064: pasted__drv_L_lowerCenter_eyelid_jnt
+    400066: pasted__drv_L_lowerInner_eyelid_jnt
+    400068: pasted__drv_L_lowerOuter_eyelid_jnt
+    400070: pasted__drv_L_upperCenter_eyelid_jnt
+    400072: pasted__drv_L_upperInner_eyelid_jnt
+    400074: pasted__drv_L_upperOuter_eyelid_jnt
+    400076: pasted__drv_R_cornerInner_eyelid_jnt
+    400078: pasted__drv_R_cornerOuter_eyelid_jnt
+    400080: pasted__drv_R_lowerCenter_eyelid_jnt
+    400082: pasted__drv_R_lowerInner_eyelid_jnt
+    400084: pasted__drv_R_lowerOuter_eyelid_jnt
+    400086: pasted__drv_R_upperCenter_eyelid_jnt
+    400088: pasted__drv_R_upperInner_eyelid_jnt
+    400090: pasted__drv_R_upperOuter_eyelid_jnt
+    400092: pasted__elbow_L_jnt
+    400094: pasted__elbow_R_jnt
+    400096: pasted__eye_Aim
+    400098: pasted__finger_L_jnt
+    400100: pasted__finger_R_jnt
+    400102: pasted__flexiPlane_flexiPlane01
+    400104: pasted__flexiPlane_flexiPlane_bind_a01
+    400106: pasted__flexiPlane_flexiPlane_bind_b01
+    400108: pasted__flexiPlane_flexiPlane_bind_c01
+    400110: pasted__flexiPlane_flexiPlane_bind_d01
+    400112: pasted__flexiPlane_flexiPlane_bind_e01
+    400114: pasted__flexiPlane_flexiPlane_cnt_global01
+    400116: pasted__flexiPlane_flexiPlane_cnts01
+    400118: pasted__flexiPlane_flexiPlane_extraNodes01
+    400120: pasted__flexiPlane_flexiPlane_flc_a01
+    400122: pasted__flexiPlane_flexiPlane_flc_b01
+    400124: pasted__flexiPlane_flexiPlane_flc_c01
+    400126: pasted__flexiPlane_flexiPlane_flc_d01
+    400128: pasted__flexiPlane_flexiPlane_flc_e01
+    400130: pasted__flexiPlane_flexiPlane_flcs01
+    400132: pasted__flexiPlane_flexiPlane_globalMove01
+    400134: pasted__flexiPlane_flexiPlane_grp_midBend01
+    400136: pasted__flexiPlane_flexiPlane_midBend01
+    400138: pasted__forearm_L_jnt
+    400140: pasted__forearm_R_jnt
+    400142: pasted__forehead_jnt
+    400144: pasted__front_bottom_L_cheek_jnt
+    400146: pasted__front_bottom_R_cheek_jnt
+    400148: pasted__front_top_L_cheek_jnt
+    400150: pasted__front_top_R_cheek_jnt
+    400152: pasted__head_Con
+    400154: pasted__head_jnt
+    400156: pasted__headEnd_jnt
+    400158: pasted__hipsGymbal_Con
+    400160: pasted__inner_L_lower_chin_jnt
+    400162: pasted__inner_L_lower_lip_jnt
+    400164: pasted__inner_L_maxilia_jnt
+    400166: pasted__inner_L_upper_lip_jnt
+    400168: pasted__inner_R_lower_chin_jnt
+    400170: pasted__inner_R_lower_lip_jnt
+    400172: pasted__inner_R_maxilia_jnt
+    400174: pasted__inner_R_upper_lip_jnt
+    400176: pasted__innerBrow_L_jnt
+    400178: pasted__innerBrow_R_jnt
+    400180: pasted__innerCorner_L_lip_jnt
+    400182: pasted__innerCorner_R_lip_jnt
+    400184: pasted__jaw_jnt
+    400186: pasted__joints
+    400188: pasted__L_ankle_jnt
+    400190: pasted__L_arm_FK_Con
+    400192: pasted__L_ball_jnt
+    400194: pasted__L_ear_A_jnt
+    400196: pasted__L_ear_B_jnt
+    400198: pasted__L_ear_C_jnt
+    400200: pasted__L_ear_D_jnt
+    400202: pasted__L_earBase_jnt
+    400204: pasted__L_elbow_FK_Con
+    400206: pasted__L_eye_Aim
+    400208: pasted__L_eye_jnt
+    400210: pasted__L_foot_Ik_con
+    400212: pasted__L_Hand_Con
+    400214: pasted__L_knee_jnt
+    400216: pasted__L_leg_jnt
+    400218: pasted__L_shoulder_Con
+    400220: pasted__L_wrist_FK_Con
+    400222: pasted__locAlign_arm_L_jnt
+    400224: pasted__locAlign_arm_R_jnt
+    400226: pasted__locAlign_elbow_L_jnt
+    400228: pasted__locAlign_elbow_R_jnt
+    400230: pasted__locAlign_flexiPlane_flexiPlane_cnt_a01
+    400232: pasted__locAlign_flexiPlane_flexiPlane_cnt_b01
+    400234: pasted__locAlign_foreArm_R_jnt
+    400236: pasted__locAlign_head_jnt
+    400238: pasted__locAlign_L_earBase_jnt
+    400240: pasted__locAlign_neck_jnt
+    400242: pasted__locAlign_R_earBase_jnt
+    400244: pasted__locAlign_shoulder_L_jnt
+    400246: pasted__locAlign_shoulder_R_jnt
+    400248: pasted__locAlign_wrist_L_jnt
+    400250: pasted__locAlign_wrist_R_jnt
+    400252: pasted__lowerForehead_jnt
+    400254: pasted__middle_L_cheek_jnt
+    400256: pasted__middle_L_maxilia_jnt
+    400258: pasted__middle_L_upper_lip_jnt
+    400260: pasted__middle_lip_jnt
+    400262: pasted__middle_R_cheek_jnt
+    400264: pasted__middle_R_maxilia_jnt
+    400266: pasted__middle_R_upper_lip_jnt
+    400268: pasted__middleBrow_L_jnt
+    400270: pasted__middleBrow_R_jnt
+    400272: pasted__mouth_jnt
+    400274: pasted__moveGroup
+    400276: pasted__neck_Con
+    400278: pasted__neck_jnt
+    400280: pasted__nose_bottom_jnt
+    400282: pasted__nose_center_jnt
+    400284: pasted__nose_L_jnt
+    400286: pasted__nose_R_jnt
+    400288: pasted__nose_top_jnt
+    400290: pasted__nurbsCircle19
+    400292: pasted__nurbsCircle20
+    400294: pasted__nurbsCircle21
+    400296: pasted__nurbsCircle22
+    400298: pasted__nurbsCircle23
+    400300: pasted__nurbsCircle24
+    400302: pasted__nurbsCircle25
+    400304: pasted__nurbsCircle26
+    400306: pasted__nurbsCircle27
+    400308: pasted__nurbsCircle28
+    400310: pasted__nurbsToPoly1
+    400312: pasted__nurbsToPoly2
+    400314: pasted__outer_L_lower_chin_jnt
+    400316: pasted__outer_L_lower_lip_jnt
+    400318: pasted__outer_L_maxilia_jnt
+    400320: pasted__outer_L_upper_lip_jnt
+    400322: pasted__outer_R_lower_chin_jnt
+    400324: pasted__outer_R_lower_lip_jnt
+    400326: pasted__outer_R_maxilia_jnt
+    400328: pasted__outer_R_upper_lip_jnt
+    400330: pasted__outerBrow_L_jnt
+    400332: pasted__outerBrow_R_jnt
+    400334: pasted__outerCorner_L_lip_jnt
+    400336: pasted__outerCorner_R_lip_jnt
+    400338: pasted__palm_L_jnt
+    400340: pasted__palm_R_jnt
+    400342: pasted__R_ankle_jnt
+    400344: pasted__R_arm_FK_Con
+    400346: pasted__R_ball_jnt
+    400348: pasted__R_ear_A_jnt
+    400350: pasted__R_ear_B_jnt
+    400352: pasted__R_ear_C_jnt
+    400354: pasted__R_ear_D_jnt
+    400356: pasted__R_earBase_jnt
+    400358: pasted__R_elbow_FK_Con
+    400360: pasted__R_eye_Aim
+    400362: pasted__R_eye_jnt
+    400364: pasted__R_foot_Ik_con
+    400366: pasted__R_Hand_Con
+    400368: pasted__R_knee_jnt
+    400370: pasted__R_leg_jnt
+    400372: pasted__R_shoulder_Con
+    400374: pasted__R_wrist_FK_Con
+    400376: pasted__root_jnt
+    400378: pasted__scaleGroup
+    400380: pasted__shoulder_L_jnt
+    400382: pasted__shoulder_R_jnt
+    400384: pasted__tail_A_jnt
+    400386: pasted__tail_B_jnt
+    400388: pasted__tail_C_jnt
+    400390: pasted__thumb_A_L_jnt
+    400392: pasted__thumb_A_R_jnt
+    400394: pasted__thumb_B_L_jnt
+    400396: pasted__thumb_B_R_jnt
+    400398: pasted__thumbBase_L_jnt
+    400400: pasted__thumbBase_R_jnt
+    400402: pasted__thumbHand_L_jnt
+    400404: pasted__thumbHand_R_jnt
+    400406: pasted__Tica_Lowerteeth_Ms
+    400408: pasted__Tica_Master_Grp
+    400410: pasted__Tica_Upperteeth_Ms
+    400412: pasted__TicaBody_Ms
+    400414: pasted__TicaBow_Ms
+    400416: pasted__ticaMaster_Con
+    400418: pasted__TicaModel_Ms_Grp
+    400420: pasted__TicaTeeth_Ms
+    400422: pasted__tongue_A_jnt
+    400424: pasted__tongue_B_jnt
+    400426: pasted__tongue_C_jnt
+    400428: pasted__tongue_D_jnt
+    400430: pasted__tongue_E_jnt
+    400432: pasted__tongueBase_jnt
+    400434: pasted__upperMiddle_lip_jnt
+    400436: pasted__Utilities
+    400438: pasted__wrist_L_jnt
+    400440: pasted__wrist_R_jnt
+    400442: //RootNode
+    2300000: pasted__flexiPlane_flexiPlane_midBend01
+    2300002: pasted__nurbsToPoly1
+    2300004: pasted__nurbsToPoly2
+    3300000: pasted__flexiPlane_flexiPlane_midBend01
+    3300002: pasted__nurbsToPoly1
+    3300004: pasted__nurbsToPoly2
+    4300000: pasted__TicaBody_Ms
+    4300002: pasted__TicaBow_Ms
+    4300004: pasted__TicaTeeth_Ms
+    4300006: pasted__Tica_Upperteeth_Ms
+    4300008: pasted__Tica_Lowerteeth_Ms
+    4300010: pasted__flexiPlane_flexiPlane_midBend01
+    4300012: pasted__nurbsToPoly1
+    4300014: pasted__nurbsToPoly2
+    7400000: Tica@Abriendo
+    7400002: Tica@Cerrado
+    7400004: Tica@Idle
+    9500000: //RootNode
+    13700000: pasted__Tica_Lowerteeth_Ms
+    13700002: pasted__Tica_Upperteeth_Ms
+    13700004: pasted__TicaBody_Ms
+    13700006: pasted__TicaBow_Ms
+    13700008: pasted__TicaTeeth_Ms
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Tica@Abriendo
+      takeName: Take 001
+      firstFrame: 8
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pasted__Tica_Master_Grp
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim/pasted__L_eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim/pasted__R_eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__L_foot_Ik_con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__L_Hand_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01/pasted__flexiPlane_flexiPlane_grp_midBend01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01/pasted__flexiPlane_flexiPlane_grp_midBend01/pasted__flexiPlane_flexiPlane_midBend01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__hipsGymbal_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21/pasted__nurbsCircle22
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21/pasted__nurbsCircle22/pasted__nurbsCircle23
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26/pasted__nurbsCircle27
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26/pasted__nurbsCircle27/pasted__nurbsCircle28
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con/pasted__locAlign_wrist_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con/pasted__locAlign_wrist_L_jnt/pasted__L_wrist_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt/pasted__locAlign_foreArm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt/pasted__R_wrist_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__R_foot_Ik_con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__R_Hand_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_bottom_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_bottom_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_top_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_top_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__forehead_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_bottom_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_bottom_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_top_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_top_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt/pasted__nurbsToPoly1
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt/pasted__nurbsToPoly2
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerCorner_L_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerCorner_R_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt/pasted__L_ear_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt/pasted__L_ear_C_jnt/pasted__L_ear_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerInner_eyelid_jnt/pasted__bind_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerOuter_eyelid_jnt/pasted__bind_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerCenter_eyelid_jnt/pasted__bind_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerInner_eyelid_jnt/pasted__bind_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerOuter_eyelid_jnt/pasted__bind_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperCenter_eyelid_jnt/pasted__bind_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperInner_eyelid_jnt/pasted__bind_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperOuter_eyelid_jnt/pasted__bind_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__lowerForehead_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middleBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middleBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__center_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__center_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_L_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_L_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_R_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_R_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_L_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_L_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_R_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_R_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt/pasted__tongue_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt/pasted__tongue_D_jnt/pasted__tongue_E_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_bottom_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_center_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_top_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerCorner_L_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerCorner_R_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt/pasted__R_ear_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt/pasted__R_ear_C_jnt/pasted__R_ear_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerInner_eyelid_jnt/pasted__bind_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerOuter_eyelid_jnt/pasted__bind_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerCenter_eyelid_jnt/pasted__bind_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerInner_eyelid_jnt/pasted__bind_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerOuter_eyelid_jnt/pasted__bind_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperCenter_eyelid_jnt/pasted__bind_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperInner_eyelid_jnt/pasted__bind_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperOuter_eyelid_jnt/pasted__bind_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__upperMiddle_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__palm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__palm_L_jnt/pasted__finger_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt/pasted__thumb_A_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt/pasted__thumb_A_L_jnt/pasted__thumb_B_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__palm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__palm_R_jnt/pasted__finger_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt/pasted__thumb_A_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt/pasted__thumb_A_R_jnt/pasted__thumb_B_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt/pasted__tail_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt/pasted__tail_B_jnt/pasted__tail_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt/pasted__L_ankle_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt/pasted__L_ankle_jnt/pasted__L_ball_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt/pasted__R_ankle_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt/pasted__R_ankle_jnt/pasted__R_ball_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__ticaMaster_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__Tica_Lowerteeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__Tica_Upperteeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaBody_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaBow_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaTeeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_a01/pasted__flexiPlane_flexiPlane_bind_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_b01/pasted__flexiPlane_flexiPlane_bind_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_c01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_c01/pasted__flexiPlane_flexiPlane_bind_c01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_d01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_d01/pasted__flexiPlane_flexiPlane_bind_d01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_e01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_e01/pasted__flexiPlane_flexiPlane_bind_e01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Tica@Cerrado
+      takeName: Take 001
+      firstFrame: 8
+      lastFrame: 8.10000038
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pasted__Tica_Master_Grp
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim/pasted__L_eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim/pasted__R_eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__L_foot_Ik_con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__L_Hand_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01/pasted__flexiPlane_flexiPlane_grp_midBend01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01/pasted__flexiPlane_flexiPlane_grp_midBend01/pasted__flexiPlane_flexiPlane_midBend01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__hipsGymbal_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21/pasted__nurbsCircle22
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21/pasted__nurbsCircle22/pasted__nurbsCircle23
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26/pasted__nurbsCircle27
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26/pasted__nurbsCircle27/pasted__nurbsCircle28
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con/pasted__locAlign_wrist_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con/pasted__locAlign_wrist_L_jnt/pasted__L_wrist_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt/pasted__locAlign_foreArm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt/pasted__R_wrist_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__R_foot_Ik_con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__R_Hand_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_bottom_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_bottom_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_top_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_top_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__forehead_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_bottom_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_bottom_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_top_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_top_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt/pasted__nurbsToPoly1
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt/pasted__nurbsToPoly2
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerCorner_L_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerCorner_R_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt/pasted__L_ear_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt/pasted__L_ear_C_jnt/pasted__L_ear_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerInner_eyelid_jnt/pasted__bind_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerOuter_eyelid_jnt/pasted__bind_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerCenter_eyelid_jnt/pasted__bind_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerInner_eyelid_jnt/pasted__bind_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerOuter_eyelid_jnt/pasted__bind_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperCenter_eyelid_jnt/pasted__bind_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperInner_eyelid_jnt/pasted__bind_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperOuter_eyelid_jnt/pasted__bind_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__lowerForehead_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middleBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middleBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__center_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__center_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_L_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_L_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_R_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_R_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_L_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_L_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_R_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_R_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt/pasted__tongue_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt/pasted__tongue_D_jnt/pasted__tongue_E_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_bottom_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_center_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_top_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerCorner_L_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerCorner_R_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt/pasted__R_ear_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt/pasted__R_ear_C_jnt/pasted__R_ear_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerInner_eyelid_jnt/pasted__bind_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerOuter_eyelid_jnt/pasted__bind_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerCenter_eyelid_jnt/pasted__bind_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerInner_eyelid_jnt/pasted__bind_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerOuter_eyelid_jnt/pasted__bind_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperCenter_eyelid_jnt/pasted__bind_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperInner_eyelid_jnt/pasted__bind_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperOuter_eyelid_jnt/pasted__bind_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__upperMiddle_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__palm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__palm_L_jnt/pasted__finger_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt/pasted__thumb_A_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt/pasted__thumb_A_L_jnt/pasted__thumb_B_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__palm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__palm_R_jnt/pasted__finger_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt/pasted__thumb_A_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt/pasted__thumb_A_R_jnt/pasted__thumb_B_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt/pasted__tail_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt/pasted__tail_B_jnt/pasted__tail_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt/pasted__L_ankle_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt/pasted__L_ankle_jnt/pasted__L_ball_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt/pasted__R_ankle_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt/pasted__R_ankle_jnt/pasted__R_ball_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__ticaMaster_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__Tica_Lowerteeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__Tica_Upperteeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaBody_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaBow_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaTeeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_a01/pasted__flexiPlane_flexiPlane_bind_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_b01/pasted__flexiPlane_flexiPlane_bind_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_c01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_c01/pasted__flexiPlane_flexiPlane_bind_c01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_d01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_d01/pasted__flexiPlane_flexiPlane_bind_d01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_e01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_e01/pasted__flexiPlane_flexiPlane_bind_e01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Tica@Idle
+      takeName: Take 001
+      firstFrame: 51
+      lastFrame: 99
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pasted__Tica_Master_Grp
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim/pasted__L_eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__eye_Aim/pasted__R_eye_Aim
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__L_foot_Ik_con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__L_Hand_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01/pasted__flexiPlane_flexiPlane_grp_midBend01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__flexiPlane_flexiPlane_cnt_global01/pasted__flexiPlane_flexiPlane_globalMove01/pasted__flexiPlane_flexiPlane_cnts01/pasted__flexiPlane_flexiPlane_grp_midBend01/pasted__flexiPlane_flexiPlane_midBend01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__hipsGymbal_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21/pasted__nurbsCircle22
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_L_earBase_jnt/pasted__nurbsCircle19/pasted__nurbsCircle20/pasted__nurbsCircle21/pasted__nurbsCircle22/pasted__nurbsCircle23
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26/pasted__nurbsCircle27
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_neck_jnt/pasted__neck_Con/pasted__locAlign_head_jnt/pasted__head_Con/pasted__locAlign_R_earBase_jnt/pasted__nurbsCircle25/pasted__nurbsCircle24/pasted__nurbsCircle26/pasted__nurbsCircle27/pasted__nurbsCircle28
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con/pasted__locAlign_wrist_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_L_jnt/pasted__L_shoulder_Con/pasted__locAlign_arm_L_jnt/pasted__L_arm_FK_Con/pasted__locAlign_elbow_L_jnt/pasted__L_elbow_FK_Con/pasted__locAlign_wrist_L_jnt/pasted__L_wrist_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt/pasted__locAlign_foreArm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__locAlign_flexiPlane_flexiPlane_cnt_a01/pasted__COG_Con/pasted__locAlign_flexiPlane_flexiPlane_cnt_b01/pasted__chest_Con/pasted__locAlign_shoulder_R_jnt/pasted__R_shoulder_Con/pasted__locAlign_arm_R_jnt/pasted__R_arm_FK_Con/pasted__locAlign_elbow_R_jnt/pasted__R_elbow_FK_Con/pasted__locAlign_wrist_R_jnt/pasted__R_wrist_FK_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__R_foot_Ik_con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__controls/pasted__R_Hand_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_bottom_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_bottom_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_top_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__back_top_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__forehead_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_bottom_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_bottom_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_top_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__front_top_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt/pasted__nurbsToPoly1
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__headEnd_jnt/pasted__nurbsToPoly2
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__inner_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerCorner_L_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__innerCorner_R_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt/pasted__L_ear_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_earBase_jnt/pasted__L_ear_A_jnt/pasted__L_ear_B_jnt/pasted__L_ear_C_jnt/pasted__L_ear_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerInner_eyelid_jnt/pasted__bind_L_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_cornerOuter_eyelid_jnt/pasted__bind_L_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerCenter_eyelid_jnt/pasted__bind_L_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerInner_eyelid_jnt/pasted__bind_L_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_lowerOuter_eyelid_jnt/pasted__bind_L_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperCenter_eyelid_jnt/pasted__bind_L_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperInner_eyelid_jnt/pasted__bind_L_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__L_eye_jnt/pasted__drv_L_upperOuter_eyelid_jnt/pasted__bind_L_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__lowerForehead_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_cheek_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middle_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middleBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__middleBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__center_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__center_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_L_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_L_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_R_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__inner_R_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_L_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_L_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_R_lower_chin_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__jaw_jnt/pasted__outer_R_lower_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt/pasted__tongue_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__mouth_jnt/pasted__tongueBase_jnt/pasted__tongue_A_jnt/pasted__tongue_B_jnt/pasted__tongue_C_jnt/pasted__tongue_D_jnt/pasted__tongue_E_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_bottom_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_center_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__nose_top_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_L_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_L_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_R_maxilia_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outer_R_upper_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerBrow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerBrow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerCorner_L_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__outerCorner_R_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt/pasted__R_ear_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_earBase_jnt/pasted__R_ear_A_jnt/pasted__R_ear_B_jnt/pasted__R_ear_C_jnt/pasted__R_ear_D_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerInner_eyelid_jnt/pasted__bind_R_cornerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_cornerOuter_eyelid_jnt/pasted__bind_R_cornerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerCenter_eyelid_jnt/pasted__bind_R_lowerCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerInner_eyelid_jnt/pasted__bind_R_lowerInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_lowerOuter_eyelid_jnt/pasted__bind_R_lowerOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperCenter_eyelid_jnt/pasted__bind_R_upperCenter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperInner_eyelid_jnt/pasted__bind_R_upperInner_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__R_eye_jnt/pasted__drv_R_upperOuter_eyelid_jnt/pasted__bind_R_upperOuter_eyelid_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__neck_jnt/pasted__head_jnt/pasted__upperMiddle_lip_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__palm_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__palm_L_jnt/pasted__finger_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt/pasted__thumb_A_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_L_jnt/pasted__arm_L_jnt/pasted__elbow_L_jnt/pasted__forearm_L_jnt/pasted__wrist_L_jnt/pasted__thumbHand_L_jnt/pasted__thumbBase_L_jnt/pasted__thumb_A_L_jnt/pasted__thumb_B_L_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__palm_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__palm_R_jnt/pasted__finger_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt/pasted__thumb_A_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__chest_jnt/pasted__shoulder_R_jnt/pasted__arm_R_jnt/pasted__elbow_R_jnt/pasted__forearm_R_jnt/pasted__wrist_R_jnt/pasted__thumbHand_R_jnt/pasted__thumbBase_R_jnt/pasted__thumb_A_R_jnt/pasted__thumb_B_R_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt/pasted__tail_B_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__baseTail_jnt/pasted__tail_A_jnt/pasted__tail_B_jnt/pasted__tail_C_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt/pasted__L_ankle_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__L_leg_jnt/pasted__L_knee_jnt/pasted__L_ankle_jnt/pasted__L_ball_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt/pasted__R_ankle_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__moveGroup/pasted__scaleGroup/pasted__joints/pasted__root_jnt/pasted__R_leg_jnt/pasted__R_knee_jnt/pasted__R_ankle_jnt/pasted__R_ball_jnt
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__ticaMaster_Con
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__Tica_Lowerteeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__Tica_Upperteeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaBody_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaBow_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__TicaModel_Ms_Grp/pasted__TicaTeeth_Ms
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_a01/pasted__flexiPlane_flexiPlane_bind_a01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_b01/pasted__flexiPlane_flexiPlane_bind_b01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_c01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_c01/pasted__flexiPlane_flexiPlane_bind_c01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_d01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_d01/pasted__flexiPlane_flexiPlane_bind_d01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_e01
+        weight: 1
+      - path: pasted__Tica_Master_Grp/pasted__Utilities/pasted__flexiPlane_flexiPlane01/pasted__flexiPlane_flexiPlane_extraNodes01/pasted__flexiPlane_flexiPlane_flcs01/pasted__flexiPlane_flexiPlane_flc_e01/pasted__flexiPlane_flexiPlane_bind_e01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
