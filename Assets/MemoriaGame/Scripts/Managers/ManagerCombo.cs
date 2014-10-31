@@ -12,7 +12,7 @@ public class ManagerCombo : Singleton<ManagerCombo> {
         get { 
             if (timesInRow < 1)
                 return 0;
-            return timesInRow - 1;
+            return timesInRow;
         }
     }
 	// Update is called once per frame

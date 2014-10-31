@@ -107,8 +107,8 @@ Transition:
   - m_ConditionMode: 5
     m_ConditionEvent: Open
     m_EventTreshold: 0
-    m_ExitTime: .899999976
-  m_Atomic: 1
+    m_ExitTime: .300000012
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
@@ -208,7 +208,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cerrar
-  m_Speed: -4
+  m_Speed: -10
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: cd0c2ff153e474658807e74c90f472ec, type: 3}
@@ -273,22 +273,22 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110194127}
     data:
-      first: {fileID: 110227593}
-      second:
-      - {fileID: 110188831}
-    data:
-      first: {fileID: 110231478}
-      second:
-      - {fileID: 110154655}
-    data:
       first: {fileID: 110240060}
       second:
       - {fileID: 110133994}
       - {fileID: 110151687}
     data:
+      first: {fileID: 110231478}
+      second:
+      - {fileID: 110154655}
+    data:
       first: {fileID: 110274490}
       second:
       - {fileID: 110158664}
+    data:
+      first: {fileID: 110227593}
+      second:
+      - {fileID: 110188831}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

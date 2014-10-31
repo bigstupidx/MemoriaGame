@@ -111,7 +111,7 @@ Transition:
   - m_ConditionMode: 5
     m_ConditionEvent: Open
     m_EventTreshold: 0
-    m_ExitTime: .899999976
+    m_ExitTime: .300000012
   m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
@@ -212,7 +212,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cerrar
-  m_Speed: -4
+  m_Speed: -6
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: b6c0082b78f7e48aa89d2c97fe73ec7c, type: 3}

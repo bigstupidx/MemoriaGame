@@ -10059,8 +10059,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 11400360}
-  button: {fileID: 11400058}
-  TimeRepeat: 10
 --- !u!114 &11400360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10095,8 +10093,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 11400368}
-  button: {fileID: 11400030}
-  TimeRepeat: 10
 --- !u!114 &11400364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10109,8 +10105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 11400370}
-  button: {fileID: 11400046}
-  TimeRepeat: 10
 --- !u!114 &11400366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10123,8 +10117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 11400372}
-  button: {fileID: 11400048}
-  TimeRepeat: 10
 --- !u!114 &11400368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10203,8 +10195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 11400376}
-  button: {fileID: 11400064}
-  TimeRepeat: 10
 --- !u!114 &11400376
 MonoBehaviour:
   m_ObjectHideFlags: 1

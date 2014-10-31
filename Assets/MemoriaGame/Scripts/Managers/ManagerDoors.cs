@@ -21,7 +21,7 @@ public enum NumberOfPair
 
 class ManagerDoors : Singleton<ManagerDoors>
 {
-    public static NumberOfPair numberOfPair = NumberOfPair.CuatroXCuatro;
+    public static NumberOfPair numberOfPair = NumberOfPair.CincoXSeis;
   
     /// <summary>
     /// Contiene los prefabs de las diferentes puertas del juego. En total 15.
@@ -73,6 +73,9 @@ class ManagerDoors : Singleton<ManagerDoors>
     int currentPair = 0;
 
     public bool CheckWinGame(){
+        if (numberOfPair == NumberOfPair.CincoXSeisNormal)
+            return currentPair >= (int)NumberOfPair.CincoXSeis;
+
         return (currentPair >= (int)numberOfPair);
     }
 
@@ -80,6 +83,9 @@ class ManagerDoors : Singleton<ManagerDoors>
 
     public int GetMaxPairs { 
         get {
+            if (numberOfPair == NumberOfPair.CincoXSeisNormal)
+                return (int)NumberOfPair.CincoXSeis;
+
             return (int)numberOfPair; 
         }
     }
@@ -197,7 +203,7 @@ class ManagerDoors : Singleton<ManagerDoors>
 
         #region Crear Lista de todas las puertas a usar: 
         List<Door> allDoors = new  List<Door> ();
-        for (int i = 0; i < (int)numberOfPair; ++i) {
+        for (int i = 0; i < GetMaxPairs; ++i) {
         
             allDoors.Add (prefabDoorsWithoutPair[i]);
             allDoors.Add (prefabDoorsWithoutPair[i]);
