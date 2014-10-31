@@ -966,8 +966,6 @@ ModelImporter:
         weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_flexiPlane_cnt_global01/timiApp_Rig_flexiPlane_globalMove01/timiApp_Rig_flexiPlane_cnts01/timiApp_Rig_flexiPlane_grp_midBend01
         weight: 1
-      - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_flexiPlane_cnt_global01/timiApp_Rig_flexiPlane_globalMove01/timiApp_Rig_flexiPlane_cnts01/timiApp_Rig_flexiPlane_grp_midBend01/timiApp_Rig_flexiPlane_midBend01
-        weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_locAlign_bind_Chest_jnt
         weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_locAlign_bind_Chest_jnt/timiApp_Rig_chest_Con
@@ -1807,8 +1805,6 @@ ModelImporter:
         weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_flexiPlane_cnt_global01/timiApp_Rig_flexiPlane_globalMove01/timiApp_Rig_flexiPlane_cnts01/timiApp_Rig_flexiPlane_grp_midBend01
         weight: 1
-      - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_flexiPlane_cnt_global01/timiApp_Rig_flexiPlane_globalMove01/timiApp_Rig_flexiPlane_cnts01/timiApp_Rig_flexiPlane_grp_midBend01/timiApp_Rig_flexiPlane_midBend01
-        weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_locAlign_bind_Chest_jnt
         weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_locAlign_bind_Chest_jnt/timiApp_Rig_chest_Con
@@ -2647,8 +2643,6 @@ ModelImporter:
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_flexiPlane_cnt_global01/timiApp_Rig_flexiPlane_globalMove01/timiApp_Rig_flexiPlane_cnts01/timiApp_Rig_flexiPlane_cnt_b01
         weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_flexiPlane_cnt_global01/timiApp_Rig_flexiPlane_globalMove01/timiApp_Rig_flexiPlane_cnts01/timiApp_Rig_flexiPlane_grp_midBend01
-        weight: 1
-      - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_flexiPlane_cnt_global01/timiApp_Rig_flexiPlane_globalMove01/timiApp_Rig_flexiPlane_cnts01/timiApp_Rig_flexiPlane_grp_midBend01/timiApp_Rig_flexiPlane_midBend01
         weight: 1
       - path: timiApp_Rig_globalMove/timiApp_Rig_globalScale/timiApp_Rig_controls/timiApp_Rig_COG_Cnt/timiApp_Rig_locAlign_bind_Chest_jnt
         weight: 1

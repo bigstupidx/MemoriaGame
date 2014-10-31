@@ -453,6 +453,7 @@ ModelImporter:
     100894: tongue_jnt_end
     100896: wrist_L_Jnt_bind
     100898: wrist_R_Jnt_bind
+    100900: persp1
     400000: ankle_L_jnt_bind
     400002: ankle_R_jnt_bind
     400004: arm_L_Jnt_bind
@@ -903,6 +904,7 @@ ModelImporter:
     400894: tongue_jnt_end
     400896: wrist_L_Jnt_bind
     400898: wrist_R_Jnt_bind
+    400900: persp1
     2300000: flexiPlane_midBend01
     2300002: nurbsToPoly1
     2300004: nurbsToPoly2
@@ -978,6 +980,8 @@ ModelImporter:
         weight: 1
       - path: left
         weight: 1
+      - path: persp1
+        weight: 1
       - path: Tati_Master_Grp
         weight: 1
       - path: Tati_Master_Grp/masterMove
@@ -999,8 +1003,6 @@ ModelImporter:
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_cnt_b01
         weight: 1
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_grp_midBend01
-        weight: 1
-      - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_grp_midBend01/flexiPlane_midBend01
         weight: 1
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/locAlign_chest_Jnt_bind
         weight: 1
@@ -1904,6 +1906,8 @@ ModelImporter:
         weight: 1
       - path: left
         weight: 1
+      - path: persp1
+        weight: 1
       - path: Tati_Master_Grp
         weight: 1
       - path: Tati_Master_Grp/masterMove
@@ -1925,8 +1929,6 @@ ModelImporter:
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_cnt_b01
         weight: 1
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_grp_midBend01
-        weight: 1
-      - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_grp_midBend01/flexiPlane_midBend01
         weight: 1
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/locAlign_chest_Jnt_bind
         weight: 1
@@ -2830,6 +2832,8 @@ ModelImporter:
         weight: 1
       - path: left
         weight: 1
+      - path: persp1
+        weight: 1
       - path: Tati_Master_Grp
         weight: 1
       - path: Tati_Master_Grp/masterMove
@@ -2851,8 +2855,6 @@ ModelImporter:
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_cnt_b01
         weight: 1
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_grp_midBend01
-        weight: 1
-      - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/flexiPlane_cnt_global01/flexiPlane_globalMove01/flexiPlane_cnts01/flexiPlane_grp_midBend01/flexiPlane_midBend01
         weight: 1
       - path: Tati_Master_Grp/masterMove/masterScale/Controllers/COG_Con/locAlign_chest_Jnt_bind
         weight: 1
