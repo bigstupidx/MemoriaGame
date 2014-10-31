@@ -37,6 +37,10 @@ public class PowerOff : MonoBehaviour {
         button = GetComponent<UIButton> ();
         button.isEnabled = false;
 
+        if (ManagerDoors.numberOfPair == NumberOfPair.CuatroXCuatro) {
+            return;
+        }
+
         doors = GameObject.FindObjectsOfType<Door> ();
 
 

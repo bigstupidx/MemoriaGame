@@ -28,8 +28,7 @@ public class ManagerPowers : Singleton<ManagerPowers>
             }
         }
     }
-
-
+        
     #region Signal list
     [HideInInspector]
     public List<Signal> onPowerTrue= new List<Signal>();

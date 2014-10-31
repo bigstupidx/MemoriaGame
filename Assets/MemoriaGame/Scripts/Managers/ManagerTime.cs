@@ -58,6 +58,22 @@ class ManagerTime : Singleton<ManagerTime>
 
 
     protected override void AwakeChild(){
+        switch (ManagerDoors.numberOfPair) {
+
+        case NumberOfPair.CincoXSeis:
+
+
+            break;
+        case NumberOfPair.CincoXSeisNormal:
+            TimeOfGame *= 3;
+
+            break;
+        case NumberOfPair.CuatroXCuatro:
+            TimeOfGame *= 2;
+
+            break;
+        }
+
         Invoke("setTimeToStart",0.1f);
 
       

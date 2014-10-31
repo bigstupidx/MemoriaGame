@@ -21,7 +21,7 @@ public enum NumberOfPair
 
 class ManagerDoors : Singleton<ManagerDoors>
 {
-    public static NumberOfPair numberOfPair = NumberOfPair.CincoXSeis;
+    public static NumberOfPair numberOfPair = NumberOfPair.CuatroXCuatro;
   
     /// <summary>
     /// Contiene los prefabs de las diferentes puertas del juego. En total 15.
@@ -134,26 +134,26 @@ class ManagerDoors : Singleton<ManagerDoors>
         switch (numberOfPair) {
 
         case NumberOfPair.CincoXSeis:
-            setDoorBy (5, 6, -0.5f, -9.2f);
-            setStartBy (5, 6, -0.5f, -9.2f);
-            setStartPoofBy (5, 6, -0.5f, -9.2f);
+            setDoorBy (5, 6, -0.5f, -9.2f,0);
+            setStartBy (5, 6, -0.5f, -9.2f,0.02f);
+            setStartPoofBy (5, 6, -0.5f, -9.23f,0.09f);
 
             break;
         case NumberOfPair.CincoXSeisNormal:
-            setDoorBy (5, 6, -0.5f, -9.2f);
-            setStartBy (5, 6, -0.5f, -9.2f);
-            setStartPoofBy (5, 6, -0.5f, -9.2f);
+            setDoorBy (5, 6, -0.5f, -9.2f,0);
+            setStartBy (5, 6, -0.5f, -9.2f,0.02f);
+            setStartPoofBy (5, 6, -0.5f, -9.23f,0.09f);
 
             break;
         case NumberOfPair.CuatroXCuatro:
-            setDoorBy (4, 4, -0.3f, -9.2f);
-            setStartBy (4, 4, -0.3f, -9.2f);
-            setStartPoofBy (4, 4, -0.3f, -9.2f);
+            setDoorBy (4, 4, -0.37f, -9.39f,0.2f);
+            setStartBy (4, 4, -0.37f, -9.39f,0.22f);
+            setStartPoofBy (4, 4, -0.37f, -9.41f,0.29f);
 
             break;
         }
     }
-    void setStartPoofBy(int countX,int countZ,float posIniX,float posIniZ){
+    void setStartPoofBy(int countX,int countZ,float posIniX,float posIniZ, float posIniY){
 
         float currentX = posIniX;
         float currentZ = posIniZ;
@@ -161,7 +161,7 @@ class ManagerDoors : Singleton<ManagerDoors>
             starsPoof.Add (new List<GameObject> ());
             for (int j = 0; j < countZ; j++) {
 
-                starsPoof[i].Add (StarPoof.Spawn(new Vector3(currentX,0.09f ,currentZ),Quaternion.identity));
+                starsPoof[i].Add (StarPoof.Spawn(new Vector3(currentX,posIniY ,currentZ),Quaternion.identity));
                 starsPoof [i] [j].SetActive (false);
                 currentX += offSetX;
             }
@@ -171,7 +171,7 @@ class ManagerDoors : Singleton<ManagerDoors>
         }
     }
 
-    void setStartBy(int countX,int countZ,float posIniX,float posIniZ){
+    void setStartBy(int countX,int countZ,float posIniX,float posIniZ, float posIniY){
 
         float currentX = posIniX;
         float currentZ = posIniZ;
@@ -182,7 +182,7 @@ class ManagerDoors : Singleton<ManagerDoors>
                 if (i > 3) {
                     aux = i * 0.008f;
                 }
-                stars[i].Add (Star.Spawn(new Vector3(currentX + 0.012f, 0.02f ,currentZ-(countX-i)*0.015f - aux),Quaternion.identity));
+                stars[i].Add (Star.Spawn(new Vector3(currentX + 0.012f, posIniY ,currentZ-(countX-i)*0.015f - aux),Quaternion.identity));
                 stars [i] [j].SetActive (false);
                 currentX += offSetX;
             }
@@ -192,7 +192,7 @@ class ManagerDoors : Singleton<ManagerDoors>
         }
     }
 
-    void setDoorBy(int countX,int countZ,float posIniX,float posIniZ){
+    void setDoorBy(int countX,int countZ,float posIniX,float posIniZ, float posIniY){
        
 
         #region Crear Lista de todas las puertas a usar: 
@@ -217,7 +217,7 @@ class ManagerDoors : Singleton<ManagerDoors>
                 if (i > 3) {
                     aux = i * 0.008f;
                 }
-                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,0,currentZ -(countX-i)*0.015f -aux),Quaternion.identity));
+                doors[i].Add (allDoors[posMatrix++].Spawn(new Vector3(currentX,posIniY,currentZ -(countX-i)*0.015f -aux),Quaternion.identity));
                 GameObject g1 =  Ground.Spawn (Vector3.zero, Ground.transform.rotation);
                 g1.transform.parent = doors [i] [j].transform;
                 g1.transform.localPosition = Vector3.zero;

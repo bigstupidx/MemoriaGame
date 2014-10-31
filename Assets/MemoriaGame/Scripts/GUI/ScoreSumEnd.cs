@@ -16,7 +16,7 @@ public class ScoreSumEnd : MonoBehaviour {
     bool changued = false;
 
 
-    float TimeBySecondScore = 20.5f;
+  
     bool sumTime = false;
     float currentTime = 0;
     static int countSecondTime = 50;
@@ -30,6 +30,7 @@ public class ScoreSumEnd : MonoBehaviour {
     #if UNITY_IPHONE
     static bool isIphone4 = false;
     void Awake(){
+
         // door = GetComponent<Door> ();
         if( iPhone.generation == iPhoneGeneration.iPhone4)
         {
@@ -39,6 +40,26 @@ public class ScoreSumEnd : MonoBehaviour {
 
     }
     #endif
+    void Start(){
+        switch (ManagerDoors.numberOfPair) {
+
+        case NumberOfPair.CincoXSeis:
+
+
+            break;
+        case NumberOfPair.CincoXSeisNormal:
+            for (int i = 0; i < ScoreCoin.Length; ++i) {
+                ScoreCoin [i] /= 3;
+            }
+
+            break;
+        case NumberOfPair.CuatroXCuatro:
+            for (int i = 0; i < ScoreCoin.Length; ++i) {
+                ScoreCoin [i] /= 2;
+            }
+            break;
+        }
+    }
 	// Update is called once per frame
 	void Update () {
 	
@@ -90,7 +111,7 @@ public class ScoreSumEnd : MonoBehaviour {
                 
                     currentTime += aux;
 
-                    sum += (int)(currentTime * TimeBySecondScore);
+                    sum += (int)(currentTime * ManagerScore.Instance.TimeBySecondScore);
                     CheckCoins ();
 
                     textNum.text = sum.ToString ();
@@ -106,7 +127,7 @@ public class ScoreSumEnd : MonoBehaviour {
                     isCounting = false;
                     enabled = false;
                 } else {
-                    sum += (int)(aux*TimeBySecondScore) ;
+                    sum += (int)(aux*ManagerScore.Instance.TimeBySecondScore) ;
                     CheckCoins ();
                     textNum.text = sum.ToString ();
 
@@ -131,7 +152,7 @@ public class ScoreSumEnd : MonoBehaviour {
         if(isIphone4){
             sum = ManagerScore.Instance.CurrentScore;
 
-            sum+=  (int)(ManagerTime.Instance.getCurrentTimeOfGame * TimeBySecondScore);
+            sum+=  (int)(ManagerTime.Instance.getCurrentTimeOfGame * ManagerScore.Instance.TimeBySecondScore);
             textNum.text = sum.ToString();
             scalesT = TweenScale.Begin (textNum.gameObject, 0.3f,new Vector3( 1.3f, 1.3f, 1.3f)) ;
             scalesT.style = UITweener.Style.Once;

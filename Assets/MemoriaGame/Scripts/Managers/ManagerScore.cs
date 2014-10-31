@@ -9,6 +9,10 @@ public class ManagerScore : Singleton<ManagerScore> {
     public int CurrentScore{ get { return score; } }
 
     public int ScoreBaseToSum = 50;
+    /// <summary>
+    /// Puntaje por cada segundo
+    /// </summary>
+    public float TimeBySecondScore = 20.5f;
 
     [HideInInspector]
     protected int plusScore = 1;
@@ -21,6 +25,22 @@ public class ManagerScore : Singleton<ManagerScore> {
     }
     protected override void AwakeChild(){
         highScore = PlayerPrefs.GetInt ("HighScore");
+
+        switch (ManagerDoors.numberOfPair) {
+
+        case NumberOfPair.CincoXSeis:
+
+
+            break;
+        case NumberOfPair.CincoXSeisNormal :
+            TimeBySecondScore /=3;
+            break;
+        case NumberOfPair.CuatroXCuatro:
+
+            TimeBySecondScore /=2;
+            break;
+        }
+
     }
 
     public void AddScore(int sum){

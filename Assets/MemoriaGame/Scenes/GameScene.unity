@@ -7236,6 +7236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreBaseToSum: 50
+  TimeBySecondScore: 20.5
 --- !u!4 &1410827346
 Transform:
   m_ObjectHideFlags: 0
