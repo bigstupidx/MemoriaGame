@@ -78,8 +78,14 @@ public class PowerOff : MonoBehaviour {
     [Signal]
     public void setOnPower(){
         Locked = false;
-        if(anotherUsing == false)
+        if (anotherUsing == false) {
             button.isEnabled = true;
+
+            audio.volume = ManagerSound.Instance.fxVolume;
+
+            audio.Play ();
+            
+        }
     }
     public void setOffPower(){
 

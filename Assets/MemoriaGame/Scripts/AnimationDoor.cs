@@ -25,8 +25,8 @@ class AnimationDoor : MonoBehaviour
         door.onOpenQuickly += onOpenQuickly;
         door.onClose += onClose;
 
-        door.onShakeTrue.Add (new Signal("onShakeTrue",gameObject));
-        door.onShakeFalse.Add (new Signal("onShakeFalse",gameObject));
+        door.onShakeTrue += onShakeTrue;
+        door.onShakeFalse += onShakeFalse;
         door.onCheckTruePair.Add (new Signal("onCheckTruePair",gameObject));
 
     }
@@ -53,11 +53,10 @@ class AnimationDoor : MonoBehaviour
         InvokeStarPoof ();
         Invoke ("InvokeStar",timeIvokingStar);
     }
-    [Signal]
     void onShakeTrue(){
         anim.SetBool("Shake",true);
     }
-    [Signal]
+ 
     void onShakeFalse(){
         anim.SetBool("Shake",false);
     }

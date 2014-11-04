@@ -35,10 +35,12 @@ public class Door : MonoBehaviour
 
     [HideInInspector]
     public List<Signal> onCheckTruePair = new List<Signal>();
+
+    public delegate void onShakeTrueBroadcast();
+    public event onShakeTrueBroadcast onShakeTrue;
     [HideInInspector]
-    public List<Signal> onShakeTrue = new List<Signal>();
-    [HideInInspector]
-    public List<Signal> onShakeFalse = new List<Signal>();
+    public delegate void onShakeFalseBroadcast();
+    public event onShakeFalseBroadcast onShakeFalse;
     #endregion
    
     void Awake(){
@@ -80,18 +82,12 @@ public class Door : MonoBehaviour
     public void ShakeTrue(){
         if (isPairOpen)
             return;
-        foreach (Signal sig in onShakeTrue) {
-
-            sig.Invoke ();
-        }
+        onShakeTrue ();
     }
     public void ShakeFalse(){
         if (isPairOpen)
             return;
-        foreach (Signal sig in onShakeFalse) {
-
-            sig.Invoke ();
-        }
+        onShakeFalse ();
     }
 }
 

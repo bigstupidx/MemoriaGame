@@ -25,6 +25,11 @@ public class ClockTimer : MonoBehaviour {
     public Sprite ArrowFreeze;
     public Sprite BaseStateClock;
     bool isFreezing = false;
+
+    public AudioClip clipBefore;
+    public AudioClip clipStay;
+    public AudioClip clipAfter;
+
 	// Use this for initialization
 	void Awake () {
         ManagerTime.Instance.onTimeGameStart.Add (new Signal("onTimeGameStart",gameObject));
@@ -57,6 +62,7 @@ public class ClockTimer : MonoBehaviour {
     public void onPaused(){
         tweenRota.enabled = false;
         currentStop = new Vector3(0,0,Mathf.Rad2Deg *  Arrow.transform.rotation.z * 2.0f);
+
     }
     public void onResume(){
         tweenRota.from = currentStop;
@@ -64,7 +70,6 @@ public class ClockTimer : MonoBehaviour {
         tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
         tweenRota.from = currentStop;
         tweenRota.to = new Vector3(0,0,-90);
-
        // tween.enabled = true;
 
     }
@@ -79,6 +84,19 @@ public class ClockTimer : MonoBehaviour {
         Arrow.sprite2D = ArrowFreeze;
         freezeAnimation.Play ();
         isFreezing = true;
+
+        audio.volume = ManagerSound.Instance.fxVolume;
+        audio.clip = clipBefore;
+        audio.loop = false;
+        audio.Play ();
+        Invoke ("AudioStayPlay",clipBefore.length);
+    }
+    void AudioStayPlay(){
+        audio.volume = ManagerSound.Instance.fxVolume;
+
+        audio.clip = clipStay;
+        audio.loop = true;
+        audio.Play ();
     }
     public void NotFreeze(){
         isFreezing = false;
@@ -94,6 +112,11 @@ public class ClockTimer : MonoBehaviour {
             GetComponent<UI2DSprite> ().sprite2D = BaseStateClock;
         }
 
+        audio.volume = ManagerSound.Instance.fxVolume;
+      
+        audio.clip = clipAfter;
+        audio.loop = false;
+        audio.Play ();
     }
     void Update(){
         if (isTimeGameStart) {

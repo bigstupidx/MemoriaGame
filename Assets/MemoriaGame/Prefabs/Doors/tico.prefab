@@ -16,6 +16,8 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400016}
+  - 114: {fileID: 11400018}
   m_Layer: 0
   m_Name: tico
   m_TagString: Untagged
@@ -11805,8 +11807,6 @@ MonoBehaviour:
   character: 3
   posMaxtrix: {x: -1, y: -1}
   onCheckTruePair: []
-  onShakeTrue: []
-  onShakeFalse: []
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11915,6 +11915,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 11400002}
   anim: {fileID: 9500002}
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2653863f062740c7a2f7ba09fdd2d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 11400002}
+  fx: {fileID: 11400000, guid: b96d9a04ba43247b0a477c020523ebd4, type: 2}
+  clip: {fileID: 8300000, guid: 22a9518598d214cc8a9df52987c08d93, type: 3}
+  clipClose: {fileID: 0}
+  clipShake: {fileID: 0}
+--- !u!114 &11400018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2653863f062740c7a2f7ba09fdd2d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
+  fx: {fileID: 11400000, guid: b96d9a04ba43247b0a477c020523ebd4, type: 2}
+  clip: {fileID: 8300000, guid: 7568d075943b74de685c14d5b4a62499, type: 3}
+  clipClose: {fileID: 8300000, guid: 0a8f0e31d173c431983a5ebb75eb1d72, type: 3}
+  clipShake: {fileID: 8300000, guid: 9f88c01a4459a46ceac5ca341a724f00, type: 3}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

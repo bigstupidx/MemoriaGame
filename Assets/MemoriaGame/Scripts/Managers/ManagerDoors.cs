@@ -336,7 +336,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     int count;
     bool isH;
     bool isPosi;
-    const float TimeToNextOpen = 0.08f;
+    const float TimeToNextOpen = 0.2f;
 
     /// <summary>
     /// Abre las puertas que se encuentre en la fila y la direccion isH
@@ -383,6 +383,11 @@ class ManagerDoors : Singleton<ManagerDoors>
         } else {
             pos = count - 1;
         }
+        if (audio != null) {
+            audio.volume = ManagerSound.Instance.fxVolume;
+            audio.Play ();
+        }
+
         Invoke ("CloseDoors",TimeToNextOpen * count);
 
         repeatOpensDoors ();

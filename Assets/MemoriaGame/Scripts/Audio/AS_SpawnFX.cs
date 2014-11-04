@@ -5,15 +5,23 @@ public class AS_SpawnFX : MonoBehaviour {
 
 
     public AudioClip fx;
+    public bool loop = false;
 	// Use this for initialization
 	void Start () {
-      //  audio.clip = ;
-     //   audio.volume =;
-        audio.PlayOneShot (fx, ManagerSound.Instance.fxVolume);
-        Invoke ("DestroySound",fx.length);
+        audio.loop = loop;
+
+        if (loop == false) {
+            audio.PlayOneShot (fx, ManagerSound.Instance.fxVolume);
+
+            Invoke ("DestroySound", fx.length);
+        } else {
+            audio.clip = fx;
+            audio.volume = ManagerSound.Instance.fxVolume;
+            audio.Play ();
+        }
 	}
 
-    void DestroySound(){
+    public void DestroySound(){
     
         this.Recycle ();
     }
