@@ -19,7 +19,9 @@ public class ManagerSound : Singleton<ManagerSound>
     AudioSource bgAudio;
 
     protected override void AwakeChild(){
-        bgAudio = GameObject.FindGameObjectWithTag ("BgSound").GetComponent<AudioSource>();
+        GameObject obj = GameObject.FindGameObjectWithTag ("BgSound");
+        if(bgAudio != null)
+            bgAudio = obj.GetComponent<AudioSource>();
     }
 
 
@@ -28,8 +30,8 @@ public class ManagerSound : Singleton<ManagerSound>
         bgVolume = PlayerPrefs.GetFloat ("bgVolume");
         fxVolume = PlayerPrefs.GetFloat ("fxVolume");
         bool.TryParse(PlayerPrefs.GetString ("Mute"),out mute);
-
-        bgAudio.volume = bgVolume;
+        if(bgAudio != null)
+            bgAudio.volume = bgVolume;
     }
 
     void OnDisable() {
@@ -42,8 +44,8 @@ public class ManagerSound : Singleton<ManagerSound>
 
     public void onBGValueChangue(float value){
         bgVolume = value;
-
-        bgAudio.volume = bgVolume;
+        if(bgAudio != null)
+            bgAudio.volume = bgVolume;
 
     }
     public void onFXValueChangue(float value){

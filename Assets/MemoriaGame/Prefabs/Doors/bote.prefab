@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: bote
   m_TagString: Untagged
@@ -1064,6 +1065,20 @@ MonoBehaviour:
   horizontal: {fileID: 11400008}
   vertical: {fileID: 11400010}
   activePower: 0
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2653863f062740c7a2f7ba09fdd2d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 11400002}
+  fx: {fileID: 11400000, guid: b96d9a04ba43247b0a477c020523ebd4, type: 2}
+  clip: {fileID: 8300000, guid: bc55b7244efd74ce3b0103ee555e4805, type: 3}
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
