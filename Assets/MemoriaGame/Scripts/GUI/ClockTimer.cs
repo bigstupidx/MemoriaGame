@@ -30,6 +30,7 @@ public class ClockTimer : MonoBehaviour {
     public AudioClip clipStay;
     public AudioClip clipAfter;
 
+    public AudioClip clipRed;
 	// Use this for initialization
 	void Awake () {
         ManagerTime.Instance.onTimeGameStart.Add (new Signal("onTimeGameStart",gameObject));
@@ -49,8 +50,13 @@ public class ClockTimer : MonoBehaviour {
     }
     void Start(){
         magicConstTime = 100.0f / ManagerTime.Instance.TimeOfGame;
+
+        ManagerTime.Instance.onTimeGameEnd += StopAllSound;
+
     }
-	
+    void StopAllSound () {
+        audio.Stop ();
+    }
     [Signal]
 	void onTimeGameStart () {
         tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.TimeOfGame, Quaternion.identity);
@@ -85,39 +91,49 @@ public class ClockTimer : MonoBehaviour {
         freezeAnimation.Play ();
         isFreezing = true;
 
-        audio.volume = ManagerSound.Instance.fxVolume;
-        audio.clip = clipBefore;
-        audio.loop = false;
-        audio.Play ();
+        SetAudio (clipBefore,false);
+
         Invoke ("AudioStayPlay",clipBefore.length);
     }
     void AudioStayPlay(){
-        audio.volume = ManagerSound.Instance.fxVolume;
+    
+        SetAudio (clipStay,true);
 
-        audio.clip = clipStay;
-        audio.loop = true;
-        audio.Play ();
+    }
+    void AudioRedPlay(){
+
+        SetAudio (clipRed,true);
+
     }
     public void NotFreeze(){
         isFreezing = false;
         freezeAnimation.Pause ();
         Arrow.sprite2D = ArrowSprite;
+        SetAudio (clipAfter,false);
+
         if (playRed) {
             scaleArrow.PlayForward ();
             animSpriteRed.Play ();
+            Invoke ("AudioRedPlay",clipAfter.length);
 
         } else if (playYellow) {
             animSpriteYellow.Play ();
         } else {
             GetComponent<UI2DSprite> ().sprite2D = BaseStateClock;
         }
+            
 
+
+    }
+
+    void SetAudio(AudioClip clipsito, bool loopsito){
+        audio.Pause ();
         audio.volume = ManagerSound.Instance.fxVolume;
-      
-        audio.clip = clipAfter;
-        audio.loop = false;
+        audio.clip = clipsito;
+        audio.loop = loopsito;
         audio.Play ();
     }
+
     void Update(){
         if (isTimeGameStart) {
             float value = (magicConstTime * ManagerTime.Instance.getCurrentTimeOfGame);
@@ -126,6 +142,8 @@ public class ClockTimer : MonoBehaviour {
                     scaleArrow.PlayForward ();
                     animSpriteRed.Play ();
                     playRed = true;
+
+                    AudioRedPlay ();
                 }
             } else if (value <= toYellow) {
                 if (!playYellow && !isFreezing) {

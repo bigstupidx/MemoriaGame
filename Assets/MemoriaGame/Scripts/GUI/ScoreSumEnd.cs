@@ -27,6 +27,9 @@ public class ScoreSumEnd : MonoBehaviour {
     TweenPosition tweenPos;
 
     TweenScale scalesT;
+
+    public AudioSource audioSum;
+    public AudioSource audioCoins;
     #if UNITY_IPHONE
     static bool isIphone4 = false;
     void Awake(){
@@ -67,6 +70,7 @@ public class ScoreSumEnd : MonoBehaviour {
             if (!sumTime) {
                 sum += (int)(countSecond * Time.deltaTime);
                 ++sum;
+             
                 if (sum > ManagerScore.Instance.CurrentScore) {
                     //isCounting = false;
                     sum = ManagerScore.Instance.CurrentScore;
@@ -126,6 +130,8 @@ public class ScoreSumEnd : MonoBehaviour {
                     currentTime = 0;
                     isCounting = false;
                     enabled = false;
+                    audioSum.Stop ();
+
                 } else {
                     sum += (int)(aux*ManagerScore.Instance.TimeBySecondScore) ;
                     CheckCoins ();
@@ -147,6 +153,7 @@ public class ScoreSumEnd : MonoBehaviour {
     public void StartCounting(){
         enabled = true;
         isCounting = true;
+        audioSum.Play ();
 
         #if UNITY_IPHONE
         if(isIphone4){
@@ -162,13 +169,14 @@ public class ScoreSumEnd : MonoBehaviour {
             CheckCoins ();
             CheckCoins ();
             CheckCoins ();
+            audioSum.Stop ();
         }
         #endif
     }
     void CheckCoins(){
 
         if (currentCoin <ScoreCoin.Length &&  sum >= ScoreCoin [currentCoin]) {
-        
+            audioCoins.Play ();
             coins [currentCoin].Play ();
             ++currentCoin;
         }
