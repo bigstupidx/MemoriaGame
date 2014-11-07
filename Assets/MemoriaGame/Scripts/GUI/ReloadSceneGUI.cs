@@ -87,6 +87,8 @@ public class ReloadSceneGUI : MonoBehaviour {
                 ResetUpdate ();
             } else if (sound) {
                 SoundUpdate ();
+            }else if(tutorial){
+                TutorialUpdate ();
             }
         }
     }
@@ -115,5 +117,36 @@ public class ReloadSceneGUI : MonoBehaviour {
             objectFunc.alpha = 1;
         }
     }
+
+
+    public UIWidget objectTutorial;
+    bool tutorial = false;
+
+    public void TutorialTouch(){
+        activeBG ();
+        tutorial = true;
+    }
+    public void TutorialTouchEnd(){
+        spriteAnimNo.ResetToBeginning ();
+        spriteAnimNo.Play ();
+
+        objectTutorial.alpha = 0;
+
+        isPressedNo = true;
+    }
+    void TutorialUpdate(){
+        if (isPressedNo) {
+            if (!spriteAnimNo.isPlaying) {
+                spriteBG.alpha = 0;
+                isPressedNo = false;
+                tutorial = false;
+
+            }
+        }
+        else if (!spriteAnim.isPlaying) {
+            objectTutorial.alpha = 1;
+        }
+    }
+
 }
 
