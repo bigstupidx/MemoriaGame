@@ -20,17 +20,25 @@ public class AS_Sound : MonoBehaviour {
         door.onOpenQuickly += onOpenQuickly;
     }
     void onOpen(){
+        if(fxAuxShake!= null)
+            fxAuxShake.DestroySound ();
         AS_SpawnFX fxAux =  fx.Spawn (transform.position, transform.rotation);
         fxAux.fx = clip;
     }
     void onOpenQuickly(){
         if (clipClose != null && clip != null) {
+            if(fxAuxShake!= null)
+                fxAuxShake.DestroySound ();
             AS_SpawnFX fxAux =  fx.Spawn (transform.position, transform.rotation);
             fxAux.fx = clip;
         }
     }
     void onClose(){
         if (clipClose != null) {
+            if(fxAuxShake!= null)
+                fxAuxShake.DestroySound ();
+
+
             AS_SpawnFX fxAux = fx.Spawn (transform.position, transform.rotation);
             fxAux.fx = clipClose;
         }

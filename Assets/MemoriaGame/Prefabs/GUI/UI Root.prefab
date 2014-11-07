@@ -183,6 +183,7 @@ GameObject:
   - 114: {fileID: 11400368}
   - 114: {fileID: 11400362}
   - 82: {fileID: 8200024}
+  - 82: {fileID: 8200050}
   m_Layer: 5
   m_Name: Topi
   m_TagString: Untagged
@@ -237,6 +238,7 @@ GameObject:
   - 114: {fileID: 11400370}
   - 114: {fileID: 11400364}
   - 82: {fileID: 8200032}
+  - 82: {fileID: 8200052}
   m_Layer: 5
   m_Name: Timi
   m_TagString: Untagged
@@ -259,6 +261,7 @@ GameObject:
   - 114: {fileID: 11400372}
   - 114: {fileID: 11400366}
   - 82: {fileID: 8200026}
+  - 82: {fileID: 8200048}
   m_Layer: 5
   m_Name: Tico
   m_TagString: Untagged
@@ -281,6 +284,7 @@ GameObject:
   - 114: {fileID: 11400360}
   - 114: {fileID: 11400358}
   - 82: {fileID: 8200030}
+  - 82: {fileID: 8200046}
   m_Layer: 5
   m_Name: Tica
   m_TagString: Untagged
@@ -303,6 +307,7 @@ GameObject:
   - 114: {fileID: 11400376}
   - 114: {fileID: 11400374}
   - 82: {fileID: 8200028}
+  - 82: {fileID: 8200044}
   m_Layer: 5
   m_Name: Tati
   m_TagString: Untagged
@@ -4517,11 +4522,11 @@ AudioSource:
   m_GameObject: {fileID: 104726}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 59d4d47bd81924b008513c63193d1b85, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -4741,6 +4746,296 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!82 &8200044
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 6527dad160b5942a381b92c5419c24d1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200046
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 6527dad160b5942a381b92c5419c24d1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200048
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 6527dad160b5942a381b92c5419c24d1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200050
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 6527dad160b5942a381b92c5419c24d1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200052
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 6527dad160b5942a381b92c5419c24d1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4762,10 +5057,11 @@ MonoBehaviour:
   ArrowSprite: {fileID: 21300028, guid: 22ba6e688d38f45e996f5e2aa8b44a6e, type: 3}
   ArrowFreeze: {fileID: 21300000, guid: 13e3daa8952ab4878898c8442e643975, type: 3}
   BaseStateClock: {fileID: 21300040, guid: 895317ff6511f4600ad4eca83361a860, type: 3}
-  clipBefore: {fileID: 8300000, guid: a75865e2cf2d340898d659bb3c38e252, type: 3}
+  clipBefore: {fileID: 8300000, guid: 9110affb0042d4f13910b3075509f6f5, type: 3}
   clipStay: {fileID: 8300000, guid: ef46510493f06458bad63feecf3f8ec0, type: 3}
   clipAfter: {fileID: 8300000, guid: 42e9dd4dab63c4105b567216f62d9ce4, type: 3}
-  clipRed: {fileID: 8300000, guid: 4c3928a7243f0400f9ee168e81943889, type: 3}
+  clipRed: {fileID: 8300000, guid: 23e7c777fb8c0458792f2a2103595ff2, type: 3}
+  clipYellow: {fileID: 8300000, guid: 5851cceaed0f149c0814cdbf28bb2edc, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4854,7 +5150,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .23888889
+  aspectRatio: .17916666
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5051,6 +5347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7dd0589e16b492d8239ede304278b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clipCount0: {fileID: 8300000, guid: c910c92ec76304155b9e15b42638be49, type: 3}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5226,7 +5523,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.08771944
+  aspectRatio: 3.07017541
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
@@ -5425,7 +5722,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.89819002
+  aspectRatio: 2.16968322
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5462,7 +5759,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6028,7 +6325,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 8.20833302
+  aspectRatio: 6.125
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
@@ -6193,7 +6490,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5
+  aspectRatio: 3.7391305
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -6245,7 +6542,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5
+  aspectRatio: 3.7391305
 --- !u!114 &11400086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6282,7 +6579,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.69117641
+  aspectRatio: 2.7647059
 --- !u!114 &11400088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6319,7 +6616,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.69117641
+  aspectRatio: 2.7647059
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -6460,7 +6757,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
 --- !u!114 &11400096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6497,7 +6794,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.77760255
+  aspectRatio: 1.33123028
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -7164,7 +7461,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.77760255
+  aspectRatio: 1.33123028
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -7216,7 +7513,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
 --- !u!114 &11400142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7442,7 +7739,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.77760255
+  aspectRatio: 1.33123028
 --- !u!114 &11400152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7497,7 +7794,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -7911,7 +8208,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.02325583
+  aspectRatio: 3.01162791
 --- !u!114 &11400178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7948,7 +8245,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.02325583
+  aspectRatio: 3.01162791
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -8000,7 +8297,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.10309267
+  aspectRatio: 3.07216501
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -8052,7 +8349,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.77760255
+  aspectRatio: 1.33123028
 --- !u!114 &11400184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8122,11 +8419,11 @@ MonoBehaviour:
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.36470592
+  aspectRatio: 1.82352936
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
-  mText: atras
+  mText: "atr\xE1s"
   mFontSize: 200
   mFontStyle: 0
   mAlignment: 0
@@ -8368,7 +8665,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.25
+  aspectRatio: 3.17857146
 --- !u!114 &11400198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8405,7 +8702,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.25
+  aspectRatio: 3.17857146
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -8457,7 +8754,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.14583349
+  aspectRatio: 3.10416675
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -8561,7 +8858,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.26213586
+  aspectRatio: .951456308
 --- !u!114 &11400206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8635,7 +8932,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.26213586
+  aspectRatio: .951456308
 --- !u!114 &11400210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8912,7 +9209,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.04285717
+  aspectRatio: .778571427
 --- !u!114 &11400226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8949,7 +9246,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .806629837
+  aspectRatio: .602209926
 --- !u!114 &11400228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9670,7 +9967,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
 --- !u!114 &11400262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9707,7 +10004,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
 --- !u!114 &11400264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10153,7 +10450,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -10471,7 +10768,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.7791667
+  aspectRatio: 1.33194447
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -10508,6 +10805,9 @@ MonoBehaviour:
   clockWid: {fileID: 11400006}
   timer: {fileID: 11400002}
   texteffect: {fileID: 11400354}
+  score01: {fileID: 8300000, guid: b79cd4e6c18ca48869243011e65a35b2, type: 3}
+  score02: {fileID: 8300000, guid: 59d4d47bd81924b008513c63193d1b85, type: 3}
+  score03: {fileID: 8300000, guid: 8b23a6f76d4594f9da542e91fc1468ab, type: 3}
   audioSum: {fileID: 8200036}
   audioCoins: {fileID: 8200038}
 --- !u!114 &11400300
@@ -10803,7 +11103,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.22222221
+  aspectRatio: .911111116
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
@@ -11548,7 +11848,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 8.30508518
+  aspectRatio: 6.22033882
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
@@ -11668,6 +11968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3bc3f176a8846ae8b63657c2b69ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brillitoAudio: {fileID: 8200046}
   anim: {fileID: 11400360}
 --- !u!114 &11400360
 MonoBehaviour:
@@ -11702,6 +12003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3bc3f176a8846ae8b63657c2b69ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brillitoAudio: {fileID: 8200050}
   anim: {fileID: 11400368}
 --- !u!114 &11400364
 MonoBehaviour:
@@ -11714,6 +12016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3bc3f176a8846ae8b63657c2b69ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brillitoAudio: {fileID: 8200052}
   anim: {fileID: 11400370}
 --- !u!114 &11400366
 MonoBehaviour:
@@ -11726,6 +12029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3bc3f176a8846ae8b63657c2b69ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brillitoAudio: {fileID: 8200048}
   anim: {fileID: 11400372}
 --- !u!114 &11400368
 MonoBehaviour:
@@ -11804,6 +12108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3bc3f176a8846ae8b63657c2b69ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brillitoAudio: {fileID: 8200044}
   anim: {fileID: 11400376}
 --- !u!114 &11400376
 MonoBehaviour:
@@ -11986,7 +12291,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.77760255
+  aspectRatio: 1.33123028
 --- !u!114 &11400402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12156,11 +12461,11 @@ MonoBehaviour:
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.08411217
+  aspectRatio: 1.44859815
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
-  mText: atras
+  mText: "atr\xE1s"
   mFontSize: 200
   mFontStyle: 0
   mAlignment: 0
@@ -12213,11 +12518,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 58ac4bc9f26734416bc349804ce989cb, type: 3}
   - {fileID: 21300000, guid: cde9e91a888024a9680c0ecfdbed26bc, type: 3}
   textTutorial:
-  - tati
-  - tica
-  - tico
-  - timi
-  - topi
+  - "a tati le gusta compartir, te ayudar\xE1 a que avances m\xE1s r\xE1pido regal\xE1ndote
+    un par."
+  - "tica congelar\xE1 el reloj y as\xED te dar\xE1 algunos segundos de ventaja para
+    seguir jugando."
+  - "tico con sus tremenduras te dejar\xE1 ver r\xE1pidamente todo lo que hay en una
+    hilera que escojas."
+  - "si tienes un objeto descubierto timi te dar\xE1 algunas pistas para encontrar
+    su par."
+  - "topi te ayuda a tener un mayor puntaje, por algunos segundos tendr\xE1s doble
+    puntos por jugada."
 --- !u!114 &11400416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12358,14 +12668,14 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.20392156
+  aspectRatio: 1.60000002
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
   mText: Aqui tienes q hace lo q ya tu sabe
   mFontSize: 200
   mFontStyle: 0
-  mAlignment: 1
+  mAlignment: 2
   mEncoding: 1
   mMaxLineCount: 0
   mEffectStyle: 2
@@ -12375,7 +12685,7 @@ MonoBehaviour:
   mOverflow: 0
   mMaterial: {fileID: 0}
   mApplyGradient: 1
-  mGradientTop: {r: .984281659, g: 1, b: .362388074, a: 1}
+  mGradientTop: {r: 1, g: .905882359, b: 0, a: 1}
   mGradientBottom: {r: .801630437, g: .788887739, b: .491209686, a: 1}
   mSpacingX: 0
   mSpacingY: 0

@@ -43,8 +43,13 @@ public class ShowTimeEnd : MonoBehaviour {
         audio.Play ();
     }
     void Loser(){
-        audio.volume = ManagerSound.Instance.fxVolume;
+        Invoke ("PlayAhh",alphaT.delay+2.5f);
 
+    }
+
+    void PlayAhh(){
+
+        audio.volume = ManagerSound.Instance.fxVolume;
         audio.clip = Lose;
         audio.Play ();
     }

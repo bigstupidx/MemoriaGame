@@ -121,6 +121,7 @@ class ManagerDoors : Singleton<ManagerDoors>
     }
     bool firstRun = true;
     void Start(){
+        firstRun = false;
         ManagerPause.SubscribeOnPauseGame (onPaused);
         ManagerPause.SubscribeOnResumeGame (onResume);
     }

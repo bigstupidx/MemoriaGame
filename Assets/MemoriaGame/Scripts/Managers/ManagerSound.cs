@@ -16,11 +16,11 @@ public class ManagerSound : Singleton<ManagerSound>
 
     public bool mute = false;
 
-    AudioSource bgAudio;
+    public AudioSource bgAudio;
 
     protected override void AwakeChild(){
         GameObject obj = GameObject.FindGameObjectWithTag ("BgSound");
-        if(bgAudio != null)
+        if(bgAudio == null)
             bgAudio = obj.GetComponent<AudioSource>();
     }
 

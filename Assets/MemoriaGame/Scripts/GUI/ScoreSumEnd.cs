@@ -27,6 +27,9 @@ public class ScoreSumEnd : MonoBehaviour {
     TweenPosition tweenPos;
 
     TweenScale scalesT;
+    public AudioClip score01;
+    public AudioClip score02;
+    public AudioClip score03;
 
     public AudioSource audioSum;
     public AudioSource audioCoins;
@@ -129,9 +132,14 @@ public class ScoreSumEnd : MonoBehaviour {
 
                     currentTime = 0;
                     isCounting = false;
-                    enabled = false;
                     audioSum.Stop ();
+                    audioSum.clip = score03;
+                    audioSum.loop = false;
+                    audioSum.Play ();
+                    Invoke ("DisableAudio",score03.length);
+                    enabled = false;
 
+                  
                 } else {
                     sum += (int)(aux*ManagerScore.Instance.TimeBySecondScore) ;
                     CheckCoins ();
@@ -150,28 +158,46 @@ public class ScoreSumEnd : MonoBehaviour {
         yield return Wait (time);
         changued = false;
     }
-    public void StartCounting(){
-        enabled = true;
-        isCounting = true;
+    void DisableAudio(){
+        audioSum.enabled = false;
+    }
+
+    void PlayScoreMidle(){
+        audioSum.Stop ();
+        audioSum.clip = score02;
+        audioSum.loop = true;
         audioSum.Play ();
+    }
+    public void StartCounting(){
+        if (sum == 0) {
+            enabled = true;
+            isCounting = true;
 
-        #if UNITY_IPHONE
-        if(isIphone4){
-            sum = ManagerScore.Instance.CurrentScore;
-
-            sum+=  (int)(ManagerTime.Instance.getCurrentTimeOfGame * ManagerScore.Instance.TimeBySecondScore);
-            textNum.text = sum.ToString();
-            scalesT = TweenScale.Begin (textNum.gameObject, 0.3f,new Vector3( 1.3f, 1.3f, 1.3f)) ;
-            scalesT.style = UITweener.Style.Once;
-
-            isCounting = false;
-            enabled = false;
-            CheckCoins ();
-            CheckCoins ();
-            CheckCoins ();
+            audioSum.volume = ManagerSound.Instance.fxVolume;
             audioSum.Stop ();
+            audioSum.clip = score01;
+            audioSum.loop = false;
+            audioSum.Play ();
+            Invoke ("PlayScoreMidle", score01.length);
+            #if UNITY_IPHONE
+            if (isIphone4) {
+                sum = ManagerScore.Instance.CurrentScore;
+
+                sum += (int)(ManagerTime.Instance.getCurrentTimeOfGame * ManagerScore.Instance.TimeBySecondScore);
+                textNum.text = sum.ToString ();
+                scalesT = TweenScale.Begin (textNum.gameObject, 0.3f, new Vector3 (1.3f, 1.3f, 1.3f));
+                scalesT.style = UITweener.Style.Once;
+
+                isCounting = false;
+                enabled = false;
+                CheckCoins ();
+                CheckCoins ();
+                CheckCoins ();
+                audioSum.Stop ();
+                CancelInvoke ("PlayScoreMidle");
+            }
+            #endif
         }
-        #endif
     }
     void CheckCoins(){
 

@@ -74,11 +74,11 @@ class ManagerTime : Singleton<ManagerTime>
             break;
         }
 
-        Invoke("setTimeToStart",0.1f);
+      //  Invoke("setTimeToStart",0.1f);
 
       
     }
-
+    bool firstRun = true;
     void OnEnable(){
         ManagerPause.SubscribeOnPauseGame(onPaused);
         ManagerPause.SubscribeOnResumeGame( onResume);
@@ -94,6 +94,11 @@ class ManagerTime : Singleton<ManagerTime>
     }
         
     void LateUpdate(){
+        if(firstRun){
+            firstRun = false;
+            setTimeToStart ();
+            return;
+        }
         if (!isPaused && !stopTime) {
             if (currentTimeOfGame > 0) {
                 currentTimeOfGame -= Time.deltaTime;
@@ -110,6 +115,8 @@ class ManagerTime : Singleton<ManagerTime>
         
                 currentTimeToStart -= Time.deltaTime;
                 if (currentTimeToStart <= 0) {
+                   
+
                     currentTimeOfGame = TimeOfGame;
                     TimeGameStar ();
                     ManagerDoors.Instance.CanTouch = true;

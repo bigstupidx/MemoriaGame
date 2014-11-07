@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeOfGame: 210
   onTimeGameStart: []
+  Count0: {fileID: 11400000, guid: b96d9a04ba43247b0a477c020523ebd4, type: 2}
+  clipCount0: {fileID: 8300000, guid: c910c92ec76304155b9e15b42638be49, type: 3}
   onStopTime: []
   onPlayTime: []
 --- !u!114 &11400002

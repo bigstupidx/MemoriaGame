@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PowerShiny : MonoBehaviour {
 
+    public AudioSource brillitoAudio;
+
     public UI2DSpriteAnimation anim;
      PowerOff button;
 
@@ -20,6 +22,9 @@ public class PowerShiny : MonoBehaviour {
             if (play) {
 
                 anim.Play ();
+                brillitoAudio.volume = ManagerSound.Instance.fxVolume;
+
+                brillitoAudio.Play ();
                 play = false;
                 Invoke ("PlayAgainIn", TimeRepeat);
             }
@@ -42,6 +47,7 @@ public class PowerShiny : MonoBehaviour {
     IEnumerator PlayAgain(float time) {
         yield return timer.WaitPause(time);
         play = true;
+
        // anim.ResetToBeginning ();
 
     }

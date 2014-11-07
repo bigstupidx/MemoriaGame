@@ -31,6 +31,7 @@ public class ClockTimer : MonoBehaviour {
     public AudioClip clipAfter;
 
     public AudioClip clipRed;
+    public AudioClip clipYellow;
 	// Use this for initialization
 	void Awake () {
         ManagerTime.Instance.onTimeGameStart.Add (new Signal("onTimeGameStart",gameObject));
@@ -69,6 +70,8 @@ public class ClockTimer : MonoBehaviour {
         tweenRota.enabled = false;
         currentStop = new Vector3(0,0,Mathf.Rad2Deg *  Arrow.transform.rotation.z * 2.0f);
 
+        audio.Stop ();
+
     }
     public void onResume(){
         tweenRota.from = currentStop;
@@ -76,6 +79,8 @@ public class ClockTimer : MonoBehaviour {
         tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
         tweenRota.from = currentStop;
         tweenRota.to = new Vector3(0,0,-90);
+
+        audio.Play ();
        // tween.enabled = true;
 
     }
@@ -105,6 +110,11 @@ public class ClockTimer : MonoBehaviour {
         SetAudio (clipRed,true);
 
     }
+    void AudioYellowPlay(){
+
+        SetAudio (clipYellow,false);
+
+    }
     public void NotFreeze(){
         isFreezing = false;
         freezeAnimation.Pause ();
@@ -118,6 +128,8 @@ public class ClockTimer : MonoBehaviour {
 
         } else if (playYellow) {
             animSpriteYellow.Play ();
+            Invoke ("AudioYellowPlay",clipAfter.length);
+
         } else {
             GetComponent<UI2DSprite> ().sprite2D = BaseStateClock;
         }
@@ -127,7 +139,8 @@ public class ClockTimer : MonoBehaviour {
     }
 
     void SetAudio(AudioClip clipsito, bool loopsito){
-        audio.Pause ();
+        if(audio.isPlaying)
+            audio.Pause ();
         audio.volume = ManagerSound.Instance.fxVolume;
         audio.clip = clipsito;
         audio.loop = loopsito;
@@ -149,6 +162,8 @@ public class ClockTimer : MonoBehaviour {
                 if (!playYellow && !isFreezing) {
                     animSpriteYellow.Play ();
                     playYellow = true;
+
+                    AudioYellowPlay ();
                 }
              
      
