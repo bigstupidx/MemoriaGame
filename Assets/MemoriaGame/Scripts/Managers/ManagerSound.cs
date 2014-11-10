@@ -33,6 +33,9 @@ public class ManagerSound : Singleton<ManagerSound>
         bool.TryParse(PlayerPrefs.GetString ("Mute"),out mute);
         if (bgAudio != null) {
             bgAudio.volume = bgVolume;
+
+        }
+        if (bg2Audio != null) {
             bg2Audio.volume = bgVolume;
 
         }
@@ -50,6 +53,9 @@ public class ManagerSound : Singleton<ManagerSound>
         bgVolume = value;
         if (bgAudio != null) {
             bgAudio.volume = bgVolume;
+
+        }
+        if (bg2Audio != null) {
             bg2Audio.volume = bgVolume;
 
         }
