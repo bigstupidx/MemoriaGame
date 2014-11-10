@@ -554,6 +554,7 @@ class ManagerDoors : Singleton<ManagerDoors>
         if (isFirstOpen) {
         
             firstOpen.Close ();
+            OnCloseFirst (firstOpen.IDpair,firstOpen.NameDoor);
             firstOpen = null;
             isChecking = false;
         }
