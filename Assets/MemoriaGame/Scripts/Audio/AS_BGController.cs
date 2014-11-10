@@ -14,6 +14,7 @@ public class AS_BGController : MonoBehaviour {
     public AudioClip bg_Pause;
 
     public AudioSource bg;
+    public AudioSource bg2;
 
 	// Use this for initialization
 	void Start () {
@@ -31,31 +32,35 @@ public class AS_BGController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void ChangueBGNormal () {
-       // bg.Pause ();
-        bg.loop = true;
-        bg.clip = bg_02;
-        bg.Play ();
+        bg.Pause ();
+        bg2.loop = true;
+        bg2.clip = bg_02;
+        bg2.Play ();
 	}
     void ChangueBGNormalReset () {
        // bg.Pause ();
         bg.loop = false;
         bg.clip = bg_01;
         bg.Play ();
-        Invoke ("ChangueBGNormal",bg_01.length);
+        Invoke ("ChangueBGNormal",bg_01.length*0.9f);
     }
     void ChangueBGPause () {
-     //   bg.Pause ();
+        bg2.Pause ();
         bg.loop = true;
         bg.clip = bg_Pause;
         bg.Play ();
+
+
     }
     void ChangueOnLoose(){
+        bg2.Pause ();
         bg.loop = true;
         bg.clip = bg_Loser;
         bg.Play ();
 
     }
     void ChangueOnVictory(){
+        bg2.Pause ();
         bg.loop = true;
         bg.clip = bg_win01;
         bg.Play ();

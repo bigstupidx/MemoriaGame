@@ -105,6 +105,7 @@ MonoBehaviour:
   bg_win02: {fileID: 8300000, guid: 0d5fc9ff6a7814e3ebc696d5d1919e05, type: 3}
   bg_Pause: {fileID: 8300000, guid: 2e2c268407d4c40a3916df01cf10580a, type: 3}
   bg: {fileID: 8200000}
+  bg2: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
