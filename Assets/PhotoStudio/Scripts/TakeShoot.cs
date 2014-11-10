@@ -5,37 +5,56 @@ public class TakeShoot : MonoBehaviour {
 
 
     public Renderer target;
+    Camera cam;
+    void Awake(){
+        cam = camera;
+        cam.CopyFrom (Camera.main);
+    }
     private IEnumerator TakeScreenshot()
-    {
-        Camera cam = Camera.main;
-        Debug.Log (cam.name);
-        Texture2D image = new Texture2D(Screen.width, Screen.height); 
+    {/*
+        Texture2D image = new Texture2D(VideoCameraRender.Instance.webcamTexture.width, VideoCameraRender.Instance.webcamTexture.height); 
 
         RenderTexture currentRT = RenderTexture.active;
-
         RenderTexture.active = cam.targetTexture;
+
         cam.Render();
 
         yield return new WaitForEndOfFrame();
 
-        image.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-
-        //Resize the image. Useful if you don't need a 1:1 screenshot.
-        //4 is just used as an example. You could use 10 to resize it
-        //to a tenth of the original scale or whatever floats your boat.
-      //  if (resizePhotos)
-     //       TextureScale.Bilinear(image, image.width / 4, image.height / 4);
-
+        image.ReadPixels(new Rect(0, 0, VideoCameraRender.Instance.webcamTexture.width,VideoCameraRender.Instance.webcamTexture.height), 0, 0);
+        //image.SetPixels(VideoCameraRender.Instance.webcamTexture.GetPixels());
         image.Apply();
+
         RenderTexture.active = currentRT;
 
         target.renderer.material.mainTexture = image;
+        */
+        RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24);
+        cam.targetTexture = rt;
+
+        Texture2D screenShot = new Texture2D(Screen.width,Screen.height, TextureFormat.ARGB32, false);
+        RenderTexture.active = rt;
+
+        cam.Render();
+
+        yield return new WaitForEndOfFrame();
+        screenShot.ReadPixels(new Rect(  0,0, Screen.width,  Screen.height),0,0);
+        screenShot.Apply ();
+
+        target.renderer.material.mainTexture = screenShot;
+
+
+        camera.targetTexture = null;
+        RenderTexture.active = null; // JC: added to avoid errors
+        Destroy(rt);
+
+        Debug.Log("Capture!!");
 
     }
 
     void Update(){
     
-        if (Input.GetKeyDown (KeyCode.T)) {
+        if (Input.GetKeyDown (KeyCode.T) || Input.GetMouseButtonDown(0)) {
             StartCoroutine (TakeScreenshot());
         }
     }
