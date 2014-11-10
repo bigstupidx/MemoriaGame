@@ -35,8 +35,8 @@ public class ClockTimer : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         ManagerTime.Instance.onTimeGameStart.Add (new Signal("onTimeGameStart",gameObject));
-        ManagerTime.Instance.onStopTime.Add (new Signal("onPaused",gameObject));
-        ManagerTime.Instance.onPlayTime.Add (new Signal("onResume",gameObject));
+    //    ManagerTime.Instance.onStopTime.Add (new Signal("onPaused",gameObject));
+    //    ManagerTime.Instance.onPlayTime.Add (new Signal("onResume",gameObject));
         
     
 	}
@@ -70,7 +70,8 @@ public class ClockTimer : MonoBehaviour {
         tweenRota.enabled = false;
         currentStop = new Vector3(0,0,Mathf.Rad2Deg *  Arrow.transform.rotation.z * 2.0f);
 
-        audio.Stop ();
+        if(isFreezing || playRed)
+            audio.Stop ();
 
     }
     public void onResume(){
@@ -80,7 +81,8 @@ public class ClockTimer : MonoBehaviour {
         tweenRota.from = currentStop;
         tweenRota.to = new Vector3(0,0,-90);
 
-        audio.Play ();
+        if(isFreezing || playRed)
+            audio.Play ();
        // tween.enabled = true;
 
     }
@@ -139,8 +141,10 @@ public class ClockTimer : MonoBehaviour {
     }
 
     void SetAudio(AudioClip clipsito, bool loopsito){
-        if(audio.isPlaying)
+        if (audio.isPlaying) {
             audio.Pause ();
+        }
+
         audio.volume = ManagerSound.Instance.fxVolume;
         audio.clip = clipsito;
         audio.loop = loopsito;
