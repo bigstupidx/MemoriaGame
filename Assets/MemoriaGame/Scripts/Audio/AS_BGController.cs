@@ -32,17 +32,18 @@ public class AS_BGController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void ChangueBGNormal () {
-        bg.Pause ();
         bg2.loop = true;
         bg2.clip = bg_02;
         bg2.Play ();
+        bg.Pause ();
+
 	}
     void ChangueBGNormalReset () {
        // bg.Pause ();
         bg.loop = false;
         bg.clip = bg_01;
         bg.Play ();
-        Invoke ("ChangueBGNormal",bg_01.length*0.9f);
+        Invoke ("ChangueBGNormal",bg_01.length*0.95f);
     }
     void ChangueBGPause () {
         bg2.Pause ();
