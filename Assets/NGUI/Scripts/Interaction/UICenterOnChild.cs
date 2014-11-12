@@ -47,7 +47,10 @@ public class UICenterOnChild : MonoBehaviour
 	/// </summary>
 
 	public GameObject centeredObject { get { return mCenteredObject; } }
-
+    void Start(){
+        enabled = false;
+        enabled = true;
+    }
 	void OnEnable () { if (mScrollView) mScrollView.centerOnChild = this; Recenter(); }
 	void OnDisable () { if (mScrollView) mScrollView.centerOnChild = null; }
 	void OnDragFinished () { if (enabled) Recenter(); }
