@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/MemoriaGame/Scenes/HomeScene.unity
   - enabled: 0
     path: Assets/MemoriaGame/Scenes/GameScene.unity
-  - enabled: 1
-    path: Assets/PhotoStudio/Scenes/Test.unity
   - enabled: 0
+    path: Assets/PhotoStudio/Scenes/Test.unity
+  - enabled: 1
     path: Assets/PhotoStudio/Scenes/MenuPhotoStudio.unity
