@@ -3,13 +3,12 @@ using System.Collections;
 
 public class MergeTexture : MonoBehaviour {
 
-    #pragma strict
 
-    Texture2D texToDraw ;
 
-    public Texture2D Merge (Texture2D background){
+    public static Texture2D Merge (Texture2D texToDraw ,Texture2D background){
         int x=0;
         int y=0;
+        Sprite test;
 
         Color32[] pix1 = background.GetPixels32();
         Color32[] pix2 = texToDraw.GetPixels32();

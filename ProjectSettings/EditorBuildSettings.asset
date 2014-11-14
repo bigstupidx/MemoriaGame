@@ -13,5 +13,3 @@ EditorBuildSettings:
     path: Assets/PhotoStudio/Scenes/Test.unity
   - enabled: 0
     path: Assets/PhotoStudio/Scenes/MenuPhotoStudio.unity
-  - enabled: 0
-    path: Assets/Extensions/IOSNative/xExample/Scenes/Other Examples/NativeIOSActionsExample.unity

@@ -91,8 +91,8 @@ static ISNCamera *_sharedInstance;
     
     
 
-  //  [vc presentViewController:picker animated:YES completion:nil];
-	[vc presentModalViewController:picker animated:YES ];
+    [vc presentViewController:picker animated:YES completion:nil];
+//	[vc presentModalViewController:picker animated:YES ];
     
     
    

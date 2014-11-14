@@ -41,141 +41,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9935dfebbf6b5442cbb773125d54b172, type: 2}
   mSprites:
-  - name: botom_guardar
-    x: 1440
-    y: 1873
-    width: 168
-    height: 175
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 14
-    paddingRight: 9
-    paddingTop: 14
-    paddingBottom: 18
-  - name: boton_adelante
-    x: 1025
-    y: 1648
-    width: 172
-    height: 177
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 22
-    paddingRight: 17
-    paddingTop: 28
-    paddingBottom: 16
-  - name: boton_atras
-    x: 1025
-    y: 1472
-    width: 170
-    height: 175
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 21
-    paddingRight: 18
-    paddingTop: 13
-    paddingBottom: 31
-  - name: boton_compartir
-    x: 1440
-    y: 1697
-    width: 168
-    height: 175
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 18
-    paddingRight: 12
-    paddingTop: 14
-    paddingBottom: 18
-  - name: boton_flecha
-    x: 1440
-    y: 1472
-    width: 82
-    height: 224
+  - name: atras_boton
+    x: 688
+    y: 1133
+    width: 831
+    height: 338
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
-    paddingRight: 28
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: boton_camara
+    x: 688
+    y: 744
+    width: 391
+    height: 388
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
   - name: boton_foto
-    x: 1269
-    y: 1873
-    width: 170
-    height: 175
+    x: 1080
+    y: 931
+    width: 207
+    height: 201
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 26
-    paddingRight: 11
-    paddingTop: 3
-    paddingBottom: 23
-  - name: boton_giro_derecha
-    x: 1269
-    y: 1697
-    width: 170
-    height: 175
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: boton_gal
+    x: 688
+    y: 356
+    width: 387
+    height: 387
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 22
-    paddingRight: 17
-    paddingTop: 11
-    paddingBottom: 32
-  - name: boton_giro_izquierda
-    x: 1269
-    y: 1521
-    width: 170
-    height: 175
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: continuar
+    x: 1774
+    y: 1252
+    width: 209
+    height: 219
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 22
-    paddingRight: 17
-    paddingTop: 11
-    paddingBottom: 19
-  - name: boton_marco
-    x: 1025
-    y: 1826
-    width: 243
-    height: 222
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: esquinatal_photobooth
+    x: 1520
+    y: 1181
+    width: 253
+    height: 290
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 26
-    paddingRight: 19
-    paddingTop: 11
-    paddingBottom: 17
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: fondo_marco_central
     x: 0
-    y: 806
-    width: 666
-    height: 665
+    y: 789
+    width: 687
+    height: 682
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 11
-    paddingRight: 10
-    paddingTop: 3
-    paddingBottom: 14
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: fondo_marco_izq_o_der
     x: 0
-    y: 217
-    width: 586
-    height: 588
+    y: 198
+    width: 588
+    height: 590
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -189,6 +150,45 @@ MonoBehaviour:
     y: 1472
     width: 1024
     height: 576
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: regresar
+    x: 688
+    y: 136
+    width: 209
+    height: 219
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: setFoto_text
+    x: 1025
+    y: 1646
+    width: 865
+    height: 402
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: textura_fondo_photobooth
+    x: 1891
+    y: 2044
+    width: 4
+    height: 4
     borderLeft: 0
     borderRight: 0
     borderTop: 0
