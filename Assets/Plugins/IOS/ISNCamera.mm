@@ -24,35 +24,35 @@ static ISNCamera *_sharedInstance;
 }
 
 - (void) saveToCameraRoll:(NSString *)media {
-     NSLog(@"saveToCameraRoll");
+    NSLog(@"saveToCameraRoll");
     NSData *imageData = [[NSData alloc] initWithBase64Encoding:media];
     UIImage *image = [[UIImage alloc] initWithData:imageData];
     
-
+    
     UIImageWriteToSavedPhotosAlbum(image,
                                    self, // send the message to 'self' when calling the callback
                                    @selector(thisImage:hasBeenSavedInPhotoAlbumWithError:usingContextInfo:), // the selector to tell the method to call on completion
                                    NULL); // you generally won't need a contextInfo here
-   
-
+    
+    
 }
 
 - (void)thisImage:(UIImage *)image hasBeenSavedInPhotoAlbumWithError:(NSError *)error usingContextInfo:(void*)ctxInfo {
     if (error) {
-         NSLog(@"image not saved: %@", error.description);
+        NSLog(@"image not saved: %@", error.description);
         UnitySendMessage("IOSCamera", "OnImageSaveFailed", [ISNDataConvertor NSStringToChar:@""]);
-       
+        
     } else {
         NSLog(@"image saved");
         UnitySendMessage("IOSCamera", "OnImageSaveSuccess", [ISNDataConvertor NSStringToChar:@""]);
     }
     
-
+    
 }
 
 
 -(void) GetImageFromAlbum {
-   [self GetImage:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    [self GetImage:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
 }
 
 -(void) GetImageFromCamera {
@@ -85,18 +85,18 @@ static ISNCamera *_sharedInstance;
     UIViewController *vc =  UnityGetGLViewController();
     
     UIImagePickerController * picker = [[UIImagePickerController alloc] init];
-	picker.delegate = self;
-	
+    picker.delegate = self;
+    picker.allowsEditing = true;
     picker.sourceType = source;
     
     
-
+    
     [vc presentViewController:picker animated:YES completion:nil];
-//	[vc presentModalViewController:picker animated:YES ];
+    //	[vc presentModalViewController:picker animated:YES ];
     
     
-   
-
+    
+    
 }
 
 
@@ -113,12 +113,17 @@ static ISNCamera *_sharedInstance;
     }
     else{
         // it must be an image
-        UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
+        UIImage *photo = [info objectForKey:UIImagePickerControllerEditedImage];
+        if(photo == nil){
+            photo = [info objectForKey:UIImagePickerControllerOriginalImage];
+        }
+        
         NSString *encodedImage = @"";
         if (photo == nil) {
             NSLog(@"no photo");
         } else {
             NSLog(@"MaxImageSize: %i", [self MaxImageSize]);
+            
             if(photo.size.width > [self MaxImageSize]) {
                 CGSize s = CGSizeMake([self MaxImageSize], [self MaxImageSize]);
                 CGFloat new_height = [self MaxImageSize] / (photo.size.width / photo.size.height);
@@ -165,8 +170,8 @@ extern "C" {
     
     
     //--------------------------------------
-	//  IOS Native Plugin Section
-	//--------------------------------------
+    //  IOS Native Plugin Section
+    //--------------------------------------
     
     
     void _ISN_SaveToCameraRoll(char* encodedMedia) {
@@ -191,7 +196,7 @@ extern "C" {
         [[ISNCamera sharedInstance] setMaxImageSize:maxSize];
         [[ISNCamera sharedInstance] setEncodingType:encodingType];
     }
-
+    
 }
 
 

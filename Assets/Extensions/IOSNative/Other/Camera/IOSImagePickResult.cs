@@ -18,6 +18,7 @@ public class IOSImagePickResult : ISN_Result {
 	//	_image = new Texture2D(1, 1, TextureFormat.DXT5, false);
 		_image.LoadImage(decodedFromBase64);
 		_image.hideFlags = HideFlags.DontSave;
+
 	}
 	
 
