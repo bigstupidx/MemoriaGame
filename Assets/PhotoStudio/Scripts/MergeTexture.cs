@@ -14,7 +14,7 @@ public class MergeTexture : MonoBehaviour {
         Color32[] pix2 = texToDraw.GetPixels32();
         for(int i = 0; i < pix1.Length; ++i)
         {
-            if(pix1[i].a != 255  )
+            if(pix1[i].a < 255*0.5f  )
                 pix1[i] = pix2[i];
         }
         /*
