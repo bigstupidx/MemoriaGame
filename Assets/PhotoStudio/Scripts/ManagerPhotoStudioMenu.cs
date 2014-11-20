@@ -50,4 +50,16 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
 
 
     }
+    public void GoToPreviewWithCondition(GameObject obj){
+        if (obj.GetComponent<UITexture>().mainTexture != null)
+        {
+            GoToPreview();
+        }
+        else
+        {
+            GoToHome();
+        }
+
+
+    }
 }

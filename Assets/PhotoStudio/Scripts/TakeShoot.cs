@@ -11,10 +11,14 @@ public class TakeShoot : MonoBehaviour {
     public Texture initialTextureExample;
 
     #endif
+    public UIButton next;
     void Awake(){
         initialTexture = target.mainTexture;
     }
-
+    public void setIsEnableFalse(){
+    
+        next.isEnabled = false;
+    }
     private void OnImageSaved (ISN_Result result) {
         IOSCamera.instance.OnImageSaved -= OnImageSaved;
         if(result.IsSucceeded) {
@@ -29,7 +33,9 @@ public class TakeShoot : MonoBehaviour {
             if(target.mainTexture != initialTexture)
                 DestroyImmediate(target.mainTexture,true);
             target.mainTexture = result.image;
-            IOSMessage.Create("Success", "Image Successfully Loaded, Image size: " + result.image.width + "x" + result.image.height);
+            next.isEnabled = true;
+
+         //   IOSMessage.Create("Success", "Image Successfully Loaded, Image size: " + result.image.width + "x" + result.image.height);
 
         }
         else
@@ -44,6 +50,8 @@ public class TakeShoot : MonoBehaviour {
     public void TakePhotoButton(){
         #if UNITY_EDITOR
         target.mainTexture =initialTextureExample;
+        next.isEnabled = true;
+
         return;
         #endif
         if (!isTaking)

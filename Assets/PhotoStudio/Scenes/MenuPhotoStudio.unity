@@ -564,6 +564,10 @@ MonoBehaviour:
     mMethodName: setPhotoMarco
     mParameters: []
     oneShot: 0
+  - mTarget: {fileID: 1147649513}
+    mMethodName: setIsEnableFalse
+    mParameters: []
+    oneShot: 0
 --- !u!65 &109707273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1993,6 +1997,10 @@ MonoBehaviour:
     mMethodName: SetAll
     mParameters: []
     oneShot: 0
+  - mTarget: {fileID: 1147649513}
+    mMethodName: BorrarFoto
+    mParameters: []
+    oneShot: 0
 --- !u!65 &573360842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2339,7 +2347,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
-  mTexture: {fileID: 2800000, guid: 9151de462352c4d1182fa594ff9d7431, type: 3}
+  mTexture: {fileID: 0}
   mMat: {fileID: 0}
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -3797,6 +3805,7 @@ MonoBehaviour:
   target: {fileID: 342276765}
   initialTextureExample: {fileID: 2800000, guid: 9beb678c5ca804a3fb2a391e3f97748a,
     type: 3}
+  next: {fileID: 573360841}
 --- !u!114 &1147649514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4150,6 +4159,10 @@ MonoBehaviour:
   onClick:
   - mTarget: {fileID: 1446097305}
     mMethodName: GoToHome
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 1515473114}
+    mMethodName: ErasePhoto
     mParameters: []
     oneShot: 0
 --- !u!65 &1377379086
@@ -6250,6 +6263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   father: {fileID: 1378527266}
   texturePrefab: {fileID: 11400004, guid: 6c1f53d73b1a74283ab0081a979f304b, type: 2}
+  backgroundSelected: {fileID: 1930244715}
 --- !u!1 &2125686256
 GameObject:
   m_ObjectHideFlags: 0
@@ -6292,7 +6306,21 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 1515473113}
+    mMethodName: SetFotoGaleria
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 2121774108}
+    mMethodName: EraseAll
+    mParameters: []
+    oneShot: 0
+  - mTarget: {fileID: 1446097305}
+    mMethodName: GoToPreviewWithCondition
+    mParameters:
+    - obj: {fileID: 618785113}
+      field: 
+    oneShot: 0
 --- !u!65 &2125686258
 BoxCollider:
   m_ObjectHideFlags: 0

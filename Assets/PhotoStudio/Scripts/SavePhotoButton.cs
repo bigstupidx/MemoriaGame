@@ -3,6 +3,11 @@ using System.Collections;
 public class SavePhotoButton : MonoBehaviour {
 
     public UITexture textureToSave;
+
+    public void ErasePhoto(){
+    
+        DestroyImmediate(textureToSave.mainTexture, true);
+    }
     void Awake(){
         //events use example
         IOSSocialManager.instance.addEventListener(IOSSocialManager.FACEBOOK_POST_SUCCESS, OnPostSuccses);

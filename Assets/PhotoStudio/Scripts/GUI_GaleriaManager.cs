@@ -14,6 +14,7 @@ public class GUI_GaleriaManager : MonoBehaviour {
 
     ArrayList list;
 
+    public GameObject backgroundSelected;
 	// Use this for initialization
 	void Awake () {
         number = PlayerPrefs.GetInt("CountImages");
@@ -21,7 +22,16 @@ public class GUI_GaleriaManager : MonoBehaviour {
         father.enabled = false;
 	}
 	
+    public Texture2D getTextureOfCenter(){
+    
 
+        if (father.centeredObject != null)
+        {
+            return (Texture2D)father.centeredObject.GetComponent<UITexture>().mainTexture;
+        }
+        return null;
+
+    }
     public void EnableAll(){
         Vector3 off = Vector3.right * offsetX;
         for (int i = 0; i < number; ++i)
@@ -29,6 +39,8 @@ public class GUI_GaleriaManager : MonoBehaviour {
             Texture2D texture = LoadInsideUnity("TommyPlayground_" + i + ".png");
             if (texture != null)
             {
+                if(list == null)
+                    list = new ArrayList();
                 list.Add( texturePrefab.Spawn(father.transform,texturePrefab.transform.position+off));
                 off += Vector3.right * offsetX;
                 ((UITexture)list[list.Count - 1]).gameObject.name = i.ToString();
@@ -37,15 +49,18 @@ public class GUI_GaleriaManager : MonoBehaviour {
             }
         }
         father.enabled = true;
+        father.Recenter();
     }
 
 
     public void EraseAll(){
-    
+        backgroundSelected.transform.parent = father.transform.parent;
+        Texture2D texture = getTextureOfCenter();
         for (int i = 0; i < list.Count; ++i)
         {
-
-            DestroyImmediate(((UITexture)list[i]).mainTexture,true);
+            if(texture != ((Texture2D)((UITexture)list[i]).mainTexture)){
+                DestroyImmediate(((UITexture)list[i]).mainTexture,true);
+            }
             ((UITexture)list[i]).Recycle();
         }
         list.Clear();
