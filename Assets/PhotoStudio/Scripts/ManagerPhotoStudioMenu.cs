@@ -7,7 +7,7 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
     public UIWidget selectPlantilla;
     public UIWidget takePhoto;
     public UIWidget mergePhoto;
-    public UIWidget savePhoto;
+    public UIWidget galeria;
 
     UIWidget current;
 
@@ -20,7 +20,12 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
         intro.alpha = 1;
         current = intro;
     }
-        
+    public void GoToGaleria(){
+
+        current.alpha = 0;
+        galeria.alpha = 1;
+        current = galeria;
+    }  
     public void GoToSelectPlantilla(){
     
         current.alpha = 0;

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 public class SavePhotoButton : MonoBehaviour {
 
     public UITexture textureToSave;
@@ -15,24 +14,26 @@ public class SavePhotoButton : MonoBehaviour {
 
         //actions use example:
         IOSSocialManager.instance.OnMailResult += OnMailResult;
+
     }
         
 
     public void SaveTextureToDevice(){
-    
         IOSCamera.instance.OnImageSaved += OnImageSaved;
+        ((Texture2D)textureToSave.mainTexture).name = "TommyPlayground";
         IOSCamera.instance.SaveTextureToCameraRoll((Texture2D)textureToSave.mainTexture);
     }
 
     private void OnImageSaved (ISN_Result result) {
         IOSCamera.instance.OnImageSaved -= OnImageSaved;
         if(result.IsSucceeded) {
+          
             IOSMessage.Create("Success", "Image Successfully saved to Camera Roll");
         } else {
             IOSMessage.Create("Success", "Image Save Failed");
         }
     }
-
+   
     public void ShareTexture(){
     
         IOSSocialManager.instance.ShareMedia("Tomi Playground ", (Texture2D)textureToSave.mainTexture);
