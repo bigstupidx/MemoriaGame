@@ -42,7 +42,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: b99480a1ddcc340a6a363421bdbcb8f0, type: 2}
   mSprites:
   - name: intro01
-    x: 1826
+    x: 0
     y: 1794
     width: 619
     height: 254
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 47
     paddingBottom: 59
   - name: intro02
-    x: 2446
-    y: 1815
+    x: 1815
+    y: 957
     width: 597
     height: 233
     borderLeft: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 62
     paddingBottom: 65
   - name: intro03
-    x: 3044
-    y: 1823
+    x: 1210
+    y: 931
     width: 578
     height: 225
     borderLeft: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
     paddingTop: 66
     paddingBottom: 69
   - name: intro04
-    x: 3474
-    y: 1358
+    x: 2367
+    y: 716
     width: 577
     height: 217
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro05
-    x: 2896
-    y: 1358
+    x: 2945
+    y: 699
     width: 577
     height: 217
     borderLeft: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro06
-    x: 2318
-    y: 704
+    x: 1789
+    y: 739
     width: 577
     height: 217
     borderLeft: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro07
-    x: 2318
-    y: 922
+    x: 578
+    y: 498
     width: 577
     height: 217
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro08
-    x: 2318
-    y: 1358
+    x: 1183
+    y: 713
     width: 577
     height: 217
     borderLeft: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro09
-    x: 2318
-    y: 1140
+    x: 0
+    y: 461
     width: 577
     height: 217
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro10
-    x: 3474
-    y: 1576
+    x: 605
+    y: 934
     width: 577
     height: 217
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro11
-    x: 2896
-    y: 1576
+    x: 605
+    y: 716
     width: 577
     height: 217
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro12
-    x: 2318
-    y: 1576
+    x: 0
+    y: 679
     width: 577
     height: 217
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 70
     paddingBottom: 73
   - name: intro13
-    x: 2318
-    y: 495
+    x: 1761
+    y: 530
     width: 550
     height: 208
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 75
     paddingBottom: 77
   - name: intro14
-    x: 2318
-    y: 303
+    x: 1156
+    y: 521
     width: 509
     height: 191
     borderLeft: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
     paddingTop: 90
     paddingBottom: 79
   - name: intro15
-    x: 0
-    y: 6
+    x: 2312
+    y: 533
     width: 458
     height: 182
     borderLeft: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 99
     paddingBottom: 79
   - name: intro16
-    x: 3623
-    y: 1872
+    x: 2771
+    y: 522
     width: 430
     height: 176
     borderLeft: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
     paddingTop: 104
     paddingBottom: 80
   - name: intro17
-    x: 1826
-    y: 297
+    x: 2312
+    y: 365
     width: 412
     height: 167
     borderLeft: 0
@@ -263,8 +263,8 @@ MonoBehaviour:
     paddingTop: 107
     paddingBottom: 86
   - name: intro18
-    x: 2318
-    y: 137
+    x: 1666
+    y: 364
     width: 335
     height: 165
     borderLeft: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
     paddingTop: 100
     paddingBottom: 95
   - name: intro19
-    x: 2896
-    y: 1193
+    x: 2002
+    y: 200
     width: 332
     height: 164
     borderLeft: 0
@@ -289,8 +289,8 @@ MonoBehaviour:
     paddingTop: 102
     paddingBottom: 94
   - name: intro20
-    x: 3229
-    y: 1201
+    x: 2002
+    y: 373
     width: 266
     height: 156
     borderLeft: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
     paddingTop: 119
     paddingBottom: 85
   - name: intro21
-    x: 3496
-    y: 1196
+    x: 3672
+    y: 372
     width: 214
     height: 161
     borderLeft: 0
@@ -315,8 +315,8 @@ MonoBehaviour:
     paddingTop: 92
     paddingBottom: 107
   - name: intro22
-    x: 459
-    y: 72
+    x: 2328
+    y: 42
     width: 140
     height: 116
     borderLeft: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
     paddingTop: 172
     paddingBottom: 72
   - name: intro23
-    x: 2084
-    y: 944
+    x: 1405
+    y: 329
     width: 230
     height: 191
     borderLeft: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
     paddingTop: 155
     paddingBottom: 14
   - name: intro24
-    x: 2896
-    y: 993
+    x: 1156
+    y: 321
     width: 248
     height: 199
     borderLeft: 0
@@ -354,8 +354,8 @@ MonoBehaviour:
     paddingTop: 148
     paddingBottom: 13
   - name: intro25
-    x: 3354
-    y: 816
+    x: 578
+    y: 321
     width: 228
     height: 176
     borderLeft: 0
@@ -367,8 +367,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro26
-    x: 3125
-    y: 816
+    x: 807
+    y: 321
     width: 228
     height: 176
     borderLeft: 0
@@ -380,8 +380,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro27
-    x: 2896
-    y: 108
+    x: 0
+    y: 284
     width: 228
     height: 176
     borderLeft: 0
@@ -393,8 +393,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro28
-    x: 2896
-    y: 285
+    x: 2099
+    y: 23
     width: 228
     height: 176
     borderLeft: 0
@@ -406,8 +406,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro29
-    x: 2896
-    y: 462
+    x: 1405
+    y: 152
     width: 228
     height: 176
     borderLeft: 0
@@ -419,8 +419,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro30
-    x: 2896
-    y: 639
+    x: 1870
+    y: 23
     width: 228
     height: 176
     borderLeft: 0
@@ -432,8 +432,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro31
-    x: 2896
-    y: 816
+    x: 1634
+    y: 3
     width: 228
     height: 176
     borderLeft: 0
@@ -445,8 +445,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro32
-    x: 3832
-    y: 1016
+    x: 2974
+    y: 238
     width: 228
     height: 176
     borderLeft: 0
@@ -458,8 +458,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro33
-    x: 3603
-    y: 1016
+    x: 3203
+    y: 238
     width: 228
     height: 176
     borderLeft: 0
@@ -471,8 +471,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro34
-    x: 3374
-    y: 1016
+    x: 2578
+    y: 104
     width: 228
     height: 176
     borderLeft: 0
@@ -484,8 +484,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro35
-    x: 3145
-    y: 1016
+    x: 3443
+    y: 386
     width: 228
     height: 176
     borderLeft: 0
@@ -497,8 +497,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro36
-    x: 3583
-    y: 816
+    x: 229
+    y: 284
     width: 228
     height: 176
     borderLeft: 0
@@ -510,8 +510,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro37
-    x: 3812
-    y: 816
+    x: 3772
+    y: 711
     width: 228
     height: 176
     borderLeft: 0
@@ -523,8 +523,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro38
-    x: 3125
-    y: 639
+    x: 3772
+    y: 534
     width: 228
     height: 176
     borderLeft: 0
@@ -536,8 +536,8 @@ MonoBehaviour:
     paddingTop: 165
     paddingBottom: 19
   - name: intro39
-    x: 2654
-    y: 119
+    x: 1636
+    y: 180
     width: 233
     height: 183
     borderLeft: 0
@@ -549,8 +549,8 @@ MonoBehaviour:
     paddingTop: 158
     paddingBottom: 19
   - name: intro40
-    x: 2075
-    y: 91
+    x: 2335
+    y: 159
     width: 242
     height: 205
     borderLeft: 0
@@ -562,8 +562,8 @@ MonoBehaviour:
     paddingTop: 138
     paddingBottom: 17
   - name: intro41
-    x: 1826
-    y: 56
+    x: 2725
+    y: 281
     width: 248
     height: 240
     borderLeft: 0
@@ -575,8 +575,8 @@ MonoBehaviour:
     paddingTop: 105
     paddingBottom: 15
   - name: intro42
-    x: 2075
-    y: 506
+    x: 3202
+    y: 415
     width: 240
     height: 283
     borderLeft: 0
@@ -588,8 +588,8 @@ MonoBehaviour:
     paddingTop: 64
     paddingBottom: 13
   - name: intro43
-    x: 1826
-    y: 465
+    x: 3523
+    y: 563
     width: 248
     height: 324
     borderLeft: 0
@@ -601,8 +601,8 @@ MonoBehaviour:
     paddingTop: 25
     paddingBottom: 11
   - name: intro44
-    x: 1826
-    y: 790
+    x: 3656
+    y: 1361
     width: 257
     height: 345
     borderLeft: 0
@@ -614,8 +614,8 @@ MonoBehaviour:
     paddingTop: 5
     paddingBottom: 10
   - name: intro45
-    x: 1826
-    y: 1136
+    x: 3656
+    y: 1707
     width: 377
     height: 341
     borderLeft: 0
@@ -627,8 +627,8 @@ MonoBehaviour:
     paddingTop: 8
     paddingBottom: 11
   - name: intro46
-    x: 1826
-    y: 1478
+    x: 3599
+    y: 888
     width: 491
     height: 315
     borderLeft: 0
@@ -640,8 +640,8 @@ MonoBehaviour:
     paddingTop: 30
     paddingBottom: 15
   - name: intro47
-    x: 1221
-    y: 383
+    x: 3040
+    y: 917
     width: 558
     height: 286
     borderLeft: 0
@@ -653,8 +653,8 @@ MonoBehaviour:
     paddingTop: 55
     paddingBottom: 19
   - name: intro48
-    x: 1221
-    y: 119
+    x: 2430
+    y: 934
     width: 590
     height: 263
     borderLeft: 0
@@ -666,8 +666,8 @@ MonoBehaviour:
     paddingTop: 73
     paddingBottom: 24
   - name: intro49
-    x: 1221
-    y: 670
+    x: 3040
+    y: 1204
     width: 601
     height: 270
     borderLeft: 0
@@ -679,8 +679,8 @@ MonoBehaviour:
     paddingTop: 61
     paddingBottom: 29
   - name: intro50
-    x: 1221
-    y: 941
+    x: 0
+    y: 897
     width: 604
     height: 276
     borderLeft: 0
@@ -692,8 +692,8 @@ MonoBehaviour:
     paddingTop: 56
     paddingBottom: 28
   - name: intro51
-    x: 1221
-    y: 1218
+    x: 1825
+    y: 1191
     width: 604
     height: 276
     borderLeft: 0
@@ -705,8 +705,8 @@ MonoBehaviour:
     paddingTop: 56
     paddingBottom: 28
   - name: intro52
-    x: 1221
-    y: 1495
+    x: 2435
+    y: 1198
     width: 604
     height: 276
     borderLeft: 0
@@ -718,8 +718,8 @@ MonoBehaviour:
     paddingTop: 56
     paddingBottom: 28
   - name: intro53
-    x: 1221
-    y: 1772
+    x: 605
+    y: 1152
     width: 604
     height: 276
     borderLeft: 0
@@ -731,8 +731,8 @@ MonoBehaviour:
     paddingTop: 56
     paddingBottom: 28
   - name: intro54
-    x: 605
-    y: 48
+    x: 1210
+    y: 1157
     width: 604
     height: 276
     borderLeft: 0
@@ -744,7 +744,7 @@ MonoBehaviour:
     paddingTop: 56
     paddingBottom: 28
   - name: intro55
-    x: 605
+    x: 1830
     y: 1755
     width: 615
     height: 293
@@ -757,7 +757,7 @@ MonoBehaviour:
     paddingTop: 39
     paddingBottom: 28
   - name: intro56
-    x: 0
+    x: 1225
     y: 1716
     width: 604
     height: 332
@@ -770,8 +770,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 28
   - name: intro57
-    x: 0
-    y: 1383
+    x: 620
+    y: 1716
     width: 604
     height: 332
     borderLeft: 0
@@ -784,7 +784,7 @@ MonoBehaviour:
     paddingBottom: 28
   - name: intro58
     x: 0
-    y: 1050
+    y: 1461
     width: 604
     height: 332
     borderLeft: 0
@@ -796,8 +796,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 28
   - name: intro59
-    x: 605
-    y: 325
+    x: 1210
+    y: 1434
     width: 614
     height: 281
     borderLeft: 0
@@ -809,8 +809,8 @@ MonoBehaviour:
     paddingTop: 51
     paddingBottom: 28
   - name: intro60
-    x: 0
-    y: 763
+    x: 3051
+    y: 1475
     width: 604
     height: 286
     borderLeft: 0
@@ -822,8 +822,8 @@ MonoBehaviour:
     paddingTop: 46
     paddingBottom: 28
   - name: intro61
-    x: 0
-    y: 476
+    x: 605
+    y: 1429
     width: 604
     height: 286
     borderLeft: 0
@@ -836,7 +836,7 @@ MonoBehaviour:
     paddingBottom: 28
   - name: intro62
     x: 0
-    y: 189
+    y: 1174
     width: 604
     height: 286
     borderLeft: 0
@@ -848,7 +848,7 @@ MonoBehaviour:
     paddingTop: 46
     paddingBottom: 28
   - name: intro63
-    x: 605
+    x: 1830
     y: 1468
     width: 604
     height: 286
@@ -861,8 +861,8 @@ MonoBehaviour:
     paddingTop: 46
     paddingBottom: 28
   - name: intro64
-    x: 605
-    y: 1181
+    x: 2446
+    y: 1762
     width: 604
     height: 286
     borderLeft: 0
@@ -874,8 +874,8 @@ MonoBehaviour:
     paddingTop: 46
     paddingBottom: 28
   - name: intro65
-    x: 605
-    y: 894
+    x: 3051
+    y: 1762
     width: 604
     height: 286
     borderLeft: 0
@@ -887,8 +887,8 @@ MonoBehaviour:
     paddingTop: 46
     paddingBottom: 28
   - name: intro66
-    x: 605
-    y: 607
+    x: 2446
+    y: 1475
     width: 604
     height: 286
     borderLeft: 0

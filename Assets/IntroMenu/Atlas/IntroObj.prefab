@@ -43,7 +43,7 @@ MonoBehaviour:
   mSprites:
   - name: cloud_1
     x: 0
-    y: 2619
+    y: 940
     width: 637
     height: 439
     borderLeft: 0
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 18
     paddingBottom: 43
   - name: cloud_2
-    x: 1524
-    y: 2757
+    x: 1518
+    y: 394
     width: 450
     height: 301
     borderLeft: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 86
     paddingBottom: 59
   - name: creditos
-    x: 1044
-    y: 2477
+    x: 1340
+    y: 51
     width: 250
     height: 141
     borderLeft: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
     paddingTop: 6
     paddingBottom: 0
   - name: fb_button
-    x: 0
-    y: 1894
+    x: 443
+    y: 335
     width: 226
     height: 258
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 51
     paddingBottom: 0
   - name: flecha_der_01
-    x: 210
-    y: 1554
+    x: 938
+    y: 254
     width: 133
     height: 339
     borderLeft: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_02
-    x: 210
-    y: 194
+    x: 804
+    y: 254
     width: 133
     height: 339
     borderLeft: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
     paddingBottom: 11
   - name: flecha_der_03
     x: 210
-    y: 874
+    y: 238
     width: 133
     height: 339
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_04
-    x: 0
-    y: 263
+    x: 670
+    y: 254
     width: 133
     height: 339
     borderLeft: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_05
-    x: 210
-    y: 1214
+    x: 1206
+    y: 13
     width: 133
     height: 339
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_06
-    x: 210
-    y: 534
+    x: 1072
+    y: 13
     width: 133
     height: 339
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_07
-    x: 0
-    y: 1284
+    x: 1903
+    y: 54
     width: 134
     height: 339
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_08
-    x: 1899
-    y: 3455
+    x: 1871
+    y: 730
     width: 134
     height: 339
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_09
-    x: 0
-    y: 944
+    x: 1862
+    y: 1709
     width: 134
     height: 339
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 16
     paddingBottom: 11
   - name: flecha_der_10
-    x: 0
-    y: 603
+    x: 1899
+    y: 1368
     width: 133
     height: 340
     borderLeft: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
     paddingBottom: 10
   - name: inst_button
     x: 1674
-    y: 3510
+    y: 1395
     width: 224
     height: 284
     borderLeft: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 25
     paddingBottom: 0
   - name: memoria_1@2x
-    x: 1524
-    y: 2627
+    x: 1591
+    y: 63
     width: 197
     height: 129
     borderLeft: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
     paddingTop: 150
     paddingBottom: 123
   - name: memoria_2@2x
-    x: 0
-    y: 2153
+    x: 1466
+    y: 1070
     width: 562
     height: 242
     borderLeft: 0
@@ -263,8 +263,8 @@ MonoBehaviour:
     paddingTop: 97
     paddingBottom: 63
   - name: memoria_3@2x
-    x: 0
-    y: 2396
+    x: 443
+    y: 594
     width: 658
     height: 222
     borderLeft: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
     paddingTop: 117
     paddingBottom: 63
   - name: memoria_4@2x
-    x: 1025
-    y: 3842
+    x: 638
+    y: 1058
     width: 827
     height: 254
     borderLeft: 0
@@ -289,8 +289,8 @@ MonoBehaviour:
     paddingTop: 66
     paddingBottom: 82
   - name: memoria_5@2x
-    x: 837
-    y: 3185
+    x: 638
+    y: 817
     width: 789
     height: 240
     borderLeft: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
     paddingBottom: 88
   - name: mountains
     x: 0
-    y: 3795
+    y: 1747
     width: 1024
     height: 301
     borderLeft: 0
@@ -315,8 +315,8 @@ MonoBehaviour:
     paddingTop: 275
     paddingBottom: 0
   - name: setfoto_1@2x
-    x: 1853
-    y: 3999
+    x: 443
+    y: 842
     width: 181
     height: 97
     borderLeft: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
     paddingTop: 139
     paddingBottom: 166
   - name: setfoto_2@2x
-    x: 659
-    y: 2418
+    x: 1518
+    y: 193
     width: 384
     height: 200
     borderLeft: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
     paddingTop: 97
     paddingBottom: 105
   - name: setfoto_3@2x
-    x: 0
-    y: 3426
+    x: 1025
+    y: 1680
     width: 836
     height: 368
     borderLeft: 0
@@ -354,8 +354,8 @@ MonoBehaviour:
     paddingTop: 17
     paddingBottom: 17
   - name: setfoto_4@2x
-    x: 0
-    y: 3059
+    x: 837
+    y: 1313
     width: 836
     height: 366
     borderLeft: 0
@@ -367,8 +367,8 @@ MonoBehaviour:
     paddingTop: 19
     paddingBottom: 17
   - name: setfoto_5@2x
-    x: 837
-    y: 3428
+    x: 0
+    y: 1380
     width: 836
     height: 366
     borderLeft: 0
@@ -380,8 +380,8 @@ MonoBehaviour:
     paddingTop: 19
     paddingBottom: 17
   - name: star_1
-    x: 1627
-    y: 3083
+    x: 1102
+    y: 353
     width: 415
     height: 342
     borderLeft: 0
@@ -393,8 +393,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: star_2
-    x: 638
-    y: 2697
+    x: 1428
+    y: 696
     width: 442
     height: 361
     borderLeft: 0
@@ -406,8 +406,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 7
   - name: star_3
-    x: 1081
-    y: 2697
+    x: 0
+    y: 578
     width: 442
     height: 361
     borderLeft: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
     paddingBottom: 7
   - name: yt_button
     x: 0
-    y: 1624
+    y: 308
     width: 209
     height: 269
     borderLeft: 0
