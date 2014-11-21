@@ -46,7 +46,10 @@ public class SetDificulty : MonoBehaviour
        
 
     }
+    public void GoToIntro(){
+        LoadLevelManager.Instance.LoadLevelImmediate ("Intro");
 
+    }
     //Our wait function //Se usa este porque pdes cambiar el el time
     IEnumerator Wait(float duration)
     {
