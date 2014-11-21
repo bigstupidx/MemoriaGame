@@ -43,7 +43,7 @@ MonoBehaviour:
   mSprites:
   - name: atras_boton
     x: 688
-    y: 1133
+    y: 542
     width: 831
     height: 338
     borderLeft: 0
@@ -54,9 +54,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: borde_foto
+    x: 0
+    y: 74
+    width: 577
+    height: 714
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 7
+    paddingTop: 18
+    paddingBottom: 7
   - name: botom_guardar
-    x: 169
-    y: 22
+    x: 1485
+    y: 907
     width: 168
     height: 175
     borderLeft: 0
@@ -68,8 +81,8 @@ MonoBehaviour:
     paddingTop: 14
     paddingBottom: 18
   - name: boton_camara
-    x: 688
-    y: 744
+    x: 1277
+    y: 1083
     width: 391
     height: 388
     borderLeft: 0
@@ -81,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: boton_compartir
-    x: 0
-    y: 22
+    x: 1879
+    y: 1005
     width: 168
     height: 175
     borderLeft: 0
@@ -94,8 +107,8 @@ MonoBehaviour:
     paddingTop: 14
     paddingBottom: 18
   - name: boton_foto
-    x: 1080
-    y: 931
+    x: 1277
+    y: 881
     width: 207
     height: 201
     borderLeft: 0
@@ -108,7 +121,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: boton_gal
     x: 688
-    y: 356
+    y: 154
     width: 387
     height: 387
     borderLeft: 0
@@ -119,9 +132,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: chiche
+    x: 1891
+    y: 1980
+    width: 70
+    height: 68
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 15
+    paddingRight: 14
+    paddingTop: 16
+    paddingBottom: 15
   - name: continuar
-    x: 1774
-    y: 1252
+    x: 1669
+    y: 961
     width: 209
     height: 219
     borderLeft: 0
@@ -133,7 +159,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: esquinatal_photobooth
-    x: 1520
+    x: 1669
     y: 1181
     width: 253
     height: 290
@@ -159,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: fondo_marco_izq_o_der
-    x: 0
-    y: 198
+    x: 688
+    y: 881
     width: 588
     height: 590
     borderLeft: 0
@@ -185,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: regresar
-    x: 688
-    y: 136
+    x: 1520
+    y: 661
     width: 209
     height: 219
     borderLeft: 0
@@ -211,7 +237,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: textura_fondo_photobooth
-    x: 1891
+    x: 1962
     y: 2044
     width: 4
     height: 4

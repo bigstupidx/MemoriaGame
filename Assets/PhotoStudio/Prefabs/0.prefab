@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -353.706512, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0265808105, y: 0, z: 0}
+  m_LocalPosition: {x: 7, y: -51.9999924, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -163,7 +163,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
-  mTexture: {fileID: 0}
+  mTexture: {fileID: 2800000, guid: 4e0166bb4bd8f488db4e9ae25874a545, type: 3}
   mMat: {fileID: 0}
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -181,29 +181,29 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 400000}
     relative: 0
-    absolute: 0
+    absolute: -53
   rightAnchor:
     target: {fileID: 400000}
     relative: 1
-    absolute: 0
+    absolute: 67
   bottomAnchor:
     target: {fileID: 400000}
     relative: 0
-    absolute: 0
+    absolute: -162
   topAnchor:
     target: {fileID: 400000}
     relative: 1
-    absolute: 0
+    absolute: 58
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 326
-  mHeight: 326
+  mWidth: 446
+  mHeight: 546
   mDepth: 6
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1
+  aspectRatio: .816849828
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: a950f7f4b244344a1801d81f4933147b, type: 2}
-  mSpriteName: fondo_marco_izq_o_der
+  mSpriteName: borde_foto
   mFillCenter: 1
 --- !u!1001 &100100000
 Prefab:
