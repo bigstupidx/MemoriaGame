@@ -143,25 +143,28 @@ public class UISpriteAnimationLimit : MonoBehaviour
             }
         }
     }
+    public void FinishedCall(){
+        if (onFinished != null)
+        {
+            mTemp = onFinished;
+            onFinished = new List<EventDelegate>();
+
+            // Notify the listener delegates
+            EventDelegate.Execute(mTemp);
+
+            // Re-add the previous persistent delegates
+            for (int i = 0; i < mTemp.Count; ++i)
+            {
+                EventDelegate ed = mTemp[i];
+                if (ed != null && !ed.oneShot) EventDelegate.Add(onFinished, ed, ed.oneShot);
+            }
+            mTemp = null;
+        }
+    }
     protected void CallOnFinished(){
         if (!mActive)
         {
-            if (onFinished != null)
-            {
-                mTemp = onFinished;
-                onFinished = new List<EventDelegate>();
-
-                // Notify the listener delegates
-                EventDelegate.Execute(mTemp);
-
-                // Re-add the previous persistent delegates
-                for (int i = 0; i < mTemp.Count; ++i)
-                {
-                    EventDelegate ed = mTemp[i];
-                    if (ed != null && !ed.oneShot) EventDelegate.Add(onFinished, ed, ed.oneShot);
-                }
-                mTemp = null;
-            }
+            FinishedCall ();
         }
     }
     /// <summary>

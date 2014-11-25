@@ -70,7 +70,7 @@ public abstract class ISN_Singleton<T> : EventDispatcher where T : MonoBehaviour
 	protected override void OnDestroy () {
 		base.OnDestroy();
 		_instance = null;
-		applicationIsQuitting = true;
+	//	applicationIsQuitting = true;
 	}
 	
 	protected virtual void OnApplicationQuit () {

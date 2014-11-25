@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0572b5693659481e8d1c14d4063df0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bg_01: {fileID: 8300000, guid: ae2be59813cd744fba68597d9ecec8aa, type: 3}
+  bg_01: {fileID: 8300000, guid: cb8a36820c3cd4b8db5524fe7c13dbcf, type: 3}
   bg_02: {fileID: 8300000, guid: a2c3f50b2d73f4c8ca68df512e6e576a, type: 3}
   bg_Loser: {fileID: 8300000, guid: 0c3a4208e1ac94da18d4dfc69ce76f9c, type: 3}
   bg_win01: {fileID: 8300000, guid: 1a277e7eacfd94d0c801afb757a6fbdb, type: 3}
