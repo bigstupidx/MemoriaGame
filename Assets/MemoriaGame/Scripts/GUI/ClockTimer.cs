@@ -40,12 +40,16 @@ public class ClockTimer : MonoBehaviour {
         
     
 	}
+    bool firstRun=true;
     void OnEnable(){
-        ManagerPause.SubscribeOnPauseGame(onPaused);
-        ManagerPause.SubscribeOnResumeGame( onResume);
+        if (!firstRun) {
+            ManagerTime.Instance.onTimeGameEnd += StopAllSound;
+
+            ManagerPause.SubscribeOnPauseGame (onPaused);
+            ManagerPause.SubscribeOnResumeGame (onResume);
+        }
     }
     void OnDisable(){
-
         ManagerPause.UnSubscribeOnPauseGame(onPaused);
         ManagerPause.UnSubscribeOnResumeGame(onResume);
     }
@@ -53,6 +57,13 @@ public class ClockTimer : MonoBehaviour {
         magicConstTime = 100.0f / ManagerTime.Instance.TimeOfGame;
 
         ManagerTime.Instance.onTimeGameEnd += StopAllSound;
+        ManagerPause.SubscribeOnPauseGame (onPaused);
+        ManagerPause.SubscribeOnResumeGame (onResume);
+
+        ManagerTime.Instance.onStopTime.Add (new Signal("onPausedFreezee",gameObject)); 
+        ManagerTime.Instance.onPlayTime.Add (new Signal("onResumeFreeze",gameObject));  
+
+        firstRun = false;
 
     }
     void StopAllSound () {
@@ -74,12 +85,30 @@ public class ClockTimer : MonoBehaviour {
             audio.Stop ();
 
     }
-    public void onResume(){
-        tweenRota.from = currentStop;
+    [Signal]
+    public void onPausedFreezee(){
+        tweenRota.enabled = false;
+        currentStop = new Vector3(0,0,Mathf.Rad2Deg *  Arrow.transform.rotation.z * 2.0f);
 
-        tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
-        tweenRota.from = currentStop;
-        tweenRota.to = new Vector3(0,0,-90);
+       
+    }
+    [Signal]
+    public void onResumeFreeze(){
+            tweenRota.from = currentStop;
+
+            tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
+            tweenRota.from = currentStop;
+            tweenRota.to = new Vector3 (0, 0, -90);
+
+    }
+    public void onResume(){
+        if (!isFreezing) {
+            tweenRota.from = currentStop;
+
+            tweenRota = TweenRotation.Begin (Arrow.gameObject, ManagerTime.Instance.getCurrentTimeOfGame, Quaternion.identity);
+            tweenRota.from = currentStop;
+            tweenRota.to = new Vector3 (0, 0, -90);
+        }
 
         if(isFreezing || playRed)
             audio.Play ();
@@ -118,6 +147,7 @@ public class ClockTimer : MonoBehaviour {
 
     }
     public void NotFreeze(){
+
         isFreezing = false;
         freezeAnimation.Pause ();
         Arrow.sprite2D = ArrowSprite;
@@ -152,10 +182,10 @@ public class ClockTimer : MonoBehaviour {
     }
 
     void Update(){
-        if (isTimeGameStart) {
+        if (isTimeGameStart && !isFreezing) {
             float value = (magicConstTime * ManagerTime.Instance.getCurrentTimeOfGame);
             if (value <= toExplode) {
-                if (!animSpriteRed.isPlaying && !isFreezing) {
+                if (!animSpriteRed.isPlaying) {
                     scaleArrow.PlayForward ();
                     animSpriteRed.Play ();
                     playRed = true;
@@ -163,7 +193,7 @@ public class ClockTimer : MonoBehaviour {
                     AudioRedPlay ();
                 }
             } else if (value <= toYellow) {
-                if (!playYellow && !isFreezing) {
+                if (!playYellow) {
                     animSpriteYellow.Play ();
                     playYellow = true;
 

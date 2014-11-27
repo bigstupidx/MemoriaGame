@@ -24,6 +24,9 @@ public class PowerOff : MonoBehaviour {
         
             return !Locked && !used && button.isEnabled;
         }
+        set{
+            button.isEnabled = value;
+        }
     }
 
     protected UIButton button;

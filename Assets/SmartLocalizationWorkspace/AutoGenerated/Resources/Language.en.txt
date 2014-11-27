@@ -116,7 +116,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-	<data name="MyFirst.Key" xml:space="preserve">
-		<value />
+	<data name="[type=GAME_OBJECT]LoLograsteSprite" xml:space="preserve">
+		<value>ee4973eb988f4410a8d69cd926660125</value>
+	</data>
+	<data name="[type=GAME_OBJECT]TiempoFueraSprite" xml:space="preserve">
+		<value>42a5b939d0dd144ee81b8686405512b0</value>
+	</data>
+	<data name="[type=GAME_OBJECT]VictoriaSprite" xml:space="preserve">
+		<value>ff2c4fd1a6ea740afa993f15813813a6</value>
+	</data>
+	<data name="[type=GAME_OBJECT]VuelveIntertarSprite" xml:space="preserve">
+		<value>8c9879a76724c4ce4b461a43ee037f03</value>
 	</data>
 </root>

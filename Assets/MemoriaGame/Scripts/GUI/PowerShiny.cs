@@ -11,13 +11,35 @@ public class PowerShiny : MonoBehaviour {
     public const float TimeRepeat = 7.0f;
     bool play = true;
     TimeCallBacks timer  = new TimeCallBacks();
+    bool firstRun = true;
 
     void Awake(){
         button = GetComponent<PowerOff> ();
     }
+    void Start(){
+        ManagerTime.Instance.onTimeGameEnd += GameFinished;
+        firstRun = false;
+        ManagerPause.SubscribeOnPauseGame (onPaused);
+        ManagerPause.SubscribeOnResumeGame (onResume);
+    }
+    void OnEnable(){
+        if (!firstRun) {
+            ManagerPause.SubscribeOnPauseGame (onPaused);
+            ManagerPause.SubscribeOnResumeGame (onResume);
+        }
+    }
+    void OnDisable(){
+
+        ManagerPause.UnSubscribeOnPauseGame(onPaused);
+        ManagerPause.UnSubscribeOnResumeGame(onResume);
+    }
+    void GameFinished(){
+
+        button.isEnabled = false;
+    }
 	// Update is called once per frame
 	void LateUpdate () {
-        if (button.isEnabled) {
+        if (button.isEnabled && !isPaused) {
         
             if (play) {
 
@@ -51,4 +73,17 @@ public class PowerShiny : MonoBehaviour {
        // anim.ResetToBeginning ();
 
     }
+
+    #region Paused
+    bool isPaused = false;
+    void onPaused(){
+        isPaused = true;
+
+    }
+    void onResume(){
+        isPaused = false;
+
+    }
+    #endregion
+
 }

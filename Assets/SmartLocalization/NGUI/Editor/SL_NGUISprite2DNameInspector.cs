@@ -3,9 +3,9 @@
 // Copyright (c) 2013-2014 Niklas Borglund, Jakob Hillerström
 //
 
-//#define SMART_LOC_NGUI //<--- UNCOMMENT THIS FOR NGUI CLASSES
+#define SMART_LOC_NGUI //<--- UNCOMMENT THIS FOR NGUI CLASSES
 
-//#if SMART_LOC_NGUI
+#if SMART_LOC_NGUI
 namespace SmartLocalization.Editor
 {
 using UnityEngine;
@@ -28,7 +28,7 @@ public override void OnInspectorGUI()
         {
             base.OnInspectorGUI ();
 
-            selectedKey = LocalizedKeySelector.SelectKeyGUI (selectedKey, true, LocalizedObjectType.TEXTURE);
+            selectedKey = LocalizedKeySelector.SelectKeyGUI (selectedKey, true, LocalizedObjectType.GAME_OBJECT);
 
             if (!Application.isPlaying && GUILayout.Button ("Use Key", GUILayout.Width (70))) {
                 SL_NGUISprite2DName spriteObject = ((SL_NGUISprite2DName)target);       
@@ -37,5 +37,5 @@ public override void OnInspectorGUI()
         }
     }
 } //namespace SmartLocalization.Editor
-//#endif
+#endif
 

@@ -23,6 +23,9 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     bool firstRun = true;
     void Start(){
     
+        ManagerTime.Instance.onTimeGameEnd += GameFinished;
+
+
         firstRun = false;
         ManagerPause.SubscribeOnPauseGame (onPaused);
         ManagerPause.SubscribeOnResumeGame (onResume);
@@ -37,6 +40,13 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
 
         ManagerPause.UnSubscribeOnPauseGame(onPaused);
         ManagerPause.UnSubscribeOnResumeGame(onResume);
+    }
+    void GameFinished(){
+        if (usingPower) {
+
+            CancelInvoke ("DeActivePower");
+            DeActivePower ();
+        }
     }
     public void ActivePower(){
         if (isPaused || usedPower || !ManagerDoors.Instance.isFirstOpen ){
@@ -80,7 +90,7 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
 
     }
 
-    void Update(){
+    void LateUpdate(){
     
         if (usingPower) {
 

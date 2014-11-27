@@ -3,9 +3,9 @@
 // Copyright (c) 2013-2014 Niklas Borglund, Jakob Hillerström
 //
 
-//#define SMART_LOC_NGUI //<--- UNCOMMENT THIS FOR NGUI CLASSES
+#define SMART_LOC_NGUI //<--- UNCOMMENT THIS FOR NGUI CLASSES
 
-//#if SMART_LOC_NGUI
+#if SMART_LOC_NGUI
 using UnityEngine;
 using System.Collections;
 using SmartLocalization;
@@ -43,4 +43,4 @@ public class SL_NGUISprite2DName : MonoBehaviour
         }
     }     
 }
-//#endif
+#endif
