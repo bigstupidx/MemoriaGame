@@ -116,8 +116,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="Cargando" xml:space="preserve">
+		<value>loading ...</value>
+	</data>
+	<data name="Foto_Title_Galeria" xml:space="preserve">
+		<value>galery</value>
+	</data>
+	<data name="Foto_Title_Plantilla" xml:space="preserve">
+		<value>pick your template</value>
+	</data>
+	<data name="Foto_Title_Tomar" xml:space="preserve">
+		<value>take photo</value>
+	</data>
+	<data name="[type=GAME_OBJECT]IntroObjAtlas" xml:space="preserve">
+		<value>d4003087b87bd4c7eb09649396b3bbc2</value>
+	</data>
 	<data name="[type=GAME_OBJECT]LoLograsteSprite" xml:space="preserve">
 		<value>ee4973eb988f4410a8d69cd926660125</value>
+	</data>
+	<data name="Memoria_Atras" xml:space="preserve">
+		<value>back</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Atras" xml:space="preserve">
+		<value>0c941b6e301894fb4b73007ebf71764f</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Dificil" xml:space="preserve">
+		<value>2d0dbb684d37a448d955aa357205a225</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Dificultad" xml:space="preserve">
+		<value>7c3db048724ab4ebf9c22a88e34ac9e0</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Facil" xml:space="preserve">
+		<value>3674e69c95548479194bcdb3beaa82fb</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Titulo" xml:space="preserve">
+		<value>df36263e8f6774b2db5f846664d768a7</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Reiniciar" xml:space="preserve">
+		<value>4e398adcc7bb7483491a87307eb461d4</value>
+	</data>
+	<data name="Memoria_Tutorial_0" xml:space="preserve">
+		<value>tati likes to share, she will help you to play quicker by giving you a free pair.</value>
+	</data>
+	<data name="Memoria_Tutorial_1" xml:space="preserve">
+		<value>tica freezes the clock and will give you extra time to keep playing.</value>
+	</data>
+	<data name="Memoria_Tutorial_2" xml:space="preserve">
+		<value>tico and his tricks will let you take a peek under a row or column you choose.</value>
+	</data>
+	<data name="Memoria_Tutorial_3" xml:space="preserve">
+		<value>if you have any object open timi will give you some leads to find its pair.</value>
+	</data>
+	<data name="Memoria_Tutorial_4" xml:space="preserve">
+		<value>topi helps you to get a big score, for a brief time you will have double the points per pair.</value>
+	</data>
+	<data name="[type=GAME_OBJECT]SetFotografico" xml:space="preserve">
+		<value>62f7ac1139bc4420aa8cfc77a5186b5b</value>
 	</data>
 	<data name="[type=GAME_OBJECT]TiempoFueraSprite" xml:space="preserve">
 		<value>42a5b939d0dd144ee81b8686405512b0</value>

@@ -116,7 +116,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="Cargando" xml:space="preserve">
+		<value>cargando ...</value>
+	</data>
+	<data name="Foto_Title_Galeria" xml:space="preserve">
+		<value>galeria</value>
+	</data>
+	<data name="Foto_Title_Plantilla" xml:space="preserve">
+		<value>escoge tu plantilla</value>
+	</data>
+	<data name="Foto_Title_Tomar" xml:space="preserve">
+		<value>toma la foto</value>
+	</data>
+	<data name="[type=GAME_OBJECT]IntroObjAtlas" xml:space="preserve">
+		<value />
+	</data>
 	<data name="[type=GAME_OBJECT]LoLograsteSprite" xml:space="preserve">
+		<value />
+	</data>
+	<data name="Memoria_Atras" xml:space="preserve">
+		<value>atrás</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Atras" xml:space="preserve">
+		<value>back
+</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Dificil" xml:space="preserve">
+		<value />
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Dificultad" xml:space="preserve">
+		<value />
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Facil" xml:space="preserve">
+		<value />
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Titulo" xml:space="preserve">
+		<value />
+	</data>
+	<data name="Memoria_Tutorial_0" xml:space="preserve">
+		<value>a tati le gusta compartir, te ayudará a que avances más rápido regalándote un par.</value>
+	</data>
+	<data name="Memoria_Tutorial_1" xml:space="preserve">
+		<value>tica congelará el reloj y así te dará algunos segundos de ventaja para seguir jugando.</value>
+	</data>
+	<data name="Memoria_Tutorial_2" xml:space="preserve">
+		<value>tico con sus tremenduras te dejará ver rápidamente todo lo que hay en una hilera que escojas.</value>
+	</data>
+	<data name="Memoria_Tutorial_3" xml:space="preserve">
+		<value>si tienes un objeto descubierto timi te dará algunas pistas para encontrar su par.</value>
+	</data>
+	<data name="Memoria_Tutorial_4" xml:space="preserve">
+		<value>topi te ayuda a tener un mayor puntaje, por algunos segundos tendrás doble puntos por jugada.</value>
+	</data>
+	<data name="[type=GAME_OBJECT]SetFotografico" xml:space="preserve">
 		<value />
 	</data>
 	<data name="[type=GAME_OBJECT]TiempoFueraSprite" xml:space="preserve">
@@ -127,5 +179,8 @@
 	</data>
 	<data name="[type=GAME_OBJECT]VuelveIntertarSprite" xml:space="preserve">
 		<value />
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Reiniciar" xml:space="preserve">
+		<value>reiniciar</value>
 	</data>
 </root>

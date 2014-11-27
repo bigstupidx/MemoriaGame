@@ -1,0 +1,449 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: IntroObjAtlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 2c3107db437cc4c2ebaaacdb05f18306, type: 2}
+  mSprites:
+  - name: cloud_1
+    x: 0
+    y: 940
+    width: 637
+    height: 439
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 56
+    paddingRight: 0
+    paddingTop: 18
+    paddingBottom: 43
+  - name: cloud_2
+    x: 1518
+    y: 394
+    width: 450
+    height: 301
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 69
+    paddingRight: 37
+    paddingTop: 86
+    paddingBottom: 59
+  - name: creditos
+    x: 1340
+    y: 51
+    width: 250
+    height: 141
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 6
+    paddingBottom: 0
+  - name: fb_button
+    x: 443
+    y: 335
+    width: 226
+    height: 258
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 10
+    paddingTop: 51
+    paddingBottom: 0
+  - name: flecha_der_01
+    x: 938
+    y: 254
+    width: 133
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 5
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_02
+    x: 804
+    y: 254
+    width: 133
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 5
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_03
+    x: 210
+    y: 238
+    width: 133
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 5
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_04
+    x: 670
+    y: 254
+    width: 133
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 5
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_05
+    x: 1206
+    y: 13
+    width: 133
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 5
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_06
+    x: 1072
+    y: 13
+    width: 133
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 5
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_07
+    x: 1903
+    y: 54
+    width: 134
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 4
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_08
+    x: 1871
+    y: 730
+    width: 134
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 4
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_09
+    x: 1862
+    y: 1709
+    width: 134
+    height: 339
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 4
+    paddingTop: 16
+    paddingBottom: 11
+  - name: flecha_der_10
+    x: 1899
+    y: 1368
+    width: 133
+    height: 340
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 5
+    paddingTop: 16
+    paddingBottom: 10
+  - name: inst_button
+    x: 1674
+    y: 1395
+    width: 224
+    height: 284
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 19
+    paddingTop: 25
+    paddingBottom: 0
+  - name: memoria_1@2x
+    x: 1591
+    y: 63
+    width: 197
+    height: 129
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 347
+    paddingRight: 321
+    paddingTop: 150
+    paddingBottom: 123
+  - name: memoria_2@2x
+    x: 1466
+    y: 1070
+    width: 562
+    height: 242
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 158
+    paddingRight: 145
+    paddingTop: 97
+    paddingBottom: 63
+  - name: memoria_3@2x
+    x: 443
+    y: 594
+    width: 658
+    height: 222
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 100
+    paddingRight: 107
+    paddingTop: 117
+    paddingBottom: 63
+  - name: memoria_4@2x
+    x: 638
+    y: 1058
+    width: 827
+    height: 254
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 19
+    paddingRight: 19
+    paddingTop: 66
+    paddingBottom: 82
+  - name: memoria_5@2x
+    x: 638
+    y: 817
+    width: 789
+    height: 240
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 26
+    paddingRight: 50
+    paddingTop: 74
+    paddingBottom: 88
+  - name: mountains
+    x: 0
+    y: 1747
+    width: 1024
+    height: 301
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 275
+    paddingBottom: 0
+  - name: setfoto_1@2x
+    x: 443
+    y: 842
+    width: 181
+    height: 97
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 332
+    paddingRight: 352
+    paddingTop: 139
+    paddingBottom: 166
+  - name: setfoto_2@2x
+    x: 1518
+    y: 193
+    width: 384
+    height: 200
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 219
+    paddingRight: 262
+    paddingTop: 97
+    paddingBottom: 105
+  - name: setfoto_3@2x
+    x: 1025
+    y: 1680
+    width: 836
+    height: 368
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 17
+    paddingTop: 17
+    paddingBottom: 17
+  - name: setfoto_4@2x
+    x: 837
+    y: 1313
+    width: 836
+    height: 366
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 17
+    paddingTop: 19
+    paddingBottom: 17
+  - name: setfoto_5@2x
+    x: 0
+    y: 1380
+    width: 836
+    height: 366
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 17
+    paddingTop: 19
+    paddingBottom: 17
+  - name: star_1
+    x: 1102
+    y: 353
+    width: 415
+    height: 342
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 11
+    paddingTop: 0
+    paddingBottom: 0
+  - name: star_2
+    x: 1428
+    y: 696
+    width: 442
+    height: 361
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 6
+    paddingTop: 3
+    paddingBottom: 7
+  - name: star_3
+    x: 0
+    y: 578
+    width: 442
+    height: 361
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 6
+    paddingTop: 3
+    paddingBottom: 7
+  - name: yt_button
+    x: 0
+    y: 308
+    width: 209
+    height: 269
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 19
+    paddingRight: 17
+    paddingTop: 40
+    paddingBottom: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

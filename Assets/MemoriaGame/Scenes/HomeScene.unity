@@ -336,7 +336,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 252982323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -640.248413, y: 360, z: 0}
+  m_LocalPosition: {x: -639.414185, y: 360, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 558870522}
@@ -371,8 +371,8 @@ MonoBehaviour:
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 0
-  mWidth: 352
-  mHeight: 404
+  mWidth: 351
+  mHeight: 403
   mDepth: 6
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -406,6 +406,7 @@ GameObject:
   - 114: {fileID: 323430819}
   - 82: {fileID: 323430822}
   - 114: {fileID: 323430821}
+  - 114: {fileID: 323430823}
   m_Layer: 5
   m_Name: dificil
   m_TagString: Untagged
@@ -420,7 +421,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 323430816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 246.518555, y: -31.4999924, z: 0}
+  m_LocalPosition: {x: 246.325958, y: -31.4999924, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 765605095}
@@ -472,7 +473,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mSprite: {fileID: 21300002, guid: 1e098340369cf4e50af310414fa6e36e, type: 3}
+  mSprite: {fileID: 0}
   mMat: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -591,6 +592,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &323430823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 323430816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c45ab172a94f5c9d2c5827632a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Intro_Dificil
 --- !u!1 &436045810
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +861,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 730126646}
   - 114: {fileID: 730126647}
+  - 114: {fileID: 730126648}
   m_Layer: 5
   m_Name: LoadingText
   m_TagString: Untagged
@@ -930,6 +944,18 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &730126648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 730126645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6c2143dac05ac4c90a25316e71b978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Cargando
 --- !u!1 &765605094
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,13 +1017,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1280
+  mWidth: 1279
   mHeight: 241
   mDepth: 2
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.31120348
+  aspectRatio: 5.30705404
 --- !u!1001 &824426919
 Prefab:
   m_ObjectHideFlags: 0
@@ -1067,6 +1093,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 955427743}
   - 114: {fileID: 955427744}
+  - 114: {fileID: 955427745}
   m_Layer: 5
   m_Name: Dificultad
   m_TagString: Untagged
@@ -1116,8 +1143,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 472
-  mHeight: 104
+  mWidth: 471
+  mHeight: 103
   mDepth: 5
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1138,6 +1165,18 @@ MonoBehaviour:
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
   nextSprite: {fileID: 0}
+--- !u!114 &955427745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955427742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c45ab172a94f5c9d2c5827632a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Intro_Dificultad
 --- !u!1 &1188835329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1188,7 @@ GameObject:
   - 114: {fileID: 1188835331}
   - 65: {fileID: 1188835333}
   - 114: {fileID: 1188835332}
+  - 114: {fileID: 1188835334}
   m_Layer: 5
   m_Name: atras
   m_TagString: Untagged
@@ -1163,7 +1203,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1188835329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -138.720474, y: -222, z: 0}
+  m_LocalPosition: {x: -138.539719, y: -222, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 558870522}
@@ -1215,7 +1255,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mSprite: {fileID: 21300000, guid: 1e098340369cf4e50af310414fa6e36e, type: 3}
+  mSprite: {fileID: 0}
   mMat: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -1261,6 +1301,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 256, y: 126, z: 0}
   m_Center: {x: 128, y: -63, z: 0}
+--- !u!114 &1188835334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1188835329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c45ab172a94f5c9d2c5827632a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Intro_Atras
 --- !u!1 &1267051143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1336,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267051143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 268.522003, y: 360, z: 0}
+  m_LocalPosition: {x: 268.172119, y: 360, z: 0}
   m_LocalScale: {x: 1.00007999, y: 1.00007999, z: 1.00007999}
   m_Children: []
   m_Father: {fileID: 558870522}
@@ -1319,8 +1371,8 @@ MonoBehaviour:
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 0
-  mWidth: 372
-  mHeight: 427
+  mWidth: 371
+  mHeight: 426
   mDepth: 6
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1354,6 +1406,7 @@ GameObject:
   - 114: {fileID: 1282463038}
   - 82: {fileID: 1282463041}
   - 114: {fileID: 1282463040}
+  - 114: {fileID: 1282463042}
   m_Layer: 5
   m_Name: facil
   m_TagString: Untagged
@@ -1368,7 +1421,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282463035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -422.666687, y: 15.2500057, z: 0}
+  m_LocalPosition: {x: -422.336426, y: 15.2500057, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 765605095}
@@ -1420,7 +1473,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mSprite: {fileID: 21300006, guid: 1e098340369cf4e50af310414fa6e36e, type: 3}
+  mSprite: {fileID: 0}
   mMat: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -1539,6 +1592,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1282463042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282463035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c45ab172a94f5c9d2c5827632a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Intro_Facil
 --- !u!1 &1297621315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1613,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1297621316}
   - 114: {fileID: 1297621317}
+  - 114: {fileID: 1297621318}
   m_Layer: 5
   m_Name: NameJuego
   m_TagString: Untagged
@@ -1619,6 +1685,18 @@ MonoBehaviour:
   mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   mBorder: {x: 0, y: 0, z: 0, w: 0}
   nextSprite: {fileID: 0}
+--- !u!114 &1297621318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1297621315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c45ab172a94f5c9d2c5827632a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Intro_Titulo
 --- !u!1 &1795931235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,10 +2095,10 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1280
+  mWidth: 1279
   mHeight: 228
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.61403513
+  aspectRatio: 5.60964918

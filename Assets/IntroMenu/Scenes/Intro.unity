@@ -194,6 +194,7 @@ GameObject:
   - 114: {fileID: 62936701}
   - 65: {fileID: 62936704}
   - 114: {fileID: 62936703}
+  - 114: {fileID: 62936705}
   m_Layer: 5
   m_Name: credits
   m_TagString: Untagged
@@ -339,6 +340,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 206, y: 119, z: 0}
   m_Center: {x: 103, y: 59.5, z: 0}
+--- !u!114 &62936705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 62936699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399e531631dda5144ab28ff017e43a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: IntroObjAtlas
 --- !u!1 &116326976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1093,7 @@ GameObject:
   - 114: {fileID: 295698134}
   - 65: {fileID: 295698137}
   - 114: {fileID: 295698136}
+  - 114: {fileID: 295698138}
   m_Layer: 5
   m_Name: facebook
   m_TagString: Untagged
@@ -1229,6 +1243,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 127, y: 159, z: 0}
   m_Center: {x: 63.5, y: 79.5, z: 0}
+--- !u!114 &295698138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295698132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399e531631dda5144ab28ff017e43a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: IntroObjAtlas
 --- !u!1 &310295148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1626,7 @@ GameObject:
   - 4: {fileID: 837310521}
   - 114: {fileID: 837310523}
   - 114: {fileID: 837310522}
+  - 114: {fileID: 837310524}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1684,6 +1711,18 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 508c2be143c034d2786ffe7837f8ea93, type: 2}
   mSpriteName: setfoto_1@2x
   mFillCenter: 1
+--- !u!114 &837310524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837310520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399e531631dda5144ab28ff017e43a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: IntroObjAtlas
 --- !u!1 &877098159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2343,7 @@ GameObject:
   - 4: {fileID: 1286855468}
   - 114: {fileID: 1286855470}
   - 114: {fileID: 1286855469}
+  - 114: {fileID: 1286855471}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -2385,9 +2425,21 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 508c2be143c034d2786ffe7837f8ea93, type: 2}
+  mAtlas: {fileID: 11400000, guid: d4003087b87bd4c7eb09649396b3bbc2, type: 2}
   mSpriteName: memoria_1@2x
   mFillCenter: 1
+--- !u!114 &1286855471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286855467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399e531631dda5144ab28ff017e43a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: IntroObjAtlas
 --- !u!1 &1618349113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2452,7 @@ GameObject:
   - 114: {fileID: 1618349115}
   - 65: {fileID: 1618349118}
   - 114: {fileID: 1618349117}
+  - 114: {fileID: 1618349119}
   m_Layer: 5
   m_Name: youtube
   m_TagString: Untagged
@@ -2549,6 +2602,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 127, y: 159, z: 0}
   m_Center: {x: 63.5, y: 79.5, z: 0}
+--- !u!114 &1618349119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1618349113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399e531631dda5144ab28ff017e43a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: IntroObjAtlas
 --- !u!1 &1759748908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,6 +2736,7 @@ GameObject:
   - 114: {fileID: 2070769232}
   - 65: {fileID: 2070769235}
   - 114: {fileID: 2070769234}
+  - 114: {fileID: 2070769236}
   m_Layer: 5
   m_Name: instagram
   m_TagString: Untagged
@@ -2820,6 +2886,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 126, y: 158, z: 0}
   m_Center: {x: 63, y: 79, z: 0}
+--- !u!114 &2070769236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070769230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399e531631dda5144ab28ff017e43a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: IntroObjAtlas
 --- !u!1 &2109461514
 GameObject:
   m_ObjectHideFlags: 0

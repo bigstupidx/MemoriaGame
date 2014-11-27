@@ -14,7 +14,7 @@ public class GUI_GaleriaManager : MonoBehaviour {
 
     ArrayList list;
 
-    public GameObject backgroundSelected;
+    public GUI_CenterBgPlantilla backgroundSelected;
 	// Use this for initialization
 	void Awake () {
         number = PlayerPrefs.GetInt("CountImages");
@@ -32,7 +32,27 @@ public class GUI_GaleriaManager : MonoBehaviour {
         return null;
 
     }
+
+    public void DeleteCurrentSelect(){
+        if (father.centeredObject != null) {
+            if (File.Exists (getPathFile ("TommyPlayground_" + father.centeredObject.name + ".png"))) {
+
+                father.enabled = false;
+
+                UITexture current = father.centeredObject.GetComponent<UITexture> ();
+                Erase (current);
+                System.IO.File.Delete (getPathFile ("TommyPlayground_" + father.centeredObject.name + ".png"));
+                backgroundSelected.AddFromOnCenter ();
+
+                father.enabled = true;
+                father.Recenter ();
+                //  --number;
+                //  PlayerPrefs.SetInt("CountImages",number);
+            }
+        }
+    }
     public void EnableAll(){
+
         Vector3 off = Vector3.right * offsetX;
         for (int i = 0; i < number; ++i)
         {
@@ -48,13 +68,28 @@ public class GUI_GaleriaManager : MonoBehaviour {
                 ((UITexture)list[list.Count - 1]).transform.localScale = new Vector3(1, 1, 1);
             }
         }
+        backgroundSelected.AddFromOnCenter ();
         father.enabled = true;
         father.Recenter();
     }
 
+    public void Erase(UITexture toErase){
+        backgroundSelected.RemoveFromOnCenter ();
 
+        for (int i = 0; i < list.Count; ++i)
+        {
+            if(toErase == ((UITexture)list[i])){
+
+              //  DestroyImmediate(((UITexture)list[i]).mainTexture,true);
+             //   ((UITexture)list[i]).Recycle();
+            //    list.RemoveAt (i);
+            }
+           
+        }
+
+    }
     public void EraseAll(){
-        backgroundSelected.transform.parent = father.transform.parent;
+        backgroundSelected.RemoveFromOnCenter ();
         Texture2D texture = getTextureOfCenter();
         for (int i = 0; i < list.Count; ++i)
         {

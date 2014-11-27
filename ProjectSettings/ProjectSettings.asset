@@ -109,8 +109,24 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 9b83e6bcaf648466b9ed091211c3c59b, type: 3}
       m_Size: 128
+  - m_BuildTarget: iPhone
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: be3abf7f7bc7741efbc0bcbec40ec6e2, type: 3}
+      m_Size: 152
+    - m_Icon: {fileID: 2800000, guid: a9e78f6433f704e138d26312c18cc591, type: 3}
+      m_Size: 144
+    - m_Icon: {fileID: 2800000, guid: 0c9ad90a5458a4ec182d0ae46cf8f7b4, type: 3}
+      m_Size: 120
+    - m_Icon: {fileID: 2800000, guid: 8bf109c5b25f049779b3b8e3482948c6, type: 3}
+      m_Size: 114
+    - m_Icon: {fileID: 2800000, guid: 35fd078867a56478aa60722b8382ae8a, type: 3}
+      m_Size: 76
+    - m_Icon: {fileID: 2800000, guid: 318d2821126a349d6a1f5708bd465716, type: 3}
+      m_Size: 72
+    - m_Icon: {fileID: 2800000, guid: e15802b17d4f247ab8d37251e613eafc, type: 3}
+      m_Size: 57
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}

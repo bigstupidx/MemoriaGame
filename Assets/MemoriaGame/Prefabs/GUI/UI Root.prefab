@@ -699,6 +699,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400074}
   - 114: {fileID: 11400148}
+  - 114: {fileID: 11400444}
   m_Layer: 5
   m_Name: Palabra_Reiniciar
   m_TagString: Untagged
@@ -763,6 +764,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400082}
   - 114: {fileID: 11400158}
+  - 114: {fileID: 11400438}
   m_Layer: 5
   m_Name: Name_JuegoMemoria
   m_TagString: Untagged
@@ -882,6 +884,7 @@ GameObject:
   - 114: {fileID: 11400184}
   - 82: {fileID: 8200012}
   - 114: {fileID: 11400394}
+  - 114: {fileID: 11400440}
   m_Layer: 5
   m_Name: Atras
   m_TagString: Untagged
@@ -1013,6 +1016,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400112}
   - 114: {fileID: 11400320}
+  - 114: {fileID: 11400446}
   m_Layer: 5
   m_Name: LoadingText
   m_TagString: Untagged
@@ -1224,6 +1228,7 @@ GameObject:
   - 114: {fileID: 11400408}
   - 82: {fileID: 8200042}
   - 114: {fileID: 11400412}
+  - 114: {fileID: 11400442}
   m_Layer: 5
   m_Name: Atras
   m_TagString: Untagged
@@ -12531,16 +12536,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 58ac4bc9f26734416bc349804ce989cb, type: 3}
   - {fileID: 21300000, guid: cde9e91a888024a9680c0ecfdbed26bc, type: 3}
   textTutorial:
-  - "a tati le gusta compartir, te ayudar\xE1 a que avances m\xE1s r\xE1pido regal\xE1ndote
-    un par."
-  - "tica congelar\xE1 el reloj y as\xED te dar\xE1 algunos segundos de ventaja para
-    seguir jugando."
-  - "tico con sus tremenduras te dejar\xE1 ver r\xE1pidamente todo lo que hay en una
-    hilera que escojas."
-  - "si tienes un objeto descubierto timi te dar\xE1 algunas pistas para encontrar
-    su par."
-  - "topi te ayuda a tener un mayor puntaje, por algunos segundos tendr\xE1s doble
-    puntos por jugada."
+  - Memoria_Tutorial_0
+  - Memoria_Tutorial_1
+  - Memoria_Tutorial_2
+  - Memoria_Tutorial_3
+  - Memoria_Tutorial_4
 --- !u!114 &11400416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12903,6 +12903,66 @@ MonoBehaviour:
   callWhenFinished: 
   from: 1
   to: 0
+--- !u!114 &11400438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c45ab172a94f5c9d2c5827632a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Intro_Titulo
+--- !u!114 &11400440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6c2143dac05ac4c90a25316e71b978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Atras
+--- !u!114 &11400442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6c2143dac05ac4c90a25316e71b978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Atras
+--- !u!114 &11400444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c45ab172a94f5c9d2c5827632a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Memoria_Reiniciar
+--- !u!114 &11400446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6c2143dac05ac4c90a25316e71b978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Cargando
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -116,8 +116,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="Cargando" xml:space="preserve">
+		<value>cargando ...</value>
+	</data>
+	<data name="Foto_Title_Galeria" xml:space="preserve">
+		<value>galeria</value>
+	</data>
+	<data name="Foto_Title_Plantilla" xml:space="preserve">
+		<value>escoge tu plantilla</value>
+	</data>
+	<data name="Foto_Title_Tomar" xml:space="preserve">
+		<value>toma la foto</value>
+	</data>
+	<data name="[type=GAME_OBJECT]IntroObjAtlas" xml:space="preserve">
+		<value>508c2be143c034d2786ffe7837f8ea93</value>
+	</data>
 	<data name="[type=GAME_OBJECT]LoLograsteSprite" xml:space="preserve">
 		<value>c232b4323c7804359b0d8a74d45bb745</value>
+	</data>
+	<data name="Memoria_Atras" xml:space="preserve">
+		<value>atrás</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Atras" xml:space="preserve">
+		<value>77992e66a19f94e31a058f7d95630165</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Dificil" xml:space="preserve">
+		<value>a7ee544d570b84041a62ae44122c92f0</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Dificultad" xml:space="preserve">
+		<value>bc8030ca0ffcd4e12ac0e0bc97a83891</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Facil" xml:space="preserve">
+		<value>579223308eac544faac4c45946bea23c</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Intro_Titulo" xml:space="preserve">
+		<value>a6dd31ce2f7bd40c7b7b1d85ca06092d</value>
+	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Reiniciar" xml:space="preserve">
+		<value>789fe7a44515c44808305b810b4fa473</value>
+	</data>
+	<data name="Memoria_Tutorial_0" xml:space="preserve">
+		<value>a tati le gusta compartir, te ayudará a que avances más rápido regalándote un par.</value>
+	</data>
+	<data name="Memoria_Tutorial_1" xml:space="preserve">
+		<value>tica congelará el reloj y así te dará algunos segundos de ventaja para seguir jugando.</value>
+	</data>
+	<data name="Memoria_Tutorial_2" xml:space="preserve">
+		<value>tico con sus tremenduras te dejará ver rápidamente todo lo que hay en una hilera que escojas.</value>
+	</data>
+	<data name="Memoria_Tutorial_3" xml:space="preserve">
+		<value>si tienes un objeto descubierto timi te dará algunas pistas para encontrar su par.</value>
+	</data>
+	<data name="Memoria_Tutorial_4" xml:space="preserve">
+		<value>topi te ayuda a tener un mayor puntaje, por algunos segundos tendrás doble puntos por jugada.</value>
+	</data>
+	<data name="[type=GAME_OBJECT]SetFotografico" xml:space="preserve">
+		<value>a950f7f4b244344a1801d81f4933147b</value>
 	</data>
 	<data name="[type=GAME_OBJECT]TiempoFueraSprite" xml:space="preserve">
 		<value>cae3c96b974c949ec86dd02564a5a7f2</value>
