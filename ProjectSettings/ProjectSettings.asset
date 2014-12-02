@@ -67,7 +67,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  iPhoneBundleIdentifier: mx.com.hollowgames.penguinplatformer
+  iPhoneBundleIdentifier: com.ppinteractivo.MemoriaGame
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 7709f1da01988401a9e4f3d4cc6e898a
@@ -109,23 +109,23 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: 9b83e6bcaf648466b9ed091211c3c59b, type: 3}
+    - m_Icon: {fileID: 2800000, guid: bf83b58fffc574701a3027123abe1dfb, type: 3}
       m_Size: 128
   - m_BuildTarget: iPhone
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: be3abf7f7bc7741efbc0bcbec40ec6e2, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 711b9156a918849f1ba3cd4a688efb24, type: 3}
       m_Size: 152
-    - m_Icon: {fileID: 2800000, guid: a9e78f6433f704e138d26312c18cc591, type: 3}
+    - m_Icon: {fileID: 2800000, guid: b047fcd490aff408da316ebaa93736d6, type: 3}
       m_Size: 144
-    - m_Icon: {fileID: 2800000, guid: 0c9ad90a5458a4ec182d0ae46cf8f7b4, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 48ccee11a0171402bbea12bf1536b5d7, type: 3}
       m_Size: 120
-    - m_Icon: {fileID: 2800000, guid: 8bf109c5b25f049779b3b8e3482948c6, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 325f76c03d9b040a9bcd012ca67d407f, type: 3}
       m_Size: 114
-    - m_Icon: {fileID: 2800000, guid: 35fd078867a56478aa60722b8382ae8a, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 46e5a9de17f194b30b3b293378888ad8, type: 3}
       m_Size: 76
-    - m_Icon: {fileID: 2800000, guid: 318d2821126a349d6a1f5708bd465716, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 160828d427e3f4d18b831294e0b69f59, type: 3}
       m_Size: 72
-    - m_Icon: {fileID: 2800000, guid: e15802b17d4f247ab8d37251e613eafc, type: 3}
+    - m_Icon: {fileID: 2800000, guid: a15718ab473f244d39a88e154d9033ec, type: 3}
       m_Size: 57
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
