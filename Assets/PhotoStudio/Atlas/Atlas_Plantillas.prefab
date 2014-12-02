@@ -42,10 +42,10 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 41ad1acb8436c46a784c310b30322372, type: 2}
   mSprites:
   - name: marco_tati_version1
-    x: 1302
-    y: 747
-    width: 650
-    height: 650
+    x: 129
+    y: 255
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -56,9 +56,9 @@ MonoBehaviour:
     paddingBottom: 0
   - name: marco_tatiytipi_version1
     x: 0
-    y: 96
-    width: 650
-    height: 650
+    y: 126
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -68,10 +68,10 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: marco_tica_version1
-    x: 0
-    y: 1398
-    width: 650
-    height: 650
+    x: 129
+    y: 126
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -81,10 +81,10 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: marco_tico_version1
-    x: 651
-    y: 747
-    width: 650
-    height: 650
+    x: 0
+    y: 255
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -95,9 +95,9 @@ MonoBehaviour:
     paddingBottom: 0
   - name: marco_ticoytica_version1
     x: 0
-    y: 747
-    width: 650
-    height: 650
+    y: 384
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -107,10 +107,10 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: marco_tipi_version1
-    x: 1302
-    y: 1398
-    width: 650
-    height: 650
+    x: 129
+    y: 384
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -120,10 +120,10 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: marco_tomi_version1
-    x: 651
-    y: 1398
-    width: 650
-    height: 650
+    x: 258
+    y: 384
+    width: 128
+    height: 128
     borderLeft: 0
     borderRight: 0
     borderTop: 0
