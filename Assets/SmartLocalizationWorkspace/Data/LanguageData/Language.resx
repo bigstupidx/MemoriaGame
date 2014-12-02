@@ -116,8 +116,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="bote" xml:space="preserve">
+		<value>bote</value>
+	</data>
 	<data name="Cargando" xml:space="preserve">
 		<value>cargando ...</value>
+	</data>
+	<data name="carro" xml:space="preserve">
+		<value>carro</value>
+	</data>
+	<data name="cohete" xml:space="preserve">
+		<value>cohete</value>
+	</data>
+	<data name="cupcake" xml:space="preserve">
+		<value>cupcake</value>
+	</data>
+	<data name="flor" xml:space="preserve">
+		<value>flor</value>
 	</data>
 	<data name="Foto_Title_Galeria" xml:space="preserve">
 		<value>galeria</value>
@@ -128,8 +143,14 @@
 	<data name="Foto_Title_Tomar" xml:space="preserve">
 		<value>toma la foto</value>
 	</data>
+	<data name="fresa" xml:space="preserve">
+		<value>fresa</value>
+	</data>
 	<data name="[type=GAME_OBJECT]IntroObjAtlas" xml:space="preserve">
 		<value />
+	</data>
+	<data name="lazo" xml:space="preserve">
+		<value>lazo</value>
 	</data>
 	<data name="[type=GAME_OBJECT]LoLograsteSprite" xml:space="preserve">
 		<value />
@@ -153,6 +174,9 @@
 	<data name="[type=GAME_OBJECT]Memoria_Intro_Titulo" xml:space="preserve">
 		<value />
 	</data>
+	<data name="[type=GAME_OBJECT]Memoria_Reiniciar" xml:space="preserve">
+		<value>reiniciar</value>
+	</data>
 	<data name="Memoria_Tutorial_0" xml:space="preserve">
 		<value>a tati le gusta compartir, te ayudará a que avances más rápido regalándote un par.</value>
 	</data>
@@ -168,11 +192,35 @@
 	<data name="Memoria_Tutorial_4" xml:space="preserve">
 		<value>topi te ayuda a tener un mayor puntaje, por algunos segundos tendrás doble puntos por jugada.</value>
 	</data>
+	<data name="pelota" xml:space="preserve">
+		<value>pelota</value>
+	</data>
+	<data name="robot" xml:space="preserve">
+		<value>robot</value>
+	</data>
 	<data name="[type=GAME_OBJECT]SetFotografico" xml:space="preserve">
 		<value />
 	</data>
+	<data name="tati" xml:space="preserve">
+		<value>tati</value>
+	</data>
+	<data name="tica" xml:space="preserve">
+		<value>tica</value>
+	</data>
+	<data name="tico" xml:space="preserve">
+		<value>tico</value>
+	</data>
 	<data name="[type=GAME_OBJECT]TiempoFueraSprite" xml:space="preserve">
 		<value />
+	</data>
+	<data name="timi" xml:space="preserve">
+		<value>timi</value>
+	</data>
+	<data name="topi" xml:space="preserve">
+		<value>topi</value>
+	</data>
+	<data name="varita" xml:space="preserve">
+		<value>varita</value>
 	</data>
 	<data name="[type=GAME_OBJECT]VictoriaSprite" xml:space="preserve">
 		<value />
@@ -180,7 +228,7 @@
 	<data name="[type=GAME_OBJECT]VuelveIntertarSprite" xml:space="preserve">
 		<value />
 	</data>
-	<data name="[type=GAME_OBJECT]Memoria_Reiniciar" xml:space="preserve">
-		<value>reiniciar</value>
+	<data name="creditosLetra" xml:space="preserve">
+		<value>créditos</value>
 	</data>
 </root>

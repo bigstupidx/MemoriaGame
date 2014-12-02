@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/PhotoStudio/Scenes/MenuPhotoStudio.unity
   - enabled: 1
     path: Assets/MemoriaGame/Scenes/GameScene.unity
+  - enabled: 1
+    path: Assets/IntroMenu/Scenes/Credits.unity

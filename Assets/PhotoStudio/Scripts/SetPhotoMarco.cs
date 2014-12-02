@@ -4,9 +4,9 @@ using System.Collections;
 public class SetPhotoMarco : MonoBehaviour {
 
     public UICenterOnChild Marco;
-    public UI2DSprite TargetMarco;
+    public UISprite TargetMarco;
 	// Update is called once per frame
 	public void setPhotoMarco () {
-        TargetMarco.sprite2D = Marco.centeredObject.GetComponent<UI2DSprite>().sprite2D;
+        TargetMarco.spriteName = Marco.centeredObject.GetComponent<UISprite>().spriteName;
 	}
 }

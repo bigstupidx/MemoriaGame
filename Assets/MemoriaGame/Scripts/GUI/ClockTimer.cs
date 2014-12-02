@@ -57,6 +57,8 @@ public class ClockTimer : MonoBehaviour {
         magicConstTime = 100.0f / ManagerTime.Instance.TimeOfGame;
 
         ManagerTime.Instance.onTimeGameEnd += StopAllSound;
+        ManagerDoors.Instance.onVictory += StopAllSound;
+
         ManagerPause.SubscribeOnPauseGame (onPaused);
         ManagerPause.SubscribeOnResumeGame (onResume);
 

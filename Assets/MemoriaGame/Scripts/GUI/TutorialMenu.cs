@@ -12,14 +12,12 @@ public class TutorialMenu : MonoBehaviour {
 
     protected int currentPos = 0;
 
-    void Awake(){
-        for (int i = 0; i < textTutorial.Length; ++i) {
-        
-            textTutorial[i] = LanguageManager.Instance.GetTextValue(textTutorial[i]);
-        }
-    }
 	// Use this for initialization
 	void Start () {
+        for (int i = 0; i < textTutorial.Length; ++i) {
+
+            textTutorial[i] = LanguageManager.Instance.GetTextValue(textTutorial[i]);
+        }
         SetCurrent ();
 	}
 	

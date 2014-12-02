@@ -18,6 +18,7 @@ public class PowerShiny : MonoBehaviour {
     }
     void Start(){
         ManagerTime.Instance.onTimeGameEnd += GameFinished;
+        ManagerDoors.Instance.onVictory += GameFinished;
         firstRun = false;
         ManagerPause.SubscribeOnPauseGame (onPaused);
         ManagerPause.SubscribeOnResumeGame (onResume);

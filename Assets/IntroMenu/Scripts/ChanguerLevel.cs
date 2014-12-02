@@ -13,5 +13,7 @@ public class ChanguerLevel : MonoBehaviour {
     public void ChangueToIntro(){
         LoadLevelManager.Instance.LoadLevelImmediate ("Intro");
     }
-
+    public void ChangueToCredits(){
+        LoadLevelManager.Instance.LoadLevelImmediate ("Credits");
+    }
 }

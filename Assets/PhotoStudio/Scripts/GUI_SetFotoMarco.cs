@@ -7,19 +7,21 @@ public class GUI_SetFotoMarco : MonoBehaviour {
     public UITexture TargetFoto;
 
     public UICenterOnChild Marco;
-    public UI2DSprite TargetMarco;
+  //  public UI2DSprite TargetMarco;
 
     public GUI_GaleriaManager galeria;
 
   //  public Texture2D BGFoto;
     public void SetAll(){
         TargetFoto.mainTexture = Foto.mainTexture;
-        TargetMarco.sprite2D = Marco.centeredObject.GetComponent<UI2DSprite>().sprite2D;
+        string marco_Name = Marco.centeredObject.GetComponent<UISprite>().spriteName;
 
-        TargetFoto.mainTexture = MergeTexture.Merge ((Texture2D)TargetFoto.mainTexture,(Texture2D)TargetMarco.sprite2D.texture, 0, 0);
+        Texture2D marquito = (Texture2D)Resources.Load("Plantillas/" + marco_Name);
+        TargetFoto.mainTexture = MergeTexture.Merge ((Texture2D)TargetFoto.mainTexture,marquito, 0, 0);
        // DestroyImmediate (Foto.mainTexture, true);
        // Foto.mainTexture = BGFoto;
         galeria.SaveInsideUnity((Texture2D)TargetFoto.mainTexture);
+        Resources.UnloadAsset(marquito);
     }
 
     public void SetFotoGaleria(){

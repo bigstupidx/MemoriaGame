@@ -6,7 +6,7 @@
 //
 using UnityEngine;
 using System.Collections;
-
+using SmartLocalization;
 [RequireComponent (typeof (UILabel))]
 public class NameFirstSelectedGUI : MonoBehaviour {
 
@@ -22,8 +22,8 @@ public class NameFirstSelectedGUI : MonoBehaviour {
     }
 
     void FirstOpenShow(int id, string name){
-
-        label.text = name;
+        label.text = LanguageManager.Instance.GetTextValue(name);
+       
     }
 
     void FirstOpenClose(int id,  string name){

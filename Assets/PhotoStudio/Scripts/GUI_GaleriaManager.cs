@@ -15,6 +15,7 @@ public class GUI_GaleriaManager : MonoBehaviour {
     ArrayList list;
 
     public GUI_CenterBgPlantilla backgroundSelected;
+    public UIButton buttonBack;
 	// Use this for initialization
 	void Awake () {
         number = PlayerPrefs.GetInt("CountImages");
@@ -40,12 +41,15 @@ public class GUI_GaleriaManager : MonoBehaviour {
                 father.enabled = false;
 
                 UITexture current = father.centeredObject.GetComponent<UITexture> ();
-                Erase (current);
+              //  Erase (current);
                 System.IO.File.Delete (getPathFile ("TommyPlayground_" + father.centeredObject.name + ".png"));
-                backgroundSelected.AddFromOnCenter ();
+                EventDelegate.Execute(buttonBack.onClick);
+              //  EraseAll();
+              //  EnableAll();
+                //backgroundSelected.AddFromOnCenter ();
 
-                father.enabled = true;
-                father.Recenter ();
+                //father.enabled = true;
+            //    father.Recenter ();
                 //  --number;
                 //  PlayerPrefs.SetInt("CountImages",number);
             }

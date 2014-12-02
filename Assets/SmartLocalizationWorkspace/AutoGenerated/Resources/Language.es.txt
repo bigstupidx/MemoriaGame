@@ -116,8 +116,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="bote" xml:space="preserve">
+		<value>bote</value>
+	</data>
 	<data name="Cargando" xml:space="preserve">
 		<value>cargando ...</value>
+	</data>
+	<data name="carro" xml:space="preserve">
+		<value>carro</value>
+	</data>
+	<data name="cohete" xml:space="preserve">
+		<value>cohete</value>
+	</data>
+	<data name="creditosLetra" xml:space="preserve">
+		<value>créditos</value>
+	</data>
+	<data name="cupcake" xml:space="preserve">
+		<value>cupcake</value>
+	</data>
+	<data name="flor" xml:space="preserve">
+		<value>flor</value>
 	</data>
 	<data name="Foto_Title_Galeria" xml:space="preserve">
 		<value>galeria</value>
@@ -128,8 +146,14 @@
 	<data name="Foto_Title_Tomar" xml:space="preserve">
 		<value>toma la foto</value>
 	</data>
+	<data name="fresa" xml:space="preserve">
+		<value>fresa</value>
+	</data>
 	<data name="[type=GAME_OBJECT]IntroObjAtlas" xml:space="preserve">
 		<value>508c2be143c034d2786ffe7837f8ea93</value>
+	</data>
+	<data name="lazo" xml:space="preserve">
+		<value>lazo</value>
 	</data>
 	<data name="[type=GAME_OBJECT]LoLograsteSprite" xml:space="preserve">
 		<value>c232b4323c7804359b0d8a74d45bb745</value>
@@ -170,11 +194,35 @@
 	<data name="Memoria_Tutorial_4" xml:space="preserve">
 		<value>topi te ayuda a tener un mayor puntaje, por algunos segundos tendrás doble puntos por jugada.</value>
 	</data>
+	<data name="pelota" xml:space="preserve">
+		<value>pelota</value>
+	</data>
+	<data name="robot" xml:space="preserve">
+		<value>robot</value>
+	</data>
 	<data name="[type=GAME_OBJECT]SetFotografico" xml:space="preserve">
 		<value>a950f7f4b244344a1801d81f4933147b</value>
 	</data>
+	<data name="tati" xml:space="preserve">
+		<value>tati</value>
+	</data>
+	<data name="tica" xml:space="preserve">
+		<value>tica</value>
+	</data>
+	<data name="tico" xml:space="preserve">
+		<value>tico</value>
+	</data>
 	<data name="[type=GAME_OBJECT]TiempoFueraSprite" xml:space="preserve">
 		<value>cae3c96b974c949ec86dd02564a5a7f2</value>
+	</data>
+	<data name="timi" xml:space="preserve">
+		<value>timi</value>
+	</data>
+	<data name="topi" xml:space="preserve">
+		<value>topi</value>
+	</data>
+	<data name="varita" xml:space="preserve">
+		<value>varita</value>
 	</data>
 	<data name="[type=GAME_OBJECT]VictoriaSprite" xml:space="preserve">
 		<value>f8c2e02b03c294afcbf28cfb1e079007</value>

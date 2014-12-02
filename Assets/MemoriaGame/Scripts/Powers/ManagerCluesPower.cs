@@ -24,6 +24,7 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     void Start(){
     
         ManagerTime.Instance.onTimeGameEnd += GameFinished;
+        ManagerDoors.Instance.onVictory += GameFinished;
 
 
         firstRun = false;
