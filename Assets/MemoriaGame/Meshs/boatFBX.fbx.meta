@@ -70,10 +70,6 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: back
-        weight: 1
-      - path: bottom
-        weight: 1
       - path: group1
         weight: 1
       - path: Master
@@ -114,10 +110,6 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: back
-        weight: 1
-      - path: bottom
-        weight: 1
       - path: group1
         weight: 1
       - path: Master
@@ -157,10 +149,6 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: back
-        weight: 1
-      - path: bottom
         weight: 1
       - path: group1
         weight: 1
