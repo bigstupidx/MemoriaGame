@@ -86,7 +86,7 @@ static ISNCamera *_sharedInstance;
     
     UIImagePickerController * picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = true;
+  //  picker.allowsEditing = true;
     picker.sourceType = source;
     
     

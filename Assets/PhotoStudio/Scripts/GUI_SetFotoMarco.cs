@@ -23,6 +23,12 @@ public class GUI_SetFotoMarco : MonoBehaviour {
         galeria.SaveInsideUnity((Texture2D)TargetFoto.mainTexture);
         Resources.UnloadAsset(marquito);
     }
+    public void SetAll2(){
+        TargetFoto.mainTexture = Foto.mainTexture;
+
+        galeria.SaveInsideUnity((Texture2D)TargetFoto.mainTexture);
+    }
+
 
     public void SetFotoGaleria(){
         Texture2D texture = galeria.getTextureOfCenter();

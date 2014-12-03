@@ -5,7 +5,7 @@ public class SocialLinks : MonoBehaviour {
 
     bool FacebookApp = false;
     bool InstragramApp = false;
-    bool YoutubeApp= false;
+//    bool YoutubeApp= false;
     void Awake() {
 
         #if UNITY_IOS

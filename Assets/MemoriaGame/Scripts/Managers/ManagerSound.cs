@@ -18,7 +18,7 @@ public class ManagerSound : Singleton<ManagerSound>
 
     public AudioSource bgAudio;
     public AudioSource bg2Audio;
-
+    bool isNotFirstTime = false;
     protected override void AwakeChild(){
         GameObject obj = GameObject.FindGameObjectWithTag ("BgSound");
         if(bgAudio == null)
@@ -27,10 +27,26 @@ public class ManagerSound : Singleton<ManagerSound>
 
 
     void OnEnable() {
+
+        bool.TryParse(PlayerPrefs.GetString ("isNotFirstTime"),out isNotFirstTime);
+
+        if (isNotFirstTime)
+        {
+            bgVolume = PlayerPrefs.GetFloat ("bgVolume");
+            fxVolume = PlayerPrefs.GetFloat ("fxVolume");
+            bool.TryParse(PlayerPrefs.GetString ("Mute"),out mute);
+            isNotFirstTime = true;
+            PlayerPrefs.SetString ("isNotFirstTime", isNotFirstTime.ToString());
+
+        }
+        else
+        {
+            bgVolume = 0.5f;
+            fxVolume = 1.0f;
+            mute = false;
+        }
         //Aqui cargo
-        bgVolume = PlayerPrefs.GetFloat ("bgVolume");
-        fxVolume = PlayerPrefs.GetFloat ("fxVolume");
-        bool.TryParse(PlayerPrefs.GetString ("Mute"),out mute);
+
         if (bgAudio != null) {
             bgAudio.volume = bgVolume;
 

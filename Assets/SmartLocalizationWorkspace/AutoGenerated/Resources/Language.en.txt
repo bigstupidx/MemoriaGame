@@ -138,7 +138,7 @@
 		<value>flower</value>
 	</data>
 	<data name="Foto_Title_Galeria" xml:space="preserve">
-		<value>galery</value>
+		<value>gallery</value>
 	</data>
 	<data name="Foto_Title_Plantilla" xml:space="preserve">
 		<value>pick your template</value>

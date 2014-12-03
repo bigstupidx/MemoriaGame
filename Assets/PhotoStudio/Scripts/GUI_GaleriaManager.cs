@@ -9,7 +9,7 @@ public class GUI_GaleriaManager : MonoBehaviour {
     public UICenterOnChild father;
     public UITexture texturePrefab;
 
-    const float offsetX = 450;
+    const float offsetX = 550;
     int number = 0;
 
     ArrayList list;

@@ -8,6 +8,7 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
     public UIWidget takePhoto;
     public UIWidget mergePhoto;
     public UIWidget galeria;
+    public UIWidget edit;
 
     UIWidget current;
 
@@ -59,6 +60,15 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
         {
             GoToHome();
         }
+
+
+    }
+
+    public void GoToEdit(){
+
+        current.alpha = 0;
+        edit.alpha = 1;
+        current = edit;
 
 
     }
