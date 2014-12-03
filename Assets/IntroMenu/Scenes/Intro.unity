@@ -557,9 +557,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim01: {fileID: 131674849}
   anim02: {fileID: 372410317}
-  audioIni: {fileID: 8300000, guid: 3adb283c9a1d64ceeb42f02917b878a4, type: 3}
-  audioLoop: {fileID: 8300000, guid: b2be3a8dd454e4ab4a0b7900cff859fe, type: 3}
-  audioBG: {fileID: 172937140}
 --- !u!114 &131674849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,8 +709,8 @@ AudioSource:
   m_GameObject: {fileID: 172937134}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: b2be3a8dd454e4ab4a0b7900cff859fe, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1

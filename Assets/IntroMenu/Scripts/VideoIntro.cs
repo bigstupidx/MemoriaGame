@@ -9,23 +9,16 @@ public class VideoIntro : MonoBehaviour {
     public static bool startIntro = true;
     bool firstRun = true;
 
-    public AudioClip audioIni;
-    public AudioClip audioLoop;
-
-    public AudioSource audioBG;
 	// Use this for initialization
 	void Update () {
         if (firstRun) {
 //            Debug.Log (startIntro);
             if (startIntro) {
-                audioBG.clip = audioIni;
-                audioBG.Play();
+
                 anim01.PlayForward ();
 
                 startIntro = false;
             } else {
-                audioBG.clip = audioLoop;
-                audioBG.Play();
 
                 anim02.FinishedCall ();
 
