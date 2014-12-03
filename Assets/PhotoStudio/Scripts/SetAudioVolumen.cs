@@ -4,7 +4,7 @@ using System.Collections;
 public class SetAudioVolumen : MonoBehaviour {
 
 	// Use this for initialization
-	void OnEnable () {
+	void Awake () {
         bool isNotFirstTime = false;
         bool.TryParse(PlayerPrefs.GetString ("isNotFirstTime"),out isNotFirstTime);
 
@@ -20,5 +20,16 @@ public class SetAudioVolumen : MonoBehaviour {
        
 	}
 	
+    public void AudioPlay(){
+    
+        if (!audio.isPlaying)
+            audio.Play();
+    }
+
+    public bool isPlayOnEnable = false;
+    void OnEnable(){
+        if (isPlayOnEnable)
+            audio.Play();
+    }
 
 }

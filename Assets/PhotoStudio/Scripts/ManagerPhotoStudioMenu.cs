@@ -16,26 +16,30 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
         current = intro;
     }
     public void GoToHome(){
-
+        if (!audio.isPlaying)
+            audio.Play();
         current.alpha = 0;
         intro.alpha = 1;
         current = intro;
     }
     public void GoToGaleria(){
-
+        if (audio.isPlaying)
+            audio.Pause();
         current.alpha = 0;
         galeria.alpha = 1;
         current = galeria;
     }  
     public void GoToSelectPlantilla(){
-    
+        if (audio.isPlaying)
+            audio.Pause();
         current.alpha = 0;
         selectPlantilla.alpha = 1;
         current = selectPlantilla;
     }
 
     public void GoToTakePhoto(){
-
+        if (audio.isPlaying)
+            audio.Pause();
         current.alpha = 0;
         takePhoto.alpha = 1;
         current = takePhoto;
@@ -44,7 +48,8 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
     }
 
     public void GoToPreview(){
-
+        if (audio.isPlaying)
+            audio.Pause();
         current.alpha = 0;
         mergePhoto.alpha = 1;
         current = mergePhoto;
@@ -52,6 +57,7 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
 
     }
     public void GoToPreviewWithCondition(GameObject obj){
+
         if (obj.GetComponent<UITexture>().mainTexture != null)
         {
             GoToPreview();
@@ -65,7 +71,8 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
     }
 
     public void GoToEdit(){
-
+        if (audio.isPlaying)
+            audio.Pause();
         current.alpha = 0;
         edit.alpha = 1;
         current = edit;

@@ -12,6 +12,9 @@ public class ManagerBook : MonoBehaviour {
     public GameObject LeftArrow;
     public GameObject RightArrow;
 
+    public AudioClip LeftAudio;
+    public AudioClip RightAudio;
+
     public void Init(){
         mPages [currentPage].TurnOn ();
 
@@ -43,6 +46,8 @@ public class ManagerBook : MonoBehaviour {
                 RightArrow.SetActive (false);
             }
         }
+
+        audio.PlayOneShot(RightAudio);
     }
     public void LeftPage(){
         if(!RightArrow.activeSelf)
@@ -60,5 +65,8 @@ public class ManagerBook : MonoBehaviour {
             if(currentPage - 1 <= 0)
                 LeftArrow.SetActive (false);
         }
+
+        audio.PlayOneShot(LeftAudio);
+
     }
 }

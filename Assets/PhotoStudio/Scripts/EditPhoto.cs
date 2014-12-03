@@ -143,8 +143,8 @@ public class EditPhoto : MonoBehaviour {
             // Find the difference in the distances between each frame.
             float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
-            FotoEdit.transform.localScale = new Vector3(FotoEdit.transform.localScale.x -deltaMagnitudeDiff*0.25f,
-            FotoEdit.transform.localScale.y - deltaMagnitudeDiff*0.25f,
+            FotoEdit.transform.localScale = new Vector3(FotoEdit.transform.localScale.x -deltaMagnitudeDiff*0.1f,
+            FotoEdit.transform.localScale.y - deltaMagnitudeDiff*0.1f,
             FotoEdit.transform.localScale.z);
 
             if (FotoEdit.transform.localScale.x < 1 )

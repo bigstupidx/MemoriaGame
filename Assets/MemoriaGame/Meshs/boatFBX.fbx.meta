@@ -135,8 +135,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Bote@Cerrado
       takeName: Take 001
-      firstFrame: 6
-      lastFrame: 6.0999999
+      firstFrame: 7
+      lastFrame: 7.09999943
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
