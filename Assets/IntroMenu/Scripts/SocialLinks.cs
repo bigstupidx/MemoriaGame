@@ -26,7 +26,9 @@ public class SocialLinks : MonoBehaviour {
     }
 
     void OnDisable(){
+        #if UNITY_IOS
         IOSSharedApplication.OnUrCheckResultAction -= OnUrCheckResultAction;
+        #endif
     }
 
     public void InstagramLink(){
