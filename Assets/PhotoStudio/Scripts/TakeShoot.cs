@@ -27,6 +27,7 @@ public class TakeShoot : MonoBehaviour {
             IOSMessage.Create("Success", "Image Save Failed");
         }
     }
+    #if UNITY_IOS
     private void OnImage (IOSImagePickResult result) {
         if (result.IsSucceeded)
         {
@@ -47,6 +48,21 @@ public class TakeShoot : MonoBehaviour {
         IOSCamera.instance.OnImagePicked -= OnImage;
     }
 
+    #elif UNITY_ANDROID
+    private void OnImage(AndroidImagePickResult result) {
+
+        if (result.IsSucceeded)
+        {
+            if(target.mainTexture != initialTexture)
+                DestroyImmediate(target.mainTexture,true);
+            target.mainTexture = result.image;
+            next.isEnabled = true;
+
+        }
+        isTaking = false;
+        AndroidCamera.instance.OnImagePicked -= OnImage;
+    }
+    #endif
     public void TakePhotoButton(){
         #if UNITY_EDITOR
         target.mainTexture =initialTextureExample;
@@ -57,8 +73,13 @@ public class TakeShoot : MonoBehaviour {
         if (!isTaking)
         {
             isTaking = true;
+            #if UNITY_IOS
             IOSCamera.instance.OnImagePicked += OnImage;
             IOSCamera.instance.GetImageFromCamera();
+            #elif UNITY_ANDROID
+            AndroidCamera.instance.OnImagePicked += OnImage;
+            AndroidCamera.instance.GetImageFromCamera();
+            #endif
            
         }
     }

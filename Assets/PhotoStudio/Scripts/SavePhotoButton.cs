@@ -9,6 +9,7 @@ public class SavePhotoButton : MonoBehaviour {
         DestroyImmediate(textureToSave.mainTexture, true);
     }
     void Awake(){
+        #if UNITY_IOS
         //events use example
         IOSSocialManager.instance.addEventListener(IOSSocialManager.FACEBOOK_POST_SUCCESS, OnPostSuccses);
         IOSSocialManager.instance.addEventListener(IOSSocialManager.TWITTER_POST_SUCCESS, OnPostSuccses);
@@ -19,16 +20,24 @@ public class SavePhotoButton : MonoBehaviour {
 
         //actions use example:
         IOSSocialManager.instance.OnMailResult += OnMailResult;
-
+        #elif UNITY_ANDROID
+        #endif
     }
         
 
     public void SaveTextureToDevice(){
-        IOSCamera.instance.OnImageSaved += OnImageSaved;
         ((Texture2D)textureToSave.mainTexture).name = "TommyPlayground";
+
+        #if UNITY_IOS
+        IOSCamera.instance.OnImageSaved += OnImageSaved;
         IOSCamera.instance.SaveTextureToCameraRoll((Texture2D)textureToSave.mainTexture);
+        #elif UNITY_ANDROID
+        AndroidCamera.instance.OnImageSaved += OnImageSaved;
+        AndroidCamera.instance.SaveImageToGalalry((Texture2D)textureToSave.mainTexture);
+        #endif
     }
 
+    #if UNITY_IOS
     private void OnImageSaved (ISN_Result result) {
         IOSCamera.instance.OnImageSaved -= OnImageSaved;
         if(result.IsSucceeded) {
@@ -38,28 +47,44 @@ public class SavePhotoButton : MonoBehaviour {
             IOSMessage.Create("Success", "Image Save Failed");
         }
     }
-   
-    public void ShareTexture(){
-    
-        IOSSocialManager.instance.ShareMedia("Tomi Playground ", (Texture2D)textureToSave.mainTexture);
+    #elif UNITY_ANDROID
+    private void OnImageSaved (GallerySaveResult result) {
 
+        AndroidCamera.instance.OnImageSaved -= OnImageSaved;
+
+        if(result.IsSucceeded) {
+            AN_PoupsProxy.showMessage("Saved", "Image saved to gallery \n" + "Path: " + result.imagePath);
+            SA_StatusBar.text =  "Image saved to gallery";
+        } else {
+            AN_PoupsProxy.showMessage("Failed", "Image save to gallery failed");
+            SA_StatusBar.text =  "Image save to gallery failed";
+        }
+
+    }
+    #endif
+    public void ShareTexture(){
+        #if UNITY_IOS
+        IOSSocialManager.instance.ShareMedia("Timi's Playground", (Texture2D)textureToSave.mainTexture);
+        #elif UNITY_ANDROID
+        AndroidSocialGate.StartShareIntent("Timi's Playground", "Timi's Playground", (Texture2D)textureToSave.mainTexture);
+        #endif
     }
 
     private void OnPostFailed() {
-        IOSNativePopUpManager.showMessage("Positng example", "Post Failed :(");
+  //      IOSNativePopUpManager.showMessage("Posting example", "Post Failed :(");
     }
 
     private void OnPostSuccses() {
-        IOSNativePopUpManager.showMessage("Positng example", "Posy Succses!");
+   //     IOSNativePopUpManager.showMessage("Posting example", "Post Succses!");
     }
 
 
 
     private void OnMailResult (ISN_Result result) {
         if(result.IsSucceeded) {
-            IOSNativePopUpManager.showMessage("Positng example", "Mail Sended");
+       //     IOSNativePopUpManager.showMessage("Positng example", "Mail Sended");
         } else {
-            IOSNativePopUpManager.showMessage("Positng example", "Mail Failed :(");
+      //      IOSNativePopUpManager.showMessage("Positng example", "Mail Failed :(");
         }
     }
 }

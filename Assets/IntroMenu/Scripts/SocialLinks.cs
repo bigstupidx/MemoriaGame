@@ -5,12 +5,14 @@ public class SocialLinks : MonoBehaviour {
 
     bool FacebookApp = false;
     bool InstragramApp = false;
-//    bool YoutubeApp= false;
+    bool YoutubeApp= false;
     void Awake() {
 
         #if UNITY_IOS
 
         IOSSharedApplication.OnUrCheckResultAction += OnUrCheckResultAction;
+        #elif UNITY_ANDROID
+        AndroidNativeUtility.instance.OnPackageCheckResult += OnPackageCheckResult;
 
 
         #endif
@@ -20,6 +22,12 @@ public class SocialLinks : MonoBehaviour {
 
         IOSSharedApplication.instance.CheckUrl("instagram://");
         IOSSharedApplication.instance.CheckUrl("fb://");
+        #elif UNITY_ANDROID
+
+        AndroidNativeUtility.instance.CheckIsPackageInstalled("com.google.android.youtube");
+        AndroidNativeUtility.instance.CheckIsPackageInstalled("com.google.android.facebook");
+        AndroidNativeUtility.instance.CheckIsPackageInstalled("com.google.android.instagram");
+
 
         #endif
 
@@ -28,6 +36,8 @@ public class SocialLinks : MonoBehaviour {
     void OnDisable(){
         #if UNITY_IOS
         IOSSharedApplication.OnUrCheckResultAction -= OnUrCheckResultAction;
+        #elif UNITY_ANDROID
+        //AndroidNativeUtility.instance.OnPackageCheckResult -= OnPackageCheckResult;
         #endif
     }
 
@@ -40,15 +50,28 @@ public class SocialLinks : MonoBehaviour {
             IOSSharedApplication.instance.OpenUrl ("http://instagram.com/timisplayground");
 
         }
+        #elif UNITY_ANDROID
+        if(InstragramApp){
+            Application.OpenURL("http://instagram.com/timisplayground");
+        }else{
+            Application.OpenURL("http://instagram.com/timisplayground");
+
+        }
         #endif
 
     }
     public void YoutubeLink () {
         #if UNITY_IOS
 
-       // IOSSharedApplication.instance.CheckUrl( "https://www.youtube.com/user/TomiTipiOficial");
-
         IOSSharedApplication.instance.OpenUrl( "https://www.youtube.com/user/timisplayground");
+
+        #elif UNITY_ANDROID
+        if(YoutubeApp){
+            Application.OpenURL("https://www.youtube.com/user/timisplayground");
+        }else{
+            Application.OpenURL( "https://www.youtube.com/user/timisplayground");
+
+        }
         #endif
 
     }
@@ -64,6 +87,15 @@ public class SocialLinks : MonoBehaviour {
            
 
             IOSSharedApplication.instance.OpenUrl ("https://www.facebook.com/TimisPlayground");
+
+        }
+        #elif UNITY_ANDROID
+        if (FacebookApp) {
+            Application.OpenURL("fb://profile/TimisPlayground");
+        } else {
+
+
+            Application.OpenURL ("https://www.facebook.com/TimisPlayground");
 
         }
         #endif
@@ -87,6 +119,26 @@ public class SocialLinks : MonoBehaviour {
         } else {
            // IOSMessage.Create("Url Exists", "The " + result.url + " wasn't registred");
         }
+    }
+    #elif UNITY_ANDROID
+
+    void OnPackageCheckResult (AN_PackageCheckResult res) {
+        if(res.IsSucceeded) {
+            switch(res.packageName){
+                case "com.google.android.youtube":
+                    YoutubeApp = true;
+                    break;
+                case "com.google.android.instagram":
+                    InstragramApp = true;
+                    break;
+                case "com.google.android.facebook":
+                    FacebookApp = true;
+                    break;
+            }
+            //  IOSMessage.Create("Url Exists", "The " + result.url + " is registred" );
+        }
+
+       // AndroidNativeUtility.instance.OnPackageCheckResult -= OnPackageCheckResult;
     }
     #endif
 }
