@@ -16,27 +16,10 @@ public class AnimationMesh : MonoBehaviour
 
     static float timeShutDown = 0.35f;
 
-    #if UNITY_IPHONE
-    static bool isIphone4 = false;
- 
-    void Awake(){
-        // door = GetComponent<Door> ();
-        if( iPhone.generation == iPhoneGeneration.iPhone4)
-        {
-            isIphone4 = true;
-            //Its an iPod Touch, third generation
-        }
-
-    }
-    #endif
     void Start(){
 
-        #if UNITY_IPHONE
-        if (isIphone4) {
-            gameObject.SetActive (false);
 
-        }
-        #endif
+        gameObject.SetActive (false);
         door.OnOpenDoor += onOpen;
         door.onOpenQuickly += onOpenQuickly;
         door.onClose += onClose;
@@ -49,23 +32,16 @@ public class AnimationMesh : MonoBehaviour
     void onOpen(){
 
         StopCoroutine (ShutDown(timeShutDown));
-        #if UNITY_IPHONE
 
-        if (isIphone4) {
-            gameObject.SetActive (true);
-        }
-        #endif
+        gameObject.SetActive (true);
 
         anim.SetBool("Open",true);
     }
     void onOpenQuickly(){
         StopCoroutine (ShutDown(timeShutDown));
-        #if UNITY_IPHONE
 
-        if (isIphone4) {
-            gameObject.SetActive (true);
-        }
-        #endif
+        gameObject.SetActive (true);
+
         anim.SetBool("OpenQuickly",true);
     }
     void onClose(){
@@ -81,12 +57,9 @@ public class AnimationMesh : MonoBehaviour
     IEnumerator ShutDown(float time)
     {
         yield return StartCoroutine(Wait(time));
-        #if UNITY_IPHONE
 
-        if (isIphone4) {
-            gameObject.SetActive (false);
-        }
-        #endif
+        gameObject.SetActive (false);
+
     }
     //Our wait function
     IEnumerator Wait(float duration)
