@@ -242,8 +242,8 @@ MonoBehaviour:
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1280
-  mHeight: 1280
+  mWidth: 1148
+  mHeight: 1148
   mDepth: -1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 896
-  mHeight: 137
+  mWidth: 804
+  mHeight: 123
   mDepth: 2
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1322466221}
   - 114: {fileID: 1322466222}
+  - 114: {fileID: 1322466223}
   m_Layer: 5
   m_Name: Primera
   m_TagString: Untagged
@@ -430,13 +431,13 @@ MonoBehaviour:
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 768
+  mWidth: 689
   mHeight: 4004
   mDepth: 3
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .191808194
+  aspectRatio: .172077924
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 3418610d32c244767a3190849d97d0fd, type: 3}
   mFont: {fileID: 0}
@@ -444,7 +445,7 @@ MonoBehaviour:
     l p\xE9rez cabello\r\ngustavo jim\xE9nez\r\n\n//--//\r\n\nlead game programming:\r\nluis
     alejandro vieira\r\n\r\n//--//\r\n\ngame designer:\r\ngustavo jim\xE9nez\r\njose
     l p\xE9rez cabello\r\nluis alejandro vieira\r\n\r\n//--//\r\n\ngame producer:\r\ngustavo
-    jim\xE9nez\r\njose l j\xE9rez Cabello\r\n\r\n//--//\r\n\nconcept development:\r\ngustavo
+    jim\xE9nez\r\njose l p\xE9rez Cabello\r\n\r\n//--//\r\n\nconcept development:\r\ngustavo
     jim\xE9nez\r\njose l p\xE9rez cabello\r\njames weinreb\r\n\r\n//--//\r\n\nillustrations:\r\njames
     weinreb\r\nveronica apolinar\r\n\r\n//--//\r\n\n3d modeling:\r\nkarem yamin\r\noriana
     san miguel\r\nidoia de brito\r\nana gil\r\nsim\xF3n garcia\r\nraymond diaz\r\nveronica
@@ -452,7 +453,7 @@ MonoBehaviour:
     animation:\r\ngustavo jim\xE9nez\r\nana gil\r\nraymond diaz\r\n\r\n//--//\r\n\n2d
     animation:\r\njames weinreb\r\n\r\n//--//\r\n\nsound designer:\r\nfrancisco maciel\r\n\r\n//--//\r\n\npress:\r\nluanda
     caleca\r\nclaudia constantini\r\nharianned chaurel\r\n\r\n//--//\r\n\nsocial media:\r\naxel
-    P\xE9rez\r\n\r\n//--//\r\n\naccounts executive:\r\naxel p\xE9rez\r\n\r\n//--//\r\n\ncopyrighter:\r\nver\xF3nica
+    p\xE9rez\r\n\r\n//--//\r\n\naccounts executive:\r\naxel p\xE9rez\r\n\r\n//--//\r\n\ncopyrighter:\r\nver\xF3nica
     Colmenares\r\n\r\n//--//\r\n\ngame testers:\r\nsantiago lazo\r\nraquel lazo\r\naxel
     p\xE9rez\r\nmirna cabello\r\nliliana israel\r\nalbert rosales"
   mFontSize: 100
@@ -476,6 +477,18 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &1322466223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1322466220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6c2143dac05ac4c90a25316e71b978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Gente_Creditos
 --- !u!1 &1485999863
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +623,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1626018474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 512.238464, y: -333, z: 0}
+  m_LocalPosition: {x: 459.378479, y: -333, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 661181180}
@@ -665,7 +678,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 256, y: 104, z: 0}
+  m_Size: {x: 230, y: 93, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1626018479
 MonoBehaviour:
@@ -709,8 +722,8 @@ MonoBehaviour:
   updateAnchors: 2
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 256
-  mHeight: 104
+  mWidth: 230
+  mHeight: 93
   mDepth: 1
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -934,6 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca836caade777436e99452d4b0ef209a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayOnEnable: 0
 --- !u!82 &2147064211
 AudioSource:
   m_ObjectHideFlags: 0

@@ -149,6 +149,113 @@
 	<data name="fresa" xml:space="preserve">
 		<value>fresa</value>
 	</data>
+	<data name="Gente_Creditos" xml:space="preserve">
+		<value>productor ejecutivo:
+arieh rosales
+
+//--//
+
+gerencia de proyecto:
+jose l pérez cabello
+gustavo jiménez
+
+//--//
+
+programador lider:
+luis alejandro vieira
+
+//--//
+
+diseño del juego:
+gustavo jiménez
+jose l pérez cabello
+luis alejandro vieira
+
+//--//
+
+producción:
+gustavo jiménez
+jose l pérez Cabello
+
+//--//
+
+desarrollo conceptual:
+gustavo jiménez
+jose l pérez cabello
+james weinreb
+
+//--//
+
+ilustraciones:
+james weinreb
+veronica apolinar
+
+//--//
+
+modelado 3d:
+karem yamin
+oriana san miguel
+idoia de brito
+ana gil
+simón garcia
+raymond diaz
+veronica apolinar
+
+//--//
+
+rigging:
+gustavo jiménez
+ana gil
+
+//--//
+
+animación 3d:
+gustavo jiménez
+ana gil
+raymond diaz
+
+//--//
+
+animación 2d:
+james weinreb
+
+//--//
+
+sonido:
+francisco maciel
+
+//--//
+
+prensa:
+luanda caleca
+claudia constantini
+harianned chaurel
+
+//--//
+
+social media:
+axel pérez
+
+//--//
+
+ejecutivo de ventas:
+axel pérez
+
+//--//
+
+redactora:
+verónica Colmenares
+
+//--//
+
+game testers:
+santiago lazo
+raquel lazo
+axel pérez
+mirna cabello
+liliana israel
+albert rosales</value>
+	</data>
 	<data name="[type=GAME_OBJECT]IntroObjAtlas" xml:space="preserve">
 		<value>508c2be143c034d2786ffe7837f8ea93</value>
 	</data>

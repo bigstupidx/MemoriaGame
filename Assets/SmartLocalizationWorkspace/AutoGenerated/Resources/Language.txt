@@ -128,6 +128,9 @@
 	<data name="cohete" xml:space="preserve">
 		<value>cohete</value>
 	</data>
+	<data name="creditosLetra" xml:space="preserve">
+		<value>créditos</value>
+	</data>
 	<data name="cupcake" xml:space="preserve">
 		<value>cupcake</value>
 	</data>
@@ -145,6 +148,113 @@
 	</data>
 	<data name="fresa" xml:space="preserve">
 		<value>fresa</value>
+	</data>
+	<data name="Gente_Creditos" xml:space="preserve">
+		<value>executive producer:
+arieh rosales
+
+//--//
+
+project management:
+jose l pérez cabello
+gustavo jiménez
+
+//--//
+
+lead game programming:
+luis alejandro vieira
+
+//--//
+
+game designer:
+gustavo jiménez
+jose l pérez cabello
+luis alejandro vieira
+
+//--//
+
+game producer:
+gustavo jiménez
+jose l pérez Cabello
+
+//--//
+
+concept development:
+gustavo jiménez
+jose l pérez cabello
+james weinreb
+
+//--//
+
+illustrations:
+james weinreb
+veronica apolinar
+
+//--//
+
+3d modeling:
+karem yamin
+oriana san miguel
+idoia de brito
+ana gil
+simón garcia
+raymond diaz
+veronica apolinar
+
+//--//
+
+rigging:
+gustavo jiménez
+ana gil
+
+//--//
+
+3d animation:
+gustavo jiménez
+ana gil
+raymond diaz
+
+//--//
+
+2d animation:
+james weinreb
+
+//--//
+
+sound designer:
+francisco maciel
+
+//--//
+
+press:
+luanda caleca
+claudia constantini
+harianned chaurel
+
+//--//
+
+social media:
+axel pérez
+
+//--//
+
+accounts executive:
+axel pérez
+
+//--//
+
+copyrighter:
+verónica Colmenares
+
+//--//
+
+game testers:
+santiago lazo
+raquel lazo
+axel pérez
+mirna cabello
+liliana israel
+albert rosales</value>
 	</data>
 	<data name="[type=GAME_OBJECT]IntroObjAtlas" xml:space="preserve">
 		<value />
@@ -227,8 +337,5 @@
 	</data>
 	<data name="[type=GAME_OBJECT]VuelveIntertarSprite" xml:space="preserve">
 		<value />
-	</data>
-	<data name="creditosLetra" xml:space="preserve">
-		<value>créditos</value>
 	</data>
 </root>
