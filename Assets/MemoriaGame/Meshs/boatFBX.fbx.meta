@@ -22,7 +22,9 @@ ModelImporter:
     400014: nurbsSquare2
     400016: group1
     2300000: Boat
+    2300002: //RootNode
     3300000: Boat
+    3300002: //RootNode
     4300000: Boat
     7400000: Bote@Idle
     7400002: Bote@Abriendo
@@ -70,18 +72,6 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: group1
-        weight: 1
-      - path: Master
-        weight: 1
-      - path: Master/ControlBoat
-        weight: 1
-      - path: Master/ControlBoat/Boat
-        weight: 1
-      - path: nurbsSquare1
-        weight: 1
-      - path: nurbsSquare2
-        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
@@ -110,18 +100,6 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: group1
-        weight: 1
-      - path: Master
-        weight: 1
-      - path: Master/ControlBoat
-        weight: 1
-      - path: Master/ControlBoat/Boat
-        weight: 1
-      - path: nurbsSquare1
-        weight: 1
-      - path: nurbsSquare2
-        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
@@ -149,18 +127,6 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: group1
-        weight: 1
-      - path: Master
-        weight: 1
-      - path: Master/ControlBoat
-        weight: 1
-      - path: Master/ControlBoat/Boat
-        weight: 1
-      - path: nurbsSquare1
-        weight: 1
-      - path: nurbsSquare2
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
