@@ -5,7 +5,7 @@ using System.Collections;
 public class GCFridnsLoadExample : MonoBehaviour {
 
 	private string ChalangeLeadeboard =  "your.leaderbord2.id.here";
-	private string ChalangeAchivment =   "your.achievement.id.here ";
+	private string ChalangeAchievement =   "your.achievement.id.here ";
 	
 	
 	public GUIStyle headerStyle;
@@ -47,7 +47,7 @@ public class GCFridnsLoadExample : MonoBehaviour {
 		
 		
 		if(GUI.Button(new Rect(730, 10, 180, 50), "Achievement Chalange All")) {
-			GameCenterManager.issueAchievementChallenge(ChalangeAchivment, "Your message here", GameCenterManager.friendsList.ToArray());
+			GameCenterManager.issueAchievementChallenge(ChalangeAchievement, "Your message here", GameCenterManager.friendsList.ToArray());
 		}
 		
 
@@ -73,7 +73,7 @@ public class GCFridnsLoadExample : MonoBehaviour {
 				}
 
 				if(GUI.Button(new Rect(650, 90 + 70 * i, 150, 30), "Chalange Achievement")) {
-					GameCenterManager.issueAchievementChallenge(ChalangeAchivment, "Your message here", FriendId);
+					GameCenterManager.issueAchievementChallenge(ChalangeAchievement, "Your message here", FriendId);
 				}
 
 

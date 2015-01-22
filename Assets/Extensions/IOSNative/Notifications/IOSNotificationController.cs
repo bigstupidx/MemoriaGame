@@ -70,6 +70,11 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 
 	[DllImport ("__Internal")]
 	private static extern  void _ISN_ApplicationIconBadgeNumber (int badges);
+
+
+	[DllImport ("__Internal")]
+	private static extern void _ISN_RegisterForRemoteNotifications(int types);
+
 	#endif
 
 	
@@ -89,7 +94,8 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 	void FixedUpdate() {
 		if(NotificationServices.remoteNotificationCount > 0) {
 			foreach(var rn in NotificationServices.remoteNotifications) {
-				UnityEngine.Debug.Log("Remote Noti: " + rn.alertBody);
+				if(!IOSNativeSettings.Instance.DisablePluginLogs) 
+					UnityEngine.Debug.Log("Remote Noti: " + rn.alertBody);
 				IOSNotificationController.instance.ShowNotificationBanner("", rn.alertBody);
 				dispatch(REMOTE_NOTIFICATION_RECEIVED, rn);
 				OnRemoteNotificationReceived(rn);
@@ -104,9 +110,19 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 
 	#if UNITY_IPHONE
 	public void RegisterForRemoteNotifications(RemoteNotificationType notificationTypes) {
+
 		#if (UNITY_IPHONE && !UNITY_EDITOR && PUSH_ENABLED) || SA_DEBUG_MODE
-		
+
+		string sysInfo = SystemInfo.operatingSystem;
+		sysInfo = sysInfo.Replace("iPhone OS ", "");
+		string[] chunks = sysInfo.Split('.');
+		int majorVersion = int.Parse(chunks[0]);
+		if (majorVersion >= 8) {
+			_ISN_RegisterForRemoteNotifications((int) notificationTypes);
+		} 
+
 		NotificationServices.RegisterForRemoteNotificationTypes(notificationTypes);
+
 		DeviceTokenListner.Create ();
 
 		#endif

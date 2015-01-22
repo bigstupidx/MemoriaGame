@@ -19,10 +19,11 @@ public class IOSNativeSettingsEditor : Editor {
 	GUIContent CheckInternetLabel = new GUIContent("Check Internet Connection[?]:", "If set to true Internet connection will be checked before sending load request. Request will be sent automatically if network became available");
 	GUIContent SendBillingFakeActions = new GUIContent("Send Fake Action In Editor[?]:", "Fake connect and purchase events will be fired in editor, can be useful for testing implementation in Editor");
 
-	GUIContent UseGCCaching  = new GUIContent("Use Requests Caching[?]:", "Requests to Game Cneter will be cached if no internet connection avaliable. Requests will be resented on next Game Center connect event");
+	GUIContent UseGCCaching  = new GUIContent("Use Requests Caching[?]:", "Requests to Game Cneter will be cached if no internet connection available. Requests will be resented on next Game Center connect event");
 
 
 	GUIContent EnablePushNotification  = new GUIContent("Enable Push Notifications API[?]:", "Enables Push Notifications Api");
+	GUIContent DisablePluginLogsNote  = new GUIContent("Disable Plugin Logs[?]:", "All plugins Debug.Log lines will be disabled if this option is enabled");
 
 
 	private IOSNativeSettings settings;
@@ -72,7 +73,7 @@ public class IOSNativeSettingsEditor : Editor {
 
 
 		#if UNITY_WEBPLAYER
-		EditorGUILayout.HelpBox("Editing IOS Native Settings not avaliable with web player platfrom. Please swith to any other platfrom under Build Seting menu", MessageType.Warning);
+		EditorGUILayout.HelpBox("Editing IOS Native Settings not available with web player platfrom. Please swith to any other platfrom under Build Seting menu", MessageType.Warning);
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.Space();
 		if(GUILayout.Button("Switch To IOS Platfrom",  GUILayout.Width(150))) {
@@ -174,8 +175,8 @@ public class IOSNativeSettingsEditor : Editor {
 		if (IOSNativeSettings.Instance.ShowGCParams) {
 		
 			EditorGUI.indentLevel++;
-			IOSNativeSettings.Instance.ShowAchivmentsParamsParams = EditorGUILayout.Foldout(IOSNativeSettings.Instance.ShowAchivmentsParamsParams, "Achievements");
-			if (IOSNativeSettings.Instance.ShowAchivmentsParamsParams) {
+			IOSNativeSettings.Instance.ShowAchievementsParams = EditorGUILayout.Foldout(IOSNativeSettings.Instance.ShowAchievementsParams, "Achievements");
+			if (IOSNativeSettings.Instance.ShowAchievementsParams) {
 				if(IOSNativeSettings.Instance.RegistredAchievementsIds.Count == 0) {
 					EditorGUILayout.HelpBox("No Achievements Ids Registred", MessageType.Info);
 				}
@@ -253,9 +254,19 @@ public class IOSNativeSettingsEditor : Editor {
 			IOSNativeSettings.Instance.EnablePushNotificationsAPI = EditorGUILayout.Toggle(IOSNativeSettings.Instance.EnablePushNotificationsAPI);
 			EditorGUILayout.EndHorizontal();
 
+
 			if(EditorGUI.EndChangeCheck()) {
 				UpdatePluginSettings();
 			}
+
+
+			EditorGUI.BeginChangeCheck();
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField(DisablePluginLogsNote);
+			IOSNativeSettings.Instance.DisablePluginLogs = EditorGUILayout.Toggle(IOSNativeSettings.Instance.DisablePluginLogs);
+			EditorGUILayout.EndHorizontal();
+
+
 		}
 	}
 

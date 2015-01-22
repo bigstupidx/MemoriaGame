@@ -26,7 +26,7 @@ public class DeviceTokenListner : UnityEngine.MonoBehaviour {
 	//--------------------------------------
 
 	public static void Create() {
-		new UnityEngine.GameObject ("DeviceTockenListner").AddComponent<DeviceTokenListner> ();
+		new UnityEngine.GameObject ("DeviceTokenListner").AddComponent<DeviceTokenListner> ();
 	}
 
 
@@ -50,10 +50,12 @@ public class DeviceTokenListner : UnityEngine.MonoBehaviour {
 
 	void  FixedUpdate () {
 
+
 		
 		if (!tokenSent) {
 
 			byte[] token   = NotificationServices.deviceToken;
+			//Debug.Log(NotificationServices.deviceToken);
 			if(token != null) {
 
 				IOSNotificationDeviceToken t = new IOSNotificationDeviceToken(token);

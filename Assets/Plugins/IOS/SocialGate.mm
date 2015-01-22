@@ -299,7 +299,10 @@ static SocialGate *_sharedInstance;
 
    
     //Create a string with HTML formatting for the email body
-    NSMutableString *emailBody = [[[NSMutableString alloc] initWithString:@"<html><body>"] retain];
+    NSMutableString *emailBody = [[NSMutableString alloc] initWithString:@"<html><body>"] ;
+#if UNITY_VERSION < 500
+    [emailBody retain];
+#endif
     
     
     //Add some text to it however you want
@@ -308,10 +311,15 @@ static SocialGate *_sharedInstance;
     [emailBody appendString:@"</p>"];
     
     
+    /*
     if(media.length > 0) {
        // NSLog(@"media: %@",media);
+      
+        
+        
         [emailBody appendString:[NSString stringWithFormat:@"<p><b><img src='data:image/png;base64,%@'></b></p>",media]];
     }
+     */
    
     
     //close the HTML formatting
@@ -332,6 +340,12 @@ static SocialGate *_sharedInstance;
     [emailDialog setSubject:subject];
     [emailDialog setMessageBody:emailBody isHTML:YES];
     
+    if(media.length > 0) {
+        NSData *imageData = [[NSData alloc] initWithBase64Encoding:media];
+        [emailDialog addAttachmentData:imageData mimeType:@"image/png" fileName:@"Attachment"];
+    }
+    
+    
     NSArray *emails = [recipients componentsSeparatedByString:@","];
 
     [emailDialog setToRecipients:emails];
@@ -340,8 +354,12 @@ static SocialGate *_sharedInstance;
     UIViewController *vc =  UnityGetGLViewController();
     
     [vc presentViewController:emailDialog animated:YES completion:nil];
+#if UNITY_VERSION < 500
     [emailDialog release];
     [emailBody release];
+#endif
+    
+    
 }
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {

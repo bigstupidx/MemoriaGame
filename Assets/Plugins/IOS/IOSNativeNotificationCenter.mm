@@ -71,7 +71,9 @@ static IOSNativeNotificationCenter *sharedHelper = nil;
         if((NotificationSettings.types & UIUserNotificationTypeSound) == 0) {
             if(sound) {
                 NSLog(@"ISN: no sound allowed for this user. notification sound disabled ");
+                 #if UNITY_VERSION < 500
                 sound = false;
+                #endif
             }
 
         }
@@ -82,6 +84,7 @@ static IOSNativeNotificationCenter *sharedHelper = nil;
     localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:time];
     localNotification.alertBody = messgae;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
+   
     if (badges > 0)
         localNotification.applicationIconBadgeNumber = badges;
     
@@ -182,5 +185,22 @@ extern "C" {
     }
     void _ISN_ApplicationIconBadgeNumber (int badges) {
         [[IOSNativeNotificationCenter sharedInstance] applicationIconBadgeNumber:badges];
+    }
+    
+    
+    void _ISN_RegisterForRemoteNotifications(int types) {
+          NSLog(@"_ISN_RegisterForRemoteNotifications");
+       
+       // UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:Nil];
+       // [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        
+        //[[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+        
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert |  UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+        
     }
 }

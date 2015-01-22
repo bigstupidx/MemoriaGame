@@ -8,7 +8,7 @@ public class ISN_CacheManager : MonoBehaviour {
 
 	private const string GA_DATA_CACHE_KEY = "ISN_Chache";
 	
-	public static void SaveAchievmentRequest(string achievementId, float percent) {
+	public static void SaveAchievementRequest(string achievementId, float percent) {
 
 		if (!IOSNativeSettings.Instance.UseGCRequestsCahing) {
 			return;
@@ -27,7 +27,7 @@ public class ISN_CacheManager : MonoBehaviour {
 		SavedData = data;
 	}
 	
-	public static void SendAchievmentChashedRequests() {
+	public static void SendAchievementChashedRequests() {
 		
 		string data = SavedData;
 		if(data != string.Empty) {

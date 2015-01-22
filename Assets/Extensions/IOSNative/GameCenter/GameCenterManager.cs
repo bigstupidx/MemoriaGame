@@ -59,6 +59,7 @@ public class GameCenterManager : MonoBehaviour {
 	public static Action OnGameCenterViewDissmissed  = delegate{};
 	public static Action<ISN_Result> OnFriendsListLoaded = delegate{};
 	public static Action<ISN_UserInfoLoadResult> OnUserInfoLoaded  = delegate{};
+	public static Action<ISN_PlayerSignatureResult> OnPlayerSignatureRetrieveResult = delegate{};
 
 
 
@@ -113,13 +114,17 @@ public class GameCenterManager : MonoBehaviour {
 
 	[DllImport ("__Internal")]
 	private static extern void _gcRetrieveFriends();
+
+
+	[DllImport ("__Internal")]
+	private static extern void _ISN_getSignature();
 	
 	#endif
 
 
 	private  static bool _IsInited = false;
 	private  static bool _IsPlayerAuthed = false;
-	private  static bool _IsAchievmentInfoLoaded = false;
+	private  static bool _IsAchievementsInfoLoaded = false;
 
 
 
@@ -165,7 +170,13 @@ public class GameCenterManager : MonoBehaviour {
 			registerAchievement(aId);
 		}
 	}
-	
+
+
+	public static void RetrievePlayerSignature() {
+		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
+		_ISN_getSignature();
+		#endif
+	}
 
 
 
@@ -214,7 +225,8 @@ public class GameCenterManager : MonoBehaviour {
 	
 
 	public static void reportScore(long score, string leaderBoradrId) {
-		Debug.Log("unity reportScore: " + leaderBoradrId);
+		if(!IOSNativeSettings.Instance.DisablePluginLogs) 
+			Debug.Log("unity reportScore: " + leaderBoradrId);
 
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
 		_reportScore(score.ToString(), leaderBoradrId);
@@ -223,7 +235,8 @@ public class GameCenterManager : MonoBehaviour {
 
 
 	public static void reportScore(double score, string leaderBoradrId) {
-		Debug.Log("unity reportScore double: " + leaderBoradrId);
+		if(!IOSNativeSettings.Instance.DisablePluginLogs) 
+			Debug.Log("unity reportScore double: " + leaderBoradrId);
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
 		long s = System.Convert.ToInt64(score * 100);
 		_reportScore(s.ToString(), leaderBoradrId);
@@ -364,7 +377,7 @@ public class GameCenterManager : MonoBehaviour {
 	public static void submitAchievement(float percent, string achievementId, bool isCompleteNotification) {
 
 		if(Application.internetReachability == NetworkReachability.NotReachable) {
-			ISN_CacheManager.SaveAchievmentRequest(achievementId, percent);
+			ISN_CacheManager.SaveAchievementRequest(achievementId, percent);
 		}
 
 
@@ -462,9 +475,9 @@ public class GameCenterManager : MonoBehaviour {
 		}
 	}
 
-	public static bool IsAchievmentInfoLoaded {
+	public static bool IsAchievementsInfoLoaded {
 		get {
-			return _IsAchievmentInfoLoaded;
+			return _IsAchievementsInfoLoaded;
 		}
 	}
 
@@ -661,7 +674,7 @@ public class GameCenterManager : MonoBehaviour {
 			submitAchievement (tpl);
 		}
 
-		_IsAchievmentInfoLoaded = true;
+		_IsAchievementsInfoLoaded = true;
 		OnAchievementsLoaded (result);
 		dispatcher.dispatch (GAME_CENTER_ACHIEVEMENTS_LOADED, result);
 	}
@@ -681,7 +694,7 @@ public class GameCenterManager : MonoBehaviour {
 		_player = new GameCenterPlayerTemplate (data[0], data [1], data [2]);
 
 
-		ISN_CacheManager.SendAchievmentChashedRequests ();
+		ISN_CacheManager.SendAchievementChashedRequests ();
 
 		_IsPlayerAuthed = true;
 
@@ -761,7 +774,8 @@ public class GameCenterManager : MonoBehaviour {
 			_friendsList.Add(fl[i]);
 		}
 
-		Debug.Log("Friends list loaded, total friends: " + _friendsList.Count);
+		if(!IOSNativeSettings.Instance.DisablePluginLogs) 
+			Debug.Log("Friends list loaded, total friends: " + _friendsList.Count);
 
 
 		ISN_Result result = new ISN_Result (true);
@@ -775,6 +789,32 @@ public class GameCenterManager : MonoBehaviour {
 		OnFriendsListLoaded (result);
 		dispatcher.dispatch (GAME_CENTER_FRIEND_LIST_LOADED, result);
 	}
+
+
+
+	
+	private void VerificationSignatureRetrieveFailed(string array) {
+
+		string[] data;
+		data = array.Split("|" [0]);
+
+		ISN_Error error =  new ISN_Error();
+		error.code = System.Convert.ToInt32(data[0]);
+		error.description = data[1];
+
+		ISN_PlayerSignatureResult res =  new ISN_PlayerSignatureResult(error);
+		OnPlayerSignatureRetrieveResult(res);
+
+	}
+
+	private void VerificationSignatureRetrieved(string array) {
+		string[] data;
+		data = array.Split("|" [0]);
+
+		ISN_PlayerSignatureResult res =  new ISN_PlayerSignatureResult(data[0], data[1], data[2], data[3]);
+		OnPlayerSignatureRetrieveResult(res);
+	}
+
 
 
 	

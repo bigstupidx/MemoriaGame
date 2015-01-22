@@ -25,6 +25,14 @@ static CloudManager *_sharedInstance;
 
 -(void) initialize {
     
+    [[NSNotificationCenter defaultCenter]
+     addObserver: self
+     selector: @selector (iCloudAccountAvailabilityChanged:)
+     name: NSUbiquityIdentityDidChangeNotification
+     object: nil];
+    
+    
+    
     NSFileManager*  fileManager = [NSFileManager defaultManager];
     id currentToken = [fileManager ubiquityIdentityToken];
     bool isSignedIntoICloud = (currentToken!=nil);
@@ -40,8 +48,8 @@ static CloudManager *_sharedInstance;
          UnitySendMessage("iCloudManager", "OnCloudInit", [ISNDataConvertor NSStringToChar:@""]);
 
     } else {
-         UnitySendMessage("iCloudManager", "OnCloudInitFail", [ISNDataConvertor NSStringToChar:@""]);
-    }
+        UnitySendMessage("iCloudManager", "OnCloudInitFail", [ISNDataConvertor NSStringToChar:@""]);
+   }
     
     NSLog(@"initialize");
     
@@ -141,6 +149,10 @@ static CloudManager *_sharedInstance;
     UnitySendMessage("iCloudManager", "OnCloudDataChanged", [ISNDataConvertor NSStringToChar:@""]);
 }
 
+-(void) iCloudAccountAvailabilityChanged {
+    
+    NSLog(@"iCloudAccountAvailabilityChanged:");
+}
 
 @end
 
@@ -149,9 +161,7 @@ static CloudManager *_sharedInstance;
 extern "C" {
     void _initCloud ()  {
         [[CloudManager sharedInstance] initialize];
-         NSLog(@"_initCloud");
     }
-    
     
     void _setString(char* key, char* val) {
         NSString* k = [ISNDataConvertor charToNSString:key];

@@ -55,8 +55,17 @@ static ISNCamera *_sharedInstance;
     [self GetImage:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
 }
 
--(void) GetImageFromCamera {
+
+-(void) StartCameraImagePic {
+    NSLog(@"StartCameraImagePic");
     [self GetImage:UIImagePickerControllerSourceTypeCamera];
+}
+
+-(void) GetImageFromCamera {
+    BOOL cameraAvailableFlag = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    if (cameraAvailableFlag) {
+        [self performSelector:@selector(StartCameraImagePic) withObject:nil afterDelay:0.9];
+    }
 }
 
 
@@ -86,7 +95,7 @@ static ISNCamera *_sharedInstance;
     
     UIImagePickerController * picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-  //  picker.allowsEditing = true;
+    
     picker.sourceType = source;
     
     
@@ -103,32 +112,43 @@ static ISNCamera *_sharedInstance;
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIViewController *vc =  UnityGetGLViewController();
     [vc dismissViewControllerAnimated:YES completion:nil];
-    // ee added video support
+    
+    
+    // added video support
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType]; // get media type
     // if mediatype is video
     if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         NSURL *videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
         NSString *moviePath = [videoUrl path];
         UnitySendMessage("IOSCamera", "OnVideoPickedEvent", [ISNDataConvertor NSStringToChar:moviePath]);
-    }
-    else{
+    } else{
         // it must be an image
-        UIImage *photo = [info objectForKey:UIImagePickerControllerEditedImage];
-        if(photo == nil){
-            photo = [info objectForKey:UIImagePickerControllerOriginalImage];
-        }
-        
+        UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
         NSString *encodedImage = @"";
         if (photo == nil) {
             NSLog(@"no photo");
         } else {
-            NSLog(@"MaxImageSize: %i", [self MaxImageSize]);
+            // NSLog(@"MaxImageSize: %i", [self MaxImageSize]);
+            //  NSLog(@"photo.size.width: %f", photo.size.width);
             
-            if(photo.size.width > [self MaxImageSize]) {
+            
+            
+            if(photo.size.width > [self MaxImageSize] || photo.size.height > [self MaxImageSize] ) {
+                NSLog(@"resizing image");
                 CGSize s = CGSizeMake([self MaxImageSize], [self MaxImageSize]);
-                CGFloat new_height = [self MaxImageSize] / (photo.size.width / photo.size.height);
-                s.height = new_height;
+                
+                if(photo.size.width > photo.size.height) {
+                    CGFloat new_height = [self MaxImageSize] / (photo.size.width / photo.size.height);
+                    s.height = new_height;
+
+                } else {
+                    CGFloat new_width = [self MaxImageSize] / (photo.size.height / photo.size.width);
+                    s.width = new_width;
+
+                }
+                              
                 photo =   [ISNCamera imageWithImage:photo scaledToSize:s];
+
             }
             
             NSData *imageData = nil;
@@ -193,7 +213,7 @@ extern "C" {
     
     void _ISN_InitCamerAPI(float compressionRate, int maxSize, int encodingType) {
         [[ISNCamera sharedInstance] setImageCompressionRate:compressionRate];
-        [[ISNCamera sharedInstance] setMaxImageSize:maxSize];
+        [[ISNCamera sharedInstance] setMaxImageSize:maxSize / 2];
         [[ISNCamera sharedInstance] setEncodingType:encodingType];
     }
     

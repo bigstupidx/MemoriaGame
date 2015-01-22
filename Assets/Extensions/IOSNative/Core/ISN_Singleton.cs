@@ -23,7 +23,8 @@ public abstract class ISN_Singleton<T> : EventDispatcher where T : MonoBehaviour
 		
 		get {
 			if(applicationIsQuitting) {
-				Debug.Log(typeof(T) + " [Mog.Singleton] is already destroyed. Returning null. Please check HasInstance first before accessing instance in destructor.");
+				if(!IOSNativeSettings.Instance.DisablePluginLogs) 
+					Debug.Log(typeof(T) + " [Mog.Singleton] is already destroyed. Returning null. Please check HasInstance first before accessing instance in destructor.");
 				return null;
 			}
 			
@@ -70,7 +71,7 @@ public abstract class ISN_Singleton<T> : EventDispatcher where T : MonoBehaviour
 	protected override void OnDestroy () {
 		base.OnDestroy();
 		_instance = null;
-	//	applicationIsQuitting = true;
+		applicationIsQuitting = true;
 	}
 	
 	protected virtual void OnApplicationQuit () {
