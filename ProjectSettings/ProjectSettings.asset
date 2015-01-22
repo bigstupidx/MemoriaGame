@@ -11,7 +11,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 0
   companyName: PP_Interactivo
-  productName: TimisPlay
+  productName: Timi's Play
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -67,11 +67,11 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  iPhoneBundleIdentifier: com.ppinteractivo.MemoriaGame
+  iPhoneBundleIdentifier: com.ppinteractivo.timisplayground
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 7709f1da01988401a9e4f3d4cc6e898a
-  iPhoneBundleVersion: 1.0
+  iPhoneBundleVersion: 1.0.1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
