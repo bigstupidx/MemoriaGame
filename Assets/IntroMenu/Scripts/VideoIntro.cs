@@ -14,7 +14,7 @@ public class VideoIntro : MonoBehaviour {
         if (firstRun) {
 //            Debug.Log (startIntro);
             if (startIntro) {
-                Invoke ("StartAnimVideoIntro01",0.5f);
+                Invoke ("StartAnimVideoIntro01",1.0f);
 
             } else {
 

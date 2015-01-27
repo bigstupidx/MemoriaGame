@@ -6,7 +6,11 @@ public class SocialLinks : MonoBehaviour {
     bool FacebookApp = false;
     bool InstragramApp = false;
     bool YoutubeApp= false;
-    void Awake() {
+    void Awake(){
+        IOSSharedApplication.applicationIsQuitting = false;//Esto es por el problema del singleton
+    }
+
+    void OnEnable() {
 
         #if UNITY_IOS
 
@@ -16,8 +20,7 @@ public class SocialLinks : MonoBehaviour {
 
 
         #endif
-    }
-    void Start(){
+
         #if UNITY_IOS
 
         IOSSharedApplication.instance.CheckUrl("instagram://");
@@ -30,8 +33,8 @@ public class SocialLinks : MonoBehaviour {
 
 
         #endif
-
     }
+ 
 
     void OnDisable(){
         #if UNITY_IOS
