@@ -15,6 +15,9 @@ public class TakeShoot : MonoBehaviour {
     void Awake(){
         initialTexture = target.mainTexture;
     }
+    /// <summary>
+    /// Next button desactivar
+    /// </summary>
     public void setIsEnableFalse(){
     
         next.isEnabled = false;

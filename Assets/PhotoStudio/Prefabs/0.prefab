@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
+  - 114: {fileID: 11472130}
   m_Layer: 5
   m_Name: 0
   m_TagString: Untagged
@@ -217,6 +218,20 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: a950f7f4b244344a1801d81f4933147b, type: 2}
   mSpriteName: borde_foto
   mFillCenter: 1
+--- !u!114 &11472130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bbdc343b930743d5978337ec0eb49a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextButton: {fileID: 0}
+  PlantillaButton: {fileID: 11400002}
+  Manager: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

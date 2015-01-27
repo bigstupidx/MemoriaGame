@@ -37,6 +37,9 @@ public class ManagerPhotoStudioMenu : Singleton<ManagerPhotoStudioMenu> {
         current = selectPlantilla;
     }
 
+    /// <summary>
+    /// Cambia a la escena de tomar la foto
+    /// </summary>
     public void GoToTakePhoto(){
         if (audio.isPlaying)
             audio.Pause();

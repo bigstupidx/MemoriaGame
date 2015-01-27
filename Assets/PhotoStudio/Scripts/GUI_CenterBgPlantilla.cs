@@ -17,8 +17,13 @@ public class GUI_CenterBgPlantilla : MonoBehaviour {
         center.onCenter += CenterObject;
     }
     void CenterObject ( GameObject centerObj) {
-        transform.parent = centerObj.transform;
-        transform.localPosition = Vector3.zero;
+        if (centerObj != null) {
+            transform.parent = centerObj.transform;
+            transform.localPosition = Vector3.zero;
+        } else {
+            transform.parent = center.transform.parent;
+        }
+
 	}
 
     public string SpriteNameCenter{

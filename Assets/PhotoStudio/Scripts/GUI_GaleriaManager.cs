@@ -8,6 +8,7 @@ public class GUI_GaleriaManager : MonoBehaviour {
 
     public UICenterOnChild father;
     public UITexture texturePrefab;
+    public UIButton NextButton;
 
     const float offsetX = 550;
     int number = 0;
@@ -33,7 +34,6 @@ public class GUI_GaleriaManager : MonoBehaviour {
         return null;
 
     }
-
     public void DeleteCurrentSelect(){
         if (father.centeredObject != null) {
             if (File.Exists (getPathFile ("TommyPlayground_" + father.centeredObject.name + ".png"))) {
@@ -43,7 +43,10 @@ public class GUI_GaleriaManager : MonoBehaviour {
                 UITexture current = father.centeredObject.GetComponent<UITexture> ();
               //  Erase (current);
                 System.IO.File.Delete (getPathFile ("TommyPlayground_" + father.centeredObject.name + ".png"));
-                EventDelegate.Execute(buttonBack.onClick);
+              //  EventDelegate.Execute(buttonBack.onClick);
+                father.CenterOn (null);
+                current.gameObject.SetActive (false);
+                father.enabled = true;
               //  EraseAll();
               //  EnableAll();
                 //backgroundSelected.AddFromOnCenter ();
@@ -55,6 +58,7 @@ public class GUI_GaleriaManager : MonoBehaviour {
             }
         }
     }
+
     public void EnableAll(){
 
         Vector3 off = Vector3.right * offsetX;
@@ -70,6 +74,10 @@ public class GUI_GaleriaManager : MonoBehaviour {
                 ((UITexture)list[list.Count - 1]).gameObject.name = i.ToString();
                 ((UITexture)list[list.Count - 1]).mainTexture = texture;
                 ((UITexture)list[list.Count - 1]).transform.localScale = new Vector3(1, 1, 1);
+                TouchPlantilla tPlan = ((UITexture)list [list.Count - 1]).GetComponent<TouchPlantilla> ();
+                tPlan.NextButton = NextButton;
+                tPlan.Manager = father;
+
             }
         }
         backgroundSelected.AddFromOnCenter ();

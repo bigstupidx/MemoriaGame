@@ -12,6 +12,8 @@ public class GUI_SetFotoMarco : MonoBehaviour {
     public GUI_GaleriaManager galeria;
 
   //  public Texture2D BGFoto;
+
+    public UIButton BackButton;
     public void SetAll(){
         TargetFoto.mainTexture = Foto.mainTexture;
         string marco_Name = Marco.centeredObject.GetComponent<UISprite>().spriteName;
@@ -37,6 +39,10 @@ public class GUI_SetFotoMarco : MonoBehaviour {
         {
          //Aqui deberia cambiar al intro  
         }
+        BackButton.gameObject.SetActive (true);
+    }
+    public void OffBackButton(){
 
+        BackButton.gameObject.SetActive (false);
     }
 }

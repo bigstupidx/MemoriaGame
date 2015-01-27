@@ -2,6 +2,7 @@
 using System.Collections;
 public class SavePhotoButton : MonoBehaviour {
 
+    public UIButton NextButton;
     public UITexture textureToSave;
 
     public void ErasePhoto(){
@@ -27,7 +28,7 @@ public class SavePhotoButton : MonoBehaviour {
 
     public void SaveTextureToDevice(){
         ((Texture2D)textureToSave.mainTexture).name = "TommyPlayground";
-
+        NextButton.isEnabled = false;
         #if UNITY_IOS
         IOSCamera.instance.OnImageSaved += OnImageSaved;
         IOSCamera.instance.SaveTextureToCameraRoll((Texture2D)textureToSave.mainTexture);
@@ -40,6 +41,8 @@ public class SavePhotoButton : MonoBehaviour {
     #if UNITY_IOS
     private void OnImageSaved (ISN_Result result) {
         IOSCamera.instance.OnImageSaved -= OnImageSaved;
+        NextButton.isEnabled = true;
+
         if(result.IsSucceeded) {
           
             IOSMessage.Create("Success", "Image Successfully saved to Camera Roll");
@@ -51,6 +54,7 @@ public class SavePhotoButton : MonoBehaviour {
     private void OnImageSaved (GallerySaveResult result) {
 
         AndroidCamera.instance.OnImageSaved -= OnImageSaved;
+    NextButton.isEnabled = true;
 
         if(result.IsSucceeded) {
             AN_PoupsProxy.showMessage("Saved", "Image saved to gallery \n" + "Path: " + result.imagePath);
@@ -63,6 +67,7 @@ public class SavePhotoButton : MonoBehaviour {
     }
     #endif
     public void ShareTexture(){
+
         #if UNITY_IOS
         IOSSocialManager.instance.ShareMedia("Timi's Playground", (Texture2D)textureToSave.mainTexture);
         #elif UNITY_ANDROID
@@ -71,16 +76,20 @@ public class SavePhotoButton : MonoBehaviour {
     }
 
     private void OnPostFailed() {
+
   //      IOSNativePopUpManager.showMessage("Posting example", "Post Failed :(");
     }
 
     private void OnPostSuccses() {
+
    //     IOSNativePopUpManager.showMessage("Posting example", "Post Succses!");
     }
 
 
 
     private void OnMailResult (ISN_Result result) {
+        NextButton.isEnabled = true;
+
         if(result.IsSucceeded) {
        //     IOSNativePopUpManager.showMessage("Positng example", "Mail Sended");
         } else {

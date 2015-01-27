@@ -34,13 +34,25 @@ public class EditPhoto : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Coloca la foto de la camra y la plantilal junta para su edicion.
+    /// </summary>
     public void SetForEdit(){
-        FotoEdit.mainTexture = FotoManager.mainTexture;
 
-        string marco_Name = MarcoManager.centeredObject.GetComponent<UISprite>().spriteName;
-        marquitoTexture = (Texture2D)Resources.Load("Plantillas/" + marco_Name);
+        string marco_Name = MarcoManager.centeredObject.GetComponent<UISprite>().spriteName;//Este me da el nombre de la plantilla
+        LoadSetMarcoPhoto (marco_Name);
+
+
+    }
+    /// <summary>
+    /// CArgo el marco y coloco la foto en la escena q es
+    /// </summary>
+    /// <param name="marco_Name">Marco name.</param>
+    protected void LoadSetMarcoPhoto(string marco_Name){
+        marquitoTexture = (Texture2D)Resources.Load("Plantillas/" + marco_Name);//Carga la plantilla de tamano real
         MarcoEdit.mainTexture = marquitoTexture;
 
+        FotoEdit.mainTexture = FotoManager.mainTexture;
         FotoEdit.transform.localPosition = positionIniFoto;
         FotoEdit.transform.localScale = scaleIniFoto;
 
