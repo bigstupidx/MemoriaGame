@@ -14,10 +14,8 @@ public class VideoIntro : MonoBehaviour {
         if (firstRun) {
 //            Debug.Log (startIntro);
             if (startIntro) {
+                Invoke ("StartAnimVideoIntro01",0.5f);
 
-                anim01.PlayForward ();
-
-                startIntro = false;
             } else {
 
                 anim02.FinishedCall ();
@@ -26,6 +24,11 @@ public class VideoIntro : MonoBehaviour {
             }
             firstRun = false;
         }
+    }
+    void StartAnimVideoIntro01(){
+        anim01.PlayForward ();
+
+        startIntro = false;
     }
 
     public void ChangueAtlas(){
