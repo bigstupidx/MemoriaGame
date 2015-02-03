@@ -17,6 +17,7 @@ using UnityEngine;
 
 public class TexturePackerImporter : AssetPostprocessor
 {
+	const string IMPORTER_VERSION = "3.5.0";
 
 	static string[] textureExtensions = {
 		".png",
@@ -26,6 +27,20 @@ public class TexturePackerImporter : AssetPostprocessor
 		".tga",
 		".bmp"
 	};
+
+	static bool importPivotPoints = EditorPrefs.GetBool("TPImporter.ImportPivotPoints", true);
+
+	/*
+	 *  Pivot point import can be disabled in the Preferences dialog (menu item Unity->Preferences, TexturePacker sheet)
+	 */
+	[PreferenceItem("TexturePacker")]
+	static void PreferencesGUI()
+	{
+		importPivotPoints = EditorGUILayout.Toggle("Always import pivot points", importPivotPoints);
+		if (GUI.changed)
+			EditorPrefs.SetBool("TPImporter.ImportPivotPoints", importPivotPoints);
+	}
+
 
 	/*
 	 *  Trigger a texture file re-import each time the .tpsheet file changes (or is manually re-imported)
@@ -81,6 +96,12 @@ public class TexturePackerImporter : AssetPostprocessor
 			return;
 		}
 
+		Dictionary<string, SpriteMetaData> existingSprites = new Dictionary<string, SpriteMetaData>();
+		foreach (SpriteMetaData sprite in importer.spritesheet)
+		{
+			existingSprites.Add(sprite.name, sprite);
+		}
+
 		List<SpriteMetaData> metaData = new List<SpriteMetaData> ();
 		foreach (string row in dataFileContent) {
 			if (string.IsNullOrEmpty (row) || row.StartsWith ("#") || row.StartsWith (":"))
@@ -100,29 +121,40 @@ public class TexturePackerImporter : AssetPostprocessor
 			float py = float.Parse (cols [6]);
 
 			smd.rect = new UnityEngine.Rect (x, y, w, h);
-			smd.pivot = new UnityEngine.Vector2 (px, py);
 
-			if (px == 0 && py == 0)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.BottomLeft;
-			else if (px == 0.5 && py == 0)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.BottomCenter;
-			else if (px == 1 && py == 0)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.BottomRight;
-			else if (px == 0 && py == 0.5)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.LeftCenter;
-			else if (px == 0.5 && py == 0.5)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.Center;
-			else if (px == 1 && py == 0.5)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.RightCenter;
-			else if (px == 0 && py == 1)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.TopLeft;
-			else if (px == 0.5 && py == 1)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.TopCenter;
-			else if (px == 1 && py == 1)
-				smd.alignment = (int)UnityEngine.SpriteAlignment.TopRight;
-			else
-				smd.alignment = (int)UnityEngine.SpriteAlignment.Custom;
+			if (existingSprites.ContainsKey(smd.name))
+			{
+				SpriteMetaData sprite = existingSprites[smd.name];
+				smd.pivot = sprite.pivot;
+				smd.alignment = sprite.alignment;
+				smd.border = sprite.border;
+			}
 
+			if (importPivotPoints || !existingSprites.ContainsKey(smd.name))
+			{
+				smd.pivot = new UnityEngine.Vector2 (px, py);
+
+				if (px == 0 && py == 0)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.BottomLeft;
+				else if (px == 0.5 && py == 0)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.BottomCenter;
+				else if (px == 1 && py == 0)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.BottomRight;
+				else if (px == 0 && py == 0.5)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.LeftCenter;
+				else if (px == 0.5 && py == 0.5)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.Center;
+				else if (px == 1 && py == 0.5)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.RightCenter;
+				else if (px == 0 && py == 1)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.TopLeft;
+				else if (px == 0.5 && py == 1)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.TopCenter;
+				else if (px == 1 && py == 1)
+					smd.alignment = (int)UnityEngine.SpriteAlignment.TopRight;
+				else
+					smd.alignment = (int)UnityEngine.SpriteAlignment.Custom;
+			}
 			metaData.Add (smd);
 		}
 
