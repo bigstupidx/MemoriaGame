@@ -16,7 +16,7 @@ using System.Collections;
 public abstract class ISN_Singleton<T> : EventDispatcher where T : MonoBehaviour {
 
 	private static T _instance = null;
-    public static bool applicationIsQuitting = false;
+	public static bool applicationIsQuitting = false;
 	
 	
 	public static T instance {
