@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnionAssets.FLE;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayServiceCustomLBExample : MonoBehaviour {
 
@@ -50,8 +51,9 @@ public class PlayServiceCustomLBExample : MonoBehaviour {
 
 
 		
-		playerLabel.text = "Player Diconnected";
+		playerLabel.text = "Player Disconnected";
 		defaulttexture = avatar.GetComponent<Renderer>().material.mainTexture;
+		SA_StatusBar.text = "Custom Leader-board example scene loaded";
 
 		foreach(CustomLeaderboardFiledsHolder line in lines) {
 			line.Disable();
@@ -63,11 +65,14 @@ public class PlayServiceCustomLBExample : MonoBehaviour {
 		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
 		GooglePlayConnection.instance.addEventListener(GooglePlayConnection.CONNECTION_RESULT_RECEIVED, OnConnectionResult);
 
-		GooglePlayManager.instance.addEventListener(GooglePlayManager.SCORE_SUBMITED, OnScoreSubmited);
 
-		SA_StatusBar.text = "Custom Leader-board example scene loaded";
 
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.SCORE_REQUEST_RECEIVED, OnScoreListLoaded);
+		GooglePlayManager.ActionSoreSubmited += OnScoreSbumitted;
+
+
+		//Same events, one with C# actions, one with FLE
+		GooglePlayManager.ActionScoreRequestReceived += ActionScoreRequestReceived;
+
 
 		if(GooglePlayConnection.state == GPConnectionState.STATE_CONNECTED) {
 			//checking if player already connected
@@ -85,34 +90,40 @@ public class PlayServiceCustomLBExample : MonoBehaviour {
 
 
 	public void LoadScore() {
-		GooglePlayManager.instance.loadPlayerCenteredScores(LEADERBOARD_ID, displayTime, displayCollection, 10);
+
+		GooglePlayManager.instance.LoadPlayerCenteredScores(LEADERBOARD_ID, displayTime, displayCollection, 10);
 	}
 
 	public void OpenUI() {
-		GooglePlayManager.instance.showLeaderBoardById(LEADERBOARD_ID);
+		GooglePlayManager.instance.ShowLeaderBoardById(LEADERBOARD_ID);
 	}
 	
 
 
 	public void ShowGlobal() {
 		displayCollection = GPCollectionType.GLOBAL;
+		UpdateScoresDisaplay();
 	}
 
 	public void ShowLocal() {
 		displayCollection = GPCollectionType.FRIENDS;
+		UpdateScoresDisaplay();
 	}
 
 
 	public void ShowAllTime() {
 		displayTime = GPBoardTimeSpan.ALL_TIME;
+		UpdateScoresDisaplay();
 	}
 	
 	public void ShowWeek() {
 		displayTime = GPBoardTimeSpan.WEEK;
+		UpdateScoresDisaplay();
 	}
 
 	public void ShowDay() {
 		displayTime = GPBoardTimeSpan.TODAY;
+		UpdateScoresDisaplay();
 	}
 
 
@@ -132,38 +143,39 @@ public class PlayServiceCustomLBExample : MonoBehaviour {
 	// UNITY
 	//--------------------------------------
 
-	void Update() {
+	void UpdateScoresDisaplay() {
 		
 
 		
 		if(loadedLeaderBoard != null) {
 
 
-			//Geting current player score
+			//Getting current player score
 			int displayRank;
 
 			GPScore currentPlayerScore = loadedLeaderBoard.GetCurrentPlayerScore(displayTime, displayCollection);
 			if(currentPlayerScore == null) {
 				//Player does not have rank at this collection / time
 				//so let's show the top score
-				//since we used loadPlayerCenteredScores function. we should have top scores loaded if player have to scores at this collection / time
+				//since we used loadPlayerCenteredScores function. we should have top scores loaded if player have no scores at this collection / time
 				//https://developer.android.com/reference/com/google/android/gms/games/leaderboard/Leaderboards.html#loadPlayerCenteredScores(com.google.android.gms.common.api.GoogleApiClient, java.lang.String, int, int, int)
 				//Asynchronously load the player-centered page of scores for a given leaderboard. If the player does not have a score on this leaderboard, this call will return the top page instead.
-				displayRank = 1;
+			  	displayRank = 1;
 			} else {
 				//Let's show 5 results before curent player Rank
 				displayRank = Mathf.Clamp(currentPlayerScore.rank - 5, 1, currentPlayerScore.rank);
 
-				//let's check if dosplayRank we what to display before player score is exists
+				//let's check if displayRank we what to display before player score is exists
 				while(loadedLeaderBoard.GetScore(displayRank, displayTime, displayCollection) == null) {
 					displayRank++;
 				}
 			}
 
 
+			Debug.Log("Start Display at rank: " + displayRank);
 
 
-			int i = 1;
+			int i = displayRank;
 			foreach(CustomLeaderboardFiledsHolder line in lines) {
 
 				line.Disable();
@@ -195,11 +207,21 @@ public class PlayServiceCustomLBExample : MonoBehaviour {
 
 				i++;
 			}
+
+
+
+
+
+
+
 		} else {
 			foreach(CustomLeaderboardFiledsHolder line in lines) {
 				line.Disable();
 			}
 		}
+
+
+
 		
 		
 		
@@ -291,25 +313,18 @@ public class PlayServiceCustomLBExample : MonoBehaviour {
 	//--------------------------------------
 
 
-	private void OnScoreListLoaded() {
-		
-		SA_StatusBar.text = "Scores Load Finished";
-		
-	
-		loadedLeaderBoard = GooglePlayManager.instance.GetLeaderBoard(LEADERBOARD_ID);
 
-	}
 
 	private void SubmitScore() {
-		GooglePlayManager.instance.submitScoreById(LEADERBOARD_ID, score);
+		GooglePlayManager.instance.SubmitScoreById(LEADERBOARD_ID, score);
 		SA_StatusBar.text = "Submitiong score: " + (score +1).ToString();
 		score ++;
 	}
 
 
 	private void OnPlayerDisconnected() {
-		SA_StatusBar.text = "Player Diconnected";
-		playerLabel.text = "Player Diconnected";
+		SA_StatusBar.text = "Player Disconnected";
+		playerLabel.text = "Player Disconnected";
 
 	}
 	
@@ -326,13 +341,37 @@ public class PlayServiceCustomLBExample : MonoBehaviour {
 		Debug.Log(result.code.ToString());
 	}
 
-	private void OnScoreSubmited(CEvent e) {
-		GooglePlayResult result = e.data as GooglePlayResult;
+
+
+	private void ActionScoreRequestReceived (GooglePlayResult obj) {
+
+		SA_StatusBar.text = "Scores Load Finished";
+
+		loadedLeaderBoard = GooglePlayManager.instance.GetLeaderBoard(LEADERBOARD_ID);
+
+
+		if(loadedLeaderBoard == null) {
+			Debug.Log("No Leaderboard found");
+			return;
+		}
+
+		List<GPScore> scoresLB =  loadedLeaderBoard.GetScoresList(GPBoardTimeSpan.ALL_TIME, GPCollectionType.GLOBAL);
+
+		foreach(GPScore score in scoresLB) {
+			Debug.Log("OnScoreUpdated " + score.rank + " " + score.playerId + " " + score.score);
+		}
+
+		GPScore currentPlayerScore = loadedLeaderBoard.GetCurrentPlayerScore(displayTime, displayCollection);
+
+		Debug.Log("currentPlayerScore: " + currentPlayerScore.score + " rank:" + currentPlayerScore.rank);
+
+
+		UpdateScoresDisaplay();
+
+	}
+
+	void OnScoreSbumitted (GP_GamesResult result) {
 		SA_StatusBar.text = "Score Submit Resul:  " + result.message;
-
-		//Reloading scores list:
-		GooglePlayManager.instance.loadTopScores(LEADERBOARD_ID, GPBoardTimeSpan.ALL_TIME, GPCollectionType.GLOBAL, 10);
-		GooglePlayManager.instance.loadTopScores(LEADERBOARD_ID, GPBoardTimeSpan.ALL_TIME, GPCollectionType.FRIENDS, 10);
-
+		LoadScore();
 	}
 }

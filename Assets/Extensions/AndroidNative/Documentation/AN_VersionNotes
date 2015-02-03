@@ -1,3 +1,137 @@
+6.0:
+Android Native does not overrides main activity anymore
+
+Fixed:
+Score submitting when not internet connection available  fixed.
+Custom Leaderboard UI scene fixed
+GooglePlayManager.ActionOAuthTokenLoaded action fixed
+
+Refactor:
+SaveImageToGalalry -> SaveImageToGallery
+
+5.5:
+Billing API does not requires main activity anymore 
+
+5.4:
+New:
+Package Details API does not requires main activity anymore
+
+
+Fixes:
+Billing issue connected with Android L fixed 
+
+
+5.3:
+Fixes:
+Immersive mode enabling without main activity bug fixed
+Local notifications display bug fixed
+LocalNotificationTemplate splitter changed 
+Warning: This will break compatibility with notifications created with previous version.
+getToken(String accountName, String scope) method fixed
+Facebook Game Gifting API. Reade more: http://goo.gl/uhxaLf 
+Facebook Trun Based Notifications: Read more:http://goo.gl/sZNJDU
+
+
+New:
+GP_Partisipant class updated, new properties added
+Play Service Editor UI Updated
+
+
+5.2:
+Billing:
+time and originalJson properties of GooglePurchaseTemplate not available after inventory retrieved 
+GoogleProductTemplate - originalJson property added
+
+More spelling fixes
+
+Following API now does not requires main activity 
+Local notifications
+Push notifications
+Native Sharing
+
+New Features:
+Push Notifications, icon, sound and vibration settings added
+Read More: 
+https://unionassets.com/android-native-plugin/local-notifications-90
+
+Local Notifications icon, sound and vibration settings added
+Read More: 
+https://unionassets.com/android-native-plugin/push-notifications-169
+
+Advertising Id Retrieval
+Read more:
+https://unionassets.com/android-native-plugin/google-play-utilities-273#advertising-id-retrieval
+
+Facebook SDK updated to v 6.1 beta
+
+
+5.1:
+
+New Features:
+Immersive mode does not requires main activity anymore
+Popup now use Holo Android theme
+App Licensing, read more at: http://goo.gl/z7sRoV
+
+Billing:
+Purchase method now accept developer payload as additional parameter.
+Original JSON filed now available with consume Response
+
+Saved Games:
+CreateNewSnapshot - PlayedTime param added
+GP_SnapshotMeta - TotalPlayedTime filed added
+ActionGameSaved - Action Added
+Snapshot Saving issue fixed
+
+Fixes:
+Local notification template saving with UTF8 fixed
+Local notification template loading fixed
+Auto reconnect not starting anymore if user has signed out suing external play service UI.
+AchievementBuffer leak fixed
+Analytics Start Tracking function fixed
+Facebook re auth bug fixed
+Receiving Push Notification when app is closed bug fixed
+GoogleGender constant values fixed
+
+
+
+Refactor:
+Google Play Manager methods name conventions fixed
+
+Spelling Fixes:
+Tocken => Token
+Loeaded => Loaded
+Achivment => Achievement
+Retrive => Retrieve
+Avaliable => Available
+SpanShot => Snapshot
+GooglePlaySavedGmaesManager => GooglePlaySavedGamesManager
+Note: please remove old GooglePlaySavedGmaesManager manually 
+
+NotoficationsExample -> NotificationsExample
+Note: please remove old NotoficationsExample manually 
+
+
+GoogleGenger -> GoogleGender 
+Note: please remove old GoogleGenger manually 
+
+5.0:
+New Features:
+Google+ button API added
+Google Saved Games API new methods:
+* LoadAvaliableSavedGames()
+* LoadSpanShotByName(string)
+Links to online documentation added
+
+Auto manifest generation. Read more: http://goo.gl/CqSwFR
+Instagram API added Read more:
+
+
+Fixes:
+Google Ad LoadInterstisial methods fixe
+Google Analytics v4 bugs fixed 
+Quest manager fixed
+Event manager fixed
+
 4.9:
 
 New Features:

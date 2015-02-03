@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 //  
 // @module Android Native Plugin for Unity3D 
 // @author Osipov Stanislav (Stan's Assets) 
@@ -56,12 +56,12 @@ public class AndroidGoogleAdsExample : MonoBehaviour {
 
 		AndroidAdMobController.instance.Init(MY_BANNERS_AD_UNIT_ID);
 
-		//I whant to use Interstisial ad also, so I have to set additional id for it
+		//If yoi whant to use Interstisial ad also, you need to set additional ad unin id for Interstisial as well
 		AndroidAdMobController.instance.SetInterstisialsUnitID(MY_INTERSTISIALS_AD_UNIT_ID);
 
 		
 		//Optional, add data for better ad targeting
-		AndroidAdMobController.instance.SetGender(GoogleGenger.Male);
+		AndroidAdMobController.instance.SetGender(GoogleGender.Male);
 		AndroidAdMobController.instance.AddKeyword("game");
 		AndroidAdMobController.instance.SetBirthday(1989, AndroidMonth.MARCH, 18);
 		AndroidAdMobController.instance.TagForChildDirectedTreatment(false);

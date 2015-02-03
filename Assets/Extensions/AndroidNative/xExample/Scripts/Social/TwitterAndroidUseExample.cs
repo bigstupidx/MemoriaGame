@@ -17,8 +17,7 @@ public class TwitterAndroidUseExample : MonoBehaviour {
 	
 
 	private static bool IsUserInfoLoaded = false;
-
-	private static bool IsAuntifivated = false;
+	private static bool IsAuthenticated = false;
 
 	public Texture2D ImageToShare;
 	public DefaultPreviewButton connectButton;
@@ -34,14 +33,13 @@ public class TwitterAndroidUseExample : MonoBehaviour {
 	void Awake() {
 
 
-		AndroidTwitterManager.instance.addEventListener(TwitterEvents.TWITTER_INITED,  OnInit);
-		AndroidTwitterManager.instance.addEventListener(TwitterEvents.AUTHENTICATION_SUCCEEDED,  OnAuth);
 
-		AndroidTwitterManager.instance.addEventListener(TwitterEvents.POST_SUCCEEDED,  OnPost);
-		AndroidTwitterManager.instance.addEventListener(TwitterEvents.POST_FAILED,  OnPostFailed);
+		AndroidTwitterManager.instance.OnTwitterInitedAction += OnTwitterInitedAction;
+		AndroidTwitterManager.instance.OnPostingCompleteAction += OnPostingCompleteAction;
+		AndroidTwitterManager.instance.OnUserDataRequestCompleteAction += OnUserDataRequestCompleteAction;
+		AndroidTwitterManager.instance.OnAuthCompleteAction += OnAuthCompleteAction;
 
-		AndroidTwitterManager.instance.addEventListener(TwitterEvents.USER_DATA_LOADED,  OnUserDataLoaded);
-		AndroidTwitterManager.instance.addEventListener(TwitterEvents.USER_DATA_FAILED_TO_LOAD,  OnUserDataLoadFailed);
+
 
 
 		//You can use:
@@ -57,7 +55,7 @@ public class TwitterAndroidUseExample : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if(IsAuntifivated) {
+		if(IsAuthenticated) {
 			connectButton.text = "Disconnect";
 			Name.text = "Player Connected";
 			foreach(DefaultPreviewButton button in AuthDependedButtons) {
@@ -92,7 +90,7 @@ public class TwitterAndroidUseExample : MonoBehaviour {
 	}
 
 	private void Connect() {
-		if(!IsAuntifivated) {
+		if(!IsAuthenticated) {
 			AndroidTwitterManager.instance.AuthenticateUser();
 		} else {
 			LogOut();
@@ -156,40 +154,42 @@ public class TwitterAndroidUseExample : MonoBehaviour {
 
 
 
-	private void OnUserDataLoadFailed() {
-		Debug.Log("Opps, user data load failed, something was wrong");
+	void OnUserDataRequestCompleteAction (TWResult result) {
+		if(result.IsSucceeded) {
+			IsUserInfoLoaded = true;
+			AndroidTwitterManager.instance.userInfo.LoadProfileImage();
+			AndroidTwitterManager.instance.userInfo.LoadBackgroundImage();
+		} else {
+			Debug.Log("Opps, user data load failed, something was wrong");
+		}
+	}
+	
+
+	void OnPostingCompleteAction (TWResult result) {
+		if(result.IsSucceeded) {
+			Debug.Log("Congrats. You just posted something to Twitter!");
+		} else {
+			Debug.Log("Oops! Posting failed. Something went wrong.");
+		}
 	}
 
-
-	private void OnUserDataLoaded() {
-		IsUserInfoLoaded = true;
-		AndroidTwitterManager.instance.userInfo.LoadProfileImage();
-		AndroidTwitterManager.instance.userInfo.LoadBackgroundImage();
-
-
-		//style2.normal.textColor 							= AndroidTwitterManager.instance.userInfo.profile_text_color;
-		//Camera.main.GetComponent<Camera>().backgroundColor  = AndroidTwitterManager.instance.userInfo.profile_background_color;
-	}
-
-
-	private void OnPost() {
-		Debug.Log("Congrats, you just postet something to twitter");
-	}
-
-	private void OnPostFailed() {
-		Debug.Log("Opps, post failed, something was wrong");
-	}
-
-
-	private void OnInit() {
-		if(AndroidTwitterManager.instance.IsAuthed) {
+	void OnAuthCompleteAction (TWResult result) {
+		if(result.IsSucceeded) {
+			//user authed
 			OnAuth();
 		}
 	}
 
+	void OnTwitterInitedAction (TWResult result) {
+
+		if(AndroidTwitterManager.instance.IsAuthed) {
+			//user authed
+			OnAuth();
+		}
+	}
 
 	private void OnAuth() {
-		IsAuntifivated = true;
+		IsAuthenticated = true;
 	}
 
 
@@ -199,7 +199,7 @@ public class TwitterAndroidUseExample : MonoBehaviour {
 	// --------------------------------------
 
 
-	private void RetriveTimeLine() {
+	private void RetrieveTimeLine() {
 		TW_UserTimeLineRequest r =  TW_UserTimeLineRequest.Create();
 		r.addEventListener(BaseEvent.COMPLETE, OnTimeLineRequestComplete);
 		r.AddParam("screen_name", "unity3d");
@@ -343,7 +343,7 @@ public class TwitterAndroidUseExample : MonoBehaviour {
 	private void LogOut() {
 		IsUserInfoLoaded = false;
 		
-		IsAuntifivated = false;
+		IsAuthenticated = false;
 
 		AndroidTwitterManager.instance.LogOut();
 	}

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d5c8dadb03c4328a428367673ec4b2, type: 3}
   m_Name: IOSNativeSettings
   m_EditorClassIdentifier: 
-  AppleId: XXXXXXXXX
+  AppleId: joselpc84@gmail.com
   InAppProducts: []
   SendFakeEventsInEditor: 1
   RegistredAchievementsIds: []
@@ -19,9 +19,10 @@ MonoBehaviour:
   checkInternetBeforeLoadRequestl: 0
   ShowStoreKitParams: 0
   ShowGCParams: 0
-  ShowAchivmentsParamsParams: 1
+  ShowAchievementsParams: 1
   ShowOtherParams: 0
   ShowCameraAndGallryParams: 1
+  DisablePluginLogs: 0
   UseGCRequestsCahing: 0
   UsePPForAchievements: 0
   EnablePushNotificationsAPI: 0

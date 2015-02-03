@@ -97,39 +97,39 @@ public class GooglePlayRTM : SA_Singleton<GooglePlayRTM>  {
 	//--------------------------------------
 
 	public void FindMatch(int minPlayers, int maxPlayers, int bitMask = 0) {
-		AndroidNative.RTMFindMatch(minPlayers, maxPlayers, bitMask);
+		AN_GMSRTMProxy.RTMFindMatch(minPlayers, maxPlayers, bitMask);
 	}
 
 	public void SendDataToAll(byte[] data, GP_RTM_PackageType sendType) {
 		string dataString = ConvertByteDataToString(data);
-		AndroidNative.sendDataToAll(dataString, (int) sendType);
+		AN_GMSRTMProxy.sendDataToAll(dataString, (int) sendType);
 	}
 	
 	public void sendDataToPlayers(byte[] data, GP_RTM_PackageType sendType, params string[] players) {
 		string dataString = ConvertByteDataToString(data);
 		string playersString = string.Join(AndroidNative.DATA_SPLITTER, players);
-		AndroidNative.sendDataToPlayers(dataString, playersString, (int) sendType);
+		AN_GMSRTMProxy.sendDataToPlayers(dataString, playersString, (int) sendType);
 	}
 
 	public void ShowWaitingRoomIntent() {
-		AndroidNative.ShowWaitingRoomIntent();
+		AN_GMSRTMProxy.ShowWaitingRoomIntent();
 	}
 
 	public void OpenInvitationBoxUI(int minPlayers, int maxPlayers) {
-		AndroidNative.InvitePlayers(minPlayers, maxPlayers);
+		AN_GMSRTMProxy.InvitePlayers(minPlayers, maxPlayers);
 	}
 
 	public void LeaveRoom() {
-		AndroidNative.leaveRoom();
+		AN_GMSGiftsProxy.leaveRoom();
 	}
 
 
 	public void AcceptInviteToRoom(string intitationId) {
-		AndroidNative.acceptInviteToRoom(intitationId);
+		AN_GMSGiftsProxy.acceptInviteToRoom(intitationId);
 	}
 	
 	public void OpenInvitationInBoxUI()  {
-		AndroidNative.showInvitationBox();
+		AN_GMSGiftsProxy.showInvitationBox();
 	}
 
 
@@ -172,14 +172,14 @@ public class GooglePlayRTM : SA_Singleton<GooglePlayRTM>  {
 		_currentRoom.id = storeData[0];
 		_currentRoom.creatorId = storeData[1];
 
-		string[] ids = storeData[2].Split(","[0]);
+		string[] ParticipantsInfo = storeData[2].Split(","[0]);
 
-		for(int i = 0; i < ids.Length; i += 3) {
-			if(ids[i] == AndroidNative.DATA_EOF) {
+		for(int i = 0; i < ParticipantsInfo.Length; i += 6) {
+			if(ParticipantsInfo[i] == AndroidNative.DATA_EOF) {
 				break;
 			}
 
-			GP_Partisipant p =  new GP_Partisipant(ids[i], ids[i + 1], ids[i + 2]);
+			GP_Partisipant p =  new GP_Partisipant(ParticipantsInfo[i], ParticipantsInfo[i + 1], ParticipantsInfo[i + 2], ParticipantsInfo[i + 3], ParticipantsInfo[i + 4], ParticipantsInfo[i + 5]);
 			_currentRoom.AddPartisipant(p);
 		}
 

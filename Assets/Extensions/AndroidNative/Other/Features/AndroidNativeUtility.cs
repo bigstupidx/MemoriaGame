@@ -34,11 +34,6 @@ public class AndroidNativeUtility : SA_Singleton<AndroidNativeUtility> {
 		AndroidNative.runPackage(packageName);
 	}
 
-	public void LoadGoogleAccountNames() {
-		AndroidNative.loadGoogleAccountNames();
-	}
-
-
 
 	//--------------------------------------
 	// Static Methods
@@ -55,6 +50,12 @@ public class AndroidNativeUtility : SA_Singleton<AndroidNativeUtility> {
 
 	public static void OpenAppRatingPage(string url) {
 		AN_PoupsProxy.OpenAppRatePage(url);
+	}
+
+
+
+	public static void HideCurrentPopup() {
+		AN_PoupsProxy.HideCurrentPopup();
 	}
 
 

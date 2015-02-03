@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a9a6d66393b4088930138323da9797, type: 3}
   m_Name: SocialSettings
   m_EditorClassIdentifier: 
-  showPermitions: 1
+  showPermitions: 0
   ShowActions: 1
+  ShowAPIS: 1
   fb_scopes_list:
   - user_about_me
   - user_friends
@@ -24,3 +25,7 @@ MonoBehaviour:
   - user_likes
   TWITTER_CONSUMER_KEY: REPLACE_WITH_YOUR_CONSUMER_KEY
   TWITTER_CONSUMER_SECRET: REPLACE_WITH_YOUR_CONSUMER_SECRET
+  TwitterAPI: 1
+  NativeSharingAPI: 1
+  InstagramAPI: 1
+  KeepManifestClean: 1

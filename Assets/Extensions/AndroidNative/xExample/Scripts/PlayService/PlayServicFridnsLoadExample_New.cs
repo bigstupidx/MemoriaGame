@@ -18,7 +18,7 @@ public class PlayServicFridnsLoadExample_New : MonoBehaviour {
 
 	void Awake() {
 
-		playerLabel.text = "Player Diconnected";
+		playerLabel.text = "Player Disconnected";
 		defaulttexture = avatar.GetComponent<Renderer>().material.mainTexture;
 
 
@@ -29,8 +29,9 @@ public class PlayServicFridnsLoadExample_New : MonoBehaviour {
 		GooglePlayConnection.instance.addEventListener(GooglePlayConnection.CONNECTION_RESULT_RECEIVED, OnConnectionResult);
 		
 
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.FRIENDS_LOADED, OnFriendListLoaded);
-		
+	
+		GooglePlayManager.ActionFriendsListLoaded +=  OnFriendListLoaded;
+
 
 		if(GooglePlayConnection.state == GPConnectionState.STATE_CONNECTED) {
 			//checking if player already connected
@@ -136,20 +137,20 @@ public class PlayServicFridnsLoadExample_New : MonoBehaviour {
 
 
 	public void LoadFriendsList() {
-		GooglePlayManager.instance.loadConnectedPlayers();
+		GooglePlayManager.instance.LoadConnectedPlayers();
 	}
 
 
 
-	private void OnFriendListLoaded(CEvent e) {
-		GooglePlayResult result = e.data as GooglePlayResult;
+	private void OnFriendListLoaded(GooglePlayResult result) {
+		GooglePlayManager.ActionFriendsListLoaded -=  OnFriendListLoaded;
 		SA_StatusBar.text = "Load Friends Result:  " + result.response.ToString();
 	}
 
 	
 	private void OnPlayerDisconnected() {
-		SA_StatusBar.text = "Player Diconnected";
-		playerLabel.text = "Player Diconnected";
+		SA_StatusBar.text = "Player Disconnected";
+		playerLabel.text = "Player Disconnected";
 	}
 	
 	private void OnPlayerConnected() {

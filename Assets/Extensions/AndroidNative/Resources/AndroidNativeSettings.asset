@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnablePlusAPI: 1
   EnableGamesAPI: 1
-  EnableAppStateAPI: 1
+  EnableAppStateAPI: 0
   EnableDriveAPI: 0
   LoadProfileIcons: 1
   LoadProfileImages: 1
@@ -21,19 +21,56 @@ MonoBehaviour:
   LoadQuestsIcons: 1
   LoadEventsIcons: 1
   UseProductNameAsFolderName: 1
-  GalleryFolderName: TomyPlayground
+  GalleryFolderName: Timi's Play
   MaxImageLoadSize: 512
   CameraCaptureMode: 0
-  ShowPluginSettings: 1
-  EnableBillingAPI: 1
-  EnablePSAPI: 1
+  ShowPluginSettings: 0
+  ShowAppPermissions: 0
+  EnableBillingAPI: 0
+  EnablePSAPI: 0
   EnableSocialAPI: 1
   EnableCameraAPI: 1
-  ShowStoreKitParams: 1
+  ExpandNativeAPI: 0
+  ExpandPSAPI: 0
+  ExpandBillingAPI: 0
+  ExpandSocialAPI: 0
+  ExpandCameraAPI: 0
+  ShowStoreKitParams: 0
   ShowCameraAndGalleryParams: 0
-  ShowPSSettings: 1
-  ShowActions: 0
-  GCMSettingsActinve: 1
+  ShowLocalNotificationParams: 0
+  ShowPushNotificationParams: 0
+  ShowPSSettings: 0
+  ShowPSSettingsResources: 0
+  ShowActions: 1
+  GCMSettingsActinve: 0
+  LocalNotificationsAPI: 1
+  ImmersiveModeAPI: 1
+  ApplicationInformationAPI: 1
+  ExternalAppsAPI: 1
+  PoupsandPreloadersAPI: 1
+  CheckAppLicenseAPI: 1
+  InAppPurchasesAPI: 0
+  GooglePlayServicesAPI: 0
+  PlayServicesAdvancedSignInAPI: 0
+  GoogleButtonAPI: 0
+  AnalyticsAPI: 0
+  GoogleCloudSaveAPI: 0
+  PushNotificationsAPI: 0
+  GoogleMobileAdAPI: 0
+  GalleryAPI: 1
+  CameraAPI: 1
+  KeepManifestClean: 1
   GCM_SenderId: YOUR_SENDER_ID_HERE
+  GooglePlayServiceAppID: 216817929098
   base64EncodedPublicKey: REPLACE_WITH_YOUR_PUBLIC_KEY
   InAppProducts: []
+  ShowWhenAppIsForeground: 1
+  EnableVibrationLocal: 0
+  LocalNotificationIcon: {fileID: 0}
+  LocalNotificationSound: {fileID: 0}
+  UseParsePushNotifications: 0
+  ParseAppId: YOUR_PARSE_APP_ID
+  DotNetKey: YOUR_PARSE_DOT_NET_KEY
+  EnableVibrationPush: 0
+  PushNotificationIcon: {fileID: 0}
+  PushNotificationSound: {fileID: 0}
