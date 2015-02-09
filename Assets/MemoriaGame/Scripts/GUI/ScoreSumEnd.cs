@@ -78,7 +78,7 @@ public class ScoreSumEnd : MonoBehaviour {
                     //isCounting = false;
                     sum = ManagerScore.Instance.CurrentScore;
                     CheckCoins ();
-                    textNum.text = sum.ToString ();
+                    SetTextNum();
                     //enabled = false;
                     sumTime = true;
                     currentTime = ManagerTime.Instance.getCurrentTimeOfGame;
@@ -104,7 +104,7 @@ public class ScoreSumEnd : MonoBehaviour {
                     if (changued) {
                     } else {
                         CheckCoins ();
-                        textNum.text = sum.ToString ();
+                        SetTextNum();
                         changued = true;
                         StartCoroutine ("ChangueText", (secondToChangue));
                     }
@@ -121,7 +121,7 @@ public class ScoreSumEnd : MonoBehaviour {
                     sum += (int)(currentTime * ManagerScore.Instance.TimeBySecondScore);
                     CheckCoins ();
 
-                    textNum.text = sum.ToString ();
+                    SetTextNum();
                     tweenPos.enabled = false;
                     texteffect.alpha = 0;
                     scalesT.enabled = false;
@@ -143,8 +143,7 @@ public class ScoreSumEnd : MonoBehaviour {
                 } else {
                     sum += (int)(aux*ManagerScore.Instance.TimeBySecondScore) ;
                     CheckCoins ();
-                    textNum.text = sum.ToString ();
-
+                    SetTextNum();
                 }
 
               
@@ -184,7 +183,7 @@ public class ScoreSumEnd : MonoBehaviour {
                 sum = ManagerScore.Instance.CurrentScore;
 
                 sum += (int)(ManagerTime.Instance.getCurrentTimeOfGame * ManagerScore.Instance.TimeBySecondScore);
-                textNum.text = sum.ToString ();
+            SetTextNum();
                 scalesT = TweenScale.Begin (textNum.gameObject, 0.3f, new Vector3 (1.3f, 1.3f, 1.3f));
                 scalesT.style = UITweener.Style.Once;
 
@@ -213,5 +212,20 @@ public class ScoreSumEnd : MonoBehaviour {
     {
         for (float timer = 0; timer < duration; timer += Time.deltaTime)
             yield return null;
+    }
+
+    void SetTextNum(){
+     //   textNum.text = sum.ToString ();
+
+        if (!isChanguin)
+            StartCoroutine (UpdateText());
+    }
+    bool isChanguin = false;
+    IEnumerator UpdateText(){
+        isChanguin = true;
+        yield return new WaitForSeconds (0.01f);
+        isChanguin = false;
+        textNum.text = sum.ToString ();
+
     }
 }
