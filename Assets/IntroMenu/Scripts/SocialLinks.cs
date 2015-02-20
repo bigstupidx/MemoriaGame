@@ -28,8 +28,8 @@ public class SocialLinks : MonoBehaviour {
         #elif UNITY_ANDROID
 
         AndroidNativeUtility.instance.CheckIsPackageInstalled("com.google.android.youtube");
-        AndroidNativeUtility.instance.CheckIsPackageInstalled("com.google.android.facebook");
-        AndroidNativeUtility.instance.CheckIsPackageInstalled("com.google.android.instagram");
+        AndroidNativeUtility.instance.CheckIsPackageInstalled("com.facebook.katana");
+        AndroidNativeUtility.instance.CheckIsPackageInstalled("com.instagram.android");
 
 
         #endif
@@ -55,7 +55,8 @@ public class SocialLinks : MonoBehaviour {
         }
         #elif UNITY_ANDROID
         if(InstragramApp){
-            Application.OpenURL("http://instagram.com/timisplayground");
+
+            Application.OpenURL("http://instagram.com/_u/timisplayground");
         }else{
             Application.OpenURL("http://instagram.com/timisplayground");
 
@@ -93,8 +94,9 @@ public class SocialLinks : MonoBehaviour {
 
         }
         #elif UNITY_ANDROID
+        //"fb://profile/828953677148939"
         if (FacebookApp) {
-            Application.OpenURL("fb://profile/TimisPlayground");
+            Application.OpenURL("fb://facewebmodal/f?href=https://www.facebook.com/TimisPlayground");
         } else {
 
 
@@ -126,15 +128,16 @@ public class SocialLinks : MonoBehaviour {
     #elif UNITY_ANDROID
 
     void OnPackageCheckResult (AN_PackageCheckResult res) {
+
         if(res.IsSucceeded) {
             switch(res.packageName){
                 case "com.google.android.youtube":
                     YoutubeApp = true;
                     break;
-                case "com.google.android.instagram":
+            case "com.instagram.android":
                     InstragramApp = true;
                     break;
-                case "com.google.android.facebook":
+            case "com.facebook.katana":
                     FacebookApp = true;
                     break;
             }
