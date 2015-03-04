@@ -47,7 +47,7 @@ public class ManagerBook : MonoBehaviour {
             }
         }
 
-        audio.PlayOneShot(RightAudio);
+        GetComponent<AudioSource>().PlayOneShot(RightAudio);
     }
     public void LeftPage(){
         if(!RightArrow.activeSelf)
@@ -66,7 +66,7 @@ public class ManagerBook : MonoBehaviour {
                 LeftArrow.SetActive (false);
         }
 
-        audio.PlayOneShot(LeftAudio);
+        GetComponent<AudioSource>().PlayOneShot(LeftAudio);
 
     }
 }

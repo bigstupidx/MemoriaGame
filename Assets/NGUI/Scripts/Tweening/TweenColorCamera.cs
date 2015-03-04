@@ -19,7 +19,7 @@ public class TweenColorCamera : Tweener
         mCached = true;
 
         mWidget = GetComponent<Camera>();
-        mLight = light;
+        mLight = GetComponent<Light>();
 
     }
 

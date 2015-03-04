@@ -37,10 +37,10 @@ public class ShowTimeEnd : MonoBehaviour {
 
     }
     void Winer(){
-        audio.volume = ManagerSound.Instance.fxVolume;
+        GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
 
-        audio.clip = Win;
-        audio.Play ();
+        GetComponent<AudioSource>().clip = Win;
+        GetComponent<AudioSource>().Play ();
     }
     void Loser(){
         Invoke ("PlayAhh",alphaT.delay+2.5f);
@@ -49,8 +49,8 @@ public class ShowTimeEnd : MonoBehaviour {
 
     void PlayAhh(){
 
-        audio.volume = ManagerSound.Instance.fxVolume;
-        audio.clip = Lose;
-        audio.Play ();
+        GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
+        GetComponent<AudioSource>().clip = Lose;
+        GetComponent<AudioSource>().Play ();
     }
 }

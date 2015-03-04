@@ -8,16 +8,16 @@ public class AS_SpawnFX : MonoBehaviour {
     public bool loop = false;
 	// Use this for initialization
 	void Start () {
-        audio.loop = loop;
+        GetComponent<AudioSource>().loop = loop;
 
         if (loop == false) {
-            audio.PlayOneShot (fx, ManagerSound.Instance.fxVolume);
+            GetComponent<AudioSource>().PlayOneShot (fx, ManagerSound.Instance.fxVolume);
 
             Invoke ("DestroySound", fx.length);
         } else {
-            audio.clip = fx;
-            audio.volume = ManagerSound.Instance.fxVolume;
-            audio.Play ();
+            GetComponent<AudioSource>().clip = fx;
+            GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
+            GetComponent<AudioSource>().Play ();
         }
 	}
 

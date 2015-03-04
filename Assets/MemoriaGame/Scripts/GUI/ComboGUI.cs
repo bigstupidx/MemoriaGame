@@ -45,7 +45,7 @@ public class ComboGUI : MonoBehaviour {
                 TweenAlpha.Begin (gameObject, 0.3f, 1);
                 ScaleBig ();
                 combo2.Play ();
-                audio.Play ();
+                GetComponent<AudioSource>().Play ();
             }
             isCombo = true;
             break;
@@ -54,7 +54,7 @@ public class ComboGUI : MonoBehaviour {
                 ScaleBig ();
 
                 combo3.Play ();
-                audio.Play ();
+                GetComponent<AudioSource>().Play ();
 
             }
             isCombo = true;
@@ -64,7 +64,7 @@ public class ComboGUI : MonoBehaviour {
                 ScaleBig ();
 
                 combo4.Play ();
-                audio.Play ();
+                GetComponent<AudioSource>().Play ();
 
             }
             isCombo = true;
@@ -74,7 +74,7 @@ public class ComboGUI : MonoBehaviour {
                 ScaleBig ();
 
                 comboFinal.Play ();
-                audio.Play ();
+                GetComponent<AudioSource>().Play ();
 
             }
             isCombo = true;

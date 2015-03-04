@@ -6,7 +6,7 @@ public class AS_SoundPlay : MonoBehaviour {
 
 
     public void Playaudio(){
-        audio.volume = ManagerSound.Instance.fxVolume;
-        audio.Play ();
+        GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
+        GetComponent<AudioSource>().Play ();
     }
 }

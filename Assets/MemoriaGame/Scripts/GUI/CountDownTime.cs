@@ -24,11 +24,11 @@ public class CountDownTime : MonoBehaviour {
         label.text = ((int)ManagerTime.Instance.getCurrentTimeToStart).ToString();
        
         if (label.text != last && ManagerTime.Instance.getCurrentTimeToStart >= 1) {
-            audio.volume = ManagerSound.Instance.fxVolume;
-            audio.Play ();
+            GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
+            GetComponent<AudioSource>().Play ();
         }else if(label.text != last &&  ManagerTime.Instance.getCurrentTimeToStart > 0 ){
-            audio.clip = clipCount0;
-            audio.Play ();
+            GetComponent<AudioSource>().clip = clipCount0;
+            GetComponent<AudioSource>().Play ();
 
         }
         if (ManagerTime.Instance.getCurrentTimeToStart < 0) {

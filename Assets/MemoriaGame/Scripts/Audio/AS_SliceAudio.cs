@@ -10,11 +10,11 @@ public class AS_SliceAudio : MonoBehaviour {
 	}
     public void OnActivePower (bool active) {
         if (active) {
-            audio.volume = ManagerSound.Instance.fxVolume;
+            GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
 
-            audio.Play ();
+            GetComponent<AudioSource>().Play ();
         } else {
-            audio.Stop ();
+            GetComponent<AudioSource>().Stop ();
         }
     }
 
