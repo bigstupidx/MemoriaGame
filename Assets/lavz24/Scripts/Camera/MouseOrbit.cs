@@ -30,8 +30,8 @@ public class MouseOrbit : MonoBehaviour {
 		x = angles.y;
 		y = angles.x;
 
-		if (rigidbody)
-			rigidbody.freezeRotation = true;
+		if (GetComponent<Rigidbody>())
+			GetComponent<Rigidbody>().freezeRotation = true;
 	}
 
 	void LateUpdate () {

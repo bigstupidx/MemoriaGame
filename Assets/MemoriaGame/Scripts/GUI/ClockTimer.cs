@@ -69,7 +69,7 @@ public class ClockTimer : MonoBehaviour {
 
     }
     void StopAllSound () {
-        audio.Stop ();
+        GetComponent<AudioSource>().Stop ();
     }
     [Signal]
 	void onTimeGameStart () {
@@ -84,7 +84,7 @@ public class ClockTimer : MonoBehaviour {
         currentStop = new Vector3(0,0,Mathf.Rad2Deg *  Arrow.transform.rotation.z * 2.0f);
 
         if(isFreezing || playRed)
-            audio.Stop ();
+            GetComponent<AudioSource>().Stop ();
 
     }
     [Signal]
@@ -113,7 +113,7 @@ public class ClockTimer : MonoBehaviour {
         }
 
         if(isFreezing || playRed)
-            audio.Play ();
+            GetComponent<AudioSource>().Play ();
        // tween.enabled = true;
 
     }
@@ -173,14 +173,14 @@ public class ClockTimer : MonoBehaviour {
     }
 
     void SetAudio(AudioClip clipsito, bool loopsito){
-        if (audio.isPlaying) {
-            audio.Pause ();
+        if (GetComponent<AudioSource>().isPlaying) {
+            GetComponent<AudioSource>().Pause ();
         }
 
-        audio.volume = ManagerSound.Instance.fxVolume;
-        audio.clip = clipsito;
-        audio.loop = loopsito;
-        audio.Play ();
+        GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
+        GetComponent<AudioSource>().clip = clipsito;
+        GetComponent<AudioSource>().loop = loopsito;
+        GetComponent<AudioSource>().Play ();
     }
 
     void Update(){

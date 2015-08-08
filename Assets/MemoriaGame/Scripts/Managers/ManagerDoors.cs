@@ -384,9 +384,9 @@ class ManagerDoors : Singleton<ManagerDoors>
         } else {
             pos = count - 1;
         }
-        if (audio != null) {
-            audio.volume = ManagerSound.Instance.fxVolume;
-            audio.Play ();
+        if (GetComponent<AudioSource>() != null) {
+            GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
+            GetComponent<AudioSource>().Play ();
         }
 
         Invoke ("CloseDoors",TimeToNextOpen * count);

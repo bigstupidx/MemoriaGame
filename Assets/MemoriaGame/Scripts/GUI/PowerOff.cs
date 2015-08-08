@@ -84,9 +84,9 @@ public class PowerOff : MonoBehaviour {
         if (anotherUsing == false) {
             button.isEnabled = true;
 
-            audio.volume = ManagerSound.Instance.fxVolume;
+            GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
 
-            audio.Play ();
+            GetComponent<AudioSource>().Play ();
             
         }
     }

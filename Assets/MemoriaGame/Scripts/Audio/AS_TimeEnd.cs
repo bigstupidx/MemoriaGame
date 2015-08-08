@@ -10,6 +10,6 @@ public class AS_TimeEnd : MonoBehaviour {
 	
 	// Update is called once per frame
 	void PlaySound () {
-        audio.Play ();
+        GetComponent<AudioSource>().Play ();
 	}
 }

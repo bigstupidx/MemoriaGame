@@ -10,26 +10,26 @@ public class SetAudioVolumen : MonoBehaviour {
 
         if (isNotFirstTime)
         {
-            audio.volume  = PlayerPrefs.GetFloat ("bgVolume");
+            GetComponent<AudioSource>().volume  = PlayerPrefs.GetFloat ("bgVolume");
 
         }
         else
         {
-            audio.volume   = 0.5f;
+            GetComponent<AudioSource>().volume   = 0.5f;
         }
        
 	}
 	
     public void AudioPlay(){
     
-        if (!audio.isPlaying)
-            audio.Play();
+        if (!GetComponent<AudioSource>().isPlaying)
+            GetComponent<AudioSource>().Play();
     }
 
     public bool isPlayOnEnable = false;
     void OnEnable(){
         if (isPlayOnEnable)
-            audio.Play();
+            GetComponent<AudioSource>().Play();
     }
 
 }
