@@ -24,7 +24,7 @@ MonoBehaviour:
   EnableATCSupport: 0
   SaveCameraImageToGallery: 0
   UseProductNameAsFolderName: 1
-  GalleryFolderName: 
+  GalleryFolderName: Timi's Play
   MaxImageLoadSize: 512
   CameraCaptureMode: 0
   ImageFormat: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   CameraAPI: 1
   KeepManifestClean: 1
   GCM_SenderId: YOUR_SENDER_ID_HERE
-  GooglePlayServiceAppID: 0
+  GooglePlayServiceAppID: 216817929098
   base64EncodedPublicKey: REPLACE_WITH_YOUR_PUBLIC_KEY
   InAppProducts: []
   ShowWhenAppIsForeground: 1
