@@ -14,18 +14,22 @@ class ManagerTime : Singleton<ManagerTime>
 {
     public static float TimeToStart = 5.0f;
     float currentTimeToStart = 0;
-    public float getCurrentTimeToStart { get { return currentTimeToStart; }}
-   
+
+    public float getCurrentTimeToStart { get { return currentTimeToStart; } }
+
     public float TimeOfGame = 60.0f;
     float currentTimeOfGame = 0;
-    public float getCurrentTimeOfGame{get{ return currentTimeOfGame; }}
+
+    public float getCurrentTimeOfGame{ get { return currentTimeOfGame; } }
 
     /// <summary>
     /// Funciones para cuando el tiempo comienza
     /// </summary>
     [HideInInspector]
-    public List<Signal> onTimeGameStart = new List<Signal>();
-    public void TimeGameStar(){
+    public List<Signal> onTimeGameStart = new List<Signal> ();
+
+    public void TimeGameStar ()
+    {
 
         foreach (Signal sig in onTimeGameStart) {
 
@@ -36,28 +40,33 @@ class ManagerTime : Singleton<ManagerTime>
     /// <summary>
     /// Funciones para cuando el tiempo se acabe
     /// </summary>
-    public delegate void onTimeGameEndBroadcast();
+    public delegate void onTimeGameEndBroadcast ();
+
     public event onTimeGameEndBroadcast onTimeGameEnd;
 
     /// <summary>
     /// Subscribes funct to OnPauseGame.
     /// </summary>
     /// <param name="funct">Funct.</param>
-    public static void SubscribeOnTimeGameEnd(onTimeGameEndBroadcast funct){
-        Instance.onTimeGameEnd+=funct;
+    public static void SubscribeOnTimeGameEnd (onTimeGameEndBroadcast funct)
+    {
+        Instance.onTimeGameEnd += funct;
     }
+
     /// <summary>
     /// Unsubscribe safetely funct Function to OnPauseGameDelegate
     /// </summary>
     /// <param name="funct">Function.</param>
-    public static void UnSubscribeOnTimeGameEnd(onTimeGameEndBroadcast funct){
-        if(Instance != null)
-            Instance.onTimeGameEnd-=funct;
+    public static void UnSubscribeOnTimeGameEnd (onTimeGameEndBroadcast funct)
+    {
+        if (Instance != null)
+            Instance.onTimeGameEnd -= funct;
     }
 
 
 
-    protected override void AwakeChild(){
+    protected override void AwakeChild ()
+    {
         switch (ManagerDoors.numberOfPair) {
 
         case NumberOfPair.CincoXSeis:
@@ -74,27 +83,35 @@ class ManagerTime : Singleton<ManagerTime>
             break;
         }
 
-      //  Invoke("setTimeToStart",0.1f);
+        //  Invoke("setTimeToStart",0.1f);
 
       
     }
-    bool firstRun = true;
-    void OnEnable(){
-        ManagerPause.SubscribeOnPauseGame(onPaused);
-        ManagerPause.SubscribeOnResumeGame( onResume);
-    }
-    void OnDisable(){
 
-        ManagerPause.UnSubscribeOnPauseGame(onPaused);
-        ManagerPause.UnSubscribeOnResumeGame(onResume);
+    bool firstRun = true;
+
+    void OnEnable ()
+    {
+        ManagerPause.SubscribeOnPauseGame (onPaused);
+        ManagerPause.SubscribeOnResumeGame (onResume);
     }
-    void setTimeToStart(){
+
+    void OnDisable ()
+    {
+
+        ManagerPause.UnSubscribeOnPauseGame (onPaused);
+        ManagerPause.UnSubscribeOnResumeGame (onResume);
+    }
+
+    void setTimeToStart ()
+    {
         currentTimeToStart = TimeToStart;
 
     }
-        
-    void LateUpdate(){
-        if(firstRun){
+
+    void LateUpdate ()
+    {
+        if (firstRun) {
             firstRun = false;
             setTimeToStart ();
             return;
@@ -125,38 +142,50 @@ class ManagerTime : Singleton<ManagerTime>
             }
         }
     }
-   
+
     #region Paused
+
     bool isPaused = false;
-    void onPaused(){
+
+    void onPaused ()
+    {
         isPaused = true;
 
     }
-    void onResume(){
+
+    void onResume ()
+    {
         isPaused = false;
 
     }
+
     #endregion
 
     #region Stop:
+
     /// <summary>
     /// Guarda lo signal para cuando se para el tiempo
     /// </summary>
     [HideInInspector]
-    public List<Signal> onStopTime = new List<Signal>();
-     void StopTimer(){
+    public List<Signal> onStopTime = new List<Signal> ();
+
+    void StopTimer ()
+    {
 
         foreach (Signal sig in onStopTime) {
 
             sig.Invoke ();
         }
     }
+
     /// <summary>
     /// Guarda los signal para cuando se da play al tiempo
     /// </summary>
     [HideInInspector]
-    public List<Signal> onPlayTime = new List<Signal>();
-    public void PlayTimer(){
+    public List<Signal> onPlayTime = new List<Signal> ();
+
+    public void PlayTimer ()
+    {
 
         foreach (Signal sig in onPlayTime) {
 
@@ -169,10 +198,12 @@ class ManagerTime : Singleton<ManagerTime>
     /// </summary>
     bool stopTime = false;
     bool isTika = false;
+
     /// <summary>
     /// Cuando se quiere parar el tiempo
     /// </summary>
-    public void onStop(bool tika){
+    public void onStop (bool tika)
+    {
         if (!isTika && tika) {
             isTika = true;
         }
@@ -183,11 +214,13 @@ class ManagerTime : Singleton<ManagerTime>
         }
     
     }
+
     /// <summary>
     /// Cuando se quiere reanudar el tiempo
     /// </summary>
-    public void onPlay(bool tika){
-        if (ManagerDoors.Instance.CheckWinGame())
+    public void onPlay (bool tika)
+    {
+        if (ManagerDoors.Instance.CheckWinGame ())
             return;
 
         if (isTika) {
@@ -204,6 +237,7 @@ class ManagerTime : Singleton<ManagerTime>
         }
      
     }
+
     #endregion
 }
 

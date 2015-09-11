@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SmartCultureCollections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <version>1</version>
+  <version>4</version>
   <CultureInfos>
     <CultureInfo>
       <languageCode>ar</languageCode>
@@ -1008,6 +1008,36 @@
       <languageCode>ms</languageCode>
       <englishName>Malaysia</englishName>
       <nativeName>Malaysia</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
+      <languageCode />
+      <englishName>Invariant Language (Invariant Country)</englishName>
+      <nativeName>Invariant Language (Invariant Country)</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
+      <languageCode>tlh</languageCode>
+      <englishName>Klingon</englishName>
+      <nativeName>tlhIngan Hol</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
+      <languageCode>tlh-Qaak</languageCode>
+      <englishName>Klingon (pIqaD)</englishName>
+      <nativeName>tlhIngan Hol</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
+      <languageCode>cy</languageCode>
+      <englishName>Welsh</englishName>
+      <nativeName>Cymraeg</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
+      <languageCode>sr</languageCode>
+      <englishName>Serbian</englishName>
+      <nativeName>српски</nativeName>
       <isRightToLeft>false</isRightToLeft>
     </CultureInfo>
   </CultureInfos>

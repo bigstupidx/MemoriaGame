@@ -5,15 +5,15 @@ namespace SmartLocalization.Editor
     using UnityEngine.UI;
     using System.Collections;
 
-    [RequireComponent (typeof(Text))]
-    public class LocalizedText : MonoBehaviour
+    [RequireComponent (typeof(Image))]
+    public class LocalizedImage : MonoBehaviour
     {
         public string localizedKey = "INSERT_KEY_HERE";
-        Text textObject;
+        Image imageObject;
 
         void Start ()
         {
-            textObject = this.GetComponent<Text> ();
+            imageObject = this.GetComponent<Image> ();
 	
             //Subscribe to the change language event
             LanguageManager languageManager = LanguageManager.Instance;
@@ -32,7 +32,8 @@ namespace SmartLocalization.Editor
 
         void OnChangeLanguage (LanguageManager languageManager)
         {
-            textObject.text = LanguageManager.Instance.GetTextValue (localizedKey);
+            GameObject textur = LanguageManager.Instance.GetPrefab (localizedKey);
+            imageObject.sprite = textur.GetComponent<SpriteRenderer> ().sprite;
         }
     }
 }

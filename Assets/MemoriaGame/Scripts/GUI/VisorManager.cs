@@ -5,17 +5,20 @@
 //       Luis Alejandro Vieira <lavz24@gmail.com>
 //
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class VisorManager : Singleton<VisorManager> {
+public class VisorManager : Singleton<VisorManager>
+{
 
-    public UI2DSprite FrontBG;
-    public UI2DSprite Obj;
+    public Image FrontBG;
+    public Image Obj;
 
-    public List<Sprite> meshes = new List<Sprite>();
+    public List<Sprite> meshes = new List<Sprite> ();
 
-    void Start(){
+    void Start ()
+    {
     
         ManagerDoors.Instance.OnOpenFirst += FirstOpenShow;
         ManagerDoors.Instance.OnCloseFirst += FirstOpenClose;
@@ -23,23 +26,28 @@ public class VisorManager : Singleton<VisorManager> {
         ManagerDoors.Instance.OnCheckPair += CheckPair;
 
     }
-    void FirstOpenShow(int id,string name){
+
+    void FirstOpenShow (int id, string name)
+    {
         TweenAlpha.Begin (FrontBG.gameObject, 0.3f, 0);
         if (meshes.Count > 0) {
-            Obj.sprite2D = meshes [id];
+            Obj.enabled = true;
+            Obj.sprite = meshes [id];
         }
     }
 
-     void FirstOpenClose(int id, string name){
+    void FirstOpenClose (int id, string name)
+    {
         TweenAlpha.Begin (FrontBG.gameObject, 0.3f, 1);
 
         if (meshes.Count > 0) {
-
-            Obj.sprite2D = null;
+            Obj.enabled = false;
+            Obj.sprite = null;
         }
     }
 
-    void CheckPair(bool value){
+    void CheckPair (bool value)
+    {
         if (value) {
         } else {
         }

@@ -7,14 +7,14 @@ namespace SmartLocalization.Editor
     using UnityEditor;
     using System.Collections;
 
-    [CustomEditor (typeof(LocalizedText))]
-    public class LocalizedTextInspector : Editor
+    [CustomEditor (typeof(LocalizedImage))]
+    public class LocalizedImageInspector : Editor
     {
         private string selectedKey = null;
 
         void Awake ()
         {
-            LocalizedText textObject = ((LocalizedText)target);
+            LocalizedImage textObject = ((LocalizedImage)target);
             if (textObject != null) {
                 selectedKey = textObject.localizedKey;
             }
@@ -24,10 +24,10 @@ namespace SmartLocalization.Editor
         {
             base.OnInspectorGUI ();
 		
-            selectedKey = LocalizedKeySelector.SelectKeyGUI (selectedKey, true, LocalizedObjectType.STRING);
+            selectedKey = LocalizedKeySelector.SelectKeyGUI (selectedKey, true, LocalizedObjectType.GAME_OBJECT);
 		
             if (!Application.isPlaying && GUILayout.Button ("Use Key", GUILayout.Width (70))) {
-                LocalizedText textObject = ((LocalizedText)target);
+                LocalizedImage textObject = ((LocalizedImage)target);
                 textObject.localizedKey = selectedKey;
             }
         }

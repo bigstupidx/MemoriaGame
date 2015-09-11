@@ -1,17 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-[RequireComponent (typeof (UILabel))]
-public class ScoreGUI : MonoBehaviour {
+[RequireComponent (typeof(Text))]
+public class ScoreGUI : MonoBehaviour
+{
 
     public string baseNameScore = "Score: ";
-    protected UILabel label;
-	// Use this for initialization
-	void Awake  () {
-        label = GetComponent<UILabel> ();
-	}
-	
-    void LateUpdate(){
+    Text _label;
+
+    public Text label {
+    
+        get {
+            if (_label == null)
+                _label = GetComponent<Text> ();
+            return _label;
+        }
+    }
+
+    void LateUpdate ()
+    {
 
         label.text = baseNameScore + ManagerScore.Instance.CurrentScore.ToString ();
     }
