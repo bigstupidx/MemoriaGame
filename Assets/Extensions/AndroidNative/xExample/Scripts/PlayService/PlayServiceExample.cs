@@ -6,12 +6,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
- 
-
 using UnityEngine;
 using System.Collections;
-using UnionAssets.FLE;
 using System.Collections.Generic;
 
 public class PlayServiceExample : AndroidNativeExampleBase {
@@ -74,8 +70,8 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 		defaulttexture = avatar.GetComponent<Renderer>().material.mainTexture;
 
 		//listen for GooglePlayConnection events
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
+		GooglePlayConnection.ActionPlayerConnected +=  OnPlayerConnected;
+		GooglePlayConnection.ActionPlayerDisconnected += OnPlayerDisconnected;
 
 
 		GooglePlayConnection.ActionConnectionResultReceived += ActionConnectionResultReceived;
@@ -83,20 +79,22 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 
 		//listen for GooglePlayManager events
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.ACHIEVEMENT_UPDATED, OnAchievementUpdated);
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.SCORE_SUBMITED, OnScoreSubmited);
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.SCORE_REQUEST_RECEIVED, OnScoreUpdated);
+		GooglePlayManager.ActionAchievementUpdated += OnAchievementUpdated;
+		GooglePlayManager.ActionScoreSubmited += OnScoreSubmited;
+		GooglePlayManager.ActionScoreRequestReceived += OnScoreUpdated;
 
 
+		GooglePlayManager.ActionSendGiftResultReceived += OnGiftResult;
+		GooglePlayManager.ActionPendingGameRequestsDetected += OnPendingGiftsDetected;
+		GooglePlayManager.ActionGameRequestsAccepted += OnGameRequestAccepted;
 
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.SEND_GIFT_RESULT_RECEIVED, OnGiftResult);
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.PENDING_GAME_REQUESTS_DETECTED, OnPendingGiftsDetected);
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.GAME_REQUESTS_ACCEPTED, OnGameRequestAccepted);
-
+	
 		GooglePlayManager.ActionOAuthTokenLoaded += ActionOAuthTokenLoaded;
 		GooglePlayManager.ActionAvailableDeviceAccountsLoaded += ActionAvailableDeviceAccountsLoaded;
 
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.ACHIEVEMENTS_LOADED, OnAchievmnetsLoadedInfoListner);
+
+		GooglePlayManager.ActionAchievementsLoaded += OnAchievmnetsLoadedInfoListner;
+	
 
 
 		if(GooglePlayConnection.state == GPConnectionState.STATE_CONNECTED) {
@@ -108,27 +106,28 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 	private void OnDestroy() {
 		if(!GooglePlayConnection.IsDestroyed) {
-			GooglePlayConnection.instance.removeEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-			GooglePlayConnection.instance.removeEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
 
-
+			GooglePlayConnection.ActionPlayerConnected -=  OnPlayerConnected;
+			GooglePlayConnection.ActionPlayerDisconnected -= OnPlayerDisconnected;
 			GooglePlayConnection.ActionConnectionResultReceived -= ActionConnectionResultReceived;
 		}
 
 		if(!GooglePlayManager.IsDestroyed) {
-			GooglePlayManager.instance.removeEventListener (GooglePlayManager.ACHIEVEMENT_UPDATED, OnAchievementUpdated);
-			GooglePlayManager.instance.removeEventListener (GooglePlayManager.SCORE_SUBMITED, OnScoreSubmited);
+
+			GooglePlayManager.ActionAchievementUpdated -= OnAchievementUpdated;
+			GooglePlayManager.ActionScoreSubmited -= OnScoreSubmited;
+
+
 			
-			GooglePlayManager.instance.removeEventListener (GooglePlayManager.SEND_GIFT_RESULT_RECEIVED, OnGiftResult);
-			GooglePlayManager.instance.removeEventListener (GooglePlayManager.PENDING_GAME_REQUESTS_DETECTED, OnPendingGiftsDetected);
-			GooglePlayManager.instance.removeEventListener (GooglePlayManager.GAME_REQUESTS_ACCEPTED, OnGameRequestAccepted);
+			GooglePlayManager.ActionSendGiftResultReceived -= OnGiftResult;
+			GooglePlayManager.ActionPendingGameRequestsDetected -= OnPendingGiftsDetected;
+			GooglePlayManager.ActionGameRequestsAccepted -= OnGameRequestAccepted;
 			
 			GooglePlayManager.ActionAvailableDeviceAccountsLoaded -= ActionAvailableDeviceAccountsLoaded;
 			GooglePlayManager.ActionOAuthTokenLoaded -= ActionOAuthTokenLoaded;
 
+			GooglePlayManager.ActionAchievementsLoaded -= OnAchievmnetsLoadedInfoListner;
 
-			
-			GooglePlayManager.instance.removeEventListener (GooglePlayManager.ACHIEVEMENTS_LOADED, OnAchievmnetsLoadedInfoListner);
 		}
 	}
 
@@ -136,49 +135,51 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 		Debug.Log("GooglePlayManager State  -> " + GooglePlayConnection.state.ToString());
 		if(GooglePlayConnection.state == GPConnectionState.STATE_CONNECTED) {
 			SA_StatusBar.text = "Disconnecting from Play Service...";
-			GooglePlayConnection.instance.disconnect ();
+			GooglePlayConnection.Instance.disconnect ();
 		} else {
 			SA_StatusBar.text = "Connecting to Play Service...";
-			GooglePlayConnection.instance.connect ();
+			GooglePlayConnection.Instance.connect ();
 		}
 	}
 
 	private void GetAccs() {
-		GooglePlayManager.instance.RetrieveDeviceGoogleAccounts();
+		GooglePlayManager.Instance.RetrieveDeviceGoogleAccounts();
 	}
 
 	private void RetrieveToken() {
-		GooglePlayManager.instance.LoadToken();
+
+
+		GooglePlayManager.Instance.LoadToken();
 	}
 
 
 	private void showLeaderBoardsUI() {
-		GooglePlayManager.instance.ShowLeaderBoardsUI ();
+		GooglePlayManager.Instance.ShowLeaderBoardsUI ();
 		SA_StatusBar.text = "Showing Leader Boards UI";
 	}
 
 	private void loadLeaderBoards() {
 
 		//listening for load event 
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.LEADERBOARDS_LOADED, OnLeaderBoardsLoaded);
-		GooglePlayManager.instance.LoadLeaderBoards ();
+		GooglePlayManager.ActionLeaderboardsLoaded += OnLeaderBoardsLoaded;
+		GooglePlayManager.Instance.LoadLeaderBoards ();
 		SA_StatusBar.text = "Loading Leader Boards Data...";
 	}
 
 	private void showLeaderBoard() {
-		GooglePlayManager.instance.ShowLeaderBoardById (LEADERBOARD_ID);
+		GooglePlayManager.Instance.ShowLeaderBoardById (LEADERBOARD_ID);
 		SA_StatusBar.text = "Shwoing Leader Board UI for " + LEADERBOARD_ID;
 	}
 
 	private void submitScore() {
 		score++;
-		GooglePlayManager.instance.SubmitScore (LEADERBOARD_NAME, score);
+		GooglePlayManager.Instance.SubmitScore (LEADERBOARD_NAME, score);
 		SA_StatusBar.text = "Score " + score.ToString() + " Submited for " + LEADERBOARD_NAME;
 	}
 
 
 	private void ResetBoard() {
-		GooglePlayManager.instance.ResetLeaderBoard(LEADERBOARD_ID);
+		GooglePlayManager.Instance.ResetLeaderBoard(LEADERBOARD_ID);
 		UpdateBoardInfo();
 	}
 
@@ -186,42 +187,42 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 
 	private void showAchievementsUI() {
-		GooglePlayManager.instance.ShowAchievementsUI ();
+		GooglePlayManager.Instance.ShowAchievementsUI ();
 		SA_StatusBar.text = "Showing Achievements UI";
 
 	}
 
 	private void loadAchievements() {
-		GooglePlayManager.instance.addEventListener (GooglePlayManager.ACHIEVEMENTS_LOADED, OnAchievementsLoaded);
-		GooglePlayManager.instance.LoadAchievements ();
+		GooglePlayManager.ActionAchievementsLoaded += OnAchievementsLoaded;
+		GooglePlayManager.Instance.LoadAchievements ();
 
 		SA_StatusBar.text = "Loading Achievements Data...";
 	}
 
 	private void reportAchievement() {
-		GooglePlayManager.instance.UnlockAchievement ("achievement_simple_achievement_example");
+		GooglePlayManager.Instance.UnlockAchievement ("achievement_simple_achievement_example");
 		SA_StatusBar.text = "Reporting achievement_prime...";
 	}
 
 	private void incrementAchievement() {
-		GooglePlayManager.instance.IncrementAchievementById (INCREMENTAL_ACHIEVEMENT_ID, 1);
+		GooglePlayManager.Instance.IncrementAchievementById (INCREMENTAL_ACHIEVEMENT_ID, 1);
 		SA_StatusBar.text = "Incrementing achievement_bored...";
 	}
 
 
 	private void revealAchievement() {
-		GooglePlayManager.instance.RevealAchievement ("achievement_hidden_achievement_example");
+		GooglePlayManager.Instance.RevealAchievement ("achievement_hidden_achievement_example");
 		SA_StatusBar.text = "Revealing achievement_humble...";
 	}
 
 	private void ResetAchievement() {
-		GooglePlayManager.instance.ResetAchievement(INCREMENTAL_ACHIEVEMENT_ID);
+		GooglePlayManager.Instance.ResetAchievement(INCREMENTAL_ACHIEVEMENT_ID);
 
 		AN_PoupsProxy.showMessage ("Reset Complete: ", "Reset Complete, but since this is feature for testing only, achievement data cache will be updated after next interaction with acheivment");
 	}
 
 	private void ResetAllAchievements() {
-		GooglePlayManager.instance.ResetAllAchievements();
+		GooglePlayManager.Instance.ResetAllAchievements();
 		AN_PoupsProxy.showMessage ("Reset Complete: ", "Reset Complete, but since this is feature for testing only, achievement data cache will be updated after next interaction with acheivment");
 
 	}
@@ -232,26 +233,26 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 
 	
-		GooglePlayManager.instance.SendGiftRequest(GPGameRequestType.TYPE_GIFT, 1, pieIcon, "Here is some pie", PIE_GIFT_ID);
+		GooglePlayManager.Instance.SendGiftRequest(GPGameRequestType.TYPE_GIFT, 1, pieIcon, "Here is some pie", PIE_GIFT_ID);
 	}
 
 
 	private void OpenInbox() {
-		GooglePlayManager.instance.ShowRequestsAccepDialog();
+		GooglePlayManager.Instance.ShowRequestsAccepDialog();
 	}
 
 
 
 	
 	public void clearDefaultAccount() {
-		GooglePlusAPI.instance.ClearDefaultAccount();
+		GooglePlusAPI.Instance.ClearDefaultAccount();
 	}
 
 
 	void FixedUpdate() {
 		if(GooglePlayConnection.state == GPConnectionState.STATE_CONNECTED) {
-			if(GooglePlayManager.instance.player.icon != null) {
-				avatar.GetComponent<Renderer>().material.mainTexture = GooglePlayManager.instance.player.icon;
+			if(GooglePlayManager.Instance.player.icon != null) {
+				avatar.GetComponent<Renderer>().material.mainTexture = GooglePlayManager.Instance.player.icon;
 			}
 		}  else {
 			avatar.GetComponent<Renderer>().material.mainTexture = defaulttexture;
@@ -289,7 +290,7 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 	public void RequestAdvertisingId() {
 		GooglePlayUtils.ActionAdvertisingIdLoaded += ActionAdvertisingIdLoaded;
-		GooglePlayUtils.instance.GetAdvertisingId();
+		GooglePlayUtils.Instance.GetAdvertisingId();
 	}
 
 
@@ -311,8 +312,8 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 		
 	}
 
-	private void OnAchievmnetsLoadedInfoListner() {
-		GPAchievement achievement = GooglePlayManager.instance.GetAchievement(INCREMENTAL_ACHIEVEMENT_ID);
+	private void OnAchievmnetsLoadedInfoListner(GooglePlayResult res) {
+		GPAchievement achievement = GooglePlayManager.Instance.GetAchievement(INCREMENTAL_ACHIEVEMENT_ID);
 
 
 		if(achievement != null) {
@@ -326,13 +327,12 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 		}
 	}
 
-	private void OnAchievementsLoaded(CEvent e) {
-		GooglePlayManager.instance.removeEventListener (GooglePlayManager.ACHIEVEMENTS_LOADED, OnAchievementsLoaded);
-		GooglePlayResult result = e.data as GooglePlayResult;
+	private void OnAchievementsLoaded(GooglePlayResult result) {
+		GooglePlayManager.ActionAchievementsLoaded -= OnAchievementsLoaded;
 		if(result.isSuccess) {
 
-			foreach(string achievementId in GooglePlayManager.instance.achievements.Keys) {
-				GPAchievement achievement = GooglePlayManager.instance.GetAchievement(achievementId);
+			foreach(string achievementId in GooglePlayManager.Instance.achievements.Keys) {
+				GPAchievement achievement = GooglePlayManager.Instance.GetAchievement(achievementId);
 				Debug.Log(achievement.id);
 				Debug.Log(achievement.name);
 				Debug.Log(achievement.description);
@@ -342,8 +342,8 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 				Debug.Log(achievement.totalSteps);
 			}
 
-			SA_StatusBar.text = "Total Achievement: " + GooglePlayManager.instance.achievements.Count.ToString();
-			AN_PoupsProxy.showMessage ("Achievments Loaded", "Total Achievements: " + GooglePlayManager.instance.achievements.Count.ToString());
+			SA_StatusBar.text = "Total Achievement: " + GooglePlayManager.Instance.achievements.Count.ToString();
+			AN_PoupsProxy.showMessage ("Achievments Loaded", "Total Achievements: " + GooglePlayManager.Instance.achievements.Count.ToString());
 		} else {
 			SA_StatusBar.text = result.message;
 			AN_PoupsProxy.showMessage ("Achievments Loaded error: ", result.message);
@@ -351,27 +351,25 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 	}
 
-	private void OnAchievementUpdated(CEvent e) {
-		GP_GamesResult result = e.data as GP_GamesResult;
+	private void OnAchievementUpdated(GP_GamesResult result) {
 		SA_StatusBar.text = "Achievment Updated: Id: " + result.achievementId + "\n status: " + result.message;
 		AN_PoupsProxy.showMessage ("Achievment Updated ", "Id: " + result.achievementId + "\n status: " + result.message);
 	}
 
 	
 
-	private void OnLeaderBoardsLoaded(CEvent e) {
-		GooglePlayManager.instance.removeEventListener (GooglePlayManager.LEADERBOARDS_LOADED, OnLeaderBoardsLoaded);
+	private void OnLeaderBoardsLoaded(GooglePlayResult result) {
+		GooglePlayManager.ActionLeaderboardsLoaded -= OnLeaderBoardsLoaded;
 
-		GooglePlayResult result = e.data as GooglePlayResult;
 		if(result.isSuccess) {
-			if( GooglePlayManager.instance.GetLeaderBoard(LEADERBOARD_ID) == null) {
+			if( GooglePlayManager.Instance.GetLeaderBoard(LEADERBOARD_ID) == null) {
 				AN_PoupsProxy.showMessage("Leader boards loaded", LEADERBOARD_ID + " not found in leader boards list");
 				return;
 			}
 
 
-			SA_StatusBar.text = LEADERBOARD_NAME + "  score  " + GooglePlayManager.instance.GetLeaderBoard(LEADERBOARD_ID).GetCurrentPlayerScore(GPBoardTimeSpan.ALL_TIME, GPCollectionType.GLOBAL).score.ToString();
-			AN_PoupsProxy.showMessage (LEADERBOARD_NAME + "  score",  GooglePlayManager.instance.GetLeaderBoard(LEADERBOARD_ID).GetCurrentPlayerScore(GPBoardTimeSpan.ALL_TIME, GPCollectionType.GLOBAL).score.ToString());
+			SA_StatusBar.text = LEADERBOARD_NAME + "  score  " + GooglePlayManager.Instance.GetLeaderBoard(LEADERBOARD_ID).GetCurrentPlayerScore(GPBoardTimeSpan.ALL_TIME, GPCollectionType.FRIENDS).score.ToString();
+			AN_PoupsProxy.showMessage (LEADERBOARD_NAME + "  score",  GooglePlayManager.Instance.GetLeaderBoard(LEADERBOARD_ID).GetCurrentPlayerScore(GPBoardTimeSpan.ALL_TIME, GPCollectionType.FRIENDS).score.ToString());
 		} else {
 			SA_StatusBar.text = result.message;
 			AN_PoupsProxy.showMessage ("Leader-Boards Loaded error: ", result.message);
@@ -382,27 +380,22 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 	}
 
 	private void UpdateBoardInfo() {
-		GPLeaderBoard leaderboard = GooglePlayManager.instance.GetLeaderBoard(LEADERBOARD_ID);
+		GPLeaderBoard leaderboard = GooglePlayManager.Instance.GetLeaderBoard(LEADERBOARD_ID);
 		if(leaderboard != null) {
 			b_id.text 		= "Id: " + leaderboard.id;
 			b_name.text 	= "Name: " +leaderboard.name;
-			b_all_time.text = "All Time Score: " + leaderboard.GetCurrentPlayerScore(GPBoardTimeSpan.ALL_TIME, GPCollectionType.GLOBAL).score;
+			b_all_time.text = "All Time Score: " + leaderboard.GetCurrentPlayerScore(GPBoardTimeSpan.ALL_TIME, GPCollectionType.FRIENDS).score;
 			
 		} else {
 			b_all_time.text = "All Time Score: " + " -1";
 		}
 	}
 
-	private void OnScoreSubmited(CEvent e) {
-		GooglePlayResult result = e.data as GooglePlayResult;
-
+	private void OnScoreSubmited(GooglePlayResult result) {
 		SA_StatusBar.text = "Score Submited:  " + result.message;
-
-
-
 	}
 
-	private void OnScoreUpdated() {
+	private void OnScoreUpdated(GooglePlayResult res) {
 		UpdateBoardInfo();
 	}
 
@@ -415,7 +408,7 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 	private void OnPlayerConnected() {
 		SA_StatusBar.text = "Player Connected";
-		playerLabel.text = GooglePlayManager.instance.player.name + "(" + GooglePlayManager.instance.currentAccount + ")";
+		playerLabel.text = GooglePlayManager.Instance.player.name + "(" + GooglePlayManager.Instance.currentAccount + ")";
 	}
 
 	private void ActionConnectionResultReceived(GooglePlayConnectionResult result) {
@@ -428,54 +421,51 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 		SA_StatusBar.text = "ConnectionResul:  " + result.code.ToString();
 	}
 
-	private void OnGiftResult(CEvent e) {
-		GooglePlayGiftRequestResult result = e.data as GooglePlayGiftRequestResult;
+	void OnGiftResult (GooglePlayGiftRequestResult result) {
 		SA_StatusBar.text = "Gift Send Result:  " + result.code.ToString();
+		AN_PoupsProxy.showMessage("Gfit Send Complete", "Gift Send Result: " + result.code.ToString());
 	}
 
-	private void OnPendingGiftsDetected(CEvent e) {
+	void OnPendingGiftsDetected (List<GPGameRequest> gifts) {
 		AndroidDialog dialog = AndroidDialog.Create("Pending Gifts Detected", "You got few gifts from your friends, do you whant to take a look?");
-		dialog.addEventListener(BaseEvent.COMPLETE, OnPromtGiftDialogClose);
+		dialog.ActionComplete += OnPromtGiftDialogClose;
 	}
+	
 
-	private void OnPromtGiftDialogClose(CEvent e) {
-		//removing listner
-		(e.dispatcher as AndroidDialog).removeEventListener(BaseEvent.COMPLETE, OnPromtGiftDialogClose);
-		
+	private void OnPromtGiftDialogClose(AndroidDialogResult res) {
 		//parsing result
-		switch((AndroidDialogResult)e.data) {
+		switch(res) {
 		case AndroidDialogResult.YES:
-			GooglePlayManager.instance.ShowRequestsAccepDialog();
+			GooglePlayManager.Instance.ShowRequestsAccepDialog();
 			break;
 		
 			
 		}
 	}
 
-
-
-	private void OnGameRequestAccepted(CEvent e) {
-		List<GPGameRequest> gifts = e.data as List<GPGameRequest>;
+	void OnGameRequestAccepted (List<GPGameRequest> gifts) {
 		foreach(GPGameRequest g in gifts) {
 			AN_PoupsProxy.showMessage("Gfit Accepted", g.playload + " is excepted");
 		}
 	}
 
 
+
+
 	private void ActionAvailableDeviceAccountsLoaded(List<string> accounts) {
 		string msg = "Device contains following google accounts:" + "\n";
-		foreach(string acc in GooglePlayManager.instance.deviceGoogleAccountList) {
+		foreach(string acc in GooglePlayManager.Instance.deviceGoogleAccountList) {
 			msg += acc + "\n";
 		} 
 
 		AndroidDialog dialog = AndroidDialog.Create("Accounts Loaded", msg, "Sign With Fitst one", "Do Nothing");
-		dialog.OnComplete += SighDialogComplete;
+		dialog.ActionComplete += SighDialogComplete;
 		
 	}
 
 	private void SighDialogComplete (AndroidDialogResult res) {
 		if(res == AndroidDialogResult.YES) {
-			GooglePlayConnection.instance.connect(GooglePlayManager.instance.deviceGoogleAccountList[0]);
+			GooglePlayConnection.Instance.connect(GooglePlayManager.Instance.deviceGoogleAccountList[0]);
 		}
 
 	}
@@ -484,7 +474,7 @@ public class PlayServiceExample : AndroidNativeExampleBase {
 
 	private void ActionOAuthTokenLoaded(string token) {
 
-		AN_PoupsProxy.showMessage("Token Loaded", GooglePlayManager.instance.loadedAuthToken);
+		AN_PoupsProxy.showMessage("Token Loaded", GooglePlayManager.Instance.loadedAuthToken);
 	}
 
 

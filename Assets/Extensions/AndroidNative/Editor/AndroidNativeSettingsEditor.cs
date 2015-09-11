@@ -27,9 +27,6 @@ public class AndroidNativeSettingsEditor : Editor {
 	private AndroidNativeSettings settings;
 
 
-	private const string version_info_file = "Plugins/StansAssets/Versions/AN_VersionInfo.txt"; 
-
-
 	void Awake() {
 		ApplaySettings();
 
@@ -37,7 +34,40 @@ public class AndroidNativeSettingsEditor : Editor {
 			UpdateManifest();
 		}
 
+		#if !UNITY_WEBPLAYER
+		UpdatePluginSettings();
+		#endif
+
 	}
+
+	public static void UpdatePluginSettings() {
+		string AndroidNativeSettingsContent = FileStaticAPI.Read("Extensions/GooglePlayCommon/Core/AndroidNativeSettings.cs");
+	
+		
+		
+		int endlineIndex;
+		endlineIndex = AndroidNativeSettingsContent.IndexOf(System.Environment.NewLine);
+		if(endlineIndex == -1) {
+			endlineIndex = AndroidNativeSettingsContent.IndexOf("\n");
+		}
+
+		string ANS_Line = AndroidNativeSettingsContent.Substring(0, endlineIndex);
+		
+
+
+		
+
+
+		if(AndroidNativeSettings.Instance.EnableATCSupport) {
+			AndroidNativeSettingsContent 	= AndroidNativeSettingsContent.Replace(ANS_Line, "#define ATC_SUPPORT_ENABLED");
+		} else {
+			AndroidNativeSettingsContent 	= AndroidNativeSettingsContent.Replace(ANS_Line, "//#define ATC_SUPPORT_ENABLED");
+		}
+		
+		FileStaticAPI.Write("Extensions/GooglePlayCommon/Core/AndroidNativeSettings.cs", AndroidNativeSettingsContent);
+	}
+
+
 
 	public override void OnInspectorGUI() {
 		#if UNITY_WEBPLAYER
@@ -98,17 +128,15 @@ public class AndroidNativeSettingsEditor : Editor {
 
 	public static bool IsInstalled {
 		get {
-			if(FileStaticAPI.IsFileExists(PluginsInstalationUtil.ANDROID_DESTANATION_PATH + "androidnative.jar") && FileStaticAPI.IsFileExists(version_info_file)) {
-				return true;
-			} else {
-				return false;
-			}
+			return SA_VersionsManager.Is_AN_Installed;
 		}
 	}
 
 	public static bool IsUpToDate {
 		get {
-			if(AndroidNativeSettings.VERSION_NUMBER.Equals(DataVersion)) {
+
+			int currentVersion = SA_VersionsManager.ParceVersion(AndroidNativeSettings.VERSION_NUMBER);
+			if(currentVersion == SA_VersionsManager.AN_Version) {
 				return true;
 			} else {
 				return false;
@@ -117,22 +145,6 @@ public class AndroidNativeSettingsEditor : Editor {
 	}
 
 
-	public static float Version {
-		get {
-			return System.Convert.ToSingle(DataVersion);
-		}
-	}
-
-
-	public static string DataVersion {
-		get {
-			if(FileStaticAPI.IsFileExists(version_info_file)) {
-				return FileStaticAPI.Read(version_info_file);
-			} else {
-				return "Unknown";
-			}
-		}
-	}
 
 	public static bool IsFacebookInstalled {
 		get {
@@ -146,7 +158,7 @@ public class AndroidNativeSettingsEditor : Editor {
 
 
 	public static void UpdateVersionInfo() {
-		FileStaticAPI.Write(version_info_file, AndroidNativeSettings.VERSION_NUMBER);
+		FileStaticAPI.Write(SA_VersionsManager.AN_VERSION_INFO_PATH, AndroidNativeSettings.VERSION_NUMBER);
 		UpdateManifest();
 	}
 
@@ -190,17 +202,20 @@ public class AndroidNativeSettingsEditor : Editor {
 		if(IsInstalled) {
 			if(!IsUpToDate) {
 
-				DrawUpdate();
-
-				EditorGUILayout.HelpBox("Update Required \nResources version: " + DataVersion + " Plugin version: " + AndroidNativeSettings.VERSION_NUMBER, MessageType.Warning);
+				EditorGUILayout.HelpBox("Update Required \nResources version: " + SA_VersionsManager.AN_StringVersionId + " Plugin version: " + AndroidNativeSettings.VERSION_NUMBER, MessageType.Warning);
 
 				EditorGUILayout.BeginHorizontal();
 				EditorGUILayout.Space();
 				Color c = GUI.color;
 				GUI.color = Color.cyan;
-				if(GUILayout.Button("Update to " + AndroidNativeSettings.VERSION_NUMBER,  GUILayout.Width(250))) {
+				if(GUILayout.Button("How to update")) {
+
+					Application.OpenURL("https://goo.gl/Z9wgEI");
+
+					/*
 					AN_Plugin_Update();
 					UpdateVersionInfo();
+					*/
 				}
 
 				GUI.color = c;
@@ -218,53 +233,6 @@ public class AndroidNativeSettingsEditor : Editor {
 
 	}
 
-
-	private void DrawUpdate() {
-		if(Version <= 4.4f) {
-			EditorGUILayout.HelpBox("AndroidManifest.xml was updated in 4.5 \nNew version contains AndroidManifest.xml chnages, Please remove Assets/Plugins/Android/AndroidManifest.xml file before update or add manualy File Sharing Block from Assets/Plugins/StansAssets/Android/AndroidManifest.xml", MessageType.Warning);
-			
-			EditorGUILayout.BeginHorizontal();
-			EditorGUILayout.Space();
-			
-			if(GUILayout.Button("Remove AndroidManifest and Update to " + AndroidNativeSettings.VERSION_NUMBER,  GUILayout.Width(250))) {
-				
-				string file = "AndroidManifest.xml";
-				FileStaticAPI.DeleteFile(PluginsInstalationUtil.ANDROID_DESTANATION_PATH + file);
-				
-				AN_Plugin_Update();
-				UpdateVersionInfo();
-			}
-			
-			
-			EditorGUILayout.Space();
-			EditorGUILayout.EndHorizontal();
-			EditorGUILayout.Space();
-			
-		}
-
-
-		if(Version <= 4.5f) {
-			EditorGUILayout.HelpBox("AndroidManifest.xml was updated in 4.6 \nNew version contains AndroidManifest.xml chnages, Please remove Assets/Plugins/Android/AndroidManifest.xml file before update or add manualy %APP_BUNDLE_ID% tockens from Assets/Plugins/StansAssets/Android/AndroidManifest.xml", MessageType.Warning);
-			
-			EditorGUILayout.BeginHorizontal();
-			EditorGUILayout.Space();
-			
-			if(GUILayout.Button("Remove AndroidManifest and Update to " + AndroidNativeSettings.VERSION_NUMBER,  GUILayout.Width(250))) {
-				
-				string file = "AndroidManifest.xml";
-				FileStaticAPI.DeleteFile(PluginsInstalationUtil.ANDROID_DESTANATION_PATH + file);
-				
-				AN_Plugin_Update();
-				UpdateVersionInfo();
-			}
-			
-			
-			EditorGUILayout.Space();
-			EditorGUILayout.EndHorizontal();
-			EditorGUILayout.Space();
-			
-		}
-	}
 
 	private void Actions() {
 		AndroidNativeSettings.Instance.ShowActions = EditorGUILayout.Foldout(AndroidNativeSettings.Instance.ShowActions, "More Actions");
@@ -322,18 +290,34 @@ public class AndroidNativeSettingsEditor : Editor {
 
 			if(GUILayout.Button("Load Example Settings",  GUILayout.Width(160))) {
 				LoadExampleSettings();
-
 			}
 
+			EditorGUILayout.EndHorizontal();
+			EditorGUILayout.Space();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.Space();
+			if(GUILayout.Button("Reinstall",  GUILayout.Width(160))) {
+				AN_Plugin_Update();
+				UpdateVersionInfo();
+
+			}
+			if(GUILayout.Button("Remove",  GUILayout.Width(160))) {
+				SA_RemoveTool.RemovePlugins();
+			}
+			
 			EditorGUILayout.EndHorizontal();
 		}
 	}
 
-	private void LoadExampleSettings()  {
+	public static void LoadExampleSettings()  {
 		AndroidNativeSettings.Instance.base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsV676BTvO5djSDdUwotbLCIPtGZ5OVCbIn402RXuEpDwuHZMIOy5E6DQjUlQPKCiB7A1Vx+ePQI50Gk8NO1zuPRBgCgvW/oTTf863KkF34QLZD+Ii8fc6VE0UKp3GfApnLmq2qtr1fwDmRCteBUET1h0EcRn3/6R/BA5DMmF1aTv8yUY5LQETWqEPIjGdyNaAhmnWf2sTliYLANiR51WXsfbDdCNT4Ux3gQo/XJynGadfwRS7A9N9e5SgvMEFUR6EwnANOF9QXgE2d0HEitpS56D3uHH/2LwICrTWAmbLX3qPYlQ3Ncf1SRyjqiKae2wW8QUnDFU5BSozwGW6tcQvQIDAQAB";
 		AndroidNativeSettings.Instance.InAppProducts =  new List<string>();
 		AndroidNativeSettings.Instance.InAppProducts.Add("coins_bonus");
 		AndroidNativeSettings.Instance.InAppProducts.Add("small_coins_bag");
+		AndroidNativeSettings.Instance.InAppProducts.Add("pm_coins");
+		AndroidNativeSettings.Instance.InAppProducts.Add("pm_green_sphere");
+		AndroidNativeSettings.Instance.InAppProducts.Add("pm_red_sphere");
 		AndroidNativeSettings.Instance.GCM_SenderId = "216817929098";
 		AndroidNativeSettings.Instance.GooglePlayServiceAppID = "216817929098";
 
@@ -445,6 +429,10 @@ public class AndroidNativeSettingsEditor : Editor {
 				EditorGUILayout.BeginHorizontal();
 				settings.PoupsandPreloadersAPI = EditorGUILayout.Toggle(AN_API_NAME.PoupsandPreloaders,  settings.PoupsandPreloadersAPI);
 				settings.CheckAppLicenseAPI = EditorGUILayout.Toggle(AN_API_NAME.CheckAppLicense,  settings.CheckAppLicenseAPI);
+				EditorGUILayout.EndHorizontal();
+
+				EditorGUILayout.BeginHorizontal();
+				settings.NetworkStateAPI = EditorGUILayout.Toggle(AN_API_NAME.NetworkInfo,  settings.NetworkStateAPI);
 				EditorGUILayout.EndHorizontal();
 				
 				EditorGUI.indentLevel--;
@@ -744,6 +732,15 @@ public class AndroidNativeSettingsEditor : Editor {
 		//PushNotificationsAPI
 		////////////////////////
 		UpdateId++;
+
+
+		AN_PropertyTemplate permission_C2D_MESSAGE_Old = Manifest.GetPropertyWithName ("permission", "com.example.gcm.permission.C2D_MESSAGE");
+		if (permission_C2D_MESSAGE_Old != null) {
+			Manifest.RemoveProperty(permission_C2D_MESSAGE_Old);
+		}
+
+
+
 		AN_PropertyTemplate GcmBroadcastReceiver = application.GetOrCreatePropertyWithName("receiver",  "com.androidnative.gcm.GcmBroadcastReceiver");
 		AN_PropertyTemplate GcmIntentService = application.GetOrCreatePropertyWithName("service",  "com.androidnative.gcm.GcmIntentService");
 		AN_PropertyTemplate permission_C2D_MESSAGE = Manifest.GetOrCreatePropertyWithName("permission", PlayerSettings.bundleIdentifier + ".permission.C2D_MESSAGE");
@@ -762,6 +759,31 @@ public class AndroidNativeSettingsEditor : Editor {
 			application.RemoveProperty(GcmBroadcastReceiver);
 			application.RemoveProperty(GcmIntentService);
 			Manifest.RemoveProperty(permission_C2D_MESSAGE);
+		}
+
+		AN_ActivityTemplate gameThriveActivity = application.GetOrCreateActivityWithName ("com.onesignal.NotificationOpenedActivity");
+		AN_PropertyTemplate gameThriveService = application.GetOrCreatePropertyWithName("service", "com.onesignal.GcmIntentService");
+		AN_PropertyTemplate gameThriveReceiver = application.GetOrCreatePropertyWithName ("receiver", "com.onesignal.GcmBroadcastReceiver");
+		if (AndroidNativeSettings.Instance.UseGameThrivePushNotifications) {
+			FileStaticAPI.CopyFile(PluginsInstalationUtil.ANDROID_SOURCE_PATH + "OneSignalSDK.txt",
+			                       PluginsInstalationUtil.ANDROID_DESTANATION_PATH + "OneSignalSDK.jar");
+
+			gameThriveReceiver.SetValue("android:permission", "com.google.android.c2dm.permission.SEND");
+			AN_PropertyTemplate gameThriveIntentFilter = gameThriveReceiver.GetOrCreateIntentFilterWithName("com.google.android.c2dm.intent.RECEIVE");
+			gameThriveIntentFilter.GetOrCreatePropertyWithName("category", PlayerSettings.bundleIdentifier);
+
+			//Remove GcmBroadcastReceiver from AndroidManifest if it exists
+			AN_PropertyTemplate property = application.GetOrCreatePropertyWithName("receiver",  "com.androidnative.gcm.GcmBroadcastReceiver");
+			application.RemoveProperty(property);
+			//Remove GcmIntentService from AndroidManifest if it exists
+			property = application.GetOrCreatePropertyWithName("service", "com.androidnative.gcm.GcmIntentService");
+			application.RemoveProperty(property);
+		} else {
+			FileStaticAPI.DeleteFile(PluginsInstalationUtil.ANDROID_DESTANATION_PATH + "OneSignalSDK.jar");
+
+			application.RemoveActivity(gameThriveActivity);
+			application.RemoveProperty(gameThriveService);
+			//application.RemoveProperty(gameThriveReceiver);
 		}
 
 		if (AndroidNativeSettings.Instance.UseParsePushNotifications) {
@@ -902,6 +924,40 @@ public class AndroidNativeSettingsEditor : Editor {
 			Manifest.AddPermission(p);
 		}
 
+		////////////////////////
+		//Check for C2D_MESSAGE <permission> duplicates
+		////////////////////////
+		bool duplicated = true;
+		while (duplicated) {
+			duplicated = false;
+			List<AN_PropertyTemplate> properties = Manifest.Properties["permission"];
+			foreach (AN_PropertyTemplate permission in properties) {
+				if (permission.Name.EndsWith(".permission.C2D_MESSAGE")
+				    && !permission.Name.Equals(PlayerSettings.bundleIdentifier + ".permission.C2D_MESSAGE")) {
+					properties.Remove(permission);
+					duplicated = true;
+					break;
+				}
+			}
+		}
+
+		////////////////////////
+		//Check for C2D_MESSAGE <permission> <uses-permission> duplicates
+		////////////////////////
+		duplicated = true;
+		while (duplicated) {
+			duplicated = false;
+			List<AN_PropertyTemplate> properties = Manifest.Permissions;
+			foreach (AN_PropertyTemplate permission in properties) {
+				if (permission.Name.EndsWith(".permission.C2D_MESSAGE")
+				    && !permission.Name.Equals(PlayerSettings.bundleIdentifier + ".permission.C2D_MESSAGE")) {
+					properties.Remove(permission);
+					duplicated = true;
+					break;
+				}
+			}
+		}
+
 		AN_ManifestManager.SaveManifest();
 
 		SocialPlatfromSettingsEditor.UpdateManifest();
@@ -934,7 +990,7 @@ public class AndroidNativeSettingsEditor : Editor {
 
 
 
-		if(SocialPlatfromSettings.Instance.InstagramAPI || SocialPlatfromSettings.Instance.NativeSharingAPI || AndroidNativeSettings.Instance.GalleryAPI || AndroidNativeSettings.Instance.CameraAPI) {
+		if(SocialPlatfromSettings.Instance.EnableImageSharing) {
 			permissions.Add("android.permission.WRITE_EXTERNAL_STORAGE");
 		}
 
@@ -944,6 +1000,10 @@ public class AndroidNativeSettingsEditor : Editor {
 
 		if (AndroidNativeSettings.Instance.CheckAppLicenseAPI) {
 			permissions.Add("com.android.vending.CHECK_LICENSE");
+		}
+
+		if (AndroidNativeSettings.Instance.NetworkStateAPI) {
+			permissions.Add("android.permission.ACCESS_WIFI_STATE");
 		}
 
 		return permissions;
@@ -1175,6 +1235,16 @@ public class AndroidNativeSettingsEditor : Editor {
 			settings.LoadQuestsImages	 	= EditorGUILayout.Toggle(settings.LoadQuestsImages);
 			EditorGUILayout.EndHorizontal();
 			EditorGUI.indentLevel--;
+
+			EditorGUILayout.LabelField("Extras:");
+
+			EditorGUI.indentLevel++;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Show Connecting Popup");
+			settings.ShowConnectingPopup	= EditorGUILayout.Toggle(settings.ShowConnectingPopup);
+			EditorGUILayout.EndHorizontal();
+			EditorGUI.indentLevel--;
+
 		}
 
 	}
@@ -1187,8 +1257,9 @@ public class AndroidNativeSettingsEditor : Editor {
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.LabelField(Base64KeyLabel);
 			settings.base64EncodedPublicKey	 	= EditorGUILayout.TextField(settings.base64EncodedPublicKey);
-			if(settings.base64EncodedPublicKey.Length > 0) {
-				settings.base64EncodedPublicKey 	= settings.base64EncodedPublicKey.Trim();
+
+			if(settings.base64EncodedPublicKey.ToString().Length > 0) {
+				settings.base64EncodedPublicKey 	= settings.base64EncodedPublicKey.ToString().Trim();
 			}
 
 			EditorGUILayout.EndHorizontal();
@@ -1247,6 +1318,8 @@ public class AndroidNativeSettingsEditor : Editor {
 
 
 	private void Other() {
+		EditorGUILayout.HelpBox("Android Native API Settings", MessageType.None);
+
 		AndroidNativeSettings.Instance.ShowCameraAndGalleryParams = EditorGUILayout.Foldout(AndroidNativeSettings.Instance.ShowCameraAndGalleryParams, "Camera And Gallery");
 		if (AndroidNativeSettings.Instance.ShowCameraAndGalleryParams) {
 			CameraAndGalleryParams();
@@ -1263,6 +1336,39 @@ public class AndroidNativeSettingsEditor : Editor {
 		if (AndroidNativeSettings.Instance.ShowPushNotificationParams) {
 			PushNotificationParams();
 		}
+
+
+		EditorGUILayout.Space ();
+		AndroidNativeSettings.Instance.ThirdPartyParams = EditorGUILayout.Foldout (AndroidNativeSettings.Instance.ThirdPartyParams, "Third-Party Plug-Ins Params");
+		if (AndroidNativeSettings.Instance.ThirdPartyParams) {
+			ThirdPartyParams();
+		}
+	}
+
+	public void ThirdPartyParams() {
+		EditorGUI.BeginChangeCheck ();
+
+		EditorGUILayout.BeginHorizontal ();
+		EditorGUILayout.LabelField ("Anti-Cheat Toolkit Support");
+		AndroidNativeSettings.Instance.EnableATCSupport = EditorGUILayout.Toggle ("", AndroidNativeSettings.Instance.EnableATCSupport);
+
+
+		EditorGUILayout.Space ();
+		EditorGUILayout.EndHorizontal ();
+
+		if(EditorGUI.EndChangeCheck()) {
+			UpdatePluginSettings();
+		}
+
+
+
+		EditorGUILayout.BeginHorizontal ();
+		EditorGUILayout.Space ();
+		if (GUILayout.Button("[?] Read More", GUILayout.Width(100.0f))) {
+			Application.OpenURL("http://goo.gl/dokdpv");
+		}
+
+		EditorGUILayout.EndHorizontal ();
 	}
 
 	public static void LocalNotificationParams() {
@@ -1321,6 +1427,16 @@ public class AndroidNativeSettingsEditor : Editor {
 
 	public static void PushNotificationParams() {
 		EditorGUI.BeginChangeCheck ();
+		EditorGUILayout.BeginHorizontal ();
+		EditorGUILayout.LabelField ("Show when App is foreground");
+		AndroidNativeSettings.Instance.ShowPushWhenAppIsForeground = EditorGUILayout.Toggle ("", AndroidNativeSettings.Instance.ShowPushWhenAppIsForeground);
+		EditorGUILayout.EndHorizontal ();
+
+		EditorGUILayout.BeginHorizontal ();
+		EditorGUILayout.LabelField ("Replace old notification with new one");
+		AndroidNativeSettings.Instance.ReplaceOldNotificationWithNew = EditorGUILayout.Toggle ("", AndroidNativeSettings.Instance.ReplaceOldNotificationWithNew);
+		EditorGUILayout.EndHorizontal ();
+
 		AndroidNativeSettings.Instance.EnableVibrationPush = EditorGUILayout.Toggle ("Enable Vibration", AndroidNativeSettings.Instance.EnableVibrationPush);
 
 		Texture2D icon = (Texture2D)EditorGUILayout.ObjectField ("Push Notification Icon", AndroidNativeSettings.Instance.PushNotificationIcon, typeof(Texture2D), false);
@@ -1368,6 +1484,36 @@ public class AndroidNativeSettingsEditor : Editor {
 		}
 
 		EditorGUILayout.Space ();
+		EditorGUILayout.LabelField ("OneSignal Push Notifications", EditorStyles.boldLabel);
+		EditorGUILayout.BeginHorizontal ();
+		EditorGUILayout.LabelField ("Use OneSignal Push Notifications");
+		
+		EditorGUI.BeginChangeCheck ();
+		AndroidNativeSettings.Instance.UseGameThrivePushNotifications = EditorGUILayout.Toggle (AndroidNativeSettings.Instance.UseGameThrivePushNotifications);
+		if (EditorGUI.EndChangeCheck ()) {
+			UpdateManifest();
+		}
+		
+		EditorGUILayout.EndHorizontal ();
+		
+		if (AndroidNativeSettings.Instance.UseGameThrivePushNotifications) {
+			EditorGUI.indentLevel++;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("OneSignal App ID");
+			AndroidNativeSettings.Instance.GameThriveAppID = EditorGUILayout.TextField(AndroidNativeSettings.Instance.GameThriveAppID);
+			EditorGUILayout.EndHorizontal();
+			
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.Space ();
+			if (GUILayout.Button("[?] How To SetUp OneSignal Push Notifications?", GUILayout.Width(300.0f))) {
+				Application.OpenURL("http://goo.gl/tfmbMF");
+			}
+			EditorGUILayout.Space ();
+			EditorGUILayout.EndHorizontal();
+			EditorGUILayout.Space ();
+		}
+
+		EditorGUILayout.Space ();
 		EditorGUILayout.LabelField ("Parse Push Notifications", EditorStyles.boldLabel);
 		EditorGUILayout.BeginHorizontal ();
 		EditorGUILayout.LabelField ("Use Parse Push Notifications");
@@ -1396,7 +1542,7 @@ public class AndroidNativeSettingsEditor : Editor {
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.Space ();
 			if (GUILayout.Button("[?] How To SetUp Parse Push Notifications?", GUILayout.Width(300.0f))) {
-				Application.OpenURL("http://goo.gl/LXwaJ3");
+				Application.OpenURL("http://goo.gl/9BgQ8r");
 			}
 			EditorGUILayout.Space ();
 			EditorGUILayout.EndHorizontal();
@@ -1416,7 +1562,10 @@ public class AndroidNativeSettingsEditor : Editor {
 		AndroidNativeSettings.Instance.MaxImageLoadSize	 	= EditorGUILayout.IntField(AndroidNativeSettings.Instance.MaxImageLoadSize);
 		EditorGUILayout.EndHorizontal();
 		
-		
+		EditorGUILayout.BeginHorizontal();
+		EditorGUILayout.LabelField("Image Format");
+		AndroidNativeSettings.Instance.ImageFormat = (AndroidCameraImageFormat) EditorGUILayout.EnumPopup(AndroidNativeSettings.Instance.ImageFormat);
+		EditorGUILayout.EndHorizontal();
 		
 		GUI.enabled = !AndroidNativeSettings.Instance.UseProductNameAsFolderName;
 		if(AndroidNativeSettings.Instance.UseProductNameAsFolderName) {
@@ -1442,6 +1591,11 @@ public class AndroidNativeSettingsEditor : Editor {
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.LabelField("Use Product Name As Folder Name");
 		AndroidNativeSettings.Instance.UseProductNameAsFolderName	 	= EditorGUILayout.Toggle(AndroidNativeSettings.Instance.UseProductNameAsFolderName);
+		EditorGUILayout.EndHorizontal();
+
+		EditorGUILayout.BeginHorizontal();
+		EditorGUILayout.LabelField("Save Camera Image To Gallery");
+		AndroidNativeSettings.Instance.SaveCameraImageToGallery	 	= EditorGUILayout.Toggle(AndroidNativeSettings.Instance.SaveCameraImageToGallery);
 		EditorGUILayout.EndHorizontal();
 	}
 

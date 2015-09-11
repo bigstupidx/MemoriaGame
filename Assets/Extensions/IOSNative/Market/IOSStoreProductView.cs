@@ -7,7 +7,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 /// 
 using UnityEngine;
-using UnionAssets.FLE;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 #if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
@@ -15,12 +15,15 @@ using System.Runtime.InteropServices;
 #endif
 
 
-public class IOSStoreProductView : EventDispatcherBase {
+public class IOSStoreProductView {
 
-	public const string PRODUCT_VIEW_LOADED 				= "product_view_loaded";
-	public const string PRODUCT_VIEW_LOAD_FAILED 			= "product_view_load_failed";
-	public const string PRODUCT_VIEW_APPEARED 				= "product_view_appeared";
-	public const string PRODUCT_VIEW_DISMISSED 				= "product_view_dismissed";
+	public event Action Loaded = delegate {};
+	public event Action LoadFailed = delegate {};
+	public event Action Appeared = delegate {};
+	public event Action Dismissed = delegate {};
+
+
+
 
 	#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
 	[DllImport ("__Internal")]
@@ -46,7 +49,7 @@ public class IOSStoreProductView : EventDispatcherBase {
 			addProductId(pid);
 		}
 
-		IOSInAppPurchaseManager.instance.RegisterProductView(this);
+		IOSInAppPurchaseManager.Instance.RegisterProductView(this);
 	}
 
 	public IOSStoreProductView(params string[] ids) {
@@ -54,7 +57,7 @@ public class IOSStoreProductView : EventDispatcherBase {
 			addProductId(pid);
 		}
 
-		IOSInAppPurchaseManager.instance.RegisterProductView(this);
+		IOSInAppPurchaseManager.Instance.RegisterProductView(this);
 	}
 
 
@@ -111,20 +114,20 @@ public class IOSStoreProductView : EventDispatcherBase {
 	//--------------------------------------
 
 	public void OnProductViewAppeard() {
-		dispatch(PRODUCT_VIEW_APPEARED);
+		Appeared();
 	}
 
 	public void OnProductViewDismissed() {
-		dispatch(PRODUCT_VIEW_DISMISSED);
+		Dismissed();
 	}
 
 	public void OnContentLoaded() {
 		Show();
-		dispatch(PRODUCT_VIEW_LOADED);
+		Loaded();
 	}
 
 	public void OnContentLoadFailed() {
-		dispatch(PRODUCT_VIEW_LOAD_FAILED);
+		LoadFailed();
 	}
 
 	//--------------------------------------

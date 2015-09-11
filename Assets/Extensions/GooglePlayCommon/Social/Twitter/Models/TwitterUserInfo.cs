@@ -9,14 +9,15 @@
 
 
 using UnityEngine;
-using UnionAssets.FLE;
+using System;
 using System.Collections;
 
-public class TwitterUserInfo : EventDispatcherBase {
+public class TwitterUserInfo  {
 
-	public const string PROFILE_IMAGE_LOADED		 = "profile_image_loaded";
-	public const string PROFILE_BACKGROUND_LOADED 	 = "profile_background_loaded";
-	
+
+	public event Action<Texture2D> ActionProfileImageLoaded = delegate{};
+	public event Action<Texture2D> ActionProfileBackgroundImageLoaded = delegate{};
+
 
 	private string _id;
 	private string _description;
@@ -121,25 +122,25 @@ public class TwitterUserInfo : EventDispatcherBase {
 	public void LoadProfileImage() {
 
 		if(_profile_image != null) {
-			dispatch(PROFILE_IMAGE_LOADED);
+			ActionProfileImageLoaded(_profile_image);
 			return;
 		}
 
 
 		WWWTextureLoader loader = WWWTextureLoader.Create();
-		loader.addEventListener(BaseEvent.LOADED, OnProfileImageLoaded);
+		loader.OnLoad += OnProfileImageLoaded;
 		loader.LoadTexture(_profile_image_url_https);
 	}
 
 	public void LoadBackgroundImage() {
 
 		if(_profile_background != null) {
-			dispatch(PROFILE_BACKGROUND_LOADED);
+			ActionProfileBackgroundImageLoaded(_profile_background);
 			return;
 		}
 
 		WWWTextureLoader loader = WWWTextureLoader.Create();
-		loader.addEventListener(BaseEvent.LOADED, OnProfileBackgroundLoaded);
+		loader.OnLoad += OnProfileBackgroundLoaded;
 		loader.LoadTexture(_profile_background_image_url_https);
 	}
 
@@ -271,18 +272,16 @@ public class TwitterUserInfo : EventDispatcherBase {
 	// EVENTS
 	//--------------------------------------
 
-	private void OnProfileImageLoaded(CEvent e) {
-		e.dispatcher.removeEventListener(BaseEvent.LOADED, OnProfileImageLoaded);
-		_profile_image = e.data as Texture2D;
+	private void OnProfileImageLoaded(Texture2D img) {
+		_profile_image = img;
 
-		dispatch(PROFILE_IMAGE_LOADED);
+		ActionProfileImageLoaded(_profile_image);
 	}
 
-	private void OnProfileBackgroundLoaded(CEvent e) {
-		e.dispatcher.removeEventListener(BaseEvent.LOADED, OnProfileBackgroundLoaded);
-		_profile_background = e.data as Texture2D;
+	private void OnProfileBackgroundLoaded(Texture2D img) {
+		_profile_background = img;
 
-		dispatch(PROFILE_BACKGROUND_LOADED);
+		ActionProfileBackgroundImageLoaded(_profile_background);
 	}
 
 

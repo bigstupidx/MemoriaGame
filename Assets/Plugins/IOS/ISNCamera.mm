@@ -12,6 +12,7 @@
 @implementation ISNCamera
 
 static ISNCamera *_sharedInstance;
+static UIImagePickerController *_imagePicker = NULL;
 
 
 + (id)sharedInstance {
@@ -27,17 +28,28 @@ static ISNCamera *_sharedInstance;
     NSLog(@"saveToCameraRoll");
     NSData *imageData = [[NSData alloc] initWithBase64Encoding:media];
     UIImage *image = [[UIImage alloc] initWithData:imageData];
-    
+
+#if UNITY_VERSION < 500
+    [imageData release];
+#endif
     
     UIImageWriteToSavedPhotosAlbum(image,
                                    self, // send the message to 'self' when calling the callback
                                    @selector(thisImage:hasBeenSavedInPhotoAlbumWithError:usingContextInfo:), // the selector to tell the method to call on completion
                                    NULL); // you generally won't need a contextInfo here
     
+
+    
     
 }
 
 - (void)thisImage:(UIImage *)image hasBeenSavedInPhotoAlbumWithError:(NSError *)error usingContextInfo:(void*)ctxInfo {
+   
+#if UNITY_VERSION < 500
+    [image release];
+    image=  nil;
+#endif
+    
     if (error) {
         NSLog(@"image not saved: %@", error.description);
         UnitySendMessage("IOSCamera", "OnImageSaveFailed", [ISNDataConvertor NSStringToChar:@""]);
@@ -84,7 +96,10 @@ static ISNCamera *_sharedInstance;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     picker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie,      nil];
     [vc presentViewController:picker animated:YES completion:nil];
+#if UNITY_VERSION < 500
     [picker release];
+#endif
+   
 }
 
 
@@ -93,18 +108,17 @@ static ISNCamera *_sharedInstance;
 -(void) GetImage: (UIImagePickerControllerSourceType )source {
     UIViewController *vc =  UnityGetGLViewController();
     
-    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
+    if(_imagePicker == NULL) {
+        _imagePicker = [[UIImagePickerController alloc] init];
+        _imagePicker.delegate = self;
+
+    }
     
-    picker.sourceType = source;
-    
-    
-    
-    [vc presentViewController:picker animated:YES completion:nil];
-    //	[vc presentModalViewController:picker animated:YES ];
+    _imagePicker.sourceType = source;
     
     
-    
+    [vc presentViewController:_imagePicker animated:YES completion:nil];
+ 
     
 }
 
@@ -211,7 +225,7 @@ extern "C" {
         [[ISNCamera sharedInstance] GetImageFromAlbum];
     }
     
-    void _ISN_InitCamerAPI(float compressionRate, int maxSize, int encodingType) {
+    void _ISN_InitCameraAPI(float compressionRate, int maxSize, int encodingType) {
         [[ISNCamera sharedInstance] setImageCompressionRate:compressionRate];
         [[ISNCamera sharedInstance] setMaxImageSize:maxSize / 2];
         [[ISNCamera sharedInstance] setEncodingType:encodingType];

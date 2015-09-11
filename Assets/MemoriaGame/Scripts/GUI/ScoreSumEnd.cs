@@ -38,7 +38,7 @@ public class ScoreSumEnd : MonoBehaviour {
     void Awake(){
 
         // door = GetComponent<Door> ();
-        if( iPhone.generation == iPhoneGeneration.iPhone4)
+        if( UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhone4)
         {
             isIphone4 = true;
             //Its an iPod Touch, third generation

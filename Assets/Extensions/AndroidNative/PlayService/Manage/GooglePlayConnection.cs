@@ -13,20 +13,14 @@ using System;
 public class GooglePlayConnection : SA_Singleton<GooglePlayConnection> {
 	
 	private bool _isInitialized = false;
-
-
-	//Events
-	public const string CONNECTION_STATE_CHANGED        = "connection_state_changed"; 
-	public const string CONNECTION_RESULT_RECEIVED      = "connection_result_received"; 
-	public const string PLAYER_CONNECTED       			= "player_connected";
-	public const string PLAYER_DISCONNECTED   			= "player_disconnected";
+	
 
 	//Actions
-	public static Action<GooglePlayConnectionResult> ActionConnectionResultReceived =  delegate {};
+	public static event Action<GooglePlayConnectionResult> ActionConnectionResultReceived =  delegate {};
 
-	public static Action<GPConnectionState> ActionConnectionStateChanged =  delegate {};
-	public static Action ActionPlayerConnected =  delegate {};
-	public static Action ActionPlayerDisconnected =  delegate {};
+	public static event Action<GPConnectionState> ActionConnectionStateChanged =  delegate {};
+	public static event Action ActionPlayerConnected =  delegate {};
+	public static event Action ActionPlayerDisconnected =  delegate {};
 
 
 
@@ -41,6 +35,9 @@ public class GooglePlayConnection : SA_Singleton<GooglePlayConnection> {
 
 	void Awake() {
 		DontDestroyOnLoad(gameObject);
+
+		GooglePlayManager.instance.Create();
+		init();
 	}
 
 
@@ -66,14 +63,15 @@ public class GooglePlayConnection : SA_Singleton<GooglePlayConnection> {
 			connectionString += "DriveAPI";
 		}
 
+		AN_GMSGeneralProxy.setConnectionParams (AndroidNativeSettings.Instance.ShowConnectingPopup);
 		AN_GMSGeneralProxy.playServiceInit(connectionString);
-
-		_isInitialized = true;
 	}
 
 	public void connect()  {
 		connect(null);
 	}
+
+
 
 	public void connect(string accountName) {
 
@@ -82,10 +80,6 @@ public class GooglePlayConnection : SA_Singleton<GooglePlayConnection> {
 		}
 
 		OnStateChange(GPConnectionState.STATE_CONNECTING);
-		if(!_isInitialized) {
-			GooglePlayManager.instance.Create();
-			init();
-		}
 
 		if(accountName != null) {
 			AN_GMSGeneralProxy.playServiceConnect (accountName);
@@ -184,7 +178,6 @@ public class GooglePlayConnection : SA_Singleton<GooglePlayConnection> {
 		}
 
 		ActionConnectionResultReceived(result);
-		dispatch(CONNECTION_RESULT_RECEIVED, result);
 
 	}
 
@@ -195,16 +188,13 @@ public class GooglePlayConnection : SA_Singleton<GooglePlayConnection> {
 		switch(_state) {
 			case GPConnectionState.STATE_CONNECTED:
 				ActionPlayerConnected();
-				dispatch(PLAYER_CONNECTED);
 				break;
 			case GPConnectionState.STATE_DISCONNECTED:
 				ActionPlayerDisconnected();
-				dispatch(PLAYER_DISCONNECTED);
 				break; 
 		}
 
 		ActionConnectionStateChanged(_state);
-		dispatch(CONNECTION_STATE_CHANGED, _state);
 
 		Debug.Log("Play Serice Connection State -> " + _state.ToString());
 	}

@@ -7,7 +7,6 @@
 ////////////////////////////////////////////////////////////////////////////////
  
 using UnityEngine;
-using UnionAssets.FLE;
 using System.Collections;
 
 public class GameBillingManagerExample : MonoBehaviour {
@@ -36,16 +35,17 @@ public class GameBillingManagerExample : MonoBehaviour {
 		
 		//Filling product list
 		//You can skip this if you alredy did this in Editor settings menu
-		AndroidInAppPurchaseManager.instance.addProduct(COINS_ITEM);
-		AndroidInAppPurchaseManager.instance.addProduct(COINS_BOOST);
+		AndroidInAppPurchaseManager.instance.AddProduct(COINS_ITEM);
+		AndroidInAppPurchaseManager.instance.AddProduct(COINS_BOOST);
 
 		
 		//listening for purchase and consume events
-		AndroidInAppPurchaseManager.instance.addEventListener (AndroidInAppPurchaseManager.ON_PRODUCT_PURCHASED, OnProductPurchased);
-		AndroidInAppPurchaseManager.instance.addEventListener (AndroidInAppPurchaseManager.ON_PRODUCT_CONSUMED,  OnProductConsumed);
-		
-		//initilaizing store
-		AndroidInAppPurchaseManager.instance.addEventListener (AndroidInAppPurchaseManager.ON_BILLING_SETUP_FINISHED, OnBillingConnected);
+
+		AndroidInAppPurchaseManager.ActionProductPurchased += OnProductPurchased;
+		AndroidInAppPurchaseManager.ActionProductConsumed += OnProductConsumed;
+		AndroidInAppPurchaseManager.ActionBillingSetupFinished += OnBillingConnected;
+
+	
 
 		//you may use loadStore function without parametr if you have filled base64EncodedPublicKey in plugin settings
 		AndroidInAppPurchaseManager.instance.loadStore();
@@ -104,8 +104,7 @@ public class GameBillingManagerExample : MonoBehaviour {
 		}
 	}
 	
-	private static void OnProductPurchased(CEvent e) {
-		BillingResult result = e.data as BillingResult;
+	private static void OnProductPurchased(BillingResult result) {
 
 		//this flag will tell you if purchase is available
 		//result.isSuccess
@@ -128,8 +127,7 @@ public class GameBillingManagerExample : MonoBehaviour {
 	}
 	
 	
-	private static void OnProductConsumed(CEvent e) {
-		BillingResult result = e.data as BillingResult;
+	private static void OnProductConsumed(BillingResult result) {
 		
 		if(result.isSuccess) {
 			OnProcessingConsumeProduct (result.purchase);
@@ -141,14 +139,14 @@ public class GameBillingManagerExample : MonoBehaviour {
 	}
 	
 	
-	private static void OnBillingConnected(CEvent e) {
-		BillingResult result = e.data as BillingResult;
-		AndroidInAppPurchaseManager.instance.removeEventListener (AndroidInAppPurchaseManager.ON_BILLING_SETUP_FINISHED, OnBillingConnected);
+	private static void OnBillingConnected(BillingResult result) {
+
+		AndroidInAppPurchaseManager.ActionBillingSetupFinished -= OnBillingConnected;
 		
 		
 		if(result.isSuccess) {
 			//Store connection is Successful. Next we loading product and customer purchasing details
-			AndroidInAppPurchaseManager.instance.addEventListener (AndroidInAppPurchaseManager.ON_RETRIEVE_PRODUC_FINISHED, OnRetrieveProductsFinised);
+			AndroidInAppPurchaseManager.ActionRetrieveProducsFinished += OnRetrieveProductsFinised;
 			AndroidInAppPurchaseManager.instance.retrieveProducDetails();
 
 		} 
@@ -160,20 +158,14 @@ public class GameBillingManagerExample : MonoBehaviour {
 	
 	
 	
-	private static void OnRetrieveProductsFinised(CEvent e) {
-		BillingResult result = e.data as BillingResult;
-		AndroidInAppPurchaseManager.instance.removeEventListener (AndroidInAppPurchaseManager.ON_RETRIEVE_PRODUC_FINISHED, OnRetrieveProductsFinised);
-		
+	private static void OnRetrieveProductsFinised(BillingResult result) {
+		AndroidInAppPurchaseManager.ActionRetrieveProducsFinished -= OnRetrieveProductsFinised;
 		if(result.isSuccess) {
-
 			UpdateStoreData();
 			_isInited = true;
-
-
 		} else {
 			AndroidMessage.Create("Connection Responce", result.response.ToString() + " " + result.message);
 		}
-
 	}
 
 

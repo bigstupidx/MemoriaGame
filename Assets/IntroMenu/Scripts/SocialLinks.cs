@@ -1,20 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SocialLinks : MonoBehaviour {
+public class SocialLinks : MonoBehaviour
+{
 
     bool FacebookApp = false;
     bool InstragramApp = false;
-    bool YoutubeApp= false;
-    void Awake(){
+    bool YoutubeApp = false;
+
+    void Awake ()
+    {
         IOSSharedApplication.applicationIsQuitting = false;//Esto es por el problema del singleton
     }
 
-    void OnEnable() {
+    void OnEnable ()
+    {
 
         #if UNITY_IOS
 
-        IOSSharedApplication.OnUrCheckResultAction += OnUrCheckResultAction;
+        IOSSharedApplication.OnUrlCheckResultAction += OnUrCheckResultAction;
         #elif UNITY_ANDROID
         AndroidNativeUtility.instance.OnPackageCheckResult += OnPackageCheckResult;
 
@@ -23,8 +27,8 @@ public class SocialLinks : MonoBehaviour {
 
         #if UNITY_IOS
 
-        IOSSharedApplication.instance.CheckUrl("instagram://");
-        IOSSharedApplication.instance.CheckUrl("fb://");
+        IOSSharedApplication.instance.CheckUrl ("instagram://");
+        IOSSharedApplication.instance.CheckUrl ("fb://");
         #elif UNITY_ANDROID
 
         AndroidNativeUtility.instance.CheckIsPackageInstalled("com.google.android.youtube");
@@ -34,22 +38,24 @@ public class SocialLinks : MonoBehaviour {
 
         #endif
     }
- 
 
-    void OnDisable(){
+
+    void OnDisable ()
+    {
         #if UNITY_IOS
-        IOSSharedApplication.OnUrCheckResultAction -= OnUrCheckResultAction;
+        IOSSharedApplication.OnUrlCheckResultAction -= OnUrCheckResultAction;
         #elif UNITY_ANDROID
         //AndroidNativeUtility.instance.OnPackageCheckResult -= OnPackageCheckResult;
         #endif
     }
 
-    public void InstagramLink(){
+    public void InstagramLink ()
+    {
         #if UNITY_IOS
-      //  IOSSharedApplication.instance.CheckUrl("instagram://user?username=tomi_tipi");
-        if(InstragramApp){
-            IOSSharedApplication.instance.OpenUrl("instagram://user?username=timisplayground");
-        }else{
+        //  IOSSharedApplication.instance.CheckUrl("instagram://user?username=tomi_tipi");
+        if (InstragramApp) {
+            IOSSharedApplication.instance.OpenUrl ("instagram://user?username=timisplayground");
+        } else {
             IOSSharedApplication.instance.OpenUrl ("http://instagram.com/timisplayground");
 
         }
@@ -64,10 +70,12 @@ public class SocialLinks : MonoBehaviour {
         #endif
 
     }
-    public void YoutubeLink () {
+
+    public void YoutubeLink ()
+    {
         #if UNITY_IOS
 
-        IOSSharedApplication.instance.OpenUrl( "https://www.youtube.com/user/timisplayground");
+        IOSSharedApplication.instance.OpenUrl ("https://www.youtube.com/user/timisplayground");
 
         #elif UNITY_ANDROID
         if(YoutubeApp){
@@ -80,8 +88,9 @@ public class SocialLinks : MonoBehaviour {
 
     }
    
-	// Update is called once per frame
-	public void FacebookLink () {
+    // Update is called once per frame
+    public void FacebookLink ()
+    {
         #if UNITY_IOS
 
         //   IOSSharedApplication.instance.CheckUrl( "fb://profile/TomiTipiOficial");
@@ -109,10 +118,11 @@ public class SocialLinks : MonoBehaviour {
 
 
     #if UNITY_IOS
-    private void OnUrCheckResultAction (ISN_CheckUrlResult result) {
+    private void OnUrCheckResultAction (ISN_CheckUrlResult result)
+    {
 
-        if(result.IsSucceeded) {
-            switch(result.url){
+        if (result.IsSucceeded) {
+            switch (result.url) {
             case "instagram://":
                 InstragramApp = true;
                 break;
@@ -120,13 +130,13 @@ public class SocialLinks : MonoBehaviour {
                 FacebookApp = true;
                 break;
             }
-          //  IOSMessage.Create("Url Exists", "The " + result.url + " is registred" );
+            //  IOSMessage.Create("Url Exists", "The " + result.url + " is registred" );
         } else {
-           // IOSMessage.Create("Url Exists", "The " + result.url + " wasn't registred");
+            // IOSMessage.Create("Url Exists", "The " + result.url + " wasn't registred");
         }
     }
     #elif UNITY_ANDROID
-
+    
     void OnPackageCheckResult (AN_PackageCheckResult res) {
 
         if(res.IsSucceeded) {

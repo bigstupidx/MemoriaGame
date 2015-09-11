@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnionAssets.FLE;
 using System.Collections;
 
 public class QuestAndEventsExample : MonoBehaviour {
@@ -33,10 +32,10 @@ public class QuestAndEventsExample : MonoBehaviour {
 		defaulttexture = avatar.GetComponent<Renderer>().material.mainTexture;
 		
 		//listen for GooglePlayConnection events
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
-		GooglePlayConnection.instance.addEventListener(GooglePlayConnection.CONNECTION_RESULT_RECEIVED, OnConnectionResult);
+		GooglePlayConnection.ActionPlayerConnected +=  OnPlayerConnected;
+		GooglePlayConnection.ActionPlayerDisconnected += OnPlayerDisconnected;
 		
+		GooglePlayConnection.ActionConnectionResultReceived += OnConnectionResult;
 		
 		//listen for events, we will use action in this example
 		GooglePlayEvents.instance.OnEventsLoaded += OnEventsLoaded;
@@ -200,9 +199,9 @@ public class QuestAndEventsExample : MonoBehaviour {
 		playerLabel.text = GooglePlayManager.instance.player.name;
 	}
 	
-	private void OnConnectionResult(CEvent e) {
+	private void OnConnectionResult(GooglePlayConnectionResult result) {
 		
-		GooglePlayConnectionResult result = e.data as GooglePlayConnectionResult;
+	
 		SA_StatusBar.text = "ConnectionResul:  " + result.code.ToString();
 		Debug.Log(result.code.ToString());
 	}
@@ -210,11 +209,10 @@ public class QuestAndEventsExample : MonoBehaviour {
 
 	
 	void OnDestroy() {
-		if(!GooglePlayConnection.IsDestroyed) {
-			GooglePlayConnection.instance.removeEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-			GooglePlayConnection.instance.removeEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
-			
-		}
+		GooglePlayConnection.ActionPlayerConnected -=  OnPlayerConnected;
+		GooglePlayConnection.ActionPlayerDisconnected -= OnPlayerDisconnected;
+		
+		GooglePlayConnection.ActionConnectionResultReceived -= OnConnectionResult;
 		
 	}
 

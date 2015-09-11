@@ -7,8 +7,8 @@ public class CSharpAPIHelper : MonoBehaviour {
 
 	public void ConnectToPlaySertivce() {
 		//listen for GooglePlayConnection events
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
+		GooglePlayConnection.ActionPlayerConnected += OnPlayerConnected;
+		GooglePlayConnection.ActionPlayerDisconnected += OnPlayerDisconnected;
 
 		
 		

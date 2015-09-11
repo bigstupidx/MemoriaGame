@@ -20,21 +20,17 @@ public class IOSSocialUseExample : MonoBehaviour {
 
 	void Awake() {
 	
-
-		//events use example
-		IOSSocialManager.instance.addEventListener(IOSSocialManager.FACEBOOK_POST_SUCCESS, OnPostSuccses);
-		IOSSocialManager.instance.addEventListener(IOSSocialManager.TWITTER_POST_SUCCESS, OnPostSuccses);
-
-
-		IOSSocialManager.instance.addEventListener(IOSSocialManager.FACEBOOK_POST_FAILED, OnPostFailed);
-		IOSSocialManager.instance.addEventListener(IOSSocialManager.TWITTER_POST_FAILED, OnPostFailed);
+		IOSSocialManager.OnFacebookPostResult += HandleOnFacebookPostResult;
+		IOSSocialManager.OnTwitterPostResult += HandleOnTwitterPostResult;
 
 		//actions use example:
-		IOSSocialManager.instance.OnMailResult += OnMailResult;
+		IOSSocialManager.OnMailResult += OnMailResult;
 
 
 		InitStyles();
 	}
+
+
 
 	private void InitStyles () {
 		style =  new GUIStyle();
@@ -62,11 +58,11 @@ public class IOSSocialUseExample : MonoBehaviour {
 		
 		StartY+= 40;
 		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Post")) {
-			IOSSocialManager.instance.TwitterPost("Titter posting test");
+			IOSSocialManager.instance.TwitterPost("Twitter posting test");
 		}
 		
 		StartX += 170;
-		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Post Screehshot")) {
+		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Post Screenshot")) {
 			StartCoroutine(PostTwitterScreenshot());
 		}
 		
@@ -84,7 +80,7 @@ public class IOSSocialUseExample : MonoBehaviour {
 
 		StartX += 170;
 		
-		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Post Screehshot")) {
+		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Post Screenshot")) {
 			StartCoroutine(PostFBScreenshot());
 		}
 
@@ -92,7 +88,7 @@ public class IOSSocialUseExample : MonoBehaviour {
 		StartX += 170;
 		
 		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Post Image")) {
-			IOSSocialManager.instance.FacebookPost("Hello world", textureForPost);
+			IOSSocialManager.instance.FacebookPost("Hello world", "https://www.assetstore.unity3d.com/en/#!/publisher/2256", textureForPost);
 		}
 
 
@@ -108,7 +104,7 @@ public class IOSSocialUseExample : MonoBehaviour {
 		
 		StartX += 170;
 		
-		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Screehshot")) {
+		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Screenshot")) {
 			StartCoroutine(PostScreenshot());
 		}
 
@@ -116,7 +112,7 @@ public class IOSSocialUseExample : MonoBehaviour {
 		StartX += 170;
 		
 		if(GUI.Button(new Rect(StartX, StartY, 150, 50), "Send Mail")) {
-			IOSSocialManager.instance.SendMail("Mail Subject", "Mail Body", "mail1@gmail.com, mail2@gmail.com", textureForPost);
+			IOSSocialManager.instance.SendMail("Mail Subject", "Mail Body  <strong> text html </strong> ", "mail1@gmail.com, mail2@gmail.com", textureForPost);
 		}
 
 
@@ -152,7 +148,7 @@ public class IOSSocialUseExample : MonoBehaviour {
 		tex.ReadPixels( new Rect(0, 0, width, height), 0, 0 );
 		tex.Apply();
 		
-		IOSSocialManager.instance.TwitterPost("My app ScreehShot", tex);
+		IOSSocialManager.instance.TwitterPost("My app Screenshot", null,  tex);
 		
 		Destroy(tex);
 		
@@ -170,28 +166,38 @@ public class IOSSocialUseExample : MonoBehaviour {
 		tex.ReadPixels( new Rect(0, 0, width, height), 0, 0 );
 		tex.Apply();
 		
-		IOSSocialManager.instance.FacebookPost("My app ScreehShot", tex);
+		IOSSocialManager.instance.FacebookPost("My app Screenshot", null, tex);
 		
 		Destroy(tex);
 		
 	}
 
 
-	private void OnPostFailed() {
-		IOSNativePopUpManager.showMessage("Positng example", "Post Failed :(");
-	}
 
-	private void OnPostSuccses() {
-		IOSNativePopUpManager.showMessage("Positng example", "Posy Succses!");
-	}
 
+
+	void HandleOnTwitterPostResult (ISN_Result res){
+		if(res.IsSucceeded) {
+			IOSNativePopUpManager.showMessage("Posting example", "Post Success!");
+		} else {
+			IOSNativePopUpManager.showMessage("Posting example", "Post Failed :(");
+		}
+	}
+	
+	void HandleOnFacebookPostResult (ISN_Result res) {
+		if(res.IsSucceeded) {
+			IOSNativePopUpManager.showMessage("Posting example", "Post Success!");
+		} else {
+			IOSNativePopUpManager.showMessage("Posting example", "Post Failed :(");
+		}
+	}
 
 
 	private void OnMailResult (ISN_Result result) {
 		if(result.IsSucceeded) {
-			IOSNativePopUpManager.showMessage("Positng example", "Mail Sended");
+			IOSNativePopUpManager.showMessage("Posting example", "Mail Sent");
 		} else {
-			IOSNativePopUpManager.showMessage("Positng example", "Mail Failed :(");
+			IOSNativePopUpManager.showMessage("Posting example", "Mail Failed :(");
 		}
 	}
 }

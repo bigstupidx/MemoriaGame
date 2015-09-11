@@ -3,29 +3,31 @@ using System.Collections;
 
 public class IOSBillingInitChecker 
 {
-	public delegate void BilliginitListner();
+	public delegate void BillingInitListener();
 
-	BilliginitListner _listner;
+	BillingInitListener _listener;
 
 
-	public IOSBillingInitChecker(BilliginitListner listner) {
-		_listner = listner;
+	public IOSBillingInitChecker(BillingInitListener listener) {
+		_listener = listener;
 
-		if(IOSInAppPurchaseManager.instance.IsStoreLoaded) {
-			_listner();
+		if(IOSInAppPurchaseManager.Instance.IsStoreLoaded) {
+			_listener();
 		} else {
 
-			IOSInAppPurchaseManager.instance.addEventListener(IOSInAppPurchaseManager.STORE_KIT_INITIALIZED, OnStoreKitInit);
-			if(!IOSInAppPurchaseManager.instance.IsWaitingLoadResult) {
-				IOSInAppPurchaseManager.instance.loadStore();
+			IOSInAppPurchaseManager.OnStoreKitInitComplete += HandleOnStoreKitInitComplete;
+			if(!IOSInAppPurchaseManager.Instance.IsWaitingLoadResult) {
+				IOSInAppPurchaseManager.Instance.loadStore();
 			}
 		}
 	}
 
-	private void OnStoreKitInit() {
-		IOSInAppPurchaseManager.instance.removeEventListener(IOSInAppPurchaseManager.STORE_KIT_INITIALIZED, OnStoreKitInit);
-		_listner();
+	void HandleOnStoreKitInitComplete (ISN_Result obj) {
+		IOSInAppPurchaseManager.OnStoreKitInitComplete -= HandleOnStoreKitInitComplete;
+		_listener();
 	}
+
+
 
 }
 

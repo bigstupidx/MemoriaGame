@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PreviewSceneController : MonoBehaviour {
@@ -7,6 +7,11 @@ public class PreviewSceneController : MonoBehaviour {
 
 	void Awake() {
 		title.text = "Android Native Unity3d Plugin (" +  AndroidNativeSettings.VERSION_NUMBER + ")";
+
+		//Init Gamethrive Push Notifications if this option is enabled in AndroidNative Inspector window
+		if (AndroidNativeSettings.Instance.UseGameThrivePushNotifications) {
+			GoogleCloudMessageService.instance.InitOneSignalNotifications ();		
+		}
 	}
 
 
@@ -15,9 +20,15 @@ public class PreviewSceneController : MonoBehaviour {
 	}
 
 	public void SendBug() {
-		AndroidSocialGate.SendMail("Send Mail", "", "Hey Stan, I found a bug", "stans.assets@gmail.com");
+		//AndroidSocialGate.SendMail("Send Mail", "", "Hey Stan, I found a bug", "stans.assets@gmail.com");
+
+		AN_LicenseManager.OnLicenseRequestResult += LicenseRequestResult;
+		AN_LicenseManager.instance.StartLicenseRequest();
 	}
 
+	private void LicenseRequestResult(AN_LicenseRequestResult result) {
+		Debug.Log("LicenseRequestResult " + result.ToString());
+	}
 
 	public void OpenDocs() {
 		string url = "http://goo.gl/pTcIR8";

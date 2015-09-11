@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TakeShoot : MonoBehaviour {
+public class TakeShoot : MonoBehaviour
+{
 
 
     public UITexture target;
@@ -12,43 +13,47 @@ public class TakeShoot : MonoBehaviour {
 
     #endif
     public UIButton next;
-    void Awake(){
+
+    void Awake ()
+    {
         initialTexture = target.mainTexture;
     }
+
     /// <summary>
     /// Next button desactivar
     /// </summary>
-    public void setIsEnableFalse(){
+    public void setIsEnableFalse ()
+    {
     
         next.isEnabled = false;
     }
-    private void OnImageSaved (ISN_Result result) {
-        IOSCamera.instance.OnImageSaved -= OnImageSaved;
-        if(result.IsSucceeded) {
-            IOSMessage.Create("Success", "Image Successfully saved to Camera Roll");
+
+    private void OnImageSaved (ISN_Result result)
+    {
+        IOSCamera.OnImageSaved -= OnImageSaved;
+        if (result.IsSucceeded) {
+            IOSMessage.Create ("Success", "Image Successfully saved to Camera Roll");
         } else {
-            IOSMessage.Create("Success", "Image Save Failed");
+            IOSMessage.Create ("Success", "Image Save Failed");
         }
     }
     #if UNITY_IOS
-    private void OnImage (IOSImagePickResult result) {
-        if (result.IsSucceeded)
-        {
-            if(target.mainTexture != initialTexture)
-                DestroyImmediate(target.mainTexture,true);
-            target.mainTexture = result.image;
+    private void OnImage (IOSImagePickResult result)
+    {
+        if (result.IsSucceeded) {
+            if (target.mainTexture != initialTexture)
+                DestroyImmediate (target.mainTexture, true);
+            target.mainTexture = result.Image;
             next.isEnabled = true;
 
-         //   IOSMessage.Create("Success", "Image Successfully Loaded, Image size: " + result.image.width + "x" + result.image.height);
+            //   IOSMessage.Create("Success", "Image Successfully Loaded, Image size: " + result.image.width + "x" + result.image.height);
 
-        }
-        else
-        {
-            IOSMessage.Create("Success", "Image Load Failed");
+        } else {
+            IOSMessage.Create ("Success", "Image Load Failed");
 
         }
         isTaking = false;
-        IOSCamera.instance.OnImagePicked -= OnImage;
+        IOSCamera.OnImagePicked -= OnImage;
     }
 
     #elif UNITY_ANDROID
@@ -66,19 +71,19 @@ public class TakeShoot : MonoBehaviour {
         AndroidCamera.instance.OnImagePicked -= OnImage;
     }
     #endif
-    public void TakePhotoButton(){
+    public void TakePhotoButton ()
+    {
         #if UNITY_EDITOR
-        target.mainTexture =initialTextureExample;
+        target.mainTexture = initialTextureExample;
         next.isEnabled = true;
 
         return;
         #endif
-        if (!isTaking)
-        {
+        if (!isTaking) {
             isTaking = true;
             #if UNITY_IOS
-            IOSCamera.instance.OnImagePicked += OnImage;
-            IOSCamera.instance.GetImageFromCamera();
+            IOSCamera.OnImagePicked += OnImage;
+            IOSCamera.instance.GetImageFromCamera ();
             #elif UNITY_ANDROID
             AndroidCamera.instance.OnImagePicked += OnImage;
             AndroidCamera.instance.GetImageFromCamera();
@@ -86,18 +91,21 @@ public class TakeShoot : MonoBehaviour {
            
         }
     }
-    public void SavePhotoButton(){
-        IOSCamera.instance.OnImageSaved += OnImageSaved;
-        IOSCamera.instance.SaveScreenshotToCameraRoll();
+
+    public void SavePhotoButton ()
+    {
+        IOSCamera.OnImageSaved += OnImageSaved;
+        IOSCamera.instance.SaveScreenshotToCameraRoll ();
     }
 
-    public void BorrarFoto(){
+    public void BorrarFoto ()
+    {
         #if UNITY_EDITOR
         target.mainTexture = initialTexture;
         return;
-    #endif
-        if(target.mainTexture != initialTexture)
-            DestroyImmediate(target.mainTexture,true);
+        #endif
+        if (target.mainTexture != initialTexture)
+            DestroyImmediate (target.mainTexture, true);
         target.mainTexture = initialTexture;
     }
 

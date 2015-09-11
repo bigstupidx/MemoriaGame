@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnionAssets.FLE;
 using System.Collections;
 
 public class PlayServicFridnsLoadExample_New : MonoBehaviour {
@@ -24,9 +23,13 @@ public class PlayServicFridnsLoadExample_New : MonoBehaviour {
 
 
 		//listen for GooglePlayConnection events
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
-		GooglePlayConnection.instance.addEventListener(GooglePlayConnection.CONNECTION_RESULT_RECEIVED, OnConnectionResult);
+
+		GooglePlayConnection.ActionPlayerConnected +=  OnPlayerConnected;
+		GooglePlayConnection.ActionPlayerDisconnected += OnPlayerDisconnected;
+
+		GooglePlayConnection.ActionConnectionResultReceived += OnConnectionResult;
+
+	
 		
 
 	
@@ -137,7 +140,7 @@ public class PlayServicFridnsLoadExample_New : MonoBehaviour {
 
 
 	public void LoadFriendsList() {
-		GooglePlayManager.instance.LoadConnectedPlayers();
+		GooglePlayManager.instance.LoadFriends();
 	}
 
 
@@ -158,9 +161,8 @@ public class PlayServicFridnsLoadExample_New : MonoBehaviour {
 		playerLabel.text = GooglePlayManager.instance.player.name;
 	}
 	
-	private void OnConnectionResult(CEvent e) {
-		
-		GooglePlayConnectionResult result = e.data as GooglePlayConnectionResult;
+	private void OnConnectionResult(GooglePlayConnectionResult result) {
+	
 		SA_StatusBar.text = "ConnectionResul:  " + result.code.ToString();
 		Debug.Log(result.code.ToString());
 	}

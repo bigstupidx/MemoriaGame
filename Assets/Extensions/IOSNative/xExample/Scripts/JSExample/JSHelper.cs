@@ -9,12 +9,10 @@
 
 
 using UnityEngine;
-using UnionAssets.FLE;
-
 
 public class JSHelper : MonoBehaviour {
 	
-	private string leaderBoardId =  "your.leaderbord1.id.here";
+	private string leaderboardId =  "your.leaderboard1.id.here";
 
 
 	private string TEST_ACHIEVEMENT_1_ID = "your.achievement.id1.here";
@@ -31,31 +29,41 @@ public class JSHelper : MonoBehaviour {
 
 
 		//Achievement registration. If you will skipt this step GameCenterManager.achievements array will contain only achievements with reported progress 
-		GameCenterManager.registerAchievement (TEST_ACHIEVEMENT_1_ID);
-		GameCenterManager.registerAchievement (TEST_ACHIEVEMENT_2_ID);
+		GameCenterManager.RegisterAchievement (TEST_ACHIEVEMENT_1_ID);
+		GameCenterManager.RegisterAchievement (TEST_ACHIEVEMENT_2_ID);
 
 
 		//Listen for the Game Center events
-		GameCenterManager.dispatcher.addEventListener (GameCenterManager.GAME_CENTER_ACHIEVEMENTS_LOADED, OnAchievementsLoaded);
-		GameCenterManager.dispatcher.addEventListener (GameCenterManager.GAME_CENTER_ACHIEVEMENT_PROGRESS, OnAchievementProgress);
-		GameCenterManager.dispatcher.addEventListener (GameCenterManager.GAME_CENTER_ACHIEVEMENTS_RESET, OnAchievementsReset);
+		GameCenterManager.OnAchievementsLoaded += HandleOnAchievementsLoaded;
+		GameCenterManager.OnAchievementsProgress += HandleOnAchievementsProgress;
+		GameCenterManager.OnAchievementsReset += HandleOnAchievementsReset;
 
 
-		GameCenterManager.dispatcher.addEventListener (GameCenterManager.GAME_CENTER_LEADER_BOARD_SCORE_LOADED, OnLeaderBoarScoreLoaded);
-
-		GameCenterManager.dispatcher.addEventListener (GameCenterManager.GAME_CENTER_PLAYER_AUTHENTICATED, OnAuth);
+		GameCenterManager.OnPlayerScoreLoaded += HandleOnPlayerScoreLoaded;
+		GameCenterManager.OnAuthFinished += HandleOnAuthFinished;
+	
 
 		DontDestroyOnLoad (gameObject);
 
-		GameCenterManager.init();
+		GameCenterManager.Init();
 		
-		Debug.Log("InitGameCneter");
+		Debug.Log("InitGameCenter");
 	}
+
+
+
+
+
+
+
+
+
+
 	
-	
+
 	private void SubmitScore(int val) {
 		Debug.Log("SubmitScore");
-		GameCenterManager.reportScore(val, leaderBoardId);
+		GameCenterManager.ReportScore(val, leaderboardId);
 	}
 	
 	private void SubmitAchievement(string data) {
@@ -65,11 +73,11 @@ public class JSHelper : MonoBehaviour {
 		
 		float percent = System.Convert.ToSingle(arr[0]);
 		string achievementId = arr[1];
-		
+
 		
 		
 		Debug.Log("SubmitAchievement: " + achievementId + "  " + percent.ToString());
-		GameCenterManager.submitAchievement(percent, achievementId);
+		GameCenterManager.SubmitAchievement(percent, achievementId);
 	}
 	
 	
@@ -81,43 +89,38 @@ public class JSHelper : MonoBehaviour {
 	//--------------------------------------
 	//  EVENTS
 	//--------------------------------------
-
-	private void OnAchievementsLoaded() {
-		Debug.Log ("Achievemnts was loaded from IOS Game Center");
-
-		foreach(AchievementTemplate tpl in GameCenterManager.achievements) {
-			Debug.Log (tpl.id + ":  " + tpl.progress);
+	
+	void HandleOnAchievementsLoaded (ISN_Result res) {
+		Debug.Log ("Achievements loaded from iOS Game Center");
+		
+		foreach(GK_AchievementTemplate tpl in GameCenterManager.Achievements) {
+			Debug.Log (tpl.Id + ":  " + tpl.Progress);
 		}
 	}
 
-	private void OnAchievementsReset() {
-		Debug.Log ("All  Achievemnts was reseted");
-	}
-
-	private void OnAchievementProgress(CEvent e) {
+	void HandleOnAchievementsProgress (GK_AchievementProgressResult progress) {
 		Debug.Log ("OnAchievementProgress");
-
-		AchievementTemplate tpl = e.data as AchievementTemplate;
-		Debug.Log (tpl.id + ":  " + tpl.progress.ToString());
+		
+		GK_AchievementTemplate tpl = progress.Achievement;
+		Debug.Log (tpl.Id + ":  " + tpl.Progress.ToString());
 	}
 
-	private void OnLeaderBoarScoreLoaded(CEvent e) {
-		ISN_PlayerScoreLoadedResult result = e.data as ISN_PlayerScoreLoadedResult;
-		
+	void HandleOnAchievementsReset (ISN_Result res) {
+		Debug.Log ("All Achievements were reset");
+	}
+
+	void HandleOnPlayerScoreLoaded (GK_PlayerScoreLoadedResult result) {
 		if(result.IsSucceeded) {
-			GCScore score = result.loadedScore;
-			IOSNativePopUpManager.showMessage("Leader Board " + score.leaderboardId, "Score: " + score.score + "\n" + "Rank:" + score.rank);
+			GK_Score score = result.loadedScore;
+			IOSNativePopUpManager.showMessage("Leaderboard " + score.leaderboardId, "Score: " + score.score + "\n" + "Rank:" + score.rank);
 		}
-		
 	}
 
-
-	private void OnAuth(CEvent e) {
-		ISN_Result r = e.data as ISN_Result;
+	void HandleOnAuthFinished (ISN_Result r) {
 		if (r.IsSucceeded) {
-			IOSNativePopUpManager.showMessage("Player Authed ", "ID: " + GameCenterManager.player.playerId + "\n" + "Name: " + GameCenterManager.player.displayName);
+			IOSNativePopUpManager.showMessage("Player Authenticated", "ID: " + GameCenterManager.Player.Id + "\n" + "Name: " + GameCenterManager.Player.DisplayName);
 		}
-
 	}
 	
+
 }

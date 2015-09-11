@@ -22,21 +22,13 @@ public class iCloudUseExample : MonoBehaviour {
 	void Awake() {
 
 		//initialize icloud and listed for events
-		iCloudManager.instance.OnCloundInitAction += OnCloundInitAction;
-		iCloudManager.instance.OnCloundDataChangedAction += OnCloundDataChangedAction;
-		iCloudManager.instance.OnCloudDataReceivedAction += OnCloudDataReceivedAction;
+		iCloudManager.OnCloundInitAction += OnCloundInitAction;
+		iCloudManager.OnCloudDataReceivedAction += OnCloudDataReceivedAction;
 
 		iCloudManager.instance.init ();
 	
 
-		//using events example
-		/*
-		iCloudManager.instance.addEventListener (iCloudManager.CLOUD_INITIALIZED, OnInit);
-		iCloudManager.instance.addEventListener (iCloudManager.CLOUD_INITIALIZE_FAILED, OnInitFailed);
-		iCloudManager.instance.addEventListener (iCloudManager.CLOUD_DATA_CHANGED, OnDataChanged);
-
-		iCloudManager.instance.addEventListener (iCloudManager.CLOUD_DATA_RECEIVE, OnDataReceive);
-		*/
+	
 	}
 
 	//--------------------------------------
@@ -77,7 +69,7 @@ public class iCloudUseExample : MonoBehaviour {
 		}
 
 		if(GUI.Button(new Rect(170, 500, 150, 50), "TestConnection")) {
-			Application.LoadLevel("Pear-To-Pear example game");
+            Application.LoadLevel("Peer-To-PeerGameExample");
 		}
 
 	}
@@ -94,7 +86,7 @@ public class iCloudUseExample : MonoBehaviour {
 
 	private void OnCloundInitAction (ISN_Result result) {
 		if(result.IsSucceeded) {
-			IOSNativePopUpManager.showMessage("iCloud", "Initialization Sucsess!");
+			IOSNativePopUpManager.showMessage("iCloud", "Initialization Success!");
 		} else {
 			IOSNativePopUpManager.showMessage("iCloud", "Initialization Failed!");
 		}
@@ -122,11 +114,8 @@ public class iCloudUseExample : MonoBehaviour {
 	//--------------------------------------
 
 	void OnDestroy() {
-		if(iCloudManager.HasInstance) {
-			iCloudManager.instance.OnCloundInitAction -= OnCloundInitAction;
-			iCloudManager.instance.OnCloundDataChangedAction -= OnCloundDataChangedAction;
-			iCloudManager.instance.OnCloudDataReceivedAction -= OnCloudDataReceivedAction;
-		}
+		iCloudManager.OnCloundInitAction -= OnCloundInitAction;
+		iCloudManager.OnCloudDataReceivedAction -= OnCloudDataReceivedAction;
 	}
 
 }

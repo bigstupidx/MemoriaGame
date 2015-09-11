@@ -12,57 +12,70 @@ SceneSettings:
     backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
   m_Fog: 0
   m_FogColor: {r: .5, g: .5, b: .5, a: 1}
   m_FogMode: 3
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientSkyColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientEquatorColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientGroundColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
-  m_SpotCookie: {fileID: 0}
-  m_ObjectHideFlags: 0
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
 --- !u!127 &3
 LevelGameManager:
   m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
-  m_LightProbes: {fileID: 0}
-  m_Lightmaps: []
+  serializedVersion: 5
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
-  m_BakedColorSpace: 0
-  m_UseDualLightmapsInForward: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    m_Resolution: 50
-    m_LastUsedResolution: 0
+    serializedVersion: 3
+    m_Resolution: 1
+    m_BakeResolution: 50
     m_TextureWidth: 1024
     m_TextureHeight: 1024
-    m_BounceBoost: 1
-    m_BounceIntensity: 1
-    m_SkyLightColor: {r: .860000014, g: .930000007, b: 1, a: 1}
-    m_SkyLightIntensity: 0
-    m_Quality: 0
-    m_Bounces: 1
-    m_FinalGatherRays: 1000
-    m_FinalGatherContrastThreshold: .0500000007
-    m_FinalGatherGradientThreshold: 0
-    m_FinalGatherInterpolationPoints: 15
-    m_AOAmount: 0
-    m_AOMaxDistance: .100000001
-    m_AOContrast: 1
-    m_LODSurfaceMappingDistance: 1
-    m_Padding: 0
+    m_AOMaxDistance: 1
+    m_Padding: 2
+    m_CompAOExponent: 0
+    m_LightmapParameters: {fileID: 0}
     m_TextureCompression: 0
-    m_LockAtlas: 0
+    m_FinalGather: 0
+    m_FinalGatherRayCount: 1024
+  m_LightmapSnapshot: {fileID: 0}
+  m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
+    serializedVersion: 2
     agentRadius: .5
     agentHeight: 2
     agentSlope: 45
@@ -71,10 +84,9 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
-    widthInaccuracy: 16.666666
-    heightInaccuracy: 10
-    tileSizeHint: 0
-  m_NavMesh: {fileID: 0}
+    cellSize: .166666657
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &151746887
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +185,7 @@ TextMesh:
     serializedVersion: 2
     rgba: 4294967295
 --- !u!23 &578959703
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -181,15 +193,19 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &598478225
@@ -243,7 +259,7 @@ TextMesh:
     serializedVersion: 2
     rgba: 4294967295
 --- !u!23 &598478228
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -251,15 +267,19 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &697369644
@@ -1076,8 +1096,8 @@ MonoBehaviour:
         actionIsOpen:
         - 1
         - 1
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 5372a66e4cc8fcef
+        actionStartIndex: 0000000007000000
+        actionHashCodes: f1c813af4cc8fcef
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1131,6 +1151,27 @@ MonoBehaviour:
         - 111
         - 114
         - 101
+        - 67
+        - 111
+        - 109
+        - 112
+        - 108
+        - 101
+        - 116
+        - 101
+        - 79
+        - 110
+        - 84
+        - 114
+        - 97
+        - 110
+        - 115
+        - 97
+        - 99
+        - 116
+        - 105
+        - 111
+        - 110
         - 67
         - 111
         - 109
@@ -1223,12 +1264,15 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 170000001700000017000000120000001700000011000000210000001200000012000000120000001e0000000f0000000f0000000f0000000f00000011000000
+        paramDataType: 170000001700000012000000170000001700000017000000170000001700000011000000210000001200000012000000120000001e0000000f0000000f0000000f0000000f00000011000000
         paramName:
         - 496e6974436f6d706c6574654576656e74
         - 526573746f726550726f6475637473436f6d706c6574654576656e74
-        - 5472616e73616374696f6e436f6d706c6574654576656e74
         - 5472616e73616374696f6e50726f647563744964
+        - 50726f647563745075726368617365644576656e74
+        - 50726f64756374526573746f7265644576656e74
+        - 50757263686173654661696c65644576656e74
+        - 507572636861736544656665727265644576656e74
         - 73656e644576656e74
         - 73746f7265427574746f6e5374617465
         - 696d616765
@@ -1241,8 +1285,8 @@ MonoBehaviour:
         - 7769647468
         - 686569676874
         - 6e6f726d616c697a6564
-        paramDataPos: 000000000000000011000000000000002600000038000000000000000100000002000000030000003a0000004b00000050000000550000005a0000005f000000
-        paramByteDataSize: 00000000110000001500000000000000120000000200000000000000000000000000000000000000110000000500000005000000050000000500000002000000
+        paramDataPos: 00000000000000000000000011000000260000003b0000003b0000003b0000004d000000000000000100000002000000030000004f00000060000000650000006a0000006f00000074000000
+        paramByteDataSize: 00000000110000000000000015000000150000000000000000000000120000000200000000000000000000000000000000000000110000000500000005000000050000000500000002000000
     - name: 436865636b20496620436f696e7320507572636861736564
       description: 
       colorIndex: 0
@@ -1867,7 +1911,7 @@ MonoBehaviour:
         actionIsOpen:
         - 1
         actionStartIndex: 00000000
-        actionHashCodes: 5372a66e
+        actionHashCodes: f1c813af
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1908,14 +1952,17 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000170000001700000012000000
+        paramDataType: 17000000170000001200000017000000170000001700000017000000
         paramName:
         - 496e6974436f6d706c6574654576656e74
         - 526573746f726550726f6475637473436f6d706c6574654576656e74
-        - 5472616e73616374696f6e436f6d706c6574654576656e74
         - 5472616e73616374696f6e50726f647563744964
-        paramDataPos: 00000000110000001100000000000000
-        paramByteDataSize: 11000000000000000000000000000000
+        - 50726f647563745075726368617365644576656e74
+        - 50726f64756374526573746f7265644576656e74
+        - 50757263686173654661696c65644576656e74
+        - 507572636861736544656665727265644576656e74
+        paramDataPos: 00000000110000000000000011000000110000001100000011000000
+        paramByteDataSize: 11000000000000000000000000000000000000000000000000000000
     - name: 507572636861736520427574746f6e
       description: 
       colorIndex: 0
@@ -2099,7 +2146,7 @@ MonoBehaviour:
         actionIsOpen:
         - 1
         actionStartIndex: 00000000
-        actionHashCodes: c166b9f5
+        actionHashCodes: 87aa7d8b
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2164,6 +2211,14 @@ MonoBehaviour:
         - 118
         - 101
         - 46
+        - 112
+        - 114
+        - 101
+        - 118
+        - 105
+        - 101
+        - 119
+        - 46
         - 114
         - 101
         - 100
@@ -2186,14 +2241,15 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000170000000300000012000000
+        paramDataType: 1700000017000000170000000300000012000000
         paramName:
-        - 737563636573734576656e74
+        - 64656665727265644576656e74
+        - 7075726368617365644576656e74
         - 6661696c4576656e74
         - 50726f647563744944
         - 72656365697074
-        paramDataPos: 00000000120000002200000000000000
-        paramByteDataSize: 12000000100000001d00000000000000
+        paramDataPos: 0000000000000000120000002200000000000000
+        paramByteDataSize: 0000000012000000100000002500000000000000
     - name: 507572636861736564
       description: 
       colorIndex: 0
@@ -2754,7 +2810,7 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &1172984550
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2762,15 +2818,19 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 9c9cfbd96b5ee4cfda41c8f30276f9c9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!135 &1172984551
@@ -2931,7 +2991,7 @@ MonoBehaviour:
         actionIsOpen:
         - 1
         actionStartIndex: 00000000
-        actionHashCodes: 5372a66e
+        actionHashCodes: f1c813af
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2972,14 +3032,17 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000170000001700000012000000
+        paramDataType: 17000000170000001200000017000000170000001700000017000000
         paramName:
         - 496e6974436f6d706c6574654576656e74
         - 526573746f726550726f6475637473436f6d706c6574654576656e74
-        - 5472616e73616374696f6e436f6d706c6574654576656e74
         - 5472616e73616374696f6e50726f647563744964
-        paramDataPos: 00000000110000001100000000000000
-        paramByteDataSize: 11000000000000000000000000000000
+        - 50726f647563745075726368617365644576656e74
+        - 50726f64756374526573746f7265644576656e74
+        - 50757263686173654661696c65644576656e74
+        - 507572636861736544656665727265644576656e74
+        paramDataPos: 00000000110000000000000011000000110000001100000011000000
+        paramByteDataSize: 11000000000000000000000000000000000000000000000000000000
     - name: 5075726368736520427574746f6e
       description: 
       colorIndex: 0
@@ -3163,7 +3226,7 @@ MonoBehaviour:
         actionIsOpen:
         - 1
         actionStartIndex: 00000000
-        actionHashCodes: c166b9f5
+        actionHashCodes: 87aa7d8b
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3236,14 +3299,15 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000170000000300000012000000
+        paramDataType: 1700000017000000170000000300000012000000
         paramName:
-        - 737563636573734576656e74
+        - 64656665727265644576656e74
+        - 7075726368617365644576656e74
         - 6661696c4576656e74
         - 50726f647563744944
         - 72656365697074
-        paramDataPos: 00000000120000002200000000000000
-        paramByteDataSize: 12000000100000000f00000000000000
+        paramDataPos: 0000000000000000120000002200000000000000
+        paramByteDataSize: 0000000012000000100000000f00000000000000
     - name: 507572636861736564
       description: 
       colorIndex: 0
@@ -3452,7 +3516,7 @@ Transform:
   m_Father: {fileID: 1059761452}
   m_RootOrder: 0
 --- !u!23 &1399718775
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3460,15 +3524,19 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: b77ab1484c78044dcb6d67f53554a705, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!135 &1399718776
@@ -3564,7 +3632,7 @@ MonoBehaviour:
         actionIsOpen:
         - 1
         actionStartIndex: 00000000
-        actionHashCodes: 5372a66e
+        actionHashCodes: f1c813af
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3605,14 +3673,17 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000170000001700000012000000
+        paramDataType: 17000000170000001200000017000000170000001700000017000000
         paramName:
         - 496e6974436f6d706c6574654576656e74
         - 526573746f726550726f6475637473436f6d706c6574654576656e74
-        - 5472616e73616374696f6e436f6d706c6574654576656e74
         - 5472616e73616374696f6e50726f647563744964
-        paramDataPos: 00000000110000001100000000000000
-        paramByteDataSize: 11000000000000000000000000000000
+        - 50726f647563745075726368617365644576656e74
+        - 50726f64756374526573746f7265644576656e74
+        - 50757263686173654661696c65644576656e74
+        - 507572636861736544656665727265644576656e74
+        paramDataPos: 00000000110000000000000011000000110000001100000011000000
+        paramByteDataSize: 11000000000000000000000000000000000000000000000000000000
     - name: 5075726368736520427574746f6e
       description: 
       colorIndex: 0
@@ -4095,7 +4166,7 @@ TextMesh:
     serializedVersion: 2
     rgba: 4294967295
 --- !u!23 &1497490389
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4103,15 +4174,19 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &1697008327
@@ -4165,7 +4240,7 @@ TextMesh:
     serializedVersion: 2
     rgba: 4294967295
 --- !u!23 &1697008330
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4173,15 +4248,19 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &1721848122
@@ -4207,10 +4286,10 @@ Light:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1721848122}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .5
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4219,21 +4298,18 @@ Light:
     m_Resolution: -1
     m_Strength: 1
     m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
+    m_NormalBias: .400000006
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Lightmapping: 1
-  m_ShadowSamples: 1
+  m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
 --- !u!4 &1721848124
 Transform:
@@ -4241,7 +4317,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1721848122}
-  m_LocalRotation: {x: .408217967, y: -.234569743, z: .109381683, w: .875426114}
+  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
   m_LocalPosition: {x: 5.96046448e-08, y: 1, z: -5.04837751}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4319,6 +4395,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &1915016960
 Transform:
   m_ObjectHideFlags: 0
@@ -4405,7 +4482,7 @@ MonoBehaviour:
         actionIsOpen:
         - 1
         actionStartIndex: 00000000
-        actionHashCodes: 5372a66e
+        actionHashCodes: f1c813af
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -4446,14 +4523,17 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000170000001700000012000000
+        paramDataType: 17000000170000001200000017000000170000001700000017000000
         paramName:
         - 496e6974436f6d706c6574654576656e74
         - 526573746f726550726f6475637473436f6d706c6574654576656e74
-        - 5472616e73616374696f6e436f6d706c6574654576656e74
         - 5472616e73616374696f6e50726f647563744964
-        paramDataPos: 00000000110000001100000000000000
-        paramByteDataSize: 11000000000000000000000000000000
+        - 50726f647563745075726368617365644576656e74
+        - 50726f64756374526573746f7265644576656e74
+        - 50757263686173654661696c65644576656e74
+        - 507572636861736544656665727265644576656e74
+        paramDataPos: 00000000110000000000000011000000110000001100000011000000
+        paramByteDataSize: 11000000000000000000000000000000000000000000000000000000
     - name: 5075726368736520427574746f6e
       description: 
       colorIndex: 0
@@ -4630,14 +4710,18 @@ MonoBehaviour:
       actionData:
         actionNames:
         - 4875746f6e6747616d65732e506c61794d616b65722e416374696f6e732e49534e5f5075726368617365416374696f6e
+        - 4875746f6e6747616d65732e506c61794d616b65722e416374696f6e732e49534e5f53686f774e6f74696669636174696f6e42616e6e6572
         customNames:
         - 
+        - 
         actionEnabled:
+        - 0
         - 1
         actionIsOpen:
         - 1
-        actionStartIndex: 00000000
-        actionHashCodes: c166b9f5
+        - 1
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 87aa7d8b60733813
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -4654,6 +4738,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 54657374
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 546573742054657374
         fsmObjectParams: []
         fsmVarParams: []
         byteData:
@@ -4702,11 +4798,17 @@ MonoBehaviour:
         - 118
         - 101
         - 46
-        - 103
+        - 112
         - 114
         - 101
+        - 118
+        - 105
         - 101
-        - 110
+        - 119
+        - 46
+        - 114
+        - 101
+        - 100
         - 46
         - 115
         - 112
@@ -4726,14 +4828,17 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000170000000300000012000000
+        paramDataType: 17000000170000001700000003000000120000001200000012000000
         paramName:
-        - 737563636573734576656e74
+        - 64656665727265644576656e74
+        - 7075726368617365644576656e74
         - 6661696c4576656e74
         - 50726f647563744944
         - 72656365697074
-        paramDataPos: 00000000120000002200000000000000
-        paramByteDataSize: 12000000100000001f00000000000000
+        - 7469746c65
+        - 6d657373616765
+        paramDataPos: 00000000000000001200000022000000000000000100000002000000
+        paramByteDataSize: 00000000120000001000000025000000000000000000000000000000
     - name: 507572636861736564
       description: 
       colorIndex: 0

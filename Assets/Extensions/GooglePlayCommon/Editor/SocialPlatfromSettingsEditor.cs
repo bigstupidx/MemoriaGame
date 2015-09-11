@@ -13,6 +13,10 @@ public class SocialPlatfromSettingsEditor : Editor {
 
 	static GUIContent TConsumerKey   = new GUIContent("API Key [?]:", "Twitter register app consumer key");
 	static GUIContent TConsumerSecret   = new GUIContent("API Secret [?]:", "Twitter register app consumer secret");
+
+	static GUIContent TAccessToken   = new GUIContent("Access Token [?]:", "Twitter Access Token for editor testing only");
+	static GUIContent TAccessTokenSecret   = new GUIContent("Access Token Secret [?]:", "Twitter Access Token Secret for editor testing only");
+
 	static GUIContent FBdkVersion   = new GUIContent("Facebook SDK Version [?]", "Version of Unity Facebook SDK Plugin");
 
 	
@@ -27,8 +31,7 @@ public class SocialPlatfromSettingsEditor : Editor {
 	private const string ANDROID_SOURCE_PATH 		= "Plugins/StansAssets/Android/";
 	private const string ANDROID_DESTANATION_PATH 	= "Plugins/Android/";
 
-	private const string version_info_file = "Plugins/StansAssets/Versions/MSP_VersionInfo.txt"; 
-	
+
 
 
 	void Awake() {
@@ -72,8 +75,8 @@ public class SocialPlatfromSettingsEditor : Editor {
 
 		GeneralOptions();
 		EditorGUILayout.Space();
-
-
+		GeneralSettings();
+		EditorGUILayout.Space();
 		FacebookSettings();
 		EditorGUILayout.Space();
 		TwitterSettings();
@@ -103,7 +106,12 @@ public class SocialPlatfromSettingsEditor : Editor {
 
 	public static bool IsInstalled {
 		get {
+
+			#if UNITY_3_5 || UNITY_4_0 || UNITY_4_1	|| UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 			if(FileStaticAPI.IsFileExists(PluginsInstalationUtil.ANDROID_DESTANATION_PATH + "androidnative.jar") && FileStaticAPI.IsFileExists(PluginsInstalationUtil.IOS_DESTANATION_PATH + "MGInstagram.h")) {
+			#else
+			if(FileStaticAPI.IsFileExists(PluginsInstalationUtil.ANDROID_DESTANATION_PATH + "androidnative.jar")) {
+			#endif
 				return true;
 			} else {
 				return false;
@@ -113,7 +121,9 @@ public class SocialPlatfromSettingsEditor : Editor {
 	
 	public static bool IsUpToDate {
 		get {
-			if(SocialPlatfromSettings.VERSION_NUMBER.Equals(DataVersion)) {
+
+			int currentVersion = SA_VersionsManager.ParceVersion(SocialPlatfromSettings.VERSION_NUMBER);
+			if(currentVersion == SA_VersionsManager.MSP_Version) {
 				return true;
 			} else {
 				return false;
@@ -121,22 +131,6 @@ public class SocialPlatfromSettingsEditor : Editor {
 		}
 	}
 	
-	
-	public static string DataVersion {
-		get {
-			if(FileStaticAPI.IsFileExists(version_info_file)) {
-				return FileStaticAPI.Read(version_info_file);
-			} else {
-				return "Unknown";
-			}
-		}
-	}
-
-	public static float Version {
-		get {
-			return System.Convert.ToSingle(DataVersion);
-		}
-	}
 
 	public static bool IsFacebookInstalled {
 		get {
@@ -176,40 +170,24 @@ public class SocialPlatfromSettingsEditor : Editor {
 		
 		if(IsInstalled) {
 			if(!IsUpToDate) {
-				EditorGUILayout.HelpBox("Update Required \nResources version: " + DataVersion + " Plugin version: " + SocialPlatfromSettings.VERSION_NUMBER, MessageType.Warning);
+				EditorGUILayout.HelpBox("Update Required \nResources version: " + SA_VersionsManager.MSP_StringVersionId + " Plugin version: " + SocialPlatfromSettings.VERSION_NUMBER, MessageType.Warning);
 
-				if(Version <= 4.4f) {
-					EditorGUILayout.HelpBox("New version contains AndroidManifest.xml chnages, Please remove Assets/Plugins/Android/AndroidManifest.xml file before update or add manualy File Sharing Block from Assets/Plugins/StansAssets/Android/AndroidManifest.xml", MessageType.Warning);
-					
-					EditorGUILayout.BeginHorizontal();
-					EditorGUILayout.Space();
-					
-					if(GUILayout.Button("Remove AndroidManifest and Update to " + SocialPlatfromSettings.VERSION_NUMBER,  GUILayout.Width(250))) {
-						
-						string file = "AndroidManifest.xml";
-						FileStaticAPI.DeleteFile(PluginsInstalationUtil.ANDROID_DESTANATION_PATH + file);
-						
-						PluginsInstalationUtil.Android_UpdatePlugin();
-						UpdateVersionInfo();
-					}
-					
-					
-					EditorGUILayout.Space();
-					EditorGUILayout.EndHorizontal();
-					EditorGUILayout.Space();
-				}
-
-
+				
 				
 				
 				EditorGUILayout.BeginHorizontal();
 				EditorGUILayout.Space();
 				Color c = GUI.color;
 				GUI.color = Color.cyan;
-				if(GUILayout.Button("Update to " + SocialPlatfromSettings.VERSION_NUMBER,  GUILayout.Width(250))) {
+				if(GUILayout.Button("How to update",  GUILayout.Width(250))) {
+				
+
+					Application.OpenURL("https://goo.gl/ZI66Ub");
+						/*
 					PluginsInstalationUtil.Android_InstallPlugin();
 					PluginsInstalationUtil.IOS_InstallPlugin();
 					UpdateVersionInfo();
+					*/
 				}
 				
 				GUI.color = c;
@@ -241,6 +219,10 @@ public class SocialPlatfromSettingsEditor : Editor {
 		SocialPlatfromSettings.Instance.NativeSharingAPI = EditorGUILayout.Toggle("Native Sharing",  SocialPlatfromSettings.Instance.NativeSharingAPI);
 		SocialPlatfromSettings.Instance.InstagramAPI = EditorGUILayout.Toggle("Instagram",  SocialPlatfromSettings.Instance.InstagramAPI);
 		EditorGUILayout.EndHorizontal();
+
+		EditorGUILayout.BeginHorizontal();
+		SocialPlatfromSettings.Instance.EnableImageSharing = EditorGUILayout.Toggle("Image Sharing",  SocialPlatfromSettings.Instance.EnableImageSharing);
+		EditorGUILayout.EndHorizontal();
 	}
 
 	public static void UpdateManifest() {
@@ -260,34 +242,44 @@ public class SocialPlatfromSettingsEditor : Editor {
 		AndroidNativeProxy.SetValue("android:label", "@string/app_name");
 		AndroidNativeProxy.SetValue("android:configChanges", "fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen");
 		AndroidNativeProxy.SetValue("android:theme", "@android:style/Theme.Translucent.NoTitleBar");
-
-
+			
+		// Remove VIEW intent filter from AndroidNativeProxy activity
+		if(AndroidNativeProxy != null) {
+			AN_PropertyTemplate intent_filter = AndroidNativeProxy.GetOrCreateIntentFilterWithName("android.intent.action.VIEW");
+			AndroidNativeProxy.RemoveProperty(intent_filter);
+		}
+			
+		AN_ActivityTemplate SocialProxyActivity = application.GetOrCreateActivityWithName("com.androidnative.features.social.common.SocialProxyActivity");
+		SocialProxyActivity.SetValue("android:launchMode", "singleTask");
+		SocialProxyActivity.SetValue("android:label", "@string/app_name");
+		SocialProxyActivity.SetValue("android:configChanges", "fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen");
+		SocialProxyActivity.SetValue("android:theme", "@android:style/Theme.Translucent.NoTitleBar");
+			
 		if(launcherActivity.Name == "com.androidnative.AndroidNativeBridge") {
 			launcherActivity.SetName("com.unity3d.player.UnityPlayerNativeActivity");
 		}
-	
-		
+			
+			
 		////////////////////////
 		//TwitterAPI
 		////////////////////////
-
-
+			
+			
 		foreach(KeyValuePair<int, AN_ActivityTemplate> entry in application.Activities) {
 			//TODO get intents array
 			AN_ActivityTemplate act = entry.Value;
 			AN_PropertyTemplate intent = act.GetIntentFilterWithName("android.intent.action.VIEW");
 			if(intent != null) {
-				AN_PropertyTemplate data = intent.GetPropertyWithTag("data");
+				AN_PropertyTemplate data = intent.GetOrCreatePropertyWithTag("data");
 				if(data.GetValue("android:scheme") == "oauth") {
 					act.RemoveProperty(intent);
 				}
 			}
 		} 
-
+			
 		if(SocialPlatfromSettings.Instance.TwitterAPI) {
-			if(AndroidNativeProxy != null) {
-
-				AN_PropertyTemplate intent_filter = AndroidNativeProxy.GetOrCreateIntentFilterWithName("android.intent.action.VIEW");
+			if(SocialProxyActivity != null) {
+				AN_PropertyTemplate intent_filter = SocialProxyActivity.GetOrCreateIntentFilterWithName("android.intent.action.VIEW");
 				intent_filter.GetOrCreatePropertyWithName("category", "android.intent.category.DEFAULT");
 				intent_filter.GetOrCreatePropertyWithName("category", "android.intent.category.BROWSABLE");
 				AN_PropertyTemplate data = intent_filter.GetOrCreatePropertyWithTag("data");
@@ -295,12 +287,11 @@ public class SocialPlatfromSettingsEditor : Editor {
 				data.SetValue("android:host", PlayerSettings.bundleIdentifier);
 			} 
 		} else {
-			if(AndroidNativeProxy != null) {
-				AN_PropertyTemplate intent_filter = AndroidNativeProxy.GetOrCreateIntentFilterWithName("android.intent.action.VIEW");
-				AndroidNativeProxy.RemoveProperty(intent_filter);
+			if(SocialProxyActivity != null) {
+				AN_PropertyTemplate intent_filter = SocialProxyActivity.GetOrCreateIntentFilterWithName("android.intent.action.VIEW");
+				SocialProxyActivity.RemoveProperty(intent_filter);
 			}
 		}
-
 
 		////////////////////////
 		//FB API
@@ -446,25 +437,35 @@ public class SocialPlatfromSettingsEditor : Editor {
 				}
 					
 			}
+
+			if(GUILayout.Button("Reset Settings",  GUILayout.Width(160))) {
+				ResetSettings();
+			}
 				
 			GUI.enabled = true;
+
+
 			EditorGUILayout.EndHorizontal();
 			EditorGUILayout.Space();
 				
 				
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.Space();
-			if(GUILayout.Button("Reset Settings",  GUILayout.Width(160))) {
-				ResetSettings();
-			}
+			
 				
 			if(GUILayout.Button("Load Example Settings",  GUILayout.Width(160))) {
 				LoadExampleSettings();
 			}
 				
+
+			if(GUILayout.Button("Reinstall",  GUILayout.Width(160))) {
+				PluginsInstalationUtil.Android_UpdatePlugin();
+				PluginsInstalationUtil.IOS_UpdatePlugin();
+				UpdateVersionInfo();
 				
-			EditorGUILayout.EndHorizontal();
+			}
 				
+			EditorGUILayout.EndHorizontal();	
 		}
 	}
 
@@ -481,6 +482,14 @@ public class SocialPlatfromSettingsEditor : Editor {
 		Selection.activeObject = SocialPlatfromSettings.Instance;
 	}
 	
+	public static void GeneralSettings(){
+		EditorGUILayout.HelpBox("General Settings", MessageType.None);
+		
+		SocialPlatfromSettings.Instance.ShowImageSharingSettings = EditorGUILayout.Foldout(SocialPlatfromSettings.Instance.ShowImageSharingSettings, "Image Sharing");
+		if (SocialPlatfromSettings.Instance.ShowImageSharingSettings) {
+			SocialPlatfromSettings.Instance.SaveImageToGallery = EditorGUILayout.Toggle("Save Image to Gallery", SocialPlatfromSettings.Instance.SaveImageToGallery);
+		}
+	}
 	
 	private static string newPermition = "";
 	public static void FacebookSettings() {
@@ -558,6 +567,26 @@ public class SocialPlatfromSettingsEditor : Editor {
 		SocialPlatfromSettings.Instance.TWITTER_CONSUMER_SECRET	 	= EditorGUILayout.TextField(SocialPlatfromSettings.Instance.TWITTER_CONSUMER_SECRET);
 		SocialPlatfromSettings.Instance.TWITTER_CONSUMER_SECRET	 	= SocialPlatfromSettings.Instance.TWITTER_CONSUMER_SECRET.Trim();
 		EditorGUILayout.EndHorizontal();
+
+			EditorGUI.indentLevel++;
+			SocialPlatfromSettings.Instance.ShowEditorOauthTestingBlock = EditorGUILayout.Foldout(SocialPlatfromSettings.Instance.ShowEditorOauthTestingBlock, "OAuth Testing In Editor");
+			if(SocialPlatfromSettings.Instance.ShowEditorOauthTestingBlock) {
+
+				EditorGUILayout.BeginHorizontal();
+				EditorGUILayout.LabelField(TAccessToken);
+				SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN	 	= EditorGUILayout.TextField(SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN);
+				SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN 		= SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN.Trim();
+				EditorGUILayout.EndHorizontal();
+				
+				EditorGUILayout.BeginHorizontal();
+				EditorGUILayout.LabelField(TAccessTokenSecret);
+				SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN_SECRET	 	= EditorGUILayout.TextField(SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN_SECRET);
+				SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN_SECRET	 	= SocialPlatfromSettings.Instance.TWITTER_ACCESS_TOKEN_SECRET.Trim();
+				EditorGUILayout.EndHorizontal();
+		
+			}
+
+			EditorGUI.indentLevel--;
 	}
 
 
@@ -586,7 +615,7 @@ public class SocialPlatfromSettingsEditor : Editor {
 	}
 
 	public static void UpdateVersionInfo() {
-		FileStaticAPI.Write(version_info_file, SocialPlatfromSettings.VERSION_NUMBER);
+		FileStaticAPI.Write(SA_VersionsManager.MSP_VERSION_INFO_PATH, SocialPlatfromSettings.VERSION_NUMBER);
 		UpdateManifest();
 	}
 

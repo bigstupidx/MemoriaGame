@@ -18,28 +18,29 @@ public class AppEventHandlerExample : MonoBehaviour {
 
 	void Awake() {
 
-		//Event use example
-		IOSNativeAppEvents.instance.addEventListener (IOSNativeAppEvents.APPLICATION_DID_BECOME_ACTIVE,                OnApplicationDidBecomeActive);
-
 		//Action use example
-		IOSNativeAppEvents.instance.OnApplicationDidReceiveMemoryWarning += OnApplicationDidReceiveMemoryWarning;
+
+		IOSNativeAppEvents.Instance.Subscribe();
+		IOSNativeAppEvents.OnApplicationDidReceiveMemoryWarning += OnApplicationDidReceiveMemoryWarning;
+		IOSNativeAppEvents.OnApplicationDidBecomeActive += HandleOnApplicationDidBecomeActive;
 	}
+
+
 
 	//--------------------------------------
 	// EVENTS
 	//--------------------------------------
-	
 
-	private void OnApplicationDidBecomeActive() {
-		// Called when application become active again. Optionally refresh the user interface, check for some data than probably was chenged wile application was paused
 
-		Debug.Log ("Catched  OnApplicationDidBecomeActive event");
+	void HandleOnApplicationDidBecomeActive () {
+		Debug.Log("Caught OnApplicationDidBecomeActive event");
 	}
 
-	private void OnApplicationDidReceiveMemoryWarning() {
-		//Called application receives a memory warning from the system.
 
-		Debug.Log ("Catched  OnApplicationDidReceiveMemoryWarning event");
+	private void OnApplicationDidReceiveMemoryWarning() {
+		//Called when the application receives a memory warning from the system.
+
+		Debug.Log ("Caught OnApplicationDidReceiveMemoryWarning event");
 	}
 
 

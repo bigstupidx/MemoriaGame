@@ -6,11 +6,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
- 
-
 using UnityEngine;
-using UnionAssets.FLE;
 using System.Collections;
 
 public class GPaymnetManagerExample : MonoBehaviour {
@@ -37,10 +33,10 @@ public class GPaymnetManagerExample : MonoBehaviour {
 
 		//When you will add your own proucts you can skip this code section of you already have added
 		//your products ids under the editor setings menu
-		AndroidInAppPurchaseManager.instance.addProduct(ANDROID_TEST_PURCHASED);
-		AndroidInAppPurchaseManager.instance.addProduct(ANDROID_TEST_CANCELED);
-		AndroidInAppPurchaseManager.instance.addProduct(ANDROID_TEST_REFUNDED);
-		AndroidInAppPurchaseManager.instance.addProduct(ANDROID_TEST_ITEM_UNAVAILABLE);
+		AndroidInAppPurchaseManager.instance.AddProduct(ANDROID_TEST_PURCHASED);
+		AndroidInAppPurchaseManager.instance.AddProduct(ANDROID_TEST_CANCELED);
+		AndroidInAppPurchaseManager.instance.AddProduct(ANDROID_TEST_REFUNDED);
+		AndroidInAppPurchaseManager.instance.AddProduct(ANDROID_TEST_ITEM_UNAVAILABLE);
 
 
 		//listening for purchase and consume events

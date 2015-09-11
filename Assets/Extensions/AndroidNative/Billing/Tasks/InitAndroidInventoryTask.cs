@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
-using UnionAssets.FLE;
+using System;
 using System.Collections;
 
-public class InitAndroidInventoryTask : EventDispatcher {
+public class InitAndroidInventoryTask : MonoBehaviour {
+
+	public event Action ActionComplete = delegate{};
+	public event Action ActionFailed = delegate{};
 
 
 	public static InitAndroidInventoryTask Create() {
@@ -15,7 +18,7 @@ public class InitAndroidInventoryTask : EventDispatcher {
 		if(AndroidInAppPurchaseManager.instance.IsConnectd) {
 			OnBillingConnected(null);
 		} else {
-			AndroidInAppPurchaseManager.instance.addEventListener (AndroidInAppPurchaseManager.ON_BILLING_SETUP_FINISHED, OnBillingConnected);
+			AndroidInAppPurchaseManager.ActionBillingSetupFinished += OnBillingConnected;
 			if(!AndroidInAppPurchaseManager.instance.IsConnectingToServiceInProcess) {
 				AndroidInAppPurchaseManager.instance.loadStore();
 			}
@@ -24,22 +27,22 @@ public class InitAndroidInventoryTask : EventDispatcher {
 
 
 
-	private void OnBillingConnected(CEvent e) {
+	private void OnBillingConnected(BillingResult result) {
 		Debug.Log("OnBillingConnected");
-		if(e == null) {
+		if(result == null) {
 			OnBillingConnectFinished();
 			return;
 		}
 
-		BillingResult result = e.data as BillingResult;
-		AndroidInAppPurchaseManager.instance.removeEventListener (AndroidInAppPurchaseManager.ON_BILLING_SETUP_FINISHED, OnBillingConnected);
+
+		AndroidInAppPurchaseManager.ActionBillingSetupFinished -= OnBillingConnected;
 		
 		
 		if(result.isSuccess) {
 			OnBillingConnectFinished();
 		}  else {
 			Debug.Log("OnBillingConnected Failed");
-			dispatch(BaseEvent.FAILED);
+			ActionFailed();
 		}
 
 	}
@@ -50,9 +53,9 @@ public class InitAndroidInventoryTask : EventDispatcher {
 
 		if(AndroidInAppPurchaseManager.instance.IsInventoryLoaded) {
 			Debug.Log("IsInventoryLoaded COMPLETE");
-			dispatch(BaseEvent.COMPLETE);
+			ActionComplete();
 		} else {
-			AndroidInAppPurchaseManager.instance.addEventListener (AndroidInAppPurchaseManager.ON_RETRIEVE_PRODUC_FINISHED, OnRetrieveProductsFinised);
+			AndroidInAppPurchaseManager.ActionRetrieveProducsFinished += OnRetrieveProductsFinised;
 			if(!AndroidInAppPurchaseManager.instance.IsProductRetrievingInProcess) {
 				AndroidInAppPurchaseManager.instance.retrieveProducDetails();
 			}
@@ -61,17 +64,17 @@ public class InitAndroidInventoryTask : EventDispatcher {
 	}
 
 
-	private void OnRetrieveProductsFinised(CEvent e) {
+	private void OnRetrieveProductsFinised(BillingResult result) {
 		Debug.Log("OnRetrieveProductsFinised");
-		BillingResult result = e.data as BillingResult;
-		AndroidInAppPurchaseManager.instance.removeEventListener (AndroidInAppPurchaseManager.ON_RETRIEVE_PRODUC_FINISHED, OnRetrieveProductsFinised);
+
+		AndroidInAppPurchaseManager.ActionRetrieveProducsFinished -= OnRetrieveProductsFinised;
 		
 		if(result.isSuccess) {
 			Debug.Log("OnRetrieveProductsFinised COMPLETE");
-			dispatch(BaseEvent.COMPLETE);
+			ActionComplete();
 		} else {
 			Debug.Log("OnRetrieveProductsFinised FAILED");
-			dispatch(BaseEvent.FAILED);
+			ActionFailed();
 		}
 	}
 

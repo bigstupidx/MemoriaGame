@@ -12,20 +12,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseManager> {
-
-	//Events
-	public const string ON_PRODUCT_PURCHASED   = "on_product_purchased";
-	public const string ON_PRODUCT_CONSUMED    = "on_product_consumed";
-
-	public const string ON_BILLING_SETUP_FINISHED   = "on_billing_setup_finished";
-	public const string ON_RETRIEVE_PRODUC_FINISHED = "on_retrieve_produc_finished";
+	
 
 	//Actions
-	public static Action<BillingResult>  ActionProductPurchased   = delegate {};
-	public static Action<BillingResult>  ActionProductConsumed    = delegate {};
+	public static event Action<BillingResult>  ActionProductPurchased   = delegate {};
+	public static event Action<BillingResult>  ActionProductConsumed    = delegate {};
 	
-	public static Action<BillingResult>  ActionBillingSetupFinished   = delegate {};
-	public static Action<BillingResult>  ActionRetrieveProducsFinished = delegate {};
+	public static event Action<BillingResult>  ActionBillingSetupFinished   = delegate {};
+	public static event Action<BillingResult>  ActionRetrieveProducsFinished = delegate {};
 
 	private List<string> _productsIds =  new List<string>();
 
@@ -57,7 +51,12 @@ public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseMana
 
 
 	//Fill your products befor loading store
+	[System.Obsolete("addProduct is deprectaed, plase use AddProduct instaed")]
 	public void addProduct(string SKU) {
+		AddProduct(SKU);
+	}
+
+	public void AddProduct(string SKU) {
 
 		if(_productsIds.Contains(SKU)) {
 			return;
@@ -66,6 +65,9 @@ public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseMana
 
 		_productsIds.Add(SKU);
 	}
+
+
+
 
 	public void retrieveProducDetails() {
 		_IsProductRetrievingInProcess = true;
@@ -115,7 +117,7 @@ public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseMana
 	public void loadStore(string base64EncodedPublicKey) {
 
 		foreach(string pid in AndroidNativeSettings.Instance.InAppProducts) {
-			addProduct(pid);
+			AddProduct(pid);
 		}
 
 		string ids = "";
@@ -207,7 +209,6 @@ public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseMana
 		BillingResult result = new BillingResult (resp, storeData [1], purchase);
 
 		ActionProductPurchased(result);
-		dispatch (ON_PRODUCT_PURCHASED, result);
 	}
 
 
@@ -239,7 +240,6 @@ public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseMana
 		BillingResult result = new BillingResult (resp, storeData [1], purchase);
 
 		ActionProductConsumed(result);
-		dispatch (ON_PRODUCT_CONSUMED, result);
 	}
 
 
@@ -256,7 +256,6 @@ public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseMana
 		BillingResult result = new BillingResult (resp, storeData [1]);
 
 		ActionBillingSetupFinished(result);
-		dispatch (ON_BILLING_SETUP_FINISHED, result);
 	}
 
 
@@ -272,7 +271,6 @@ public class AndroidInAppPurchaseManager : SA_Singleton<AndroidInAppPurchaseMana
 		_IsProductRetrievingInProcess = false;
 
 		ActionRetrieveProducsFinished(result);
-		dispatch (ON_RETRIEVE_PRODUC_FINISHED, result);
 	}
 
 

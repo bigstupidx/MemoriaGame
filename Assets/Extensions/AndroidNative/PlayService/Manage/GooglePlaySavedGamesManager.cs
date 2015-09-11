@@ -6,27 +6,15 @@ using System.Collections.Generic;
 public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesManager> {
 
 
-	//Events
 
-	public const string NEW_GAME_SAVE_REQUES   			= "new_game_save_reques";
-	public const string GAME_SAVE_RESULT   				= "game_save_result";
-
-	public const string GAME_SAVE_LOADED  	 			= "new_game_save_reques";
-	public const string CONFLICT  			 			= "conflict";
-
-	public const string AVAILABLE_GAME_SAVES_LOADED   	= "available_game_saves_loaded";
-
-
-
-
-	
 	//Actions
-	public static Action ActionNewGameSaveRequest 	= delegate {};
-	public static Action<GooglePlayResult> ActionAvailableGameSavesLoaded 	= delegate {};
+	public static event Action ActionNewGameSaveRequest 	= delegate {};
+	public static event Action<GooglePlayResult> ActionAvailableGameSavesLoaded 	= delegate {};
 
-	public static Action<GP_SpanshotLoadResult> ActionGameSaveLoaded 	= delegate {};
-	public static Action<GP_SpanshotLoadResult> ActionGameSaveResult 	= delegate {};
-	public static Action<GP_SnapshotConflict> ActionConflict 	= delegate {};
+	public static event Action<GP_SpanshotLoadResult> ActionGameSaveLoaded 	= delegate {};
+	public static event Action<GP_SpanshotLoadResult> ActionGameSaveResult 	= delegate {};
+	public static event Action<GP_SnapshotConflict> ActionConflict 	= delegate {};
+	public static event Action<GP_DeleteSnapshotResult> ActionGameSaveRemoved 	= delegate {};
 
 	private List<GP_SnapshotMeta> _AvailableGameSaves = new List<GP_SnapshotMeta>();
 
@@ -46,10 +34,10 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 	// PUBLIC API CALL METHODS
 	//--------------------------------------
 
-	public void ShowSavedGamesUI(string title, int maxNumberOfSavedGamesToShow)  {
+	public void ShowSavedGamesUI(string title, int maxNumberOfSavedGamesToShow, bool allowAddButton = true, bool allowDelete = true)  {
 		if (!GooglePlayConnection.CheckState ()) { return; }
 
-		AN_GMSGeneralProxy.ShowSavedGamesUI_Bridge(title, maxNumberOfSavedGamesToShow);
+		AN_GMSGeneralProxy.ShowSavedGamesUI_Bridge(title, maxNumberOfSavedGamesToShow, allowAddButton, allowDelete);
 	}
 
 
@@ -76,6 +64,10 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 
 	public void LoadSpanshotByName(string name) {
 		AN_GMSGeneralProxy.OpenSpanshotByName_Bridge(name);
+	}
+
+	public void DeleteSpanshotByName(string name) {
+		AN_GMSGeneralProxy.DeleteSpanshotByName_Bridge(name);
 	}
 
 	public void LoadAvailableSavedGames() {
@@ -138,7 +130,7 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 				meta.LastModifiedTimestamp = System.Convert.ToInt64(storeData [i + 1]);
 				meta.Description = storeData[i + 2];
 				meta.CoverImageUrl = storeData[i + 3];
-	
+				meta.TotalPlayedTime = System.Convert.ToInt64(storeData[i + 4]);
 
 				_AvailableGameSaves.Add(meta);
 				
@@ -148,7 +140,6 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 		}
 		
 		ActionAvailableGameSavesLoaded(result);
-		dispatch (AVAILABLE_GAME_SAVES_LOADED, result);
 	}
 
 
@@ -184,8 +175,6 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 		
 		}
 
-
-		dispatch(GAME_SAVE_LOADED, result);
 		ActionGameSaveLoaded(result);
 
 	}
@@ -219,9 +208,7 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 			
 			result.SetSnapShot(Snapshot);
 		}
-		
-		
-		dispatch(GAME_SAVE_RESULT, result);
+
 		ActionGameSaveResult(result);
 		
 	}
@@ -270,7 +257,6 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 
 		GP_SnapshotConflict result =  new GP_SnapshotConflict(Snapshot1, Snapshot2);
 
-		dispatch(CONFLICT, result);
 		ActionConflict(result);
 
 	}
@@ -279,31 +265,25 @@ public class GooglePlaySavedGamesManager :  SA_Singleton<GooglePlaySavedGamesMan
 
 	private void OnNewGameSaveRequest(string data) {
 		Debug.Log("SavedGamesManager: OnNewGameSaveRequest");
-		dispatch(NEW_GAME_SAVE_REQUES);
 		ActionNewGameSaveRequest();
 
 	}
 
 
 
+	private void OnDeleteResult(string data) {
+		string[] storeData;
+		storeData = data.Split(AndroidNative.DATA_SPLITTER [0]);
+		
+		
+		GP_DeleteSnapshotResult result = new GP_DeleteSnapshotResult (storeData [0]);
+		if(result.isSuccess) {
+			result.SetId(storeData [1]);
+		}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		ActionGameSaveRemoved(result);
+	}
 
 
 

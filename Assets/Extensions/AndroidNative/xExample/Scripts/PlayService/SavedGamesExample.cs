@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnionAssets.FLE;
 using System.Collections;
 
 public class SavedGamesExample : MonoBehaviour {
@@ -25,9 +24,10 @@ public class SavedGamesExample : MonoBehaviour {
 		defaulttexture = avatar.GetComponent<Renderer>().material.mainTexture;
 		
 		//listen for GooglePlayConnection events
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-		GooglePlayConnection.instance.addEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
-		GooglePlayConnection.instance.addEventListener(GooglePlayConnection.CONNECTION_RESULT_RECEIVED, OnConnectionResult);
+		GooglePlayConnection.ActionPlayerConnected +=  OnPlayerConnected;
+		GooglePlayConnection.ActionPlayerDisconnected += OnPlayerDisconnected;
+		
+		GooglePlayConnection.ActionConnectionResultReceived += OnConnectionResult;
 		
 		GooglePlaySavedGamesManager.ActionNewGameSaveRequest += ActionNewGameSaveRequest;
 		GooglePlaySavedGamesManager.ActionGameSaveLoaded += ActionGameSaveLoaded;
@@ -42,18 +42,16 @@ public class SavedGamesExample : MonoBehaviour {
 	}
 
 	void OnDestroy() {
-		if(GooglePlayConnection.HasInstance) {
-			GooglePlayConnection.instance.removeEventListener (GooglePlayConnection.PLAYER_CONNECTED, OnPlayerConnected);
-			GooglePlayConnection.instance.removeEventListener (GooglePlayConnection.PLAYER_DISCONNECTED, OnPlayerDisconnected);
-			GooglePlayConnection.instance.addEventListener(GooglePlayConnection.CONNECTION_RESULT_RECEIVED, OnConnectionResult);
-			
-		}
+		GooglePlayConnection.ActionPlayerConnected -=  OnPlayerConnected;
+		GooglePlayConnection.ActionPlayerDisconnected -= OnPlayerDisconnected;
+		
+		GooglePlayConnection.ActionConnectionResultReceived -= OnConnectionResult;
 
-		if(GooglePlaySavedGamesManager.HasInstance) {
-			GooglePlaySavedGamesManager.ActionNewGameSaveRequest -= ActionNewGameSaveRequest;
-			GooglePlaySavedGamesManager.ActionGameSaveLoaded -= ActionGameSaveLoaded;
-			GooglePlaySavedGamesManager.ActionConflict -= ActionConflict;
-		}
+
+		GooglePlaySavedGamesManager.ActionNewGameSaveRequest -= ActionNewGameSaveRequest;
+		GooglePlaySavedGamesManager.ActionGameSaveLoaded -= ActionGameSaveLoaded;
+		GooglePlaySavedGamesManager.ActionConflict -= ActionConflict;
+
 		
 	}
 
@@ -148,7 +146,7 @@ public class SavedGamesExample : MonoBehaviour {
 			if(GooglePlaySavedGamesManager.instance.AvailableGameSaves.Count > 0) {
 				GP_SnapshotMeta s =  GooglePlaySavedGamesManager.instance.AvailableGameSaves[0];
 				AndroidDialog dialog = AndroidDialog.Create("Load Snapshot?", "Would you like to load " + s.Title);
-				dialog.OnComplete += OnSpanshotLoadDialogComplete;
+				dialog.ActionComplete += OnSpanshotLoadDialogComplete;
 			}
 
 		} else {
@@ -236,9 +234,8 @@ public class SavedGamesExample : MonoBehaviour {
 		playerLabel.text = GooglePlayManager.instance.player.name;
 	}
 	
-	private void OnConnectionResult(CEvent e) {
-		
-		GooglePlayConnectionResult result = e.data as GooglePlayConnectionResult;
+	private void OnConnectionResult(GooglePlayConnectionResult result) {
+
 		SA_StatusBar.text = "ConnectionResul:  " + result.code.ToString();
 		Debug.Log(result.code.ToString());
 	}

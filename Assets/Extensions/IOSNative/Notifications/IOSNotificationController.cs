@@ -20,28 +20,33 @@ using System.Runtime.InteropServices;
 #if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 using UnityEngine;
 #else
+
+#if UNITY_IOS
 using UnityEngine.iOS;
+using UnityEngine;
 #endif
 
 
-public class IOSNotificationController : ISN_Singleton<IOSNotificationController>
-{
+#endif
+
+
+public class IOSNotificationController : ISN_Singleton<IOSNotificationController> {
 
 
 	private static IOSNotificationController _instance;
 
 	private static int _AllowedNotificationsType = -1;
 
-
-
-	//Events
-	public const string DEVICE_TOKEN_RECEIVED = "device_token_received";
-	public const string REMOTE_NOTIFICATION_RECEIVED = "remote_notification_received";
-	public const string NOTIFICATION_SCHEDULE_RESULT = "notification_schedule_result";
+	private ISN_LocalNotification _LaunchNotification = null;
+	
 
 	//Actions
-	public Action<IOSNotificationDeviceToken> OnDeviceTokenReceived = delegate {};
-	public Action<ISN_Result>  OnNotificationScheduleResult = delegate {};
+	public static event Action<IOSNotificationDeviceToken> OnDeviceTokenReceived = delegate {};
+	public static event Action<ISN_Result>  OnNotificationScheduleResult = delegate {};
+	public static event Action<int>  OnNotificationSettingsInfoResult = delegate {};
+
+	public static event Action<ISN_LocalNotification>  OnLocalNotificationReceived = delegate {};
+
 	#if (UNITY_IPHONE && !UNITY_EDITOR && PUSH_ENABLED) || SA_DEBUG_MODE
 	[NonSerialized]
 	public Action<RemoteNotification> OnRemoteNotificationReceived = delegate {};
@@ -53,17 +58,17 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 
 	#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
 	[DllImport ("__Internal")]
-	private static extern void _ISN_ScheduleNotification (int time, string message, bool sound, string nId, int badges);
+	private static extern void _ISN_ScheduleNotification (int time, string message, bool sound, string nId, int badges, string data);
 	
 	[DllImport ("__Internal")]
-	private static extern  void _ISN_ShowNotificationBanner (string title, string messgae);
+	private static extern  void _ISN_ShowNotificationBanner (string title, string message);
 	
 	[DllImport ("__Internal")]
 	private static extern void _ISN_CancelNotifications();
 
 
 	[DllImport ("__Internal")]
-	private static extern void _ISN_RequestNotificationPermitions();
+	private static extern void _ISN_RequestNotificationPermissions();
 
 	[DllImport ("__Internal")]
 	private static extern void _ISN_CancelNotificationById(string nId);
@@ -75,6 +80,10 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 	[DllImport ("__Internal")]
 	private static extern void _ISN_RegisterForRemoteNotifications(int types);
 
+
+	[DllImport ("__Internal")]
+	private static extern void _ISN_RequestNotificationSettings();
+
 	#endif
 
 	
@@ -85,7 +94,55 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 	
 
 	void Awake() {
+
 		DontDestroyOnLoad(gameObject);
+
+		#if UNITY_IPHONE || UNITY_IOS
+
+		#if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6
+		if( NotificationServices.localNotificationCount > 0) {
+			LocalNotification n = NotificationServices.localNotifications[0];
+			
+			ISN_LocalNotification notif = new ISN_LocalNotification(DateTime.Now, n.alertBody, true);
+			
+			int id = 0;
+			if(n.userInfo.Contains("AlarmKey")) {
+				id = System.Convert.ToInt32(n.userInfo["AlarmKey"]);
+			}
+			
+			if(n.userInfo.Contains("data")) {
+				notif.SetData(System.Convert.ToString(n.userInfo["data"]));
+			}
+			notif.SetId(id);
+
+			_LaunchNotification = notif;
+		}
+		#else
+
+			#if UNITY_IOS
+			if( UnityEngine.iOS.NotificationServices.localNotificationCount > 0) {
+				UnityEngine.iOS.LocalNotification n = UnityEngine.iOS.NotificationServices.localNotifications[0];
+				
+				ISN_LocalNotification notif = new ISN_LocalNotification(DateTime.Now, n.alertBody, true);
+				
+				int id = 0;
+				if(n.userInfo.Contains("AlarmKey")) {
+					id = System.Convert.ToInt32(n.userInfo["AlarmKey"]);
+				}
+				
+				if(n.userInfo.Contains("data")) {
+					notif.SetData(System.Convert.ToString(n.userInfo["data"]));
+				}
+				notif.SetId(id);
+					
+				_LaunchNotification = notif;
+			}
+			#endif
+
+		#endif
+
+
+		#endif
 	}
 
 
@@ -96,8 +153,7 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 			foreach(var rn in NotificationServices.remoteNotifications) {
 				if(!IOSNativeSettings.Instance.DisablePluginLogs) 
 					UnityEngine.Debug.Log("Remote Noti: " + rn.alertBody);
-				IOSNotificationController.instance.ShowNotificationBanner("", rn.alertBody);
-				dispatch(REMOTE_NOTIFICATION_RECEIVED, rn);
+				//IOSNotificationController.instance.ShowNotificationBanner("", rn.alertBody);
 				OnRemoteNotificationReceived(rn);
 			}
 			NotificationServices.ClearRemoteNotifications();
@@ -109,7 +165,14 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 
 
 	#if UNITY_IPHONE
+
+	#if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 	public void RegisterForRemoteNotifications(RemoteNotificationType notificationTypes) {
+	#else
+	public void RegisterForRemoteNotifications(NotificationType notificationTypes) {;
+	#endif
+
+
 
 		#if (UNITY_IPHONE && !UNITY_EDITOR && PUSH_ENABLED) || SA_DEBUG_MODE
 
@@ -121,9 +184,13 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 			_ISN_RegisterForRemoteNotifications((int) notificationTypes);
 		} 
 
+		#if UNITY_3_5 || UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_5 || UNITY_4_6
 		NotificationServices.RegisterForRemoteNotificationTypes(notificationTypes);
+		#else
+		NotificationServices.RegisterForNotifications(notificationTypes);
+		#endif
 
-		DeviceTokenListner.Create ();
+		DeviceTokenListener.Create ();
 
 		#endif
 	}
@@ -133,17 +200,23 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 	//  PUBLIC METHODS
 	//--------------------------------------
 
-	public void RequestNotificationPermitions() {
+	public void RequestNotificationPermissions() {
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
-			_ISN_RequestNotificationPermitions ();
+			_ISN_RequestNotificationPermissions ();
 		#endif
 
 	}
 	
-	public void ShowNotificationBanner (string title, string messgae) {
+
+	public void ShowGmaeKitNotification (string title, string message) {
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
-			_ISN_ShowNotificationBanner (title, messgae);
+		_ISN_ShowNotificationBanner (title, message);
 		#endif
+	}
+
+	[System.Obsolete("ShowNotificationBanner is deprecated, please use ShowGmaeKitNotification instead.")]
+	public void ShowNotificationBanner (string title, string message) {
+		ShowGmaeKitNotification(title, message);
 	}
 
 	[System.Obsolete("CancelNotifications is deprecated, please use CancelAllLocalNotifications instead.")]
@@ -158,22 +231,27 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 		#endif
 	}
 
+
+	public void CancelLocalNotification (ISN_LocalNotification notification) {
+		CancelLocalNotificationById(notification.Id);
+	}
+
+
 	public void CancelLocalNotificationById (int notificationId) {
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
 			_ISN_CancelNotificationById(notificationId.ToString());
 		#endif
 	}
 
-	public int ScheduleNotification (int time, string message, bool sound, int badges = 0) {
-		int nid = GetNextId;
 
+	public void ScheduleNotification (ISN_LocalNotification notification) {
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
-		string notificationId = nid.ToString();
-		_ISN_ScheduleNotification (time, message, sound, notificationId, badges);
+			int time =  System.Convert.ToInt32((notification.Date -DateTime.Now).TotalSeconds); 
+			_ISN_ScheduleNotification (time, notification.Message, notification.UseSound, notification.Id.ToString(), notification.Badges, notification.Data);
 		#endif
-
-		return nid;
 	}
+
+
 
 	public void ApplicationIconBadgeNumber (int badges) {
 		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
@@ -182,11 +260,12 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 
 	}
 
-	
-	
-
-
-	
+	public void RequestNotificationSettings () {
+		#if (UNITY_IPHONE && !UNITY_EDITOR) || SA_DEBUG_MODE
+		_ISN_RequestNotificationSettings ();
+		#endif
+		
+	}
 
 
 	
@@ -195,7 +274,7 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 	//--------------------------------------
 
 
-	private int GetNextId {
+	public static int GetNextNotificationId {
 		get {
 			int id = 1;
 			if(UnityEngine.PlayerPrefs.HasKey(PP_ID_KEY)) {
@@ -214,13 +293,18 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 			return _AllowedNotificationsType;
 		}
 	}
+
+	public ISN_LocalNotification LaunchNotification {
+		get {
+			return _LaunchNotification;
+		}
+	}
 	
 	//--------------------------------------
 	//  EVENTS
 	//--------------------------------------
 
 	public void OnDeviceTockeReceivedAction (IOSNotificationDeviceToken token) {
-		dispatch (DEVICE_TOKEN_RECEIVED, token);
 		OnDeviceTokenReceived(token);
 	}
 
@@ -242,9 +326,30 @@ public class IOSNotificationController : ISN_Singleton<IOSNotificationController
 		_AllowedNotificationsType = System.Convert.ToInt32(data[1]);
 
 		OnNotificationScheduleResult(result);
-		dispatch(NOTIFICATION_SCHEDULE_RESULT, result);
 
 	
+	}
+
+	private void OnNotificationSettingsInfoRetrived(string data) {
+			int types = System.Convert.ToInt32(data);
+			OnNotificationSettingsInfoResult(types);
+	}
+
+	private void OnLocalNotificationReceived_Event(string array) {
+		string[] data;
+		data = array.Split("|" [0]);
+
+		string msg = data[0];
+		int Id = System.Convert.ToInt32(data[1]);
+		string notifDta = data[2];
+		int badges = System.Convert.ToInt32(data[3]);
+
+		ISN_LocalNotification n =  new ISN_LocalNotification(DateTime.Now, msg);
+		n.SetData(notifDta);
+		n.SetBadgesNumber(badges);
+		n.SetId(Id);
+
+		OnLocalNotificationReceived(n);
 	}
 	
 	//--------------------------------------

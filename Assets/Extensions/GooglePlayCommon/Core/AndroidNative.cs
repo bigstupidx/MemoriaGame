@@ -17,6 +17,7 @@ public class AndroidNative {
 
 	public const string DATA_SPLITTER = "|";
 	public const string DATA_EOF = "endofline";
+	public const string DATA_SPLITTER2 = "|%|";
 	
 
 
@@ -56,8 +57,8 @@ public class AndroidNative {
 	// --------------------------------------
 	
 
-	public static void InitCameraAPI(string folderName, int maxSize, int mode) {
-		CallAndroidNativeBridge("InitCameraAPI", folderName, maxSize.ToString(), mode.ToString());
+	public static void InitCameraAPI(string folderName, int maxSize, int mode, int format) {
+		CallAndroidNativeBridge("InitCameraAPI", folderName, maxSize.ToString(), mode.ToString(), format);
 	}
 
 	public static void SaveToGalalry(string ImageData, string name) {
@@ -69,8 +70,8 @@ public class AndroidNative {
 		CallAndroidNativeBridge("GetImageFromGallery");
 	}
 	
-	public static void GetImageFromCamera() {
-		CallAndroidNativeBridge("GetImageFromCamera");
+	public static void GetImageFromCamera(bool bSaveToGallery = false) {
+		CallAndroidNativeBridge("GetImageFromCamera", bSaveToGallery.ToString());
 	}
 
 
@@ -86,7 +87,21 @@ public class AndroidNative {
 		CallAndroidNativeBridge("runPackage", packagename);
 	}
 
+	public static void LoadAndroidId() {
+		CallAndroidNativeBridge("loadAndroidId");
+	}
 
+	public static void LoadPackagesList () {
+		CallUtility("loadPackagesList");
+	}
+
+	public static void LoadNetworkInfo () {
+		CallUtility("loadNetworkInfo");
+	}
+
+	public static void OpenSettingsPage (string action) {
+		CallUtility("openSettingsPage", action);
+	}
 	
 	//--------------------------------------
 	// Other Features
@@ -100,7 +115,38 @@ public class AndroidNative {
 	public static void LoadPackageInfo() {
 		CallAndroidNativeBridge("LoadPackageInfo");
 	}
+
+	public static void GetInternalStoragePath() {
+		CallUtility("GetInternalStoragePath");
+	}
 	
+	public static void GetExternalStoragePath() {
+		CallUtility("GetExternalStoragePath");
+	}
+
+	public static void LoadLocaleInfo () {
+		CallUtility("LoadLocaleInfo");
+	}
+
+	public static void StartLockTask() {
+		CallAndroidNativeBridge ("StartLockTask");
+	}
+	
+	
+	public static void StopLockTask() {
+		CallAndroidNativeBridge ("StopLockTask");
+	}
+
+	public static void OpenAppInStore(string appPackageName) {
+		CallAndroidNativeBridge ("OpenAppInStore", appPackageName);
+	}
+
+	private const string UTILITY_CLASSS = "com.androidnative.features.common.AndroidNativeUtility";
+	
+	private static void CallUtility(string methodName, params object[] args) {
+		AN_ProxyPool.CallStatic(UTILITY_CLASSS, methodName, args);
+	}
+
 
 
 	// --------------------------------------

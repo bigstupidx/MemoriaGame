@@ -8,21 +8,15 @@
 
 using UnityEngine;
 using System;
-using System.Collections;
+using System.Collections.Generic;
 
 public class GoogleCloudMessageService : SA_Singleton<GoogleCloudMessageService> {
 
 
-	//Events
-	public const string CLOUD_MESSAGE_SERVICE_REGISTRATION_FAILED = "cloud_message_service_registration_failed";
-	public const string CLOUD_MESSAGE_SERVICE_REGISTRATION_RECIVED = "cloud_message_service_registration_recived";
-	public const string CLOUD_MESSAGE_LOADED = "cloud_message_loaded";
-
 	//Actions
-
-	public static Action<string> ActionCouldMessageLoaded 						 =  delegate {};
-	public static Action<GP_GCM_RegistrationResult> ActionCMDRegistrationResult  =  delegate {};
-
+	public static event Action<string> ActionCouldMessageLoaded 						 						= delegate {};
+	public static event Action<GP_GCM_RegistrationResult> ActionCMDRegistrationResult  						= delegate {};
+	public static event Action<string, Dictionary<string, object>, bool> ActionGameThriveNotificationReceived	= delegate {};
 
 
 	private string _lastMessage = string.Empty;
@@ -44,15 +38,25 @@ public class GoogleCloudMessageService : SA_Singleton<GoogleCloudMessageService>
 	// PUBLIC METHODS
 	//--------------------------------------
 
+	public void InitOneSignalNotifications() {
+		OneSignal.Init(AndroidNativeSettings.Instance.GameThriveAppID, AndroidNativeSettings.Instance.GCM_SenderId, HandleNotification);
+	}
+
+	// Gets called when the player opens the notification.
+	private static void HandleNotification(string message, Dictionary<string, object> additionalData, bool isActive) {
+		ActionGameThriveNotificationReceived (message, additionalData, isActive);
+	}
+
 	public void InitPushNotifications() {
 		AN_NotificationProxy.InitPushNotifications (
 			AndroidNativeSettings.Instance.PushNotificationIcon == null ? string.Empty : AndroidNativeSettings.Instance.PushNotificationIcon.name,
 		    AndroidNativeSettings.Instance.PushNotificationSound == null ? string.Empty : AndroidNativeSettings.Instance.PushNotificationSound.name,
-		    AndroidNativeSettings.Instance.EnableVibrationPush);
+		    AndroidNativeSettings.Instance.EnableVibrationPush, AndroidNativeSettings.Instance.ShowPushWhenAppIsForeground,
+			AndroidNativeSettings.Instance.ReplaceOldNotificationWithNew);
 	}
 
-	public void InitPushNotifications(string icon, string sound, bool enableVibrationPush) {
-		AN_NotificationProxy.InitPushNotifications (icon, sound,enableVibrationPush);
+	public void InitPushNotifications(string icon, string sound, bool enableVibrationPush, bool showWhenAppForeground, bool replaceOldNotificationWithNew) {
+		AN_NotificationProxy.InitPushNotifications (icon, sound,enableVibrationPush, showWhenAppForeground, replaceOldNotificationWithNew);
 	}
 
 	public void InitParsePushNotifications() {
@@ -66,6 +70,12 @@ public class GoogleCloudMessageService : SA_Singleton<GoogleCloudMessageService>
 	public void LoadLastMessage() {
 		AN_NotificationProxy.GCMLoadLastMessage();
 	}
+
+	public void RemoveLastMessageInfo() {
+		AN_NotificationProxy.GCMRemoveLastMessageInfo();
+	}
+
+
 	
 	//--------------------------------------
 	// GET / SET
@@ -90,7 +100,7 @@ public class GoogleCloudMessageService : SA_Singleton<GoogleCloudMessageService>
 
 	private void OnLastMessageLoaded(string data) {
 		_lastMessage = data;
-		dispatch(CLOUD_MESSAGE_LOADED, lastMessage);
+		ActionCouldMessageLoaded(lastMessage);
 
 	}
 
@@ -99,12 +109,10 @@ public class GoogleCloudMessageService : SA_Singleton<GoogleCloudMessageService>
 		_registrationId = regId;
 
 		ActionCMDRegistrationResult(new GP_GCM_RegistrationResult(_registrationId));
-		dispatch(CLOUD_MESSAGE_SERVICE_REGISTRATION_RECIVED, regId);
 	}
 	
 	private void OnRegistrationFailed() {
 		ActionCMDRegistrationResult(new GP_GCM_RegistrationResult());
-		dispatch(CLOUD_MESSAGE_SERVICE_REGISTRATION_FAILED);
 	}
 	
 	

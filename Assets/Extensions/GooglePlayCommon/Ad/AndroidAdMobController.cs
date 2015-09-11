@@ -23,7 +23,7 @@ public class AndroidAdMobController : SA_Singleton<AndroidAdMobController>, Goog
 
 
 	//Actions
-	private Action _OnInterstitialLoaded 			= delegate {};
+	private  Action _OnInterstitialLoaded 			= delegate {};
 	private Action _OnInterstitialFailedLoading 	= delegate {};
 	private Action _OnInterstitialOpened 			= delegate {};
 	private Action _OnInterstitialClosed 			= delegate {};
@@ -428,27 +428,22 @@ public class AndroidAdMobController : SA_Singleton<AndroidAdMobController>, Goog
 	
 	private void OnInterstitialAdLoaded()  {
 		_OnInterstitialLoaded();
-		dispatch(GoogleMobileAdEvents.ON_INTERSTITIAL_AD_LOADED);
 	}
 	
 	private void OnInterstitialAdFailedToLoad() {
-		_OnInterstitialFailedLoading();
-		dispatch(GoogleMobileAdEvents.ON_INTERSTITIAL_AD_FAILED_LOADING);
+		_OnInterstitialFailedLoading();;
 	}
 	
 	private void OnInterstitialAdOpened() {
 		_OnInterstitialOpened();
-		dispatch(GoogleMobileAdEvents.ON_INTERSTITIAL_AD_OPENED);
 	}
 	
 	private void OnInterstitialAdClosed() {
 		_OnInterstitialClosed();
-		dispatch(GoogleMobileAdEvents.ON_INTERSTITIAL_AD_CLOSED);
 	}
 	
 	private void OnInterstitialAdLeftApplication() {
 		_OnInterstitialLeftApplication();
-		dispatch(GoogleMobileAdEvents.ON_INTERSTITIAL_AD_LEFT_APPLICATION);
 	}
 	
 	//--------------------------------------
@@ -457,7 +452,6 @@ public class AndroidAdMobController : SA_Singleton<AndroidAdMobController>, Goog
 
 	private void OnInAppPurchaseRequested(string productId) {
 		_OnAdInAppRequest(productId);
-		dispatch(GoogleMobileAdEvents.ON_AD_IN_APP_REQUEST, productId);
 	}
 
 

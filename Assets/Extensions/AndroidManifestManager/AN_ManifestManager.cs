@@ -190,7 +190,9 @@ static public class AN_ManifestManager {
 		}
 		//Get Properties
 		foreach (XmlNode n in node.ChildNodes) {
-			property.AddProperty(n.Name, ParseProperty(n));
+			if (!n.Name.Equals("#comment")) {
+				property.AddProperty(n.Name, ParseProperty(n));
+			}
 		}
 
 		return property;

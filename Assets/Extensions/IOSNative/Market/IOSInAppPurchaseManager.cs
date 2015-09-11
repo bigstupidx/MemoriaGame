@@ -10,35 +10,23 @@
 
 using UnityEngine;
 using System;
-using UnionAssets.FLE;
 using System.Collections;
 using System.Collections.Generic;
 
 
-public class IOSInAppPurchaseManager : EventDispatcher {
+public class IOSInAppPurchaseManager : ISN_Singleton<IOSInAppPurchaseManager> {
 
 
 	public const string APPLE_VERIFICATION_SERVER   = "https://buy.itunes.apple.com/verifyReceipt";
 	public const string SANDBOX_VERIFICATION_SERVER = "https://sandbox.itunes.apple.com/verifyReceipt";
-
-
-	//Events
-	public const string TRANSACTION_COMPLETE 	= "transaction_complete";
-	public const string RESTORE_TRANSACTION_FAILED 	= "restore_transaction_failed";
-	public const string RESTORE_TRANSACTION_COMPLETE 	= "restore_transaction_complete";
 	
 
-	public const string VERIFICATION_RESPONSE 	= "verification_response";
-	public const string STORE_KIT_INITIALIZED	= "store_kit_initialized";
-	public const string STORE_KIT_INITI_FAILED	= "store_kit_init_failed";
-
-
 	//Actions
-	public Action<IOSStoreKitResponse> OnTransactionComplete = delegate{};
-	public Action<ISN_Result> OnRestoreComplete = delegate{};
-	public Action<ISN_Result> OnStoreKitInitComplete = delegate{};
-	public Action<bool> OnPurchasesStateSettingsLoaded = delegate{};
-	public Action<IOSStoreKitVerificationResponse> OnVerificationComplete = delegate{};
+	public static event Action<IOSStoreKitResult> OnTransactionComplete = delegate{};
+	public static event Action<IOSStoreKitRestoreResult> OnRestoreComplete = delegate{};
+	public static event Action<ISN_Result> OnStoreKitInitComplete = delegate{};
+	public static event Action<bool> OnPurchasesStateSettingsLoaded = delegate{};
+	public static event Action<IOSStoreKitVerificationResponse> OnVerificationComplete = delegate{};
 
 	
 	private bool _IsStoreLoaded = false;
@@ -49,27 +37,17 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 	private List<string> _productsIds =  new List<string>();
 	private List<IOSProductTemplate> _products    =  new List<IOSProductTemplate>();
 	private Dictionary<int, IOSStoreProductView> _productsView =  new Dictionary<int, IOSStoreProductView>(); 
-	
-	
-	private static IOSInAppPurchaseManager _instance;
-	private static string lastPurchasedProdcut;
+
+	private static string lastPurchasedProduct;
 	
 	//--------------------------------------
 	// INITIALIZE
 	//--------------------------------------
 	
-	public static IOSInAppPurchaseManager instance {
-		get {
-			if(_instance ==  null) {
-				GameObject go =  new GameObject("IOSInAppPurchaseManager");
-				DontDestroyOnLoad(go);
-				_instance =  go.AddComponent<IOSInAppPurchaseManager>();
-			}
-			
-			return _instance;
-		}
-	}
 
+	void Awake() {
+		DontDestroyOnLoad(gameObject);
+	}
 
 
 	//--------------------------------------
@@ -79,7 +57,7 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 	public void loadStore() {
 
 		if(_IsStoreLoaded) {
-			Invoke("FireSuccsesInitEvent", 1f);
+			Invoke("FireSuccessInitEvent", 1f);
 			return;
 		}
 
@@ -108,7 +86,7 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 		IOSNativeMarketBridge.loadStore(ids);
 		#else
 		if(IOSNativeSettings.Instance.SendFakeEventsInEditor) {
-			Invoke("FireSuccsesInitEvent", 1f);
+			Invoke("EditorFakeInitEvent", 1f);
 		}
 		#endif
 		
@@ -126,8 +104,8 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 		if(!_IsStoreLoaded) {
 
 			if(!IOSNativeSettings.Instance.DisablePluginLogs) 
-				Debug.LogWarning("buyProduct shouldn't be called before store kit initialized"); 
-			SendTransactionFailEvent(productId, "Store kit not yet initialized", IOSTransactionErrorCode.SKErrorPaymentNotAllowed);
+				Debug.LogWarning("buyProduct shouldn't be called before StoreKit is initialized"); 
+			SendTransactionFailEvent(productId, "StoreKit not yet initialized", IOSTransactionErrorCode.SKErrorPaymentNotAllowed);
 
 			return;
 		} 
@@ -136,7 +114,7 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 
 		#else
 		if(IOSNativeSettings.Instance.SendFakeEventsInEditor) {
-			FireProductBoughtEvent(productId, "", "", false);
+			FireProductBoughtEvent(productId, "", "", "", false);
 		}
 		#endif
 	}
@@ -163,8 +141,11 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 	public void restorePurchases() {
 
 		if(!_IsStoreLoaded) {
-			dispatch(RESTORE_TRANSACTION_FAILED);
-			OnRestoreComplete(new ISN_Result(false));
+
+			ISN_Error e = new ISN_Error((int) IOSTransactionErrorCode.SKErrorPaymentServiceNotInitialized, "Store Kit Initilizations required"); 
+
+			IOSStoreKitRestoreResult r =  new IOSStoreKitRestoreResult(e);
+			OnRestoreComplete(r);
 			return;
 		}
 
@@ -173,14 +154,21 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 		#else
 		if(IOSNativeSettings.Instance.SendFakeEventsInEditor) {
 			foreach(string productId in _productsIds) {
-				FireProductBoughtEvent(productId, "", "", true);
+				Debug.Log("Restored: " + productId);
+				FireProductBoughtEvent(productId, "", "", "", true);
 			}
 			FireRestoreCompleteEvent();
 		}
 		#endif
 	}
 
+
+	[System.Obsolete("verifyLastPurchase is deprecated, please use VerifyLastPurchase instead.")]
 	public void verifyLastPurchase(string url) {
+		VerifyLastPurchase(url);
+	}
+
+	public void VerifyLastPurchase(string url) {
 		IOSNativeMarketBridge.verifyLastPurchase (url);
 	}
 
@@ -243,33 +231,25 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 
 	private void OnStoreKitInitFailed(string data) {
 
-
-		string[] storeData;
-		storeData = data.Split("|" [0]);
-		ISN_Error e =  new ISN_Error();
-		e.code = System.Convert.ToInt32(storeData[0]);
-		e.description = storeData[1];
-
+		ISN_Error e =  new ISN_Error(data);
 
 		_IsStoreLoaded = false;
 		_IsWaitingLoadResult = false;
 
 
 		ISN_Result res = new ISN_Result (false);
-		res.error = e;
-		dispatch(STORE_KIT_INITI_FAILED, res);
+		res.SetError(e);
 		OnStoreKitInitComplete (res);
 
 
 		if(!IOSNativeSettings.Instance.DisablePluginLogs) 
-			Debug.Log("STORE_KIT_INITI_FAILED Erro: " + e.description);
+			Debug.Log("STORE_KIT_INIT_FAILED Error: " + e.Description);
 	}
 	
 	private void onStoreDataReceived(string data) {
 		if(data.Equals(string.Empty)) {
 			Debug.Log("InAppPurchaseManager, no products avaiable: " + _products.Count.ToString());
 			ISN_Result res = new ISN_Result(true);
-			dispatch (STORE_KIT_INITIALIZED, res);
 			OnStoreKitInitComplete(res);
 			return;
 		}
@@ -290,8 +270,8 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 			_products.Add(tpl);
 		}
 		
-		Debug.Log("InAppPurchaseManager, tottal products loaded: " + _products.Count.ToString());
-		FireSuccsesInitEvent();
+		Debug.Log("InAppPurchaseManager, total products loaded: " + _products.Count.ToString());
+		FireSuccessInitEvent();
 	}
 	
 	private void onProductBought(string array) {
@@ -304,17 +284,14 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 			IsRestored = true;
 		}
 
-		FireProductBoughtEvent(data [0], data [2], data [3], IsRestored);
-
+		FireProductBoughtEvent(data [0], data [2], data [3], data [4], IsRestored);
 
 	}
 
 	private void onProductStateDeferred(string productIdentifier) {
-		IOSStoreKitResponse response = new IOSStoreKitResponse ();
-		response.productIdentifier = productIdentifier;
-		response.state = InAppPurchaseState.Deferred;
-		
-		dispatch(TRANSACTION_COMPLETE, response);
+		IOSStoreKitResult response = new IOSStoreKitResult (productIdentifier, InAppPurchaseState.Deferred);
+
+
 		OnTransactionComplete (response);
 	}
 
@@ -337,16 +314,20 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 		response.status = System.Convert.ToInt32(data[0]);
 		response.originalJSON = data [1];
 		response.receipt = data [2];
-		response.productIdentifier = lastPurchasedProdcut;
+		response.productIdentifier = lastPurchasedProduct;
 
-		dispatch (VERIFICATION_RESPONSE, response);
 		OnVerificationComplete (response);
 
 	}
 
 	public void onRestoreTransactionFailed(string array) {
-		dispatch(RESTORE_TRANSACTION_FAILED);
-		OnRestoreComplete (new ISN_Result (false));
+
+		ISN_Error e = new ISN_Error(array);
+
+		IOSStoreKitRestoreResult r =  new IOSStoreKitRestoreResult(e);
+
+
+		OnRestoreComplete (r);
 	}
 
 	public void onRestoreTransactionComplete(string array) {
@@ -380,53 +361,68 @@ public class IOSInAppPurchaseManager : EventDispatcher {
 	//  PRIVATE METHODS
 	//--------------------------------------
 
-	private void FireSuccsesInitEvent() {
+	private void FireSuccessInitEvent() {
 		_IsStoreLoaded = true;
 		_IsWaitingLoadResult = false;
 		ISN_Result r = new ISN_Result(true);
-		dispatch (STORE_KIT_INITIALIZED);
 		OnStoreKitInitComplete(r);
 	}
 
 
 	private void FireRestoreCompleteEvent() {
-		dispatch(RESTORE_TRANSACTION_COMPLETE);
-		OnRestoreComplete (new ISN_Result (true));
+
+		IOSStoreKitRestoreResult r =  new IOSStoreKitRestoreResult(true);
+
+		OnRestoreComplete (r);
 	}
 
-	private void FireProductBoughtEvent(string productIdentifier, string receipt, string transactionIdentifier, bool IsRestored) {
-		IOSStoreKitResponse response = new IOSStoreKitResponse ();
-		response.productIdentifier = productIdentifier;
-		response.receipt = receipt;
-		response.transactionIdentifier = transactionIdentifier;
+	private void FireProductBoughtEvent(string productIdentifier, string applicationUsername, string receipt, string transactionIdentifier, bool IsRestored) {
+
+		InAppPurchaseState state;
 		if(IsRestored) {
-			response.state = InAppPurchaseState.Restored;
+			state = InAppPurchaseState.Restored;
 		} else {
-			response.state = InAppPurchaseState.Purchased;
+			state = InAppPurchaseState.Purchased;
 		}
+
+		IOSStoreKitResult response = new IOSStoreKitResult (productIdentifier, state, applicationUsername, receipt, transactionIdentifier);
+
+	
 		
-		lastPurchasedProdcut = response.productIdentifier;
-		dispatch(TRANSACTION_COMPLETE, response);
+		lastPurchasedProduct = response.ProductIdentifier;
 		OnTransactionComplete (response);
 	}
 
 
 	private void SendTransactionFailEvent(string productIdentifier, string errorDescribtion, IOSTransactionErrorCode errorCode) {
-		IOSStoreKitResponse response = new IOSStoreKitResponse ();
-		response.productIdentifier = productIdentifier;
-		response.state = InAppPurchaseState.Failed;
+		IOSStoreKitResult response = new IOSStoreKitResult (productIdentifier, new ISN_Error((int) errorCode, errorDescribtion));
 
-
-		response.error =  new IOSStoreKitError();
-		response.error.description = errorDescribtion;
-		response.error.code = errorCode;
-
-
-		
-		
-		dispatch(TRANSACTION_COMPLETE, response);
 		OnTransactionComplete (response);
 	}
+
+	//--------------------------------------
+	//  UNITY EDITOR FAKE SECTION
+	//--------------------------------------
+
+	private void EditorFakeInitEvent() {
+		foreach(string id in _productsIds) {
+
+			IOSProductTemplate tpl =  new IOSProductTemplate();
+			tpl.id 				= id;
+			tpl.title 			= "Title for " + id;
+			tpl.description 	= "Description for " + id;
+			tpl.localizedPrice 	= "1 $";
+			tpl.price 			= "1";
+			tpl.currencyCode 	= "USD";
+			tpl.currencySymbol 	= "$";
+			_products.Add(tpl);
+
+		}
+
+		FireSuccessInitEvent();
+	}
+
+
 	
 	//--------------------------------------
 	//  DESTROY
