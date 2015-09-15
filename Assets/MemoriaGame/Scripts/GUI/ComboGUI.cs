@@ -3,79 +3,52 @@ using System.Collections;
 
 
 
-public class ComboGUI : MonoBehaviour {
+public class ComboGUI : MonoBehaviour
+{
 
-    public UI2DSpriteAnimation dismiss;
-
-    public UI2DSpriteAnimation combo2;
-
-    public UI2DSpriteAnimation combo3;
-
-    public UI2DSpriteAnimation combo4;
-
-    public UI2DSpriteAnimation comboFinal;
-
+    public Animator anim;
+    public AudioSource audio;
     bool isCombo = false;
 
     int lastCombo = 0;
-   
-    void ScaleNormal(){
-        TweenScale.Begin (gameObject, 0.1f, new Vector3 (1, 1, 1));
 
-    }
-    void ScaleBig(){
-        TweenScale.Begin(gameObject,0.1f,new Vector3(1.1f,1.1f,1.1f)).AddOnFinished(new EventDelegate(this,"ScaleNormal")) ;
-
-
-    }
-    void LateUpdate(){
+    void LateUpdate ()
+    {
         switch (ManagerCombo.Instance.GetCombo) {
         case 1:
         case 0:
 
             if (isCombo) {
-                dismiss.Play ();
-                TweenAlpha.Begin (gameObject, 0.3f, 0);
-
+                anim.SetTrigger ("Dismiss");
             }
             isCombo = false;
             break;
         case 2:
-            if (!combo2.isPlaying && lastCombo != 2) {
-                TweenAlpha.Begin (gameObject, 0.3f, 1);
-                ScaleBig ();
-                combo2.Play ();
-                GetComponent<AudioSource>().Play ();
+            if (lastCombo != 2) {
+                anim.SetTrigger ("Combo_2");
+                audio.Play ();
             }
             isCombo = true;
             break;
         case 3:
-            if (!combo3.isPlaying && lastCombo != 3) {
-                ScaleBig ();
-
-                combo3.Play ();
-                GetComponent<AudioSource>().Play ();
-
+            if (lastCombo != 3) {
+                anim.SetTrigger ("Combo_3");
+                audio.Play ();
             }
             isCombo = true;
             break;
         case 4:
-            if (!combo4.isPlaying && lastCombo != 4) {
-                ScaleBig ();
-
-                combo4.Play ();
-                GetComponent<AudioSource>().Play ();
+            if (lastCombo != 4) {
+                anim.SetTrigger ("Combo_4");
+                audio.Play ();
 
             }
             isCombo = true;
             break;
         default:
-            if (!comboFinal.isPlaying && lastCombo != ManagerCombo.Instance.GetCombo) {
-                ScaleBig ();
-
-                comboFinal.Play ();
-                GetComponent<AudioSource>().Play ();
-
+            if (lastCombo != ManagerCombo.Instance.GetCombo) {
+                anim.SetTrigger ("Combo_Final");
+                audio.Play ();
             }
             isCombo = true;
             break;

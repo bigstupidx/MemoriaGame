@@ -2,27 +2,29 @@
 using System.Collections;
 
 
-public class PowerOffClue : PowerOff {
+public class PowerOffClue : PowerOff
+{
 
 
  
 
-    void Update(){
+    void Update ()
+    {
 
         if (Locked == false) {
 
-            if (ManagerDoors.Instance.isFirstOpen ) {
+            if (ManagerDoors.Instance.isFirstOpen) {
                 if (ManagerCluesPower.Instance.isPowerUsed == false) {
-                    if (!button.isEnabled && anotherUsing==false)
-                        button.isEnabled = true;
+                    if (!isEnabled && anotherUsing == false)
+                        isEnabled = true;
                 } else {
-                    button.isEnabled = false;
-             //       enabled = false;
+                    isEnabled = false;
+                    //       enabled = false;
                 }
             } else {
             
-                if(button.isEnabled)
-                    button.isEnabled = false;
+                if (isEnabled)
+                    isEnabled = false;
 
             }
         }

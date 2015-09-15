@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public enum PowerDoor
 {
-    Any = 0, // Use this transition to represent a non-existing transition in your system
+    Any = 0,
+    // Use this transition to represent a non-existing transition in your system
     Tati = 1,
     Tica = 2,
     Tico = 3,
     Timi = 4,
     Topi = 5,
 }
-public class PowerOff : MonoBehaviour {
+
+public class PowerOff : MonoBehaviour
+{
 
     public PowerDoor character = PowerDoor.Any;
 
@@ -18,27 +22,38 @@ public class PowerOff : MonoBehaviour {
     protected bool Locked = true;
     [HideInInspector]
     public bool used = false;
+
     public bool isEnabled {
     
-        get{
+        get {
         
-            return !Locked && !used && button.isEnabled;
+            return !Locked && !used && button.interactable;
         }
-        set{
-            button.isEnabled = value;
+        set {
+            button.interactable = value;
         }
     }
 
-    protected UIButton button;
+    Button _button;
+
+    public Button button {
+    
+        get {
+        
+            if (_button == null)
+                _button = GetComponent<Button> ();
+            return _button;
+        }
+    }
 
     Door[] doors;
+    public AudioSource audio;
 
     bool firstRun = true;
 
-    void Start(){
-
-        button = GetComponent<UIButton> ();
-        button.isEnabled = false;
+    void Start ()
+    {
+        isEnabled = false;
 
         if (ManagerDoors.numberOfPair == NumberOfPair.CuatroXCuatro) {
             return;
@@ -49,7 +64,7 @@ public class PowerOff : MonoBehaviour {
 
         for (int i = 0; i < doors.Length; ++i) {
             if (character == doors [i].character) {
-                doors[i].onCheckTruePair.Add (new Signal ("setOnPower", gameObject));
+                doors [i].onCheckTruePair.Add (new Signal ("setOnPower", gameObject));
 
                 break;
             }
@@ -58,75 +73,92 @@ public class PowerOff : MonoBehaviour {
         ManagerPowers.Instance.onPowerTrue.Add (new Signal ("onNotUse", gameObject));
         ManagerPowers.Instance.onPowerFalse.Add (new Signal ("onUse", gameObject));
 
-        ManagerPause.SubscribeOnPauseGame(onPaused);
-        ManagerPause.SubscribeOnResumeGame( onResume);
+        ManagerPause.SubscribeOnPauseGame (onPaused);
+        ManagerPause.SubscribeOnResumeGame (onResume);
 
         firstRun = false;
     }
 
-    void OnEnable(){
+    void OnEnable ()
+    {
         if (!firstRun) {
 
-            ManagerPause.SubscribeOnPauseGame(onPaused);
-            ManagerPause.SubscribeOnResumeGame( onResume);
+            ManagerPause.SubscribeOnPauseGame (onPaused);
+            ManagerPause.SubscribeOnResumeGame (onResume);
         }
     }
 
-    void OnDisable(){
+    void OnDisable ()
+    {
 
-        ManagerPause.UnSubscribeOnPauseGame(onPaused);
-        ManagerPause.UnSubscribeOnResumeGame(onResume);
+        ManagerPause.UnSubscribeOnPauseGame (onPaused);
+        ManagerPause.UnSubscribeOnResumeGame (onResume);
     }
 
     [Signal]
-    public void setOnPower(){
+    public void setOnPower ()
+    {
         Locked = false;
         if (anotherUsing == false) {
-            button.isEnabled = true;
+            isEnabled = true;
 
-            GetComponent<AudioSource>().volume = ManagerSound.Instance.fxVolume;
-
-            GetComponent<AudioSource>().Play ();
+            audio.volume = ManagerSound.Instance.fxVolume;
+            audio.Play ();
             
         }
     }
-    public void setOffPower(){
+
+    public void setOffPower ()
+    {
 
         if (!isPaused) {
-            button.isEnabled = false;
+            isEnabled = false;
             used = true;
         }
 
 
     }
+
     protected bool anotherUsing = false;
+
     #region Used
+
     [Signal]
-    void onUse(){
-        if(!Locked && !used)
-            button.isEnabled = true;
+    void onUse ()
+    {
+        if (!Locked && !used)
+            isEnabled = true;
 
         anotherUsing = false;
 
     }
+
     [Signal]
-    void onNotUse(){
-        button.isEnabled = false;
+    void onNotUse ()
+    {
+        isEnabled = false;
         anotherUsing = true;
 
     }
+
     #endregion
 
     #region Paused
+
     bool isPaused = false;
-    void onPaused(){
+
+    void onPaused ()
+    {
         isPaused = true;
 
     }
-    void onResume(){
+
+    void onResume ()
+    {
         isPaused = false;
 
     }
+
     #endregion
 
 }

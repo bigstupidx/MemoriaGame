@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 using System.Collections;
 
-public class CheckAudioGUI : MonoBehaviour {
+public class CheckAudioGUI : MonoBehaviour
+{
 
     public string value;
-    UISlider slider;
-	// Use this for initialization
-	void Awake () {
-        slider =GetComponent<UISlider> ();
+    Scrollbar slider;
+
+    // Use this for initialization
+    void OnEnable ()
+    {
+        slider = GetComponent<Scrollbar> ();
         slider.value = PlayerPrefs.GetFloat (value);
-	}
+    }
 	
 
 }
