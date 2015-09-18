@@ -8,11 +8,14 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ManagerCluesPower: Singleton<ManagerCluesPower> {
+public class ManagerCluesPower: Singleton<ManagerCluesPower>
+{
 
     public float TimeOfPower = 3.0f;
     bool usedPower = false;
-    public bool isPowerUsed { get { return usedPower; }}
+
+    public bool isPowerUsed { get { return usedPower; } }
+
     Door primera = null;
     Door segunda = null;
     Door tercera = null;
@@ -21,7 +24,9 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     int idFirst = -1;
 
     bool firstRun = true;
-    void Start(){
+
+    void Start ()
+    {
     
         ManagerTime.Instance.onTimeGameEnd += GameFinished;
         ManagerDoors.Instance.onVictory += GameFinished;
@@ -31,26 +36,34 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         ManagerPause.SubscribeOnPauseGame (onPaused);
         ManagerPause.SubscribeOnResumeGame (onResume);
     }
-    void OnEnable(){
+
+    void OnEnable ()
+    {
         if (!firstRun) {
             ManagerPause.SubscribeOnPauseGame (onPaused);
             ManagerPause.SubscribeOnResumeGame (onResume);
         }
     }
-    void OnDisable(){
 
-        ManagerPause.UnSubscribeOnPauseGame(onPaused);
-        ManagerPause.UnSubscribeOnResumeGame(onResume);
+    void OnDisable ()
+    {
+
+        ManagerPause.UnSubscribeOnPauseGame (onPaused);
+        ManagerPause.UnSubscribeOnResumeGame (onResume);
     }
-    void GameFinished(){
+
+    void GameFinished ()
+    {
         if (usingPower) {
 
             CancelInvoke ("DeActivePower");
             DeActivePower ();
         }
     }
-    public void ActivePower(){
-        if (isPaused || usedPower || !ManagerDoors.Instance.isFirstOpen ){
+
+    public void ActivePower ()
+    {
+        if (isPaused || usedPower || !ManagerDoors.Instance.isFirstOpen) {
             return;
         }
         ManagerPowers.Instance.UsingPower = true;
@@ -70,11 +83,13 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
             tercera.ShakeTrue ();
        
         usingPower = true;
-        idFirst = ManagerDoors.Instance.getFisrtDoorID();
+        idFirst = ManagerDoors.Instance.getFisrtDoorID ();
         Invoke ("DeActivePower", TimeOfPower);
 
     }
-    void DeActivePower(){
+
+    void DeActivePower ()
+    {
         usingPower = false;
         idFirst = -1;
 
@@ -91,11 +106,12 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
 
     }
 
-    void LateUpdate(){
+    void LateUpdate ()
+    {
     
         if (usingPower) {
 
-            if (ManagerDoors.Instance.getFisrtDoorID() != idFirst) {
+            if (ManagerDoors.Instance.getFisrtDoorID () != idFirst) {
             
                 CancelInvoke ("DeActivePower");
                 DeActivePower ();
@@ -103,20 +119,21 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         }
     }
 
-    void FindPair(){
+    void FindPair ()
+    {
 
         List< List < Door> > allD = ManagerDoors.Instance.GetAllDoors;
 
-        int zP=0;
-        int xP=0;
+        int zP = 0;
+        int xP = 0;
         bool find = false;
         for (zP = 0; zP < allD.Count; ++zP) {
 
-            for ( xP = 0; xP < allD[zP].Count; ++xP) {
+            for (xP = 0; xP < allD [zP].Count; ++xP) {
                 if (allD [zP] [xP] != null
-                    &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zP] [xP])) {
+                    && !ManagerDoors.Instance.isFirstOpenEqual (allD [zP] [xP])) {
 
-                    if(ManagerDoors.Instance.isPair(allD [zP] [xP])){
+                    if (ManagerDoors.Instance.isPair (allD [zP] [xP])) {
                         find = true;
                         primera = allD [zP] [xP];
                         break;
@@ -131,19 +148,19 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         if (!find)
             return;
 
-        int z = Random.Range (0,zP);
-        int x = Random.Range (0,xP);
+        int z = Random.Range (0, zP);
+        int x = Random.Range (0, xP);
         //Aqui busco a los otros dos;
         #region Buscar PrimeraPista Izquirda y luego derecha
         bool findL = false;
         //Busco el primero haci ala izquierda
         for (int zL = z; zL >= 0; --zL) {
 
-            for (int xL = x; xL>= 0; --xL) {
+            for (int xL = x; xL >= 0; --xL) {
                 if (allD [zL] [xL] != null
-                    &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])) {
+                    && !ManagerDoors.Instance.isFirstOpenEqual (allD [zL] [xL])) {
 
-                    if(!ManagerDoors.Instance.isPair(allD [zL] [xL])){
+                    if (!ManagerDoors.Instance.isPair (allD [zL] [xL])) {
                         findL = true;
                         segunda = allD [zL] [xL];
                         break;
@@ -160,11 +177,11 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
             //Aqui busco a los otros dos;
             for (int zL = z; zL < allD.Count; ++zL) {
 
-                for (int xL = x; xL< allD[zL].Count; ++xL) {
+                for (int xL = x; xL < allD [zL].Count; ++xL) {
                     if (allD [zL] [xL] != null
-                        &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])) {
+                        && !ManagerDoors.Instance.isFirstOpenEqual (allD [zL] [xL])) {
 
-                        if(!ManagerDoors.Instance.isPair(allD [zL] [xL])){
+                        if (!ManagerDoors.Instance.isPair (allD [zL] [xL])) {
                             findLR = true;
                             segunda = allD [zL] [xL];
                             break;
@@ -180,10 +197,10 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         #endregion
 
         if (zP + 1 < allD.Count) {
-            z = Random.Range (zP+1, allD.Count);
+            z = Random.Range (zP + 1, allD.Count);
         }
         if (xP + 1 < allD [zP].Count) {
-            x = Random.Range (xP+1, allD.Count);
+            x = Random.Range (xP + 1, allD.Count);
         }
 
 
@@ -192,12 +209,12 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         //Busco el segundo a la derecha
         for (int zL = z; zL < allD.Count; ++zL) {
 
-            for (int xL = x; xL< allD[zL].Count; ++xL) {
+            for (int xL = x; xL < allD [zL].Count; ++xL) {
                 if (allD [zL] [xL] != null
-                    &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])
-                    && segunda != allD [zL] [xL]  ) {
+                    && !ManagerDoors.Instance.isFirstOpenEqual (allD [zL] [xL])
+                    && segunda != allD [zL] [xL]) {
 
-                    if(!ManagerDoors.Instance.isPair(allD [zL] [xL])){
+                    if (!ManagerDoors.Instance.isPair (allD [zL] [xL])) {
                         findR = true;
                         tercera = allD [zL] [xL];
                         break;
@@ -209,15 +226,15 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
         }
         bool findRL = false;
         //Si no hay a la derecha lo busco haci ala izquierda
-        if(!findR ){
+        if (!findR) {
             for (int zL = z; zL >= 0; --zL) {
 
-                for (int xL = x; xL>= 0; --xL) {
+                for (int xL = x; xL >= 0; --xL) {
                     if (allD [zL] [xL] != null
-                        &&  !ManagerDoors.Instance.isFirstOpenEqual(allD [zL] [xL])
-                        && segunda != allD [zL] [xL] ) {
+                        && !ManagerDoors.Instance.isFirstOpenEqual (allD [zL] [xL])
+                        && segunda != allD [zL] [xL]) {
 
-                        if(!ManagerDoors.Instance.isPair(allD [zL] [xL])){
+                        if (!ManagerDoors.Instance.isPair (allD [zL] [xL])) {
                             findRL = true;
                             tercera = allD [zL] [xL];
                             break;
@@ -236,15 +253,21 @@ public class ManagerCluesPower: Singleton<ManagerCluesPower> {
     }
 
     #region Paused
+
     bool isPaused = false;
-    void onPaused(){
+
+    void onPaused ()
+    {
         isPaused = true;
 
     }
-    void onResume(){
+
+    void onResume ()
+    {
         isPaused = false;
 
     }
+
     #endregion
 
 

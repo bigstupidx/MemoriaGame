@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class ScoreSumEnd : MonoBehaviour {
+public class ScoreSumEnd : MonoBehaviour
+{
 
-    public UILabel textNum;
+    public Text textNum;
     int sum = 0;
     bool isCounting = false;
 
-    public UI2DSpriteAnimation[] coins;
+    public Animator[] coins;
     public int[] ScoreCoin;
     int currentCoin = 0;
     static int countSecond = 300;
@@ -21,10 +23,10 @@ public class ScoreSumEnd : MonoBehaviour {
     float currentTime = 0;
     static int countSecondTime = 50;
     public ClockTimer clock;
-    public UIWidget clockWid;
-    public UIWidget timer;
-    public UIWidget texteffect;
-    TweenPosition tweenPos;
+    public CanvasGroup clockWid;
+    public CanvasGroup timer;
+    public CanvasGroup texteffect;
+    TweenPosition_2 tweenPos;
 
     TweenScale scalesT;
     public AudioClip score01;
@@ -35,18 +37,20 @@ public class ScoreSumEnd : MonoBehaviour {
     public AudioSource audioCoins;
     #if UNITY_IPHONE
     static bool isIphone4 = false;
-    void Awake(){
+
+    void Awake ()
+    {
 
         // door = GetComponent<Door> ();
-        if( UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhone4)
-        {
+        if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhone4) {
             isIphone4 = true;
             //Its an iPod Touch, third generation
         }
 
     }
     #endif
-    void Start(){
+    void Start ()
+    {
         switch (ManagerDoors.numberOfPair) {
 
         case NumberOfPair.CincoXSeis:
@@ -66,8 +70,9 @@ public class ScoreSumEnd : MonoBehaviour {
             break;
         }
     }
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update ()
+    {
 	
         if (isCounting) {
             if (!sumTime) {
@@ -78,7 +83,7 @@ public class ScoreSumEnd : MonoBehaviour {
                     //isCounting = false;
                     sum = ManagerScore.Instance.CurrentScore;
                     CheckCoins ();
-                    SetTextNum();
+                    SetTextNum ();
                     //enabled = false;
                     sumTime = true;
                     currentTime = ManagerTime.Instance.getCurrentTimeOfGame;
@@ -86,16 +91,14 @@ public class ScoreSumEnd : MonoBehaviour {
                     //Showtime
 
                     clock.transform.parent = transform;
-                    clockWid.depth = 41;
-                    timer.depth = 42;
 
-                    scalesT = TweenScale.Begin (clock.gameObject, 0.3f,new Vector3( 1.3f, 1.3f, 1.3f)) ;
+                    scalesT = TweenScale.Begin (clock.gameObject, 0.3f, new Vector3 (1.3f, 1.3f, 1.3f));
                     scalesT.style = UITweener.Style.PingPong;
 
-                    clock.PlayFinalClock (  currentTime / countSecondTime);
+                    clock.PlayFinalClock (currentTime / countSecondTime);
                     texteffect.alpha = 1;
 
-                    tweenPos = TweenPosition.Begin<TweenPosition> (texteffect.gameObject, 0.1f);
+                    tweenPos = TweenPosition_2.Begin<TweenPosition_2> (texteffect.gameObject, 0.1f);
                     tweenPos.from = clockWid.transform.localPosition;
                     tweenPos.to = textNum.transform.localPosition;
                     tweenPos.style = UITweener.Style.Loop;
@@ -104,7 +107,7 @@ public class ScoreSumEnd : MonoBehaviour {
                     if (changued) {
                     } else {
                         CheckCoins ();
-                        SetTextNum();
+                        SetTextNum ();
                         changued = true;
                         StartCoroutine ("ChangueText", (secondToChangue));
                     }
@@ -121,13 +124,13 @@ public class ScoreSumEnd : MonoBehaviour {
                     sum += (int)(currentTime * ManagerScore.Instance.TimeBySecondScore);
                     CheckCoins ();
 
-                    SetTextNum();
+                    SetTextNum ();
                     tweenPos.enabled = false;
                     texteffect.alpha = 0;
                     scalesT.enabled = false;
                     clockWid.alpha = 0;
                     timer.alpha = 0;
-                    scalesT = TweenScale.Begin (textNum.gameObject, 0.3f,new Vector3( 1.3f, 1.3f, 1.3f)) ;
+                    scalesT = TweenScale.Begin (textNum.gameObject, 0.3f, new Vector3 (1.3f, 1.3f, 1.3f));
                     scalesT.style = UITweener.Style.Once;
 
                     currentTime = 0;
@@ -136,14 +139,14 @@ public class ScoreSumEnd : MonoBehaviour {
                     audioSum.clip = score03;
                     audioSum.loop = false;
                     audioSum.Play ();
-                    Invoke ("DisableAudio",score03.length);
+                    Invoke ("DisableAudio", score03.length);
                     enabled = false;
 
                   
                 } else {
-                    sum += (int)(aux*ManagerScore.Instance.TimeBySecondScore) ;
+                    sum += (int)(aux * ManagerScore.Instance.TimeBySecondScore);
                     CheckCoins ();
-                    SetTextNum();
+                    SetTextNum ();
                 }
 
               
@@ -151,23 +154,30 @@ public class ScoreSumEnd : MonoBehaviour {
             }
   
         }
-	}
-    IEnumerator ChangueText(float time){
+    }
+
+    IEnumerator ChangueText (float time)
+    {
     
         yield return Wait (time);
         changued = false;
     }
-    void DisableAudio(){
+
+    void DisableAudio ()
+    {
         audioSum.enabled = false;
     }
 
-    void PlayScoreMidle(){
+    void PlayScoreMidle ()
+    {
         audioSum.Stop ();
         audioSum.clip = score02;
         audioSum.loop = true;
         audioSum.Play ();
     }
-    public void StartCounting(){
+
+    public void StartCounting ()
+    {
         if (sum == 0) {
             enabled = true;
             isCounting = true;
@@ -183,7 +193,7 @@ public class ScoreSumEnd : MonoBehaviour {
                 sum = ManagerScore.Instance.CurrentScore;
 
                 sum += (int)(ManagerTime.Instance.getCurrentTimeOfGame * ManagerScore.Instance.TimeBySecondScore);
-            SetTextNum();
+                SetTextNum ();
                 scalesT = TweenScale.Begin (textNum.gameObject, 0.3f, new Vector3 (1.3f, 1.3f, 1.3f));
                 scalesT.style = UITweener.Style.Once;
 
@@ -198,30 +208,36 @@ public class ScoreSumEnd : MonoBehaviour {
             #endif
         }
     }
-    void CheckCoins(){
 
-        if (currentCoin <ScoreCoin.Length &&  sum >= ScoreCoin [currentCoin]) {
+    void CheckCoins ()
+    {
+
+        if (currentCoin < ScoreCoin.Length && sum >= ScoreCoin [currentCoin]) {
             audioCoins.Play ();
-            coins [currentCoin].Play ();
+            coins [currentCoin].SetTrigger ("On");
             ++currentCoin;
         }
     }
 
     //Our wait function
-    IEnumerator Wait(float duration)
+    IEnumerator Wait (float duration)
     {
         for (float timer = 0; timer < duration; timer += Time.deltaTime)
             yield return null;
     }
 
-    void SetTextNum(){
-     //   textNum.text = sum.ToString ();
+    void SetTextNum ()
+    {
+        //   textNum.text = sum.ToString ();
 
         if (!isChanguin)
-            StartCoroutine (UpdateText());
+            StartCoroutine (UpdateText ());
     }
+
     bool isChanguin = false;
-    IEnumerator UpdateText(){
+
+    IEnumerator UpdateText ()
+    {
         isChanguin = true;
         yield return new WaitForSeconds (0.01f);
         isChanguin = false;

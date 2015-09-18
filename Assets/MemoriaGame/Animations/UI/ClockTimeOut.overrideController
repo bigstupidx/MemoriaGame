@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ClockTimeOut
+  m_Controller: {fileID: 9100000, guid: e199f7564d4a144bf8ce72b83333f494, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ffdcc5988006747299b7dc43167e0ba4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a513686f12777434b95f8d35cbd5429d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9e9972e6a3264464d8be120fdb4e4cc1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2e11f0e59466143738b91a2487d0b2b7, type: 2}

@@ -37,6 +37,7 @@ public class CountDownTime : MonoBehaviour
 
     }
 
+    public Button Pausebutton;
     public string last = "6";
     // Update is called once per frame
     void LateUpdate ()
@@ -52,6 +53,7 @@ public class CountDownTime : MonoBehaviour
 
         }
         if (ManagerTime.Instance.getCurrentTimeToStart < 0) {
+            Pausebutton.interactable = true;
             gameObject.SetActive (false);
         }
      

@@ -19,7 +19,7 @@ public class LoadLevelManager : PersistentSingleton<LoadLevelManager>
 
     #region HelperWithSceneLoading:
 
-    public string SceneLoading = "Loading";
+    public string SceneLoading = "LoadingScene";
     bool LoadWithLoadScene = false;
     object level = null;
     bool manualActivation = false;

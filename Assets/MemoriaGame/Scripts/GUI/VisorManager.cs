@@ -29,7 +29,7 @@ public class VisorManager : Singleton<VisorManager>
 
     void FirstOpenShow (int id, string name)
     {
-        TweenAlpha.Begin (FrontBG.gameObject, 0.3f, 0);
+        TweenAlpha_2.Begin (FrontBG.gameObject, 0.3f, 0);
         if (meshes.Count > 0) {
             Obj.enabled = true;
             Obj.sprite = meshes [id];
@@ -38,7 +38,7 @@ public class VisorManager : Singleton<VisorManager>
 
     void FirstOpenClose (int id, string name)
     {
-        TweenAlpha.Begin (FrontBG.gameObject, 0.3f, 1);
+        TweenAlpha_2.Begin (FrontBG.gameObject, 0.3f, 1);
 
         if (meshes.Count > 0) {
             Obj.enabled = false;

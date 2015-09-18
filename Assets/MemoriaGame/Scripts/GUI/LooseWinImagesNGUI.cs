@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class LooseWinImagesNGUI : MonoBehaviour {
+public class LooseWinImagesNGUI : MonoBehaviour
+{
 
-    public UI2DSprite win;
+    public Image win;
     public Sprite[] Winners;
-    public UI2DSprite loser;
+    public Image loser;
     public Sprite[] Loosers;
-	// Use this for initialization
-	void Awake () {
-        win.sprite2D = Winners [Random.Range (0, Winners.Length)];
-        loser.sprite2D = Loosers [Random.Range (0, Loosers.Length)];
-
-	}
-	
+    // Use this for initialization
+    void Awake ()
+    {
+        win.sprite = Winners [Random.Range (0, Winners.Length)];
+        loser.sprite = Loosers [Random.Range (0, Loosers.Length)];
+    }
 }

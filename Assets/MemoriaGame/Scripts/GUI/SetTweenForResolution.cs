@@ -26,9 +26,25 @@ public class SetTweenForResolution : MonoBehaviour
         _position.to = EndPos.localPosition;
     }
 
+    bool firstRun = true;
+
     void Start ()
     {
+        firstRun = false;
         ManagerSlidePower.Instance.OnActivePower += OnActivePower;
+
+    }
+
+    void OnEnable ()
+    {
+        if (!firstRun)
+            ManagerSlidePower.Instance.OnActivePower += OnActivePower;
+
+    }
+
+    void OnDisable ()
+    {
+        ManagerSlidePower.Instance.OnActivePower -= OnActivePower;
 
     }
 

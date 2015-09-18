@@ -22,6 +22,12 @@ public class PlayState : FSMState
         AddTransition (Transition.PlayToPause, StateID.PauseID);
     }
 
+    public  void Start ()
+    {
+        play.SetBool ("In", true);
+
+    }
+
     public override void DoBeforeEntering ()
     { 
         play.SetBool ("In", true);
