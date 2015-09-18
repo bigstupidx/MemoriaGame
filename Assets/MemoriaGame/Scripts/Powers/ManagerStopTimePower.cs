@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
+public class ManagerStopTimePower : Singleton<ManagerStopTimePower>
+{
 
 
     public float TimeStop = 4.0f;
@@ -9,18 +10,22 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
     bool usedPower = false;
     public ClockTimer clock;
 
-    void OnEnable(){
-        ManagerPause.SubscribeOnPauseGame(onPaused);
-        ManagerPause.SubscribeOnResumeGame( onResume);
-    }
-    void OnDisable(){
-
-        ManagerPause.UnSubscribeOnPauseGame(onPaused);
-        ManagerPause.UnSubscribeOnResumeGame(onResume);
+    void OnEnable ()
+    {
+        ManagerPause.SubscribeOnPauseGame (onPaused);
+        ManagerPause.SubscribeOnResumeGame (onResume);
     }
 
-    public void ActivePower(){
-        if (isPaused || usedPower ){
+    void OnDisable ()
+    {
+
+        ManagerPause.UnSubscribeOnPauseGame (onPaused);
+        ManagerPause.UnSubscribeOnResumeGame (onResume);
+    }
+
+    public void ActivePower ()
+    {
+        if (isPaused || usedPower) {
             return;
         }
         ManagerPowers.Instance.UsingPower = true;
@@ -30,7 +35,9 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
         ManagerTime.Instance.onStop (true);
 
     }
-    public void DeActivePower(){
+
+    public void DeActivePower ()
+    {
         ManagerTime.Instance.onPlay (true);
         usedPower = true;
         clock.NotFreeze ();
@@ -38,23 +45,30 @@ public class ManagerStopTimePower : Singleton<ManagerStopTimePower> {
     }
 
     #region Paused
+
     bool isPaused = false;
-    void onPaused(){
+
+    void onPaused ()
+    {
         isPaused = true;
 
     }
-    void onResume(){
+
+    void onResume ()
+    {
         isPaused = false;
 
     }
+
     #endregion
 
 
-    void Update(){
+    void Update ()
+    {
         if (isPaused || usedPower)
-            return ;
+            return;
       
-        if(currentTimeStop > 0){
+        if (currentTimeStop > 0) {
             currentTimeStop -= Time.deltaTime;
             if (currentTimeStop <= 0) {
                 DeActivePower ();
