@@ -7,18 +7,19 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class ManagerPowers : Singleton<ManagerPowers>
 {
 
     bool usingPow = false;
 
-    public bool UsingPower{
+    public bool UsingPower {
     
-        get{
+        get {
             return usingPow;
         }
-        set{
+        set {
             usingPow = value;
             if (value) {
 
@@ -28,23 +29,23 @@ public class ManagerPowers : Singleton<ManagerPowers>
             }
         }
     }
-        
+
     #region Signal list
-    [HideInInspector]
-    public List<Signal> onPowerTrue= new List<Signal>();
-    [HideInInspector]
-    public List<Signal> onPowerFalse = new List<Signal>();
+
+    public Action onPowerTrue;
+    public Action onPowerFalse;
+
     #endregion
-    void usingPowerIsTrue(){
-        foreach (Signal sig in onPowerTrue) {
 
-            sig.Invoke ();
-        }
+    void usingPowerIsTrue ()
+    {
+        if (onPowerTrue != null)
+            onPowerTrue ();
     }
-    void usingPowerIsFalse(){
-        foreach (Signal sig in onPowerFalse) {
 
-            sig.Invoke ();
-        }
+    void usingPowerIsFalse ()
+    {
+        if (onPowerFalse != null)
+            onPowerFalse ();
     }
 }

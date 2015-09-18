@@ -25,8 +25,8 @@ public class ShowTimeEnd : MonoBehaviour
             ManagerDoors.SubscribeOnVictory (StartAlpha);
             ManagerDoors.SubscribeOnVictory (Winer);
         } else {
-            ManagerTime.SubscribeOnTimeGameEnd (StartAlpha);
-            ManagerTime.SubscribeOnTimeGameEnd (Loser);
+            ManagerTime.Instance.onTimeGameEnd += (StartAlpha);
+            ManagerTime.Instance.onTimeGameEnd += (Loser);
         }
     }
 
@@ -36,8 +36,10 @@ public class ShowTimeEnd : MonoBehaviour
             ManagerDoors.UnSubscribeOnVictory (StartAlpha);
             ManagerDoors.UnSubscribeOnVictory (Winer);
         } else {
-            ManagerTime.UnSubscribeOnTimeGameEnd (StartAlpha);
-            ManagerTime.UnSubscribeOnTimeGameEnd (Loser);
+            if (ManagerTime.Instance != null) {
+                ManagerTime.Instance.onTimeGameEnd -= (StartAlpha);
+                ManagerTime.Instance.onTimeGameEnd -= (Loser);
+            }
         }
     }
 

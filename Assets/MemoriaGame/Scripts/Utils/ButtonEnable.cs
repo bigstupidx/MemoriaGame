@@ -31,10 +31,9 @@ public class ButtonEnable : MonoBehaviour
 
     void Start ()
     {
-        ManagerTime.Instance.onTimeGameStart.Add (new Signal ("setOnPower", gameObject));
+        ManagerTime.Instance.onTimeGameStart += setOnPower;
     }
 
-    [Signal]
     public void setOnPower ()
     {
         button.interactable = true;

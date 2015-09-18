@@ -70,8 +70,8 @@ public class PowerOff : MonoBehaviour
             }
         }
 
-        ManagerPowers.Instance.onPowerTrue.Add (new Signal ("onNotUse", gameObject));
-        ManagerPowers.Instance.onPowerFalse.Add (new Signal ("onUse", gameObject));
+        ManagerPowers.Instance.onPowerTrue += onNotUse;
+        ManagerPowers.Instance.onPowerFalse += onUse;
 
         ManagerPause.SubscribeOnPauseGame (onPaused);
         ManagerPause.SubscribeOnResumeGame (onResume);

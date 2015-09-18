@@ -41,7 +41,7 @@ public class ClockTimer : MonoBehaviour
     // Use this for initialization
     void Awake ()
     {
-        ManagerTime.Instance.onTimeGameStart.Add (new Signal ("onTimeGameStart", gameObject));
+        ManagerTime.Instance.onTimeGameStart += onTimeGameStart;
     }
 
     bool firstRun = true;
@@ -72,7 +72,7 @@ public class ClockTimer : MonoBehaviour
         ManagerPause.SubscribeOnPauseGame (onPaused);
         ManagerPause.SubscribeOnResumeGame (onResume);
 
-        ManagerTime.Instance.onStopTime.Add (new Signal ("onPausedFreezee", gameObject)); 
+        ManagerTime.Instance.onStopTime += onPausedFreezee; 
         ManagerTime.Instance.onPlayTime.Add (new Signal ("onResumeFreeze", gameObject));  
 
         firstRun = false;
@@ -84,7 +84,6 @@ public class ClockTimer : MonoBehaviour
         audio.Stop ();
     }
 
-    [Signal]
     void onTimeGameStart ()
     {
         tweenRota = TweenRotation.Begin (ArrowAnimator.gameObject, ManagerTime.Instance.TimeOfGame, Quaternion.identity);

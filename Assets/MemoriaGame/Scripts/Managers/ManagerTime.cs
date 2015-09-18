@@ -9,6 +9,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 class ManagerTime : Singleton<ManagerTime>
 {
@@ -25,43 +26,15 @@ class ManagerTime : Singleton<ManagerTime>
     /// <summary>
     /// Funciones para cuando el tiempo comienza
     /// </summary>
-    [HideInInspector]
-    public List<Signal> onTimeGameStart = new List<Signal> ();
+    public Action onTimeGameStart;
 
-    public void TimeGameStar ()
-    {
 
-        foreach (Signal sig in onTimeGameStart) {
-
-            sig.Invoke ();
-        }
-    }
 
     /// <summary>
     /// Funciones para cuando el tiempo se acabe
     /// </summary>
-    public delegate void onTimeGameEndBroadcast ();
 
-    public event onTimeGameEndBroadcast onTimeGameEnd;
-
-    /// <summary>
-    /// Subscribes funct to OnPauseGame.
-    /// </summary>
-    /// <param name="funct">Funct.</param>
-    public static void SubscribeOnTimeGameEnd (onTimeGameEndBroadcast funct)
-    {
-        Instance.onTimeGameEnd += funct;
-    }
-
-    /// <summary>
-    /// Unsubscribe safetely funct Function to OnPauseGameDelegate
-    /// </summary>
-    /// <param name="funct">Function.</param>
-    public static void UnSubscribeOnTimeGameEnd (onTimeGameEndBroadcast funct)
-    {
-        if (Instance != null)
-            Instance.onTimeGameEnd -= funct;
-    }
+    public Action onTimeGameEnd;
 
 
 
@@ -124,7 +97,8 @@ class ManagerTime : Singleton<ManagerTime>
                     currentTimeOfGame = 0;
                     ManagerDoors.Instance.CanTouch = false;
                     ManagerPause.Instance.Pause = true;
-                    onTimeGameEnd ();
+                    if (onTimeGameEnd != null)
+                        onTimeGameEnd ();
                     enabled = false;
                 }
 
@@ -135,7 +109,8 @@ class ManagerTime : Singleton<ManagerTime>
                    
 
                     currentTimeOfGame = TimeOfGame;
-                    TimeGameStar ();
+                    if (onTimeGameStart != null)
+                        onTimeGameStart ();
                     ManagerDoors.Instance.CanTouch = true;
 
                 }
@@ -166,17 +141,8 @@ class ManagerTime : Singleton<ManagerTime>
     /// <summary>
     /// Guarda lo signal para cuando se para el tiempo
     /// </summary>
-    [HideInInspector]
-    public List<Signal> onStopTime = new List<Signal> ();
+    public Action onStopTime;
 
-    void StopTimer ()
-    {
-
-        foreach (Signal sig in onStopTime) {
-
-            sig.Invoke ();
-        }
-    }
 
     /// <summary>
     /// Guarda los signal para cuando se da play al tiempo
@@ -210,7 +176,8 @@ class ManagerTime : Singleton<ManagerTime>
 
         if (!stopTime) {
             stopTime = true;
-            StopTimer ();
+            if (onStopTime != null)
+                onStopTime ();
         }
     
     }
